@@ -1,0 +1,70 @@
+<script src="http://igniteui.com/js/modernizr.min.js"></script>
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>
+<script src="http://cdn-na.infragistics.com/jquery/20132/latest/js/infragistics.core.js"></script>
+<script src="http://cdn-na.infragistics.com/jquery/20132/latest/js/infragistics.dv.js"></script>
+<link href="http://cdn-na.infragistics.com/jquery/20132/latest/css/themes/infragistics/infragistics.theme.css" rel="stylesheet"></link>
+<link href="http://cdn-na.infragistics.com/jquery/20132/latest/css/structure/infragistics.css" rel="stylesheet"></link>
+
+<script id="budgetTooltipTemplate" type="text/x-ig-tmpl">        
+        <div >
+            <span id="tooltipValue" style="font-family: Arial; font-size: 11px;">${item.Budget}</span>    
+        </div>       
+    </script>
+<script id="depTooltipTemplate" type="text/x-ig-tmpl">        
+        <div >
+            <span id="tooltipValue" style="font-family: Arial; font-size: 11px;">${item.DepartmentSize}</span>    
+        </div>       
+    </script>
+
+<div id="chart"></div>
+
+     <br />
+     
+     <table class="options" style="max-width: 550px; width: 100%;">
+        <tr>            
+            <td>
+                Start Angle
+            </td>
+            <td class="optionTdWidth">
+                <select id="angleSeriesName" class="optionTdWidth" style="margin-bottom: 7px;">
+                    <option value="Budget" selected="selected">Budget</option>
+                    <option value="DepartmentSize">Department Size</option>                    
+                </select>
+                <div id="angle" class="slider optionTdWidth"></div>
+            </td>
+        </tr>
+        <tr>
+            <td>InnerExtent:</td>
+            <td class="optionTdWidth">
+                <div id="innerExtent" class="slider optionTdWidth"></div>
+            </td>
+        </tr>               
+        <tr>
+            <td>Label Position for the Budget Series:</td>
+            <td class="optionTdWidth">
+                <select id="labelPosition" class="optionTdWidth">
+                    <option value="center" selected="selected">Center</option>
+                    <option value="insideEnd">Inside End</option>                    
+                    <option value="bestFit">Best Fit</option>
+                </select>               
+            </td>
+        </tr>
+         <tr>
+            <td>Label Position for the Department Size Series:</td>
+            <td class="optionTdWidth">
+                <select id="labelPosition2" class="optionTdWidth">
+                    <option value="center" selected="selected">Center</option>
+                    <option value="insideEnd">Inside End</option>
+                    <option value="outsideEnd">Outside End</option>
+                    <option value="bestFit">Best Fit</option>
+                </select>               
+            </td>
+        </tr>
+        <tr>
+            <td>Label Extent (Outside End)</td>
+            <td class="optionTdWidth">
+                <div id="labelExtent" class="slider optionTdWidth"></div>
+            </td>
+        </tr>
+    </table>

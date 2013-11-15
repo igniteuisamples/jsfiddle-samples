@@ -1,0 +1,26 @@
+<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.3.0/jquery.mobile-1.3.0.min.js"></script>
+<script src="http://cdn-na.infragistics.com/jquery/20132/latest/mobile/js/infragistics.mobile.js"></script>
+<script src="http://igniteui.com/js-data/nw-products"></script>
+<link href="http://code.jquery.com/mobile/1.3.0/jquery.mobile.structure-1.3.0.min.css" rel="stylesheet"></link>
+<link href="http://cdn-na.infragistics.com/jquery/20132/latest/mobile/css/structure/infragistics.mobile.css" rel="stylesheet"></link>
+<link href="http://cdn-na.infragistics.com/jquery/20132/latest/mobile/css/themes/ios/infragistics.mobile.theme.css" rel="stylesheet"></link>
+
+<div data-role="page">
+        
+
+        <div data-role="content">
+            
+
+            
+            
+
+            <div style="margin-bottom: 30px">
+                <div id="listViewExpandButton" data-role="button">Expand Presets</div>
+            </div>
+
+            <ul id="listViewExpand" data-role="iglistview" data-image-mode="none" data-auto-generate-layouts="False" data-bindings-text-key="ProductName" data-bindings-description-key="CategoryName" data-data-source="northwindProducts" data-data-source-type="json" data-filtering="true" data-filtering-name="Filtering" data-sorting="true" data-sorting-auto-generate-sort-presets="true" data-sorting-name="Sorting" data-sorting-presets='[ {"text":"Product Name","sortedFields":[ {"fieldName":"ProductName"} ]}, {"text":"Category","sortedFields":[ {"fieldName":"CategoryName"} ]} ]'>
+            </ul>
+
+        </div>
+    </div>

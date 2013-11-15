@@ -1,0 +1,11 @@
+.ig-chart-root {
+            width: 79%;
+            float: left;
+            margin-right: 1%;
+            margin-bottom: 10px;
+        }
+
+        .ig-chart-legend {
+            width: 19%;
+            float: left;
+        }

@@ -1,0 +1,14 @@
+#chart1 {
+            position: relative;
+            float: left;
+            margin-right: 10px;
+        }
+
+        #legend1 {
+            position: relative;
+            float: left;
+        }
+
+        .selectionOptions {
+            margin-bottom: 10px;
+        }

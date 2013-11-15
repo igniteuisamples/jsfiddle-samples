@@ -1,0 +1,20 @@
+.rating-options {
+            width: 350px;
+            margin-top: 20px;
+        }
+
+            .rating-options label {
+                width: 200px;
+            }
+
+            .rating-options label, .rating-options select {
+                float: left;
+            }
+
+        #selectPrecision, #decimalPlaces, #currValue {
+            width: 120px;
+        }
+
+        .rating-options > div {
+            margin: 7px 0;
+        }

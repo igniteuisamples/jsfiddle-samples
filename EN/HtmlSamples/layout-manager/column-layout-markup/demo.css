@@ -1,0 +1,50 @@
+body {
+			font-family: "Segoe UI",Helvetica,Tahoma,Arial,Verdana,sans-serif;
+			background-color: #fff;
+		}
+
+		.col3 {
+			background-color: #EEE;
+			color: #555;
+			padding: 0 20px 20px 20px;
+			margin: 0 0 20px 0;
+		}
+
+		#layout .col12 {
+			border:2px dashed #999;
+			margin: 0 0 20px 0;
+		}
+
+		#layout .col7 {
+			background-color: #FFA72D;
+			color: #FFF;
+			padding: 0 20px 20px 20px;
+			margin: 0 0 20px 0;
+		}
+
+		#layout .col4 {
+			background-color: #ffaf41;
+			color: #fff;
+			padding: 0 20px 20px 20px;
+		}
+
+		#layout .col2 {
+			background-color: rgb(0, 155,225);
+			color: #FFF;
+			padding: 0 20px 20px 20px;
+		}
+
+		#layout .col5 {
+			background-color: #00CCFF;
+			padding: 0 20px 20px 20px;
+			color: #FFF;
+		}
+	    @media screen and (min-width: 768px) {
+	        #sampleContainer {
+	            margin-left: 0;
+	        }
+	    }
+
+	    .ig-layout-col {
+            padding-left: 0;
+        }

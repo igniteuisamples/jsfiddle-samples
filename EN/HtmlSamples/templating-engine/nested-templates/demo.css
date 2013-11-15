@@ -1,0 +1,13 @@
+.clear {
+            clear: both;
+        }
+
+        .ui-igrating {
+            float: left;
+        }
+
+        .ratingLabel {
+            float: left;
+            margin-left: 3px;
+            margin-right: 5px;
+        }

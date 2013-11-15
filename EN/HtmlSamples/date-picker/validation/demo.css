@@ -1,0 +1,9 @@
+@media all and (max-width: 360px) {
+            .ui-datepicker {
+                width: 250px;
+            }
+        }
+     
+        #datePickerForm h4 {
+            margin-bottom: .5em;
+        }

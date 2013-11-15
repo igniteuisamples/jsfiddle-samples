@@ -1,0 +1,30 @@
+<script src="http://igniteui.com/js/modernizr.min.js"></script>
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>
+<script src="http://cdn-na.infragistics.com/jquery/20132/latest/js/infragistics.core.js"></script>
+<script src="http://cdn-na.infragistics.com/jquery/20132/latest/js/infragistics.dv.js"></script>
+<script src="http://cdn-na.infragistics.com/jquery/20132/latest/js/infragistics.lob.js"></script>
+<script src="http://igniteui.com/js-data/financial-data-random"></script>
+<link href="http://cdn-na.infragistics.com/jquery/20132/latest/css/themes/infragistics/infragistics.theme.css" rel="stylesheet"></link>
+<link href="http://cdn-na.infragistics.com/jquery/20132/latest/css/structure/infragistics.css" rel="stylesheet"></link>
+<link href="http://cdn-na.infragistics.com/jquery/20132/latest/css/structure/modules/infragistics.ui.chart.new.css" rel="stylesheet"></link>
+
+<script id="tooltipTemplate" type="text/x-jquery-tmpl">
+		<span class="tooltip">${item.DateString}</span><br />
+        <span class="tooltip">Open:&nbsp;</span><span>${item.Open}</span><br />
+		<span class="tooltip">Low:&nbsp;</span><span>${item.Low}</span><br />
+		<span class="tooltip">High:&nbsp;</span><span>${item.High}</span><br />
+		<span class="tooltip">Close:&nbsp;</span><span>${item.Close}</span><br />
+    </script>
+
+<div id="chart"></div>
+	<div id="zoom"></div>
+	<div id="buttonset" class="buttonset">
+		<input type="radio" id="day" name="radio"></input><label for="day">Day</label>
+		<input type="radio" id="week" name="radio"></input><label for="week">Week</label>
+		<input type="radio" id="month" name="radio"></input><label for="month">Month</label>
+	</div>
+	<div id="date">
+	</div>
+	<div id="popoverLeft"></div>
+	<div id="popoverRight"></div>

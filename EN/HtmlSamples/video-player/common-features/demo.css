@@ -1,0 +1,93 @@
+canvas {
+            margin-bottom: 3px;
+        }
+
+        span.green {
+            display: inline;
+            color: white;
+            padding: 2px;
+            background: green;
+            -moz-border-radius: 2px;
+            -webkit-border-radius: 2px;
+            border-radius: 2px;
+        }
+
+        span.red {
+            display: inline;
+            color: white;
+            padding: 2px;
+            background: red;
+            -moz-border-radius: 2px;
+            -webkit-border-radius: 2px;
+            border-radius: 2px;
+        }
+
+        .controlsContainer {
+            width: 310px;
+            height: 340px;
+            margin-left: 7px;
+            background: none repeat scroll 0 0 #CFCFCF;
+            border: 1px solid #B1B1B1;
+            border-radius: 4px;
+            moz-border-radius: 4px;
+            webkit-border-radius: 4px;
+            float: left;
+        }
+
+        .leftContainer {
+            width: 150px;
+            height: 329px;
+            padding: 10px;
+            float: left;
+        }
+
+        .rightContainer {
+            width: 112px;
+            height: 290px;
+            border-color: #999999;
+            border-style: none none none solid;
+            border-width: 1px;
+            overflow-x: hidden;
+            overflow-y: auto;
+            margin-left: 5px;
+            margin-top: 10px;
+            padding-left: 16px;
+            padding-right: 10px;
+            padding-bottom: 10px;
+            float: left;
+        }
+
+        .buttons {
+            width: 150px;
+            margin-top: 2px;
+        }
+
+        .videoPlayerContainer {
+            float: left;
+            width: 380px;
+        }
+
+        .screenshot {
+            background: white;
+            border: 1px solid #B1B1B1;
+            display: block;
+            height: 38px;
+            left: 50%;
+            margin-left: -54px;
+            position: relative;
+            width: 100px;
+        }
+
+        #videoPlayer1 {
+            z-index: 1000;
+        }
+
+        #html5Video, #h264Video, #oggVideo, #webMVideo, #currentTime {
+            font-family: "Segoe UI", Arial, sans-serif;
+            font-size: 0.8em;
+            margin-bottom: 5px !important;
+        }
+
+        #currentTime {
+            margin-top: 20px;
+        }

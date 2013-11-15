@@ -1,0 +1,37 @@
+<script src="http://igniteui.com/js/modernizr.min.js"></script>
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>
+<script src="http://cdn-na.infragistics.com/jquery/20132/latest/js/infragistics.core.js"></script>
+<script src="http://cdn-na.infragistics.com/jquery/20132/latest/js/infragistics.dv.js"></script>
+<link href="http://cdn-na.infragistics.com/jquery/20132/latest/css/themes/infragistics/infragistics.theme.css" rel="stylesheet"></link>
+<link href="http://cdn-na.infragistics.com/jquery/20132/latest/css/structure/infragistics.css" rel="stylesheet"></link>
+
+<div id="linearGauge"></div>
+
+    
+    
+    <fieldset id="graphOptions" style="margin-top: 30px">
+        <legend>Options</legend>
+        <table>
+            <tr>
+                <td>Choose a setting</td>
+                <td>
+                    <select id="graphSettings">
+                        <option value="setting1();" selected="selected">Setting One</option>
+                        <option value="setting2();">Setting Two</option>
+                        <option value="setting3();">Setting Three</option>
+                    </select>
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Transition Duration</td>
+                <td>
+                    <div id="transitionDurationSlider" style="width: 100px; margin: 12px 40px 12px 12px"></div>
+                </td>
+                <td>
+                    <label id="transitionDurationLabel">1000</label>
+                </td>
+            </tr>
+        </table>
+    </fieldset>

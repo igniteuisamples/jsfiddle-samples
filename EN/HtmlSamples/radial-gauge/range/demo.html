@@ -1,0 +1,79 @@
+<script src="http://igniteui.com/js/modernizr.min.js"></script>
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>
+<script src="http://cdn-na.infragistics.com/jquery/20132/latest/js/infragistics.core.js"></script>
+<script src="http://cdn-na.infragistics.com/jquery/20132/latest/js/infragistics.dv.js"></script>
+<link href="http://cdn-na.infragistics.com/jquery/20132/latest/css/themes/infragistics/infragistics.theme.css" rel="stylesheet"></link>
+<link href="http://cdn-na.infragistics.com/jquery/20132/latest/css/structure/infragistics.css" rel="stylesheet"></link>
+
+<div id="radialgauge"></div>
+
+    <div>
+        <fieldset id="gaugeOptions">
+            <legend>Options</legend>
+				<div class="optionContainer">
+               Inner Start Extent
+					<br />
+               <div id="innerStartExtentSlider" class="sliderBounds"></div>
+               <label id="innerStartExtentLabel">0.5</label>
+				</div>
+				<div class="optionContainer">
+               Inner End Extent
+					<br />
+               <div id="innerEndExtentSlider" class="sliderBounds"></div>
+               <label id="innerEndExtentLabel">0.5</label>
+				</div>
+				<div class="optionContainer">
+               Outer Start Extent
+					<br />
+               <div id="outerStartExtentSlider" class="sliderBounds"></div>
+               <label id="outerStartExtentLabel">0.72</label>
+				</div>
+				<div class="optionContainer">
+               Outer End Extent
+					<br />
+               <div id="outerEndExtentSlider" class="sliderBounds"></div>
+               <label id="outerEndExtentLabel">.78</label>
+				</div>
+				<div class="optionContainer">
+               Start Value
+					<br />
+               <div id="startValueSlider" class="sliderBounds"></div>
+               <label id="startValueLabel">70</label>
+				</div>
+				<div class="optionContainer">
+               End Value
+               <div id="endValueSlider" class="sliderBounds"></div>
+               <label id="endValueLabel">100</label>
+				</div>
+            <div class="optionContainer">
+                Transition Duration
+                <br />
+                <div id="transitionDurationSlider" class="sliderBounds"></div>
+                <label id="transitionDurationLabel">2</label>
+            </div>
+            <div class="optionContainer">
+                Brush
+                <br />
+                <select id="brushDropdown" class="selectBounds">
+                    <option value="red">Red</option>
+                    <option value="blue">Blue</option>
+                    <option value="green">Green</option>
+                    <option value="yellow">Yellow</option>
+                    <option value="black" selected="selected">Black</option>
+                </select>
+            </div>
+            <div class="optionContainer">
+                Outline Brush
+                <br />
+                <select id="outlineBrushDropdown" class="selectBounds">
+                    <option value="red">Red</option>
+                    <option value="blue">Blue</option>
+                    <option value="green">Green</option>
+                    <option value="yellow">Yellow</option>
+                    <option value="black" selected="selected">Black</option>
+                </select>
+            </div>
+
+        </fieldset>
+    </div>

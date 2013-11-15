@@ -1,0 +1,59 @@
+<script src="http://igniteui.com/js/modernizr.min.js"></script>
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>
+<script src="http://cdn-na.infragistics.com/jquery/20132/latest/js/infragistics.core.js"></script>
+<script src="http://cdn-na.infragistics.com/jquery/20132/latest/js/infragistics.dv.js"></script>
+<link href="http://cdn-na.infragistics.com/jquery/20132/latest/css/themes/infragistics/infragistics.theme.css" rel="stylesheet"></link>
+<link href="http://cdn-na.infragistics.com/jquery/20132/latest/css/structure/infragistics.css" rel="stylesheet"></link>
+
+<div id="radialgauge"></div>
+
+    <div>
+        <fieldset id="gaugeOptions">
+            <legend>Options</legend>
+				<div class="optionContainer">
+               Start Extent
+					<br />
+               <div id="scaleStartExtentSlider" class="sliderBounds"></div>
+               <label id="startExtentLabel">0.57</label>
+				</div>
+				<div class="optionContainer">
+               End Extent
+					<br />
+               <div id="scaleEndExtentSlider" class="sliderBounds"></div>
+               <label id="endExtentLabel">0.57</label>
+				</div>
+				<div class="optionContainer">
+               Scale Oversweep
+					<br />
+               <div id="scaleOversweepSlider" class="sliderBounds"></div>
+               <label id="scaleOversweepLabel">3</label>
+				</div>
+				<div class="optionContainer">
+               Sweep Direction
+					<br />
+               <select id="scaleOversweepDropdown" class="selectBounds">
+                  <option value="clockwise" selected="selected">clockwise</option>
+                  <option value="counterclockwise">counterclockwise</option>
+               </select>
+				</div>
+				<div class="optionContainer">
+               Scale Brush
+					<br />
+               <select id="scaleBrushDropdown" class="selectBounds">
+                  <option value="red">Red</option>
+                  <option value="yellow">Yellow</option>
+                  <option value="green">Green</option>
+                  <option value="blue">Blue</option>
+                  <option value="#45ADD6" selected="selected">LightBlue</option>
+                  <option value="black">Black</option>
+               </select>
+				</div>
+				<div class="optionContainer">
+               Transition Duration
+					<br />
+               <div id="transitionDurationSlider" class="sliderBounds"></div>
+               <label id="transitionDurationLabel">2</label>
+				</div>
+        </fieldset>
+    </div>

@@ -1,0 +1,5 @@
+@media all and (max-width: 480px) {
+            #mainGrid_container, #detailGrid_container {
+                font-size: 14px;
+            }
+        }

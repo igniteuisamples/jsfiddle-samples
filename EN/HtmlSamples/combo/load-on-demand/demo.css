@@ -1,0 +1,12 @@
+.propName { font-weight: bold; border-bottom: 2px dotted Gray; padding-right: 10px; }
+        .propValue { font-weight: normal; border-bottom: 2px dotted Gray; }
+        .boxed { border: 1px solid Gray; margin: 3px 3px 3px 3px; padding: 3px 3px 3px 3px; border-radius: 3px; font-weight: bold; }
+        .dropDownHeaderFooter
+         {
+            border: 1px solid Gray; 
+            margin: 3px 3px 3px 3px; 
+            padding: 3px 3px 3px 3px; 
+            border-radius: 3px; 
+            font-weight: bold; 
+         }
+        #selItemLabel { font-weight: bold; margin: 20px 3px 3px 3px; }

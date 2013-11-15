@@ -1,0 +1,5 @@
+$(function () {
+
+            // ----- JavaScript Goes Here ----- //
+
+        });

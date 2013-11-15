@@ -1,0 +1,134 @@
+.demo-section {
+            width: 320px;
+        }
+
+        #bodyParts {
+            position: relative;
+            width: 320px;
+            height: 470px;
+            margin: 0 auto;
+            background: url('http://igniteui.com/images/samples/popover/BodyParts.png') no-repeat 0 0;
+        }
+
+            #bodyParts a {
+                position: absolute;
+                display: block;
+                width: 23px;
+                height: 23px;
+                background-color: #0094ff;
+                -moz-border-radius: 25px;
+                -webkit-border-radius: 25px;
+                border-radius: 25px;
+                border: 0;
+                -moz-box-shadow: 0 0 0 1px rgba(0,0,0,0.5);
+                -webkit-box-shadow: 0 0 0 0px rgba(0,0,0,0.5);
+                box-shadow: 0 0 0 0px rgba(0,0,0,0.5);
+                -moz-transition: -moz-box-shadow .3s;
+                -webkit-transition: -webkit-box-shadow .3s;
+                transition: box-shadow .3s;
+            }
+
+        #hand {
+            top: 85px;
+            left: -2px;
+        }
+
+        #shoulder {
+            top: 106px;
+            left: 86px;
+        }
+
+        #head {
+            top: 36px;
+            left: 136px;
+        }
+
+        #neck {
+            top: 85px;
+            left: 193px;
+        }
+
+        #finger {
+            top: 0px;
+            left: 196px;
+        }
+
+        #thumb {
+            top: 18px;
+            left: 246px;
+        }
+
+        #wrist {
+            top: 40px;
+            left: 268px;
+        }
+
+        #elbow {
+            top: 100px;
+            left: 280px;
+        }
+
+        #breast {
+            top: 155px;
+            left: 235px;
+        }
+
+        #belly {
+            top: 207px;
+            left: 230px;
+        }
+
+        #thigh {
+            top: 286px;
+            left: 230px;
+        }
+
+        #knee {
+            top: 331px;
+            left: 211px;
+        }
+
+        #lowerleg {
+            top: 373px;
+            left: 206px;
+        }
+
+        #toe {
+            top: 418px;
+            left: 214px;
+        }
+
+        #calf {
+            top: 382px;
+            left: 110px;
+        }
+
+        #ankle {
+            top: 354px;
+            left: 84px;
+        }
+
+        #foot {
+            top: 340px;
+            left: 35px;
+        }
+
+        #bottom {
+            top: 258px;
+            left: 88px;
+        }
+
+        #back {
+            top: 228px;
+            left: 102px;
+        }
+
+        #upperarm {
+            top: 202px;
+            left: 95px;
+        }
+
+        #forearm {
+            top: 165px;
+            left: 2px;
+        }

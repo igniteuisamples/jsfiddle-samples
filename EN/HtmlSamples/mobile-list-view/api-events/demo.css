@@ -1,0 +1,8 @@
+/*This css is to hide the sort/filter tray*/
+                .ui-iglist-tray-collapse {
+                    display: none;
+                }
+
+                .ui-iglist-tray-footer-collapsed {
+                    display: none;
+                }

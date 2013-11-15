@@ -1,0 +1,14 @@
+/* 
+            Redefine the styles from infragistics.theme.css that configure the appearance of 
+            selected and unselected slices.
+        */
+
+        .ui-funnel-slice-selected
+        {
+            opacity: 1;
+        }
+        .ui-funnel-slice-unselected
+        {
+            opacity: 0.4;
+            border: 1px solid black;
+        }
