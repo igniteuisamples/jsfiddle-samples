@@ -1,0 +1,39 @@
+#igRatingGhost .ui-igrating-vote {
+                background-image: url("http://jp.igniteui.com/images/samples/rating/ig-rating-ghost.png")!important;
+                background-position: -75px 0;
+                background-size: auto;
+            }
+
+            #igRatingGhost .ui-igrating-voteselected {
+                background-image: url("http://jp.igniteui.com/images/samples/rating/ig-rating-ghost.png")!important;
+                background-position: 0 0;
+                background-size: auto;
+            }
+
+            #igRatingGhost .ui-igrating-votehover {
+                background-image: url("http://jp.igniteui.com/images/samples/rating/ig-rating-ghost.png")!important;
+                background-position: -50px 0;
+                background-size: auto;
+            }
+
+            #igRatingBasket .ui-igrating-vote {
+                background-image: url("http://jp.igniteui.com/images/samples/rating/ig-rating-basket.png")!important;
+                background-position: -75px 0;
+                background-size: auto;
+            }
+
+            #igRatingBasket .ui-igrating-voteselected {
+                background-image: url("http://jp.igniteui.com/images/samples/rating/ig-rating-basket.png")!important;
+                background-position: 0 0;
+                background-size: auto;
+            }
+
+            #igRatingBasket .ui-igrating-votehover {
+                background-image: url("http://jp.igniteui.com/images/samples/rating/ig-rating-basket.png")!important;
+                background-position: -25px 0;
+                background-size: auto;
+            }
+
+            #igRatingGhost {
+                padding: 0 0 20px 0;
+            }

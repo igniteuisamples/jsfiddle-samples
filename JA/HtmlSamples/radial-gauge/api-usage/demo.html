@@ -1,0 +1,33 @@
+<script src="http://jp.igniteui.com/js/modernizr.min.js"></script>
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>
+<script src="http://cdn-na.infragistics.com/jquery/20132/latest/js/infragistics.core.js"></script>
+<script src="http://cdn-na.infragistics.com/jquery/20132/latest/js/infragistics.dv.js"></script>
+<script src="http://jp.igniteui.com/js/apiviewer.js"></script>
+<link href="http://cdn-na.infragistics.com/jquery/20132/latest/css/themes/infragistics/infragistics.theme.css" rel="stylesheet"></link>
+<link href="http://cdn-na.infragistics.com/jquery/20132/latest/css/structure/infragistics.css" rel="stylesheet"></link>
+<link href="http://jp.igniteui.com/css/apiviewer.css" rel="stylesheet" type="text/css"></link>
+<script src="http://cdn-na.infragistics.com/jquery/20132/latest/js/i18n/infragistics-ja.js"></script>
+
+<div id="radialGauge"></div>
+
+    <div class="api-explorer">  
+        <table style="width: 100%;">
+	        <tr>
+                <td><span>針値の入力/設定: </span></td>
+                <td style="text-align: right;">
+                    <input type="text" id="needleValue" name="format" value="" class="apiInput"></input>
+                    <span class="apiButton ui-corner-all" id="changeNeedleValue">針値の設定</span>
+                </td>
+            </tr>
+            <tr style="height:10px"></tr>
+            <tr>
+                <td><span>現在の針値の取得: </span></td>
+                <td style="text-align: right;">
+                    <span class="apiButton ui-corner-all" id="getNeedleValue">針値の取得</span>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="api-viewer"></div>

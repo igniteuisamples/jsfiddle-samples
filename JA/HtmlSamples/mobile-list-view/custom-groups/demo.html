@@ -1,0 +1,23 @@
+<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.3.0/jquery.mobile-1.3.0.min.js"></script>
+<script src="http://cdn-na.infragistics.com/jquery/20132/latest/mobile/js/infragistics.mobile.js"></script>
+<script src="http://jp.igniteui.com/js-data/nw-products"></script>
+<link href="http://code.jquery.com/mobile/1.3.0/jquery.mobile.structure-1.3.0.min.css" rel="stylesheet"></link>
+<link href="http://cdn-na.infragistics.com/jquery/20132/latest/mobile/css/structure/infragistics.mobile.css" rel="stylesheet"></link>
+<link href="http://cdn-na.infragistics.com/jquery/20132/latest/mobile/css/themes/ios/infragistics.mobile.theme.css" rel="stylesheet"></link>
+<script src="http://cdn-na.infragistics.com/jquery/20132/latest/js/i18n/infragistics-ja.js"></script>
+
+<div data-role="page">
+        
+        
+
+        <div data-role="content">
+
+            
+            
+
+            <ul id="basicFilteringListView" data-auto-generate-layouts="False" data-image-mode="icon" data-bindings='{"textKey":"ProductName","descriptionKey":"CategoryName","imageUrlKey":"ImageUrl"}' data-data-source="northwindProducts" data-image-mode="icon" data-role="iglistview" data-sorting="true" data-sorting-auto-generate-sort-presets="false" data-sorting-divider-template="${Name} - ${Count} {{if ${Count} == 1}}項目{{else}}項目{{/if}}" data-sorting-group-comparer-function="byFirstLetter" data-sorting-group-name-function="returnFirstLetter" data-sorting-name="Sorting" data-sorting-show-grouping="true" data-sorting-grouping-settings='{"enableCollapsibleDividers" : true }' data-sorting-sorted-fields='[ {"fieldName":"ProductName","direction":"asc"} ]' data-sorting-type="local">
+            </ul>
+
+        </div>
+    </div>

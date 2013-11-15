@@ -1,0 +1,21 @@
+<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.3.0/jquery.mobile-1.3.0.min.js"></script>
+<script src="http://cdn-na.infragistics.com/jquery/20132/latest/mobile/js/infragistics.mobile.js"></script>
+<script src="http://jp.igniteui.com/js-data/nw-products"></script>
+<link href="http://code.jquery.com/mobile/1.3.0/jquery.mobile.structure-1.3.0.min.css" rel="stylesheet"></link>
+<link href="http://cdn-na.infragistics.com/jquery/20132/latest/mobile/css/structure/infragistics.mobile.css" rel="stylesheet"></link>
+<link href="http://cdn-na.infragistics.com/jquery/20132/latest/mobile/css/themes/ios/infragistics.mobile.theme.css" rel="stylesheet"></link>
+<script src="http://cdn-na.infragistics.com/jquery/20132/latest/js/i18n/infragistics-ja.js"></script>
+
+<div data-role="page">
+
+        
+        
+
+        <div data-role="content">
+
+            <ul id="filterPresetsListView" data-role="iglistview" data-image-mode="icon" data-auto-generate-layouts="False" data-bindings-header-key="ProductName" data-bindings-description-key="CategoryName" data-bindings-count-key="InStock" data-bindings-image-url-key="ImageUrl" data-data-source="northwindProducts" data-data-source-type="json" data-filtering="true" data-filtering-name="Filtering" data-filtering-presets='[ {"text":"飲料","filteredFields":[ {"fieldName":"CategoryName","searchValue":"飲料","condition":"equals"} ]}, {"text":"乳製品","filteredFields":[ {"fieldName":"CategoryName","searchValue":"乳製品","condition":"contains"} ]}, {"text":"魚介類","filteredFields":[ {"fieldName":"CategoryName","searchValue":"魚介類","condition":"equals"} ]}, {"text":"菓子類","filteredFields":[ {"fieldName":"CategoryName","searchValue":"菓子類","condition":"equals"} ]} ]' data-filtering-search-bar-enabled="false" data-filtering-filter-presets-label="">
+            </ul>
+
+        </div>
+    </div>

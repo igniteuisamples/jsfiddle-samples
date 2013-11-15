@@ -1,0 +1,10 @@
+#updatedMessage
+        {
+            padding-top: 20px;
+        }
+
+        @media all and (max-width:360px) {
+            #gridProducts {
+                font-size: 14px;
+            }
+        }

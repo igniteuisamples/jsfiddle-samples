@@ -1,0 +1,94 @@
+<script src="http://jp.igniteui.com/js/modernizr.min.js"></script>
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>
+<script src="http://cdn-na.infragistics.com/jquery/20132/latest/js/infragistics.core.js"></script>
+<script src="http://cdn-na.infragistics.com/jquery/20132/latest/js/infragistics.dv.js"></script>
+<link href="http://cdn-na.infragistics.com/jquery/20132/latest/css/themes/infragistics/infragistics.theme.css" rel="stylesheet"></link>
+<link href="http://cdn-na.infragistics.com/jquery/20132/latest/css/structure/infragistics.css" rel="stylesheet"></link>
+<script src="http://cdn-na.infragistics.com/jquery/20132/latest/js/i18n/infragistics-ja.js"></script>
+
+<div id="radialgauge"></div>
+
+    <div>
+        <fieldset id="gaugeOptions">
+            <legend>オプション</legend>
+            <strong>目盛りのサイズ プロパティ</strong>
+				<br />
+				<div class="optionContainer">
+               開始範囲
+					<br />
+               <div id="tickmarkStartExtentSlider" class="sliderBounds"></div>
+               <label id="tickmarkStartExtentLabel">0.50</label>
+				</div>
+				<div class="optionContainer">
+                終了範囲
+					 <br />
+                <div id="tickmarkEndExtentSlider" class="sliderBounds"></div>
+                <label id="tickmarkEndExtentLabel">0.57</label>
+				</div>
+				<div class="optionContainer">
+                ストロークの太さ
+					 <br />
+                <div id="tickmarkStrokeThicknessSlider" class="sliderBounds"></div>
+                <label id="tickmarkStrokeThicknessLabel">3</label>
+				</div>
+				<br />
+            <strong>副目盛りのサイズ プロパティ</strong>
+				<br />
+				<div class="optionContainer">
+                開始範囲
+					 <br />
+                <div id="minorTickmarkStartExtentSlider" class="sliderBounds"></div>
+                <label id="minorTickmarkStartExtentLabel">0.57</label>
+				</div>
+				<div class="optionContainer">
+                終了範囲
+					 <br />
+                <div id="minorTickmarkEndExtentSlider" class="sliderBounds"></div>
+                <label id="minorTickmarkEndExtentSliderLabel">0.54</label>
+				</div>
+				<div class="optionContainer">
+                目盛り数
+					 <br />
+                <div id="tickCountSlider" class="sliderBounds"></div>
+                <label id="tickCountLabel">5</label>
+				</div>
+				<div class="optionContainer">
+                ストロークの太さ
+					 <br />
+                <div id="minorTickmarkStrokeThicknessSlider" class="sliderBounds"></div>
+                <label id="minorTickmarkStrokeThicknessLabel">1</label>
+				</div>
+				<br />
+            <strong>ブラシ</strong>
+				<br />
+				<div class="optionContainer">
+                目盛りのブラシ
+					 <br />
+                <select id="tickmarkBrushDropdown" class="selectBounds">
+                   <option value="red">Red</option>
+                   <option value="blue">Blue</option>
+                   <option value="green">Green</option>
+                   <option value="yellow">Yellow</option>
+                   <option value="black" selected="selected">Black</option>
+                </select>
+				</div>
+				<div class="optionContainer">
+                副目盛りのブラシ
+					 <br />
+                <select id="minorTickmarkBrushDropdown" class="selectBounds">
+                     <option value="red">Red</option>
+                     <option value="blue">Blue</option>
+                     <option value="green">Green</option>
+                     <option value="yellow">Yellow</option>
+                     <option value="black" selected="selected">Black</option>
+                </select>
+				</div>
+				<div class="optionContainer">
+                トランジション期間
+					 <br />
+                <div id="transitionDurationSlider" class="sliderBounds"></div>
+                <label id="transitionDurationLabel">2</label>
+				</div>
+        </fieldset>
+    </div>

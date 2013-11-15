@@ -1,0 +1,60 @@
+<script src="http://jp.igniteui.com/js/modernizr.min.js"></script>
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>
+<script src="http://cdn-na.infragistics.com/jquery/20132/latest/js/infragistics.core.js"></script>
+<script src="http://cdn-na.infragistics.com/jquery/20132/latest/js/infragistics.dv.js"></script>
+<link href="http://cdn-na.infragistics.com/jquery/20132/latest/css/themes/infragistics/infragistics.theme.css" rel="stylesheet"></link>
+<link href="http://cdn-na.infragistics.com/jquery/20132/latest/css/structure/infragistics.css" rel="stylesheet"></link>
+<script src="http://cdn-na.infragistics.com/jquery/20132/latest/js/i18n/infragistics-ja.js"></script>
+
+<div id="radialgauge"></div>
+
+    <div>
+        <fieldset id="gaugeOptions">
+            <legend>オプション</legend>
+				<div class="optionContainer">
+               開始範囲
+					<br />
+               <div id="scaleStartExtentSlider" class="sliderBounds"></div>
+               <label id="startExtentLabel">0.57</label>
+				</div>
+				<div class="optionContainer">
+               終了範囲
+					<br />
+               <div id="scaleEndExtentSlider" class="sliderBounds"></div>
+               <label id="endExtentLabel">0.57</label>
+				</div>
+				<div class="optionContainer">
+               スケールのオーバースイープ
+					<br />
+               <div id="scaleOversweepSlider" class="sliderBounds"></div>
+               <label id="scaleOversweepLabel">3</label>
+				</div>
+				<div class="optionContainer">
+               スイープの方向
+					<br />
+               <select id="scaleOversweepDropdown" class="selectBounds">
+                  <option value="clockwise" selected="selected">clockwise</option>
+                  <option value="counterclockwise">counterclockwise</option>
+               </select>
+				</div>
+				<div class="optionContainer">
+               スケール ブラシ
+					<br />
+               <select id="scaleBrushDropdown" class="selectBounds">
+                  <option value="red">レッド</option>
+                  <option value="yellow">イエロー</option>
+                  <option value="green">グリーン</option>
+                  <option value="blue">ブルー</option>
+                  <option value="#45ADD6" selected="selected">ライト ブルー</option>
+                  <option value="black">ブラック</option>
+               </select>
+				</div>
+				<div class="optionContainer">
+               トランジション期間
+					<br />
+               <div id="transitionDurationSlider" class="sliderBounds"></div>
+               <label id="transitionDurationLabel">2</label>
+				</div>
+        </fieldset>
+    </div>

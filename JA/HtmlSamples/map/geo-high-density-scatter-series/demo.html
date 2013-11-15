@@ -1,0 +1,86 @@
+<script src="http://jp.igniteui.com/js/modernizr.min.js"></script>
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>
+<script src="http://cdn-na.infragistics.com/jquery/20132/latest/js/infragistics.core.js"></script>
+<script src="http://cdn-na.infragistics.com/jquery/20132/latest/js/infragistics.dv.js"></script>
+<script src="http://jp.igniteui.com/js/apiviewer.js"></script>
+<script src="http://jp.igniteui.com/js-data/high-density-data"></script>
+<link href="http://cdn-na.infragistics.com/jquery/20132/latest/css/themes/infragistics/infragistics.theme.css" rel="stylesheet"></link>
+<link href="http://cdn-na.infragistics.com/jquery/20132/latest/css/structure/infragistics.css" rel="stylesheet"></link>
+<script src="http://cdn-na.infragistics.com/jquery/20132/latest/js/i18n/infragistics-ja.js"></script>
+
+<script id="cityTemplate" type="text/x-jquery-tmpl">
+        <table>
+            <tr><td class="tooltipHeading" colspan="2">${item.name}</td></tr>
+        </table>
+    </script>
+
+<div id="map"></div>
+    <br/>
+    
+    <div>
+        <fieldset id="chartOptions">
+            <legend>マップ オプション</legend>
+            <br />            
+            <div class="optionContainer">
+                解像度
+                <br />
+                <div id="resolutionSlider" class="sliderBounds"></div>
+                <label id="resolutionLabel">0</label>
+            </div>
+           
+           <div class="optionContainer">
+                ヒートの最小値
+                <br />
+                <div id="minimumHeatValueSlider" class="sliderBounds"></div>
+                <label id="minimumHeatValueLabel">0</label>
+            </div>
+            <div class="optionContainer">
+                ヒートの最大値
+                <br />
+                <div id="maximumHeatValueSlider" class="sliderBounds"></div>
+                <label id="maximumHeatValueLabel">5</label>
+            </div>
+
+            <br />
+
+            <div class="optionContainer">
+                ポイント範囲
+                <br />
+                <div id="pointExtentSlider" class="sliderBounds"></div>
+                 <label id="pointExtentLabel">1</label>
+            </div>
+            
+            <div class="optionContainer">
+                ヒートの最小色
+                <br />
+                <select id="minimumHeatColorDropDown" class="selectBounds">
+                    <option value="red">Red</option>
+                    <option value="blue">Blue</option>
+                    <option value="green">Green</option>
+                    <option value="yellow">Yellow</option>
+                    <option value="black" selected="selected">Black</option>
+                </select>
+            </div>
+            <div class="optionContainer">
+                ヒートの最大色
+                <br />
+                <select id="maximumHeatColorDropDown" class="selectBounds">
+                    <option value="red" selected="selected">Red</option>
+                    <option value="blue">Blue</option>
+                    <option value="green">Green</option>
+                    <option value="yellow">Yellow</option>
+                    <option value="black">Black</option>
+                </select>
+            </div>
+             <br />
+            <div class="optionContainer">
+                <input type="checkbox" id="enableMouseOverCheckBox" checked="checked"></input>マウス オーバーの有効化<br />
+            </div>
+             <div class="optionContainer">
+                <input type="checkbox" id="useBruteForceCheckBox"></input>ブルート フォースの使用<br />
+             </div>  
+            
+        </fieldset>
+    </div>
+    <br />

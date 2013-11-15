@@ -1,0 +1,54 @@
+.standard-grid {
+            margin-bottom: 20px;
+        }
+
+        .mr10 {
+            margin-right: 10px;
+        }
+
+        .standard-grid {
+            position: relative;
+            width: 500px;
+            margin-left: -250px;
+            left: 50%;
+        }
+
+        .standard-grid td {
+            float:left;
+            width: 50%;
+            margin: 0;
+            padding: 0;
+            border: none;
+        }
+
+        #submitEvent, #formSubmit {
+            float: left;
+            margin-right: 20px;
+        }
+
+        #formSubmit {
+            float: left;
+        }
+
+        .buttons {
+            position: relative;
+            width: 270px;
+            margin-left: -135px;
+            left: 50%;
+            overflow: hidden;
+        }
+
+        .buttons div {
+            overflow: hidden;
+        }
+
+        @media all and (max-width: 600px) {
+            .standard-grid {
+                width: 220px;
+                margin-left: -110px;
+            }
+
+            .standard-grid td {
+                width: 100%;
+            }
+        }

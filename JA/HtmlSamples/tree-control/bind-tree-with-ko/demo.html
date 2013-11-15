@@ -1,0 +1,93 @@
+<script src="http://jp.igniteui.com/js/modernizr.min.js"></script>
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>
+<script src="http://cdn-na.infragistics.com/jquery/20132/latest/js/infragistics.core.js"></script>
+<script src="http://cdn-na.infragistics.com/jquery/20132/latest/js/infragistics.lob.js"></script>
+<script src="http://jp.igniteui.com/js/external/knockout-latest.js"></script>
+<script src="http://jp.igniteui.com/js/external/knockout.mapping-latest.js"></script>
+<script src="http://cdn-na.infragistics.com/jquery/20132/latest/js/extensions/infragistics.ui.tree.knockout-extensions.js"></script>
+<script src="http://cdn-na.infragistics.com/jquery/20132/latest/js/extensions/infragistics.ui.editors.knockout-extensions.js"></script>
+<link href="http://cdn-na.infragistics.com/jquery/20132/latest/css/themes/infragistics/infragistics.theme.css" rel="stylesheet"></link>
+<link href="http://cdn-na.infragistics.com/jquery/20132/latest/css/structure/infragistics.css" rel="stylesheet"></link>
+<script src="http://cdn-na.infragistics.com/jquery/20132/latest/js/i18n/infragistics-ja.js"></script>
+
+<div><span class="message">データをサーバーから取得しています...</span></div>
+    <div class="container">
+        <div id="tree" data-bind="igTree: {
+		    dataSource: data,
+		    width: '100%',
+            dataSourceType: 'json',
+            singleBranchExpand: true,
+		    bindings: {
+			    textKey: 'CategoryName',
+			    valueKey: 'ID',
+                childDataProperty: 'Products',
+                bindings: {
+                    textKey: 'ProductName',
+                    valueKey: 'ProductID'
+                }
+		    }
+	    }"></div>
+    </div>
+
+    <div class="container">
+        <div id="categoryEditorsContainer" tabindex="0">
+            <h4>カテゴリ</h4>
+            <table>
+                <colgroup>
+                    <col span="1" style="min-width: 30%;">
+                    <col span="1" style="width: 68%;">
+                </colgroup>
+                <tr>
+                    <td>名前:</td>
+                    <td><div data-bind="igTextEditor: { 
+                            value: Category().CategoryName, 
+                            updateMode: 'immediate' 
+                        }"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>説明:</td>
+                    <td><div data-bind="igTextEditor: { value: Category().Description }"></div></td>
+                </tr>
+                <tr>
+                    <td>製品数:</td>
+                    <td><div data-bind="igNumericEditor: { value: Category().ProductCount }"></div></td>
+                </tr>
+            </table>
+        </div>
+
+        <div id="productEditorsContainer" tabindex="1">
+            <h4>製品</h4>
+            <table>
+                <colgroup>
+                    <col span="1" style="min-width: 30%;">
+                    <col span="1" style="width: 68%;">
+                </colgroup>
+                <tr>
+                    <td>名前:</td>
+                    <td><div data-bind="igTextEditor: { value: Product().ProductName }"></div></td>
+                </tr>
+                <tr>
+                    <td>数量:</td>
+                    <td><div data-bind="igNumericEditor: { value: Product().QuantityPerUnit }"></div></td>
+                </tr>
+                <tr>
+                    <td>単価:</td>
+                    <td><div data-bind="igCurrencyEditor: { value: Product().UnitPrice }"></div></td>
+                </tr>
+                <tr>
+                    <td>在庫数:</td>
+                    <td><div data-bind="igNumericEditor: { value: Product().UnitsInStock }"></div></td>
+                </tr>
+                <tr>
+                    <td>入荷待ち:</td>
+                    <td><div data-bind="igNumericEditor: { value: Product().UnitsOnOrder }"></div></td>
+                </tr>
+                <tr>
+                    <td>製造中止</td>
+                    <td><input type="checkbox" data-bind="checked: Product().Discontinued"></input></td>
+                </tr>
+            </table>
+        </div>
+    </div>

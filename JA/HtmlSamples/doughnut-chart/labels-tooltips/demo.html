@@ -1,0 +1,71 @@
+<script src="http://jp.igniteui.com/js/modernizr.min.js"></script>
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>
+<script src="http://cdn-na.infragistics.com/jquery/20132/latest/js/infragistics.core.js"></script>
+<script src="http://cdn-na.infragistics.com/jquery/20132/latest/js/infragistics.dv.js"></script>
+<link href="http://cdn-na.infragistics.com/jquery/20132/latest/css/themes/infragistics/infragistics.theme.css" rel="stylesheet"></link>
+<link href="http://cdn-na.infragistics.com/jquery/20132/latest/css/structure/infragistics.css" rel="stylesheet"></link>
+<script src="http://cdn-na.infragistics.com/jquery/20132/latest/js/i18n/infragistics-ja.js"></script>
+
+<script id="budgetTooltipTemplate" type="text/x-ig-tmpl">        
+        <div >
+            <span id="tooltipValue" style="font-family: Arial; font-size: 11px;">${item.Budget}</span>    
+        </div>       
+    </script>
+<script id="depTooltipTemplate" type="text/x-ig-tmpl">        
+        <div >
+            <span id="tooltipValue" style="font-family: Arial; font-size: 11px;">${item.DepartmentSize}</span>    
+        </div>       
+    </script>
+
+<div id="chart"></div>
+
+     <br />
+     
+     <table class="options" style="max-width: 550px; width: 100%;">
+        <tr>            
+            <td>
+                開始角度
+            </td>
+            <td class="optionTdWidth">
+                <select id="angleSeriesName" class="optionTdWidth" style="margin-bottom: 7px;">
+                    <option value="Budget" selected="selected">予算</option>
+                    <option value="DepartmentSize">部署サイズ</option>                    
+                </select>
+                <div id="angle" class="slider optionTdWidth"></div>
+            </td>
+        </tr>
+        <tr>
+            <td>InnerExtent:</td>
+            <td class="optionTdWidth">
+                <div id="innerExtent" class="slider optionTdWidth"></div>
+            </td>
+        </tr>               
+        <tr>
+            <td>予算シリーズのラベル位置:</td>
+            <td class="optionTdWidth">
+                <select id="labelPosition" class="optionTdWidth">
+                    <option value="center" selected="selected">中央</option>
+                    <option value="insideEnd">内部の終了位置</option>                    
+                    <option value="bestFit">最適</option>
+                </select>               
+            </td>
+        </tr>
+         <tr>
+            <td>部署サイズ シリーズのラベル位置:</td>
+            <td class="optionTdWidth">
+                <select id="labelPosition2" class="optionTdWidth">
+                    <option value="center" selected="selected">中央</option>
+                    <option value="insideEnd">内部の終了位置</option>
+                    <option value="outsideEnd">外部の終了位置</option>
+                    <option value="bestFit">最適</option>
+                </select>               
+            </td>
+        </tr>
+        <tr>
+            <td>ラベルの拡張 (外部の終了位置)</td>
+            <td class="optionTdWidth">
+                <div id="labelExtent" class="slider optionTdWidth"></div>
+            </td>
+        </tr>
+    </table>

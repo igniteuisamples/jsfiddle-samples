@@ -1,0 +1,38 @@
+<script src="http://jp.igniteui.com/js/modernizr.min.js"></script>
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>
+<script src="http://cdn-na.infragistics.com/jquery/20132/latest/js/infragistics.core.js"></script>
+<script src="http://cdn-na.infragistics.com/jquery/20132/latest/js/infragistics.dv.js"></script>
+<link href="http://cdn-na.infragistics.com/jquery/20132/latest/css/themes/infragistics/infragistics.theme.css" rel="stylesheet"></link>
+<link href="http://cdn-na.infragistics.com/jquery/20132/latest/css/structure/infragistics.css" rel="stylesheet"></link>
+<script src="http://cdn-na.infragistics.com/jquery/20132/latest/js/i18n/infragistics-ja.js"></script>
+
+<div id="bulletgraph"></div>
+
+    
+    
+    <fieldset id="graphOptions" style="margin-top: 30px">
+        <legend>オプション</legend>
+        <table>
+            <tr>
+                <td>設定の選択</td>
+                <td>
+                    <select id="graphSettings">
+                        <option value="setting1();" selected="selected">設定 1</option>
+                        <option value="setting2();">設定 2</option>
+                        <option value="setting3();">設定 3</option>
+                    </select>
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>トランジション期間</td>
+                <td>
+                    <div id="transitionDurationSlider" style="width: 100px; margin: 12px 40px 12px 12px"></div>
+                </td>
+                <td>
+                    <label id="transitionDurationLabel">1000</label>
+                </td>
+            </tr>
+        </table>
+    </fieldset>

@@ -1,0 +1,17 @@
+<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.3.0/jquery.mobile-1.3.0.min.js"></script>
+<script src="http://cdn-na.infragistics.com/jquery/20132/latest/mobile/js/infragistics.mobile.js"></script>
+<link href="http://code.jquery.com/mobile/1.3.0/jquery.mobile.structure-1.3.0.min.css" rel="stylesheet"></link>
+<link href="http://cdn-na.infragistics.com/jquery/20132/latest/mobile/css/structure/infragistics.mobile.css" rel="stylesheet"></link>
+<link href="http://cdn-na.infragistics.com/jquery/20132/latest/mobile/css/themes/ios/infragistics.mobile.theme.css" rel="stylesheet"></link>
+<script src="http://cdn-na.infragistics.com/jquery/20132/latest/js/i18n/infragistics-ja.js"></script>
+
+<div data-role="page">
+
+        <div data-role="content">
+
+            <ul data-role="iglistview" data-odata="true" data-auto-generate-layouts="False" data-response-data-type="jsonp" data-response-data-key="d.results" data-bindings-header-key="ProductName" data-bindings-primary-key="ID" data-bindings-description-key="CategoryName" data-bindings-count-key="UnitsInStock" data-bindings-image-url-key="CategoryImageUrl" data-data-source-url="http://labs.infragistics.com/igniteui/api/products?callback=?" data-filtering="true" data-filtering-search-bar-enabled="false" data-filtering-name="Filtering" data-filtering-presets="[ {&quot;text&quot;:&quot;在庫がありません&quot;,&quot;filteredFields&quot;:[ {&quot;fieldName&quot;:&quot;UnitsInStock&quot;,&quot;searchValue&quot;:&quot;0&quot;,&quot;condition&quot;:&quot;equals&quot;} ]}, {&quot;text&quot;:&quot;飲料&quot;,&quot;filteredFields&quot;:[ {&quot;fieldName&quot;:&quot;CategoryName&quot;,&quot;searchValue&quot;:&quot;Beverages&quot;,&quot;condition&quot;:&quot;equals&quot;} ]} ]" data-filtering-type="remote" data-generate-compact-jsonresponse="false" data-image-mode="icon" data-sorting="true" data-sorting-auto-generate-sort-presets="false" data-sorting-name="Sorting" data-sorting-presets="[ {&quot;text&quot;:&quot;カテゴリ&quot;,&quot;sortedFields&quot;:[ {&quot;fieldName&quot;:&quot;CategoryName&quot;,&quot;direction&quot;:&quot;asc&quot;} ]}, {&quot;text&quot;:&quot;製品名&quot;,&quot;sortedFields&quot;:[ {&quot;fieldName&quot;:&quot;ProductName&quot;,&quot;direction&quot;:&quot;asc&quot;} ]} ]" data-sorting-sort-url-key-asc-value="asc" data-sorting-sort-url-key-desc-value="desc" data-sorting-type="remote" id="remoteListView">
+            </ul>
+
+        </div>
+    </div>

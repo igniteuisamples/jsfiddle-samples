@@ -1,0 +1,62 @@
+<script src="http://jp.igniteui.com/js/modernizr.min.js"></script>
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>
+<script src="http://cdn-na.infragistics.com/jquery/20132/latest/js/infragistics.core.js"></script>
+<script src="http://cdn-na.infragistics.com/jquery/20132/latest/js/infragistics.lob.js"></script>
+<link href="http://cdn-na.infragistics.com/jquery/20132/latest/css/themes/infragistics/infragistics.theme.css" rel="stylesheet"></link>
+<link href="http://cdn-na.infragistics.com/jquery/20132/latest/css/structure/infragistics.css" rel="stylesheet"></link>
+<script src="http://cdn-na.infragistics.com/jquery/20132/latest/js/i18n/infragistics-ja.js"></script>
+
+<div style="width: 100%; overflow: hidden;">
+        <div class="videoPlayerContainer">
+            <div id="videoPlayer1">
+            </div>
+        </div>
+        <div id="rightControls" class="controlsContainer" style="width: 323px;">
+            <div id="controls" class="leftContainer" style="width: 155px;">
+                <center>
+						<button id="btnPlay" class="buttons" type="button">
+							再生
+						</button>
+						<button id="btnAddScreenShot" class="buttons" type="button">
+							スクリーンショットの追加
+						</button>
+						<div style="width: 120px; height: 20px; margin-top: 10px;">
+							<div style="width: 40px; float: left; margin-right: 10px; font-size: small;">
+								音量
+							</div>
+							<div id="slider" style="width: 60px; float: left; background-color: White; margin-top: 7px;">
+							</div>
+							<div style="clear: both;">
+							</div>
+						</div>
+					</center>
+                <p id="currentTime">
+                    現在の値: <span style="display: inline; color: blue;">0</span>
+                </p>
+                <p id="html5Video">
+                    HTML5 ビデオ：
+                </p>
+                <p id="h264Video">
+                    H264/AVC ビデオ：
+                </p>
+                <p id="oggVideo">
+                    Ogg/Theora ビデオ：
+                </p>
+                <p id="webMVideo">
+                    WebM ビデオ：
+                </p>
+            </div>
+            <div id="screenShots" class="rightContainer">
+                <center>
+						<p style="font-weight: bold;">
+							スクリーンショット
+						</p>
+					</center>
+            </div>
+        </div>
+        <div style="clear: both;">
+        </div>
+
+        
+</div>

@@ -1,0 +1,22 @@
+/* Redefine the styles from infragistics.theme.css that define fill and border colors for slices */
+        .customCss .ui-chart-palette-1 { border-color: #00AADE; background-color: #00AADE }
+        .customCss .ui-chart-palette-2 { border-color: #4B4B4D; background-color: #4B4B4D }
+        .customCss .ui-chart-palette-3 { border-color: #FCB025; background-color: #FCB025 }
+        .customCss .ui-chart-palette-4 { border-color: #EC6C2B; background-color: #EC6C2B }
+        .customCss .ui-chart-palette-5 { border-color: #36C0F3; background-color: #36C0F3 }
+        .customCss .ui-chart-palette-6 { border-color: #5B17A8; background-color: #5B17A8 }
+        .customCss .ui-funnel { 
+            font-family: verdana;
+				font-weight: bold;
+				font-style: italic;
+            font-size: 12px;
+            color: #d00000;
+        }
+        .customCss .ui-funnel-slice { color: yellow; }
+        .customCss .ui-funnel-tooltip {
+            font-family: 'Courier New';
+				background: #e0e0f0;
+				border: 1px solid #8080e0;
+            font-size: 18px;
+            color: #8000a0;
+        }

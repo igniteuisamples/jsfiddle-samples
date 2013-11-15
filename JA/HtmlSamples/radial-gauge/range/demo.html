@@ -1,0 +1,80 @@
+<script src="http://jp.igniteui.com/js/modernizr.min.js"></script>
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>
+<script src="http://cdn-na.infragistics.com/jquery/20132/latest/js/infragistics.core.js"></script>
+<script src="http://cdn-na.infragistics.com/jquery/20132/latest/js/infragistics.dv.js"></script>
+<link href="http://cdn-na.infragistics.com/jquery/20132/latest/css/themes/infragistics/infragistics.theme.css" rel="stylesheet"></link>
+<link href="http://cdn-na.infragistics.com/jquery/20132/latest/css/structure/infragistics.css" rel="stylesheet"></link>
+<script src="http://cdn-na.infragistics.com/jquery/20132/latest/js/i18n/infragistics-ja.js"></script>
+
+<div id="radialgauge"></div>
+
+    <div>
+        <fieldset id="gaugeOptions">
+            <legend>オプション</legend>
+				<div class="optionContainer">
+               内部の開始範囲
+					<br />
+               <div id="innerStartExtentSlider" class="sliderBounds"></div>
+               <label id="innerStartExtentLabel">0.5</label>
+				</div>
+				<div class="optionContainer">
+               内部の終了範囲
+					<br />
+               <div id="innerEndExtentSlider" class="sliderBounds"></div>
+               <label id="innerEndExtentLabel">0.5</label>
+				</div>
+				<div class="optionContainer">
+               外部の開始範囲
+					<br />
+               <div id="outerStartExtentSlider" class="sliderBounds"></div>
+               <label id="outerStartExtentLabel">0.72</label>
+				</div>
+				<div class="optionContainer">
+               外部の終了範囲
+					<br />
+               <div id="outerEndExtentSlider" class="sliderBounds"></div>
+               <label id="outerEndExtentLabel">.78</label>
+				</div>
+				<div class="optionContainer">
+               開始値
+					<br />
+               <div id="startValueSlider" class="sliderBounds"></div>
+               <label id="startValueLabel">70</label>
+				</div>
+				<div class="optionContainer">
+               終了値
+               <div id="endValueSlider" class="sliderBounds"></div>
+               <label id="endValueLabel">100</label>
+				</div>
+            <div class="optionContainer">
+                トランジション期間
+                <br />
+                <div id="transitionDurationSlider" class="sliderBounds"></div>
+                <label id="transitionDurationLabel">2</label>
+            </div>
+            <div class="optionContainer">
+                ブラシ
+                <br />
+                <select id="brushDropdown" class="selectBounds">
+                    <option value="red">Red</option>
+                    <option value="blue">Blue</option>
+                    <option value="green">Green</option>
+                    <option value="yellow">Yellow</option>
+                    <option value="black" selected="selected">Black</option>
+                </select>
+            </div>
+            <div class="optionContainer">
+                アウトライン ブラシ
+                <br />
+                <select id="outlineBrushDropdown" class="selectBounds">
+                    <option value="red">Red</option>
+                    <option value="blue">Blue</option>
+                    <option value="green">Green</option>
+                    <option value="yellow">Yellow</option>
+                    <option value="black" selected="selected">Black</option>
+                </select>
+            </div>
+
+        </fieldset>
+    </div>

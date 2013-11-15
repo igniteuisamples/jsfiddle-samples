@@ -1,0 +1,48 @@
+<script src="http://jp.igniteui.com/js/modernizr.min.js"></script>
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>
+<script src="http://cdn-na.infragistics.com/jquery/20132/latest/js/infragistics.core.js"></script>
+<script src="http://cdn-na.infragistics.com/jquery/20132/latest/js/infragistics.dv.js"></script>
+<link href="http://cdn-na.infragistics.com/jquery/20132/latest/css/themes/infragistics/infragistics.theme.css" rel="stylesheet"></link>
+<link href="http://cdn-na.infragistics.com/jquery/20132/latest/css/structure/infragistics.css" rel="stylesheet"></link>
+<link href="http://jp.igniteui.com/css/apiviewer.css" rel="stylesheet" type="text/css"></link>
+<script src="http://cdn-na.infragistics.com/jquery/20132/latest/js/i18n/infragistics-ja.js"></script>
+
+<div id="barcode" style="max-width: 300px"></div>
+
+    
+    
+    <fieldset id="barcodeOptions" style="margin: 30px 20px 0px 0px;">
+        <legend>オプション</legend>
+        <div>
+            <div>
+                バー ブラシ
+                <select id="barBrush" style="width: 100px; margin: 12px">
+                    <option>Black</option>
+                    <option>Blue</option>
+                    <option>Green</option>
+                </select>
+            </div>
+            <div>
+                バッキング ブラシ
+                <select id="backingBrush" style="width: 100px; margin: 12px">
+                    <option>White</option>
+                    <option>Yellow</option>
+                    <option>Gray</option>
+                </select>
+            </div>
+            <div>
+                バッキング アウトライン
+                <select id="backingOutline" style="width: 100px; margin: 12px">
+                    <option>Transparent</option>
+                    <option>Black</option>
+                    <option>Green</option>
+                </select>
+            </div>
+            <div style="margin: 12px 0px;">
+                <div style="float: left; margin: 0 5px">バッキングのストロークの太さ</div>
+                <div id="backingStrokeThickness" style="width: 100px; float: left; margin: 10px 15px"></div>
+                <label id="backingStrokeThicknessLabel">1</label>
+            </div>
+        </div>
+    </fieldset>

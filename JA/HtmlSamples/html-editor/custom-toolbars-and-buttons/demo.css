@@ -1,0 +1,17 @@
+#htmlEditor {
+            margin-bottom: 10px;
+        }
+        #feedback 
+        {
+            padding-left: 10px;
+            color: Red;
+        }
+        span.ui-icon.ui-icon-contact
+        {
+            background-image: url("http://jp.igniteui.com/images/samples/html-editor/ui-icons_222222_256x240.png"); 
+            background-position: -192px -128px;
+        }
+		/* Override sample's browser styles */
+    	#htmlEditor h1, #htmlEditor h2, #htmlEditor h3, #htmlEditor h4, #htmlEditor h5, #htmlEditor h6 { margin: 0px; }
+    	#htmlEditor h1 { font-size: 1.9em; }
+		#sampleContainer { overflow: visible; }

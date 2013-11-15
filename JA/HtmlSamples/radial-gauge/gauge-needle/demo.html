@@ -1,0 +1,132 @@
+<script src="http://jp.igniteui.com/js/modernizr.min.js"></script>
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>
+<script src="http://cdn-na.infragistics.com/jquery/20132/latest/js/infragistics.core.js"></script>
+<script src="http://cdn-na.infragistics.com/jquery/20132/latest/js/infragistics.dv.js"></script>
+<link href="http://cdn-na.infragistics.com/jquery/20132/latest/css/themes/infragistics/infragistics.theme.css" rel="stylesheet"></link>
+<link href="http://cdn-na.infragistics.com/jquery/20132/latest/css/structure/infragistics.css" rel="stylesheet"></link>
+<script src="http://cdn-na.infragistics.com/jquery/20132/latest/js/i18n/infragistics-ja.js"></script>
+
+<div id="radialgauge"></div>
+
+    <div>
+        <fieldset id="gaugeOptions">
+            <legend>オプション</legend>
+            <strong>ラジアル ゲージ オプション</strong>
+				<br />
+				<div class="optionContainer">
+					針の値
+					<br />
+					<div id="needleValueSlider" class="sliderBounds"></div>
+					<label id="needleValueLabel">60</label>
+				</div>
+				<div class="optionContainer">
+               開始範囲
+					<br />
+               <div id="startExtentSlider" class="sliderBounds"></div>
+               <label id="startExtentLabel">0</label>
+				</div>
+				<div class="optionContainer">
+              終了範囲
+				  <br />
+              <div id="endExtentSlider" class="sliderBounds"></div>
+              <label id="endExtentLabel">0.48</label>
+				</div>
+				<div class="optionContainer">
+              開始幅の比率
+					<br />
+              <div id="startWidthRatioSlider" class="sliderBounds"></div>
+              <label id="startWidthRatioLabel">0</label>
+				</div>
+				<div class="optionContainer">
+               終了幅の比率
+					<br />
+               <div id="endWidthRatioSlider" class="sliderBounds"></div>
+               <label id="endWidthRatioLabel">0</label>
+				</div>
+				<br />
+            <strong>針の図形</strong>
+				<br />
+				<div class="optionContainer">
+               針の図形
+					<br />
+               <select id="needleShapeDropdown" class="selectBounds">
+                   <option value="none">None</option>
+                   <option value="rectangle">rectangle</option>
+                   <option value="triangle">triangle</option>
+                   <option value="needle" selected="selected">needle</option>
+                   <option value="trapezoid">trapezoid</option>
+                   <option value="rectangleWithBulb">rectangleWithBulb</option>
+                   <option value="triangleWithBulb">triangleWithBulb</option>
+                   <option value="needleWithBulb">needleWithBulb</option>
+                   <option value="trapezoidWithBulb">trapezoidWithBulb</option>
+               </select>
+				</div>
+				<div class="optionContainer">
+                ピボット図形
+					 <br />
+                <select id="pivotShapesDropdown" class="selectBounds">
+                   <option value="none">None</option>
+                   <option value="circle">circle</option>
+                   <option value="circleWithHole">circleWithHole</option>
+                   <option value="circleOverlay" selected="selected">circleOverlay</option>
+                   <option value="circleOverlayWithHole">circleOverlayWithHole</option>
+                   <option value="circleUnderlay">circleUnderlay</option>
+                   <option value="circleUnderlayWithHole">circleUnderlayWithHole</option>
+                </select>
+				</div>
+				<br />
+            <strong>針ブラシ</strong>
+				<br />
+				<div class="optionContainer">
+                針ブラシ
+					 <br />
+                <select id="needleBrushDropdown" class="selectBounds">
+                   <option value="red">Red</option>
+                   <option value="blue">Blue</option>
+                   <option value="green">Green</option>
+                   <option value="yellow">Yellow</option>
+                   <option value="black" selected="selected">Black</option>
+                </select>
+				</div>
+				<div class="optionContainer">
+               針のアウトライン
+					<br />
+               <select id="needleOutlineDropdown" class="selectBounds">
+                   <option value="red">Red</option>
+                   <option value="blue">Blue</option>
+                   <option value="green">Green</option>
+                   <option value="yellow">Yellow</option>
+                   <option value="black" selected="selected">Black</option>
+               </select>
+				</div>
+				<div class="optionContainer">
+               ピボット ブラシ
+					<br />
+               <select id="pivotBrushDropdown" class="selectBounds">
+                   <option value="red">Red</option>
+                   <option value="blue">Blue</option>
+                   <option value="green">Green</option>
+                   <option value="yellow">Yellow</option>
+                   <option value="black" selected="selected">Black</option>
+               </select>
+				</div>
+				<div class="optionContainer">
+               ピボット アウトライン
+					<br />
+               <select id="pivotOutlineDropdown" class="selectBounds">
+                   <option value="red">Red</option>
+                   <option value="blue">Blue</option>
+                   <option value="green">Green</option>
+                   <option value="yellow">Yellow</option>
+                   <option value="black" selected="selected">Black</option>
+               </select>
+				</div>
+				<br />
+            <strong>トランジション期間:</strong>
+				<div class="optionContainer">
+               <div id="transitionDurationSlider" class="sliderBounds"></div>
+               <label id="transitionDurationLabel">2</label>
+				</div>
+        </fieldset>
+    </div>
