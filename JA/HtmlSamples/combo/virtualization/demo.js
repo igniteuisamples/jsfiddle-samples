@@ -7,7 +7,7 @@ $(function () {
                 responseDataKey: "d.results",
                 valueKey: "ProductName",
                 width: "270px",
-                dataSource: 'http://labs.infragistics.com/igniteui/api/invoices?&$top=1500&callback=?'
+                dataSource: 'http://igniteui.com/api/invoices?&$top=1500&callback=?'
             });
 
         });
