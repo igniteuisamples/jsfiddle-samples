@@ -98,8 +98,11 @@ $(function () {
             $("#emphasize").igButton();
             $("#print").igButton();
 
+            var height = $('html').hasClass('touch') ? 500 : 350;
+
             $("#htmlEditor").igHtmlEditor({
-                width: "98%"
+                width: "98%",
+                height: height
             });
 
             $("#htmlEditor").igHtmlEditor("setContent", "", "html");

@@ -1,6 +1,21 @@
 .optionTdWidth {
             width: 85px;
         }
+
         .options td {
             padding-bottom: 7px;
+        }
+        .title {
+            text-align: center;
+            width: 100%;
+            font:16px Arial, Helvetica, sans-serif;
+        }
+        .subtitle {
+            text-align: center;
+            width: 100%;
+            margin: 10px 0 20px 0;
+            font:12px Arial, Helvetica, sans-serif;
+        }
+        .bold {
+            font-weight: bold;
         }

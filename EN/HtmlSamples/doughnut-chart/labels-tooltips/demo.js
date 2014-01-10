@@ -1,5 +1,4 @@
 $(function () {
-
             var data = [
                 { "DepartmentSize": 43, "Budget": 60, "Label": "Administration" },
                 { "DepartmentSize": 29, "Budget": 40, "Label": "Sales" },
@@ -7,7 +6,6 @@ $(function () {
                 { "DepartmentSize": 22, "Budget": 40, "Label": "Marketing" },
                 { "DepartmentSize": 13, "Budget": 60, "Label": "Development" },
                 { "DepartmentSize": 34, "Budget": 20, "Label": "Support" }];
-
 
             $("#chart").igDoughnutChart({
                 width: "100%",
@@ -29,22 +27,24 @@ $(function () {
                             labelMemberPath: "Label",
                             valueMemberPath: "DepartmentSize",
                             dataSource: data,
-                            labelsPosition: "center",
+                            labelsPosition: "outsideEnd",
                             showTooltip: true,
-                            tooltipTemplate: "depTooltipTemplate"
+                            tooltipTemplate: "<div class='ui-chart-tooltip'><div class='bold'>${item.Label}</div><div>Department Size: <label class='bold'>${item.DepartmentSize}</label></div></div>"
                         }
                     ]
-
             });
 
-            
-            $("#angle").slider({
+            $("#angleBudget").slider({
                 slide: function (event, ui) {
-                    var seriesName = $("#angleSeriesName").val();                    
-                    if (seriesName == "Budget")
-                        $("#chart").igDoughnutChart("option", "series", [{ name: seriesName, startAngle: ui.value }]);
-                    else
-                        $("#chart").igDoughnutChart("updateSeries", { name: seriesName, startAngle: ui.value });
+                    $("#chart").igDoughnutChart("option", "series", [{ name: "Budget", startAngle: ui.value }]);
+                },
+                min: 0,
+                max: 360
+            });
+
+            $("#angleDepartmentSize").slider({
+                slide: function (event, ui) {
+                    $("#chart").igDoughnutChart("updateSeries", { name: "DepartmentSize", startAngle: ui.value });
                 },
                 min: 0,
                 max: 360
@@ -55,7 +55,7 @@ $(function () {
                     $("#chart").igDoughnutChart("option", "innerExtent", ui.value);
                 },
                 min: 0,
-                max: 100,
+                max: 80,
                 value: 20
             });
 
@@ -67,8 +67,6 @@ $(function () {
                 max: 50,
                 value: 10
             });
-            //  jQuery UI 1.7 does not apply disabled styles on initialization
-            $("#labelExtent").slider("option", "disabled", true);
 
             $("#explodedRadius").slider({
                 slide: function (event, ui) {
@@ -78,10 +76,12 @@ $(function () {
                 max: 100,
                 value: 20
             });
+            
             $("#labelPosition").change(function (e) {
                 var labelPosition = $(this).val();
-                $("#chart").igDoughnutChart("updateSeries", { name: "Budget", labelsPosition: labelPosition });                
+                $("#chart").igDoughnutChart("updateSeries", { name: "Budget", labelsPosition: labelPosition });
             });
+            
             $("#labelPosition2").change(function (e) {
                 var labelPosition = $(this).val();
                 $("#chart").igDoughnutChart("updateSeries", { name: "DepartmentSize", labelsPosition: labelPosition });

@@ -54,9 +54,9 @@ $(function () {
                 }
             });
 
-            $('#igButtonSplitterSecondPanelsize').on({
+            $('#igButtonSplitterSecondPanelSize').on({
                 click: function () {
-                    $("#splitter").igSplitter("setSecondPanelSize").text($("#secondPanelSize").val());
+                    $("#splitter").igSplitter("setSecondPanelSize", $("#secondPanelSize").val());
                 }
             });
 

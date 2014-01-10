@@ -1,0 +1,4 @@
+/* Hides the clear button for IE */
+                input[data-type="search"]::-ms-clear {
+                    display: none;
+                }

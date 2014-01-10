@@ -7,21 +7,13 @@
 <link href="http://cdn-na.infragistics.com/jquery/20132/latest/css/structure/infragistics.css" rel="stylesheet"></link>
 <script src="http://cdn-na.infragistics.com/jquery/20132/latest/js/i18n/infragistics-ja.js"></script>
 
-<table>
-        <tr>
-            <td style="width: 550px;">
-                
-                <div id="chart"></div>
-            </td>
-            <td style="vertical-align: top;">
-                <table>
-                    <tr>
-                        <td><div id="legend"></div></td>
-                    </tr>
-                    <tr>
-                        <td><div id="legend2"></div></td>
-                    </tr>
-                </table>                                
-            </td>            
-        </tr>        
-    </table>
+<div style="float: left; width: 70%;">
+        <div style="text-align: center; width: 100%; font: 16px Arial, Helvetica, sans-serif;">人口が多い国トップ 5</div>
+        <div style="text-align: center; width: 100%; margin: 10px 0; font: 12px Arial, Helvetica, sans-serif;">1990 年 (内部リング) vs. 2008 年 (外部リング)*</div>
+
+        
+        <div id="chart"></div>
+
+        <div style="margin: 10px 0; font: 12px Arial, Helvetica, sans-serif;">*人口は 100 万単位です</div>
+    </div>
+    <div id="legend" style="float: left"></div>

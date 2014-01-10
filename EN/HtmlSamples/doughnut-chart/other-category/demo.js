@@ -1,37 +1,23 @@
 $(function () {
-
-            var data = [
-                { "CountryName": "China", "Pop1990": 1141, "Pop2008": 1333, "Pop2025": 1458 },
-                { "CountryName": "India", "Pop1990": 849, "Pop2008": 1140, "Pop2025": 1398 },
-                { "CountryName": "United States", "Pop1990": 250, "Pop2008": 304, "Pop2025": 352 },
-                { "CountryName": "Indonesia", "Pop1990": 178, "Pop2008": 228, "Pop2025": 200 },
-                { "CountryName": "Brazil", "Pop1990": 150, "Pop2008": 192, "Pop2025": 100 }
-            ];
-            
             $("#chart").igDoughnutChart({
                 width: "100%",
                 height: "550px",
-                innerExtent: 20,
                 series:
-                    [                       
-                        {
-                            name: "Pop2008",
-                            labelMemberPath: "CountryName",
-                            valueMemberPath: "Pop2008",
-                            dataSource: data,
-                            labelsPosition: "bestFit"
-                        },
+                    [
                         {
                             name: "Pop2025",
-                            labelMemberPath: "CountryName",
-                            valueMemberPath: "Pop2025",
-                            dataSource: data,
-                            labelsPosition: "bestFit",
+                            labelMemberPath: "name",
+                            valueMemberPath: "goals",
+                            dataSource: dataSource.sort(function (a, b) { return a.goals - b.goals; }),
                             othersCategoryType: "number",
-                            othersCategoryThreshold: 210,
-                            othersCategoryText: "Low Density",
-                            startAngle: 20
-
+                            othersCategoryThreshold: 15,
+                            labelsPosition: "bestFit",
+                            othersCategoryText: "Players with less than 15 goals",
+                            formatLabel: function (context) {
+                                if (context.isOthersSlice) 
+                                    return "Players with less than 15 goals";
+                                return context.item.name + " (" + context.item.goals + ")";
+                            }
                         }
                     ]
 

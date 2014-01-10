@@ -8,21 +8,24 @@ $(function () {
             ];
 
             $("#gridColumns").igCombo({
-                dataSource: data, //JSON Array defined above         
+                dataSource: data, //JSON Array defined above
                 valueKey: "columnKey",
                 textKey: "columnHeader",
                 width: "300px",
                 mode: "dropdown",
+                height: "25px",
                 selectedItems: [{index: 0}]
             });
 
-            $("#igButtonSort").igButton({ labelText: $("#igButtonSort").val() });
+            $( "#igButtonSort" ).igButton( {
+                labelText: $( "#igButtonSort" ).val(),
+                height: "25px"
+            } );
 
             $("#igButtonSort").on({
                 click: function (e) {
                     var columnKey = $( "#gridColumns" ).igCombo( "value" );
-                    if ( columnKey )
-                    {
+                    if ( columnKey ) {
                         $( '#grid7' ).igGridSorting( 'sortColumn', columnKey, 'ascending' );
                     }
                 }

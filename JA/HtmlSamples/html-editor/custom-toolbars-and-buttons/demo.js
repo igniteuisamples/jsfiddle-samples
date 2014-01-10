@@ -1,7 +1,9 @@
 $(function () {
+            var height = $('html').hasClass('touch') ? 500 : 350;
             // initialize igHtmlEditor
             var htmlEditor = $("#htmlEditor").igHtmlEditor({
                 width: "99%",
+                height: height,
                 inputName: "htmlEditor",
                 customToolbars: [
                 {

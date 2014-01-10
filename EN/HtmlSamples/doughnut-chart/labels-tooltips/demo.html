@@ -6,65 +6,66 @@
 <link href="http://cdn-na.infragistics.com/jquery/20132/latest/css/themes/infragistics/infragistics.theme.css" rel="stylesheet"></link>
 <link href="http://cdn-na.infragistics.com/jquery/20132/latest/css/structure/infragistics.css" rel="stylesheet"></link>
 
-<script id="budgetTooltipTemplate" type="text/x-ig-tmpl">        
-        <div >
-            <span id="tooltipValue" style="font-family: Arial; font-size: 11px;">${item.Budget}</span>    
-        </div>       
-    </script>
-<script id="depTooltipTemplate" type="text/x-ig-tmpl">        
-        <div >
-            <span id="tooltipValue" style="font-family: Arial; font-size: 11px;">${item.DepartmentSize}</span>    
-        </div>       
+<script id="budgetTooltipTemplate" type="text/x-ig-tmpl">
+        <div class="ui-chart-tooltip">
+            <div class='bold'>${item.Label}</div>
+            <div>Budget: <label class='bold'>$${item.Budget}K</label></div>
+        </div>
     </script>
 
-<div id="chart"></div>
+<div class="title">Departments</div>
+    <div class="subtitle">Budget (inner ring) and Department Size (outer ring)</div>
 
-     <br />
-     
-     <table class="options" style="max-width: 550px; width: 100%;">
-        <tr>            
-            <td>
-                Start Angle
-            </td>
-            <td class="optionTdWidth">
-                <select id="angleSeriesName" class="optionTdWidth" style="margin-bottom: 7px;">
-                    <option value="Budget" selected="selected">Budget</option>
-                    <option value="DepartmentSize">Department Size</option>                    
-                </select>
-                <div id="angle" class="slider optionTdWidth"></div>
-            </td>
-        </tr>
+    
+    <div id="chart"></div>
+
+    <br />
+    <table class="options" style="max-width: 550px; width: 100%;">
         <tr>
             <td>InnerExtent:</td>
             <td class="optionTdWidth">
-                <div id="innerExtent" class="slider optionTdWidth"></div>
+                <div id="innerExtent" class="optionTdWidth"></div>
             </td>
-        </tr>               
+        </tr>
+        <tr>
+            <td>Start Angle for the Budget Series
+            </td>
+            <td class="optionTdWidth">
+                <div id="angleBudget" class="optionTdWidth"></div>
+            </td>
+        </tr>
+        <tr>
+            <td>Start Angle for the Department Size Series
+            </td>
+            <td class="optionTdWidth">
+                <div id="angleDepartmentSize" class="optionTdWidth"></div>
+            </td>
+        </tr>
         <tr>
             <td>Label Position for the Budget Series:</td>
             <td class="optionTdWidth">
                 <select id="labelPosition" class="optionTdWidth">
                     <option value="center" selected="selected">Center</option>
-                    <option value="insideEnd">Inside End</option>                    
+                    <option value="insideEnd">Inside End</option>
                     <option value="bestFit">Best Fit</option>
-                </select>               
+                </select>
             </td>
         </tr>
-         <tr>
+        <tr>
             <td>Label Position for the Department Size Series:</td>
             <td class="optionTdWidth">
                 <select id="labelPosition2" class="optionTdWidth">
-                    <option value="center" selected="selected">Center</option>
+                    <option value="center">Center</option>
                     <option value="insideEnd">Inside End</option>
-                    <option value="outsideEnd">Outside End</option>
+                    <option value="outsideEnd" selected="selected">Outside End</option>
                     <option value="bestFit">Best Fit</option>
-                </select>               
+                </select>
             </td>
         </tr>
         <tr>
             <td>Label Extent (Outside End)</td>
             <td class="optionTdWidth">
-                <div id="labelExtent" class="slider optionTdWidth"></div>
+                <div id="labelExtent" class="optionTdWidth"></div>
             </td>
         </tr>
     </table>
