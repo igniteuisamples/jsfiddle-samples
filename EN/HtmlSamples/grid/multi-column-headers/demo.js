@@ -22,10 +22,10 @@ $(function () {
                             headerText: "Local Address",
                             group: [
                                 { headerText: "Address", key: "Address", dataType: "string", width: "150px" },
-                                { headerText: "City", key: "City", dataType: "string", width: "100px" },
-                                { headerText: "Postal Code", key: "PostalCode", dataType: "string", width: "100px" }
+                                { headerText: "City", key: "City", dataType: "string", width: "100px" }
                             ]
-                        }
+                        },
+                            { headerText: "Postal Code", key: "PostalCode", dataType: "string", width: "100px" }
                         ]
                     },
                     {
