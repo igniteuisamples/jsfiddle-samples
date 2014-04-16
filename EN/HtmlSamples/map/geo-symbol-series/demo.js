@@ -43,8 +43,6 @@ $(function () {
                 windowRect: { left: 0.1, top: 0.1, height: 0.7, width: 0.7 },
                 overviewPlusDetailPaneVisibility: "visible",
                 overviewPlusDetailPaneBackgroundImageUri: "http://igniteui.com/images/samples/maps/world.png",
-                verticalZoomable: true,
-                horizontalZoomable: true,
                 backgroundContent: {
                     type: "cloudMade",
                     key: mapHelper.cloudmadeData(),

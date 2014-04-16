@@ -7,7 +7,7 @@ $(function () {
                     { headerText: "Last Name", key: "LastName", dataType: "string" },
                     { headerText: "Birth Date", key: "BirthDate", dataType: "date" },
                     { headerText: "City", key: "City", dataType: "string" },
-                    { headerText: "Postal Code", key: "PostalCode", dataType: "number" }
+                    { headerText: "Postal Code", key: "PostalCode", dataType: "string" }
                 ],
                 dataSource: northwind,
                 responseDataKey: "results",

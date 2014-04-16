@@ -94,7 +94,6 @@ var evntCounter = 0, transperantBrush = "rgba(0,0,0,0)",
             });
             
             $("#axisStokeLines").click(function () {
-                console.log('axisStokeLines');
                 var brush = ($(this).is(":checked")) ? axisStokeLinesBrush : transperantBrush;
                 $("#chart").igDataChart("option", "axes", [
                     { name: "xAxis", stroke: brush },
@@ -103,7 +102,6 @@ var evntCounter = 0, transperantBrush = "rgba(0,0,0,0)",
                 $("#chart").igDataChart("styleUpdated");
             });
             $("#axisMajorLines").click(function () {
-                console.log('axisMajorLines');
                 var brush = $(this).is(":checked") ? axisMajorLinesBrush : transperantBrush;
                 $("#chart").igDataChart("option", "axes", [
                     //{ name: "xAxis", majorStroke: brush },
@@ -112,7 +110,6 @@ var evntCounter = 0, transperantBrush = "rgba(0,0,0,0)",
                 $("#chart").igDataChart("styleUpdated");
             });
             $("#axisMinorLines").click(function () {
-                console.log('axisMinorLines');
                 var brush = $(this).is(":checked") ? axisMinorLinesBrush : transperantBrush;
                 $("#chart").igDataChart("option", "axes", [
                     //{ name: "xAxis", minorStroke: brush },
@@ -121,7 +118,6 @@ var evntCounter = 0, transperantBrush = "rgba(0,0,0,0)",
                 $("#chart").igDataChart("styleUpdated");
             });
             $("#axisStripes").click(function () {
-                console.log('axisStripes');
                 var brush = $(this).is(":checked") ? axisStripBrush : transperantBrush;
                 $("#chart").igDataChart("option", "axes", [
                     //{ name: "xAxis", strip: brush },
@@ -130,7 +126,6 @@ var evntCounter = 0, transperantBrush = "rgba(0,0,0,0)",
                 $("#chart").igDataChart("styleUpdated");
             });
             $("#axisLabels").click(function () {
-                console.log('axisLabels');
                 var visibility = ($(this).is(":checked")) ? "visible" : "collapsed";
                 $("#chart").igDataChart("option", "axes", [
                     { name: "xAxis", labelVisibility: visibility },
@@ -139,7 +134,6 @@ var evntCounter = 0, transperantBrush = "rgba(0,0,0,0)",
                 $("#chart").igDataChart("styleUpdated");
             });
             $("#axisTickmarks").click(function () {
-                console.log('axisTickmarks');
                 var isVisible = ($(this).is(":checked"));
                 $("#chart").igDataChart("option", "axes", [
                     { name: "xAxis", tickLength: isVisible ? 5 : 0 },
@@ -148,7 +142,6 @@ var evntCounter = 0, transperantBrush = "rgba(0,0,0,0)",
                 $("#chart").igDataChart("styleUpdated");
             });
             $("#axisTitles").click(function () {
-                console.log('axisTitles');
                 var isVisible = ($(this).is(":checked"));
                 $("#chart").igDataChart("option", "axes", [
                     { name: "xAxis", title: isVisible ? axisTitleX : "" },
@@ -158,13 +151,11 @@ var evntCounter = 0, transperantBrush = "rgba(0,0,0,0)",
             });
             
             $("#legendCheckbox").click(function () {
-                console.log('legendCheckbox');
                 var visibility = ($(this).is(":checked")) ? "visible" : "hidden";
                 $('#chartLegend').css("visibility", visibility);
             });
 
             $("#priceSeries").click(function () {
-                console.log('priceSeries');
                 var posBrush = ($(this).is(":checked")) ? priceSeriesPositiveBrush : transperantBrush;
                 var negBrush = ($(this).is(":checked")) ? priceSeriesNegativeBrush : transperantBrush;
                 var outlineBrush = ($(this).is(":checked")) ? priceSeriesOutline : transperantBrush;
@@ -179,7 +170,6 @@ var evntCounter = 0, transperantBrush = "rgba(0,0,0,0)",
             });
 
             $("#priceTrendline").click(function () {
-                console.log('priceSeries');
                 var pBrush = ($(this).is(":checked")) ? priceTrendlineBrush : transperantBrush;
                 var vBrush = ($(this).is(":checked")) ? volumeTrendlineBrush : transperantBrush;
                 $("#chart").igDataChart("option", "series", [
@@ -190,7 +180,6 @@ var evntCounter = 0, transperantBrush = "rgba(0,0,0,0)",
             });
             
             $("#lineSeries").click(function () {
-                console.log('lineSeries');
                 var brush = ($(this).is(":checked")) ? lineSeriesBrush : transperantBrush;
                 //var mType = ($(this).is(":checked")) ? "circle" : "none";
                 var visibility = ($(this).is(":checked")) ? "visible" : "collapsed";
@@ -204,7 +193,6 @@ var evntCounter = 0, transperantBrush = "rgba(0,0,0,0)",
             });
             
             $("#lineMarkers").click(function () {
-                console.log('lineMarkers');
                 var mType = ($(this).is(":checked")) ? "circle" : "none";
                 $("#chart").igDataChart("option", "series", [
                     { name: "lineSeries", markerType: mType }]);
@@ -212,7 +200,6 @@ var evntCounter = 0, transperantBrush = "rgba(0,0,0,0)",
             });
             
             $("#chartCrosshairs").click(function () {
-                console.log('chartCrosshairs');
                 var visibility = ($(this).is(":checked")) ? "visible" : "collapsed";
                 $("#chart").igDataChart("option", "crosshairVisibility", visibility);
             });
@@ -243,9 +230,4 @@ var evntCounter = 0, transperantBrush = "rgba(0,0,0,0)",
         //    $("#chart").igDataChart("option", "series", [{ name: "series2", trendLineBrush: brush }]);
         //    $("#chart").igDataChart("styleUpdated");
         //});
-        
-       
-
-       
-        console.log('igDataChart');
 });

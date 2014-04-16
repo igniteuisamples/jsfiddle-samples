@@ -1,4 +1,6 @@
 $(function () {
+var lg; 
+        $(function () {
 
             $("#grid").igGrid({
                 height: 500,
@@ -7,9 +9,8 @@ $(function () {
                     { headerText: "id", key: "id", dataType: "number", hidden: true},
                     { headerText: "Time", key: "Time", dataType: "string", width: 80 },
                     { headerText: "Wind Speed (mph)", key: "WindSpeed", dataType: "number", width: 160 },
-                    { headerText: "Wind Speed Gauge (mph)", key: "gauge", width: 370 }
+                    { headerText: "Wind Speed Gauge (mph)", key: "gauge", width: 370, template: "<div class='linear-gauge' ></div>" }
                 ],
-                rowTemplate: "<tr><td>${id}</td><td>${Time}</td><td>${WindSpeed}</td><td><div class='linear-gauge' ></div></td></tr>",
                 dataSource: data,
                 autoGenerateColumns: false,
                 rowsRendered: function (evt, ui) {
@@ -63,11 +64,23 @@ $(function () {
                                 readOnly: true
                             }
                         ],
-                        editCellEnded: function (evt, ui) {
-                            $(".linear-gauge").eq(ui.rowID).igLinearGauge("option", "value", ui.value);
-                        }
 
+                        editCellEnding: function (evt, ui) {
+                            if (ui.value != ui.oldValue) { 
+                                lg = $(".linear-gauge").eq(ui.rowID).detach();
+                            } 
+                        },
+                        editCellEnded: function (evt, ui) {
+                            if (ui.value != ui.oldValue) { 
+                                $(".linear-gauge").eq(ui.rowID).remove();
+                                ui.owner.element.find("tr[data-id=" + ui.rowID + "]>td:eq(2)").append(lg);
+                                if (ui.columnKey == "WindSpeed") {
+                                    $(".linear-gauge").eq(ui.rowID).igLinearGauge("option", "value", ui.value);
+                                }
+                            }
+                        }
                     }],
                 caption: "Raw Data from NOAA. Wind information from Los Angeles (07\\16\\2013) weather station."
             });
         });
+});

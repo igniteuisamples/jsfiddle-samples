@@ -1,31 +1,11 @@
 <script src="http://igniteui.com/js/modernizr.min.js"></script>
 <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
 <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>
-<script src="http://cdn-na.infragistics.com/jquery/20132/latest/js/infragistics.core.js"></script>
-<script src="http://cdn-na.infragistics.com/jquery/20132/latest/js/infragistics.lob.js"></script>
+<script src="http://cdn-na.infragistics.com/igniteui/latest/js/infragistics.core.js"></script>
+<script src="http://cdn-na.infragistics.com/igniteui/latest/js/infragistics.lob.js"></script>
 <script src="http://igniteui.com/js/external/jsrender.js"></script>
 <script src="http://igniteui.com/js-data/nw-employees"></script>
-<link href="http://cdn-na.infragistics.com/jquery/20132/latest/css/themes/infragistics/infragistics.theme.css" rel="stylesheet"></link>
-<link href="http://cdn-na.infragistics.com/jquery/20132/latest/css/structure/infragistics.css" rel="stylesheet"></link>
-
-<script id="theTmpl" type="text/x-jsrender">
-        <tr>
-            <td>{{>ID}}</td>
-            <td>{{>#view.hlp('toFullName')(Name)}}</td>
-            <td><img width='100' height='90' src={{>ImageUrl}}></img></td>
-            <td>{{>Title}}</td>
-            <td>{{for Languages}}<div>{{:name}}</div>{{/for}}</td>
-            <td>{{>Phone}}</td>
-            <td><img width='20' height='15' src='http://igniteui.com/images/samples/nw/countries/{{>Country}}.gif'></img>{{>Country}}</td>
-            <td>
-                <span style='color:
-                    {{if #view.hlp('toDate')(BirthDate) > #view.hlp('toDate')('1970-01-01T00:00:00.000')}}blue
-                    {{else}}red
-                    {{/if}};'>
-                    {{>BirthDate}}
-                </span>
-            </td>
-        </tr>
-    </script>
+<link href="http://cdn-na.infragistics.com/igniteui/latest/css/themes/infragistics/infragistics.theme.css" rel="stylesheet"></link>
+<link href="http://cdn-na.infragistics.com/igniteui/latest/css/structure/infragistics.css" rel="stylesheet"></link>
 
 <table id="grid12"></table>

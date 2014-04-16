@@ -66,8 +66,8 @@ $(function () {
                     },
                     { headerText: "Is Promotion", key: "IsPromotion", dataType: "bool", unbound: true, format: "checkbox" },
                     {
-                        headerText: "Total", key: "Total", dataType: "number", unbound: true,
-                        formula: function CalculateTotal(data, grid) { return data["UnitPrice"] * data["UnitsInStock"]; }, template: "Total: ${Total}"
+                        headerText: "Total Price", key: "Total", dataType: "number", unbound: true, format: "currency",
+                        formula: function CalculateTotal(data, grid) { return data["UnitPrice"] * data["UnitsInStock"]; }
                     }
                 ],
                 features:

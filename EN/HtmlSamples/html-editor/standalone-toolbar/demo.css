@@ -1,0 +1,12 @@
+#htmlEditor {
+            margin-bottom: 10px;
+        }
+
+        #text_collapseButton,
+        #formatting_collapseButton {
+            display: none;
+        }
+
+        #toolbarHolder {
+            z-index: 99999;
+        }
