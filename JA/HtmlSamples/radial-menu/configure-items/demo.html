@@ -1,0 +1,45 @@
+<script src="http://jp.igniteui.com/js/modernizr.min.js"></script>
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>
+<script src="http://cdn-na.infragistics.com/igniteui/latest/js/infragistics.core.js"></script>
+<script src="http://cdn-na.infragistics.com/igniteui/latest/js/infragistics.lob.js"></script>
+<script src="http://cdn-na.infragistics.com/igniteui/latest/js/infragistics.dv.js"></script>
+<link href="http://cdn-na.infragistics.com/igniteui/latest/css/themes/infragistics/infragistics.theme.css" rel="stylesheet"></link>
+<link href="http://cdn-na.infragistics.com/igniteui/latest/css/structure/infragistics.css" rel="stylesheet"></link>
+<script src="http://cdn-na.infragistics.com/igniteui/latest/js/i18n/infragistics-ja.js"></script>
+
+<div>
+        
+        <div id="htmlEditor"></div>
+
+        <div style="position:absolute; left:300px; top:90px; z-index:1; visibility:hidden">
+            
+            <div id="radialMenu"></div>
+        </div>
+    </div>
+
+    <fieldset>
+        <legend>オプション</legend>
+        <table>
+            <tr>
+                <td>ウェッジの最小数:</td>
+                <td><div id="minWedgeSlider" style="width:100px"></div></td>
+                <td><label id="labMinWedgeSlider">8</label></td>
+            </tr>
+            <tr>
+                <td>StartAngleOfWedges:</td>
+                <td><div id="startAngleSlider" style="width:100px"></div></td>
+                <td><label id="labStartAngleSlider">-90</label></td>
+            </tr>
+            <tr>
+                <td>ウェッジのインデックス:</td>
+                <td><input id="inWedgeIndex"></input></td>
+                <td><input type="button" value="設定" onclick="setWedgeIndex(document.getElementById('inWedgeIndex').value);"></input></td>
+            </tr>
+            <tr>
+                <td>ウェッジのスパン:</td>
+                <td><input id="inWedgeSpan"></input></td>
+                <td><input type="button" value="設定" onclick="setWedgeSpan(document.getElementById('inWedgeSpan').value);"></input></td>
+            </tr>
+        </table>
+    </fieldset>

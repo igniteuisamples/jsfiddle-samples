@@ -14,8 +14,6 @@ $(function () {
                 width: "100%",
                 height: "500px",
                 crosshairVisibility: "visible",
-                verticalZoomable: true,
-                horizontalZoomable: true,
                 overviewPlusDetailPaneVisibility: "visible",
                 overviewPlusDetailPaneBackgroundImageUri: "http://jp.igniteui.com/images/samples/splitter/world.png",
                 panModifier: "control",
@@ -48,8 +46,7 @@ $(function () {
                                     longitude: selectedCity.Longitude,
                                     radius: 0.5
                                 });
-                                var zoom = $("#map").igMap("getZoomFromGeographic", geographic);
-                                $("#map").igMap("option", "windowRect", zoom);
+                                var zoom = $("#map").igMap("zoomToGeographic", geographic);
                             }
                         }]
                     });
@@ -59,8 +56,7 @@ $(function () {
                     longitude: node.data.Longitude,
                     radius: 23
                 });
-                var zoom = $("#map").igMap("getZoomFromGeographic", geographic);
-                $("#map").igMap("option", "windowRect", zoom);
+                var zoom = $("#map").igMap("zoomToGeographic", geographic);
                 $("#detailSplitter").igSplitter("expandAt", 1);
             });
 

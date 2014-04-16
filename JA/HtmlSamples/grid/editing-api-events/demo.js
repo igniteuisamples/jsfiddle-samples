@@ -121,17 +121,23 @@ $(function () {
                     // note: if primaryKey is set and data in primary column contains numbers,
                     // then the dataType: "number" is required, otherwise, dataSource may misbehave
                     headerText: "従業員 ID", key: "EmployeeID", dataType: "number"
-                }, {
+                },
+                {
                     headerText: "名前", key: "FirstName", dataType: "string"
-                }, {
+                },
+                {
                     headerText: "名字", key: "LastName", dataType: "string"
-                }, {
+                },
+                {
                     headerText: "役職", key: "Title", dataType: "string"
-                }, {
+                },
+                {
                     headerText: "生年月日", key: "BirthDate", dataType: "date"
-                }, {
-                    headerText: "郵便番号", key: "PostalCode", dataType: "number"
-                }, {
+                },
+                {
+                    headerText: "郵便番号", key: "PostalCode", dataType: "string"
+                },
+                {
                     headerText: "国", key: "Country", dataType: "string"
                 }
                 ],
@@ -171,13 +177,16 @@ $(function () {
                         rowEditDialogContainment: "owner",
                         showReadonlyEditors: false,
                         enableDataDirtyException: false,
-                        columnSettings: [{
+                        columnSettings: [
+                        {
                             columnKey: "EmployeeID",
                             readOnly: true
-                        }, {
+                        },
+                        {
                             columnKey: "Title",
                             editorType: "text"
-                        }, {
+                        },
+                        {
                             columnKey: "Country",
                             editorType: "combo",
                             editorOptions: {

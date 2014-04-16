@@ -112,6 +112,7 @@ $(function () {
                     $("#minimizeDialog").igButton({ disabled: true });
                     $("#pinDialog").igButton({ disabled: true });
                     $("#unpinDialog").igButton({ disabled: true });
+                    $("#position").attr("disabled", true);
                 }
             });
 

@@ -23,13 +23,9 @@ $(function () {
                 width: "700px",
                 height: "500px",
                 windowRect: { left: 0.225, top: 0.1, height: 0.6, width: 0.6 },
-                verticalZoomable: true,
-                horizontalZoomable: true,
                 series: [{
                     type: "geographicSymbol",
                     name: "worldCities",
-                    verticalZoomable: true,
-                    horizontalZoomable: true,
                     dataSource: data, //JSON Array defined above     
                     latitudeMemberPath: "Latitude",
                     longitudeMemberPath: "Longitude",

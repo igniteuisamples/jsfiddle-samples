@@ -1,7 +1,7 @@
 $(function () {
 $.ig.loader({
-            scriptPath: "http://cdn-na.infragistics.com/jquery/20132/latest/js/",
-            cssPath: "http://cdn-na.infragistics.com/jquery/20132/latest/css/",
+            scriptPath: "http://cdn-na.infragistics.com/igniteui/latest/js/",
+            cssPath: "http://cdn-na.infragistics.com/igniteui/latest/css/",
             resources: "igDataChart.Radial,igCombo"
         });
 

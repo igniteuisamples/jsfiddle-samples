@@ -2,9 +2,9 @@ $(function () {
 $(document).ready(function () {
 			var chart = $("#chart"),
 				zoombar = $("#zoom"),
-				popoverLeft = $("#popoverLeft"),
-				popoverRight = $("#popoverRight"),
 				popoverTimeout = 0,
+				popoverLeft,
+				popoverRight,
 				lastTarget,
 				currentlyDragged,
 				zoomParams;
@@ -98,25 +98,23 @@ $(document).ready(function () {
 					var target = $(evt.originalEvent.target),
 						handle = target.hasClass("ui-igzoombar-window-handle") ?
 						target : lastTarget,
-						popover = handle.attr("id").indexOf("left") > 0 ?
-						popoverLeft : popoverRight,
-						popoverContainer = $("#" + popover.attr("id") + "_popover");
+						container = handle.igPopover("container").parent().parent();
 					if (target.hasClass("ui-igzoombar-window-handle")) {
 						lastTarget = target;
 					}
-					if (currentlyDragged && popover !== currentlyDragged) {
+					if (currentlyDragged && handle[0] !== currentlyDragged[0]) {
 						currentlyDragged.igPopover("hide");
 					}
 					// show the popover if it's not already visible
-					if (!popoverContainer.is(":visible")) {
-						popover.igPopover("show");
+					if (!container.is(":visible")) {
+						handle.igPopover("show");
 					}
 					// update popovers position
-					popoverContainer.css({
-						left: handle.offset().left -
-							popoverContainer.outerWidth() / 2 + 5
+					handle.igPopover("setCoordinates", {
+						top: handle.offset().top - container.outerHeight(),
+						left: handle.offset().left - container.outerWidth() / 2 + 5
 					});
-					currentlyDragged = popover;
+					currentlyDragged = handle;
 					if (popoverTimeout > 0) {
 						clearTimeout(popoverTimeout);
 					}
@@ -171,16 +169,14 @@ $(document).ready(function () {
 					label = label.parentNode;
 				onClick(label.htmlFor, label);
 			});
-			$("#popoverLeft").igPopover({
-				target: $("#zoom_zoombar_mask_left_handle"),
+			popoverLeft = $("#zoom_zoombar_mask_left_handle");
+			popoverRight = $("#zoom_zoombar_mask_right_handle");
+			popoverLeft.igPopover({
 				direction: "top",
-				renderCloseButton: false,
 				showOn: "focus"
 			});
-			$("#popoverRight").igPopover({
-				target: $("#zoom_zoombar_mask_right_handle"),
+			popoverRight.igPopover({
 				direction: "top",
-				renderCloseButton: false,
 				showOn: "focus"
 			});
 		});

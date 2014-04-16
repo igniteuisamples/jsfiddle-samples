@@ -56,7 +56,7 @@ $.support.cors = true;
                 if (location == 'columns') {
                     return false;
                 }
-                if (itemType == 'Hierarchy'
+                if ((itemType == 'Hierarchy' || itemType == 'Dimension')
                     && uniqueName.indexOf("Seller") !== -1) {
                     return false;
                 }

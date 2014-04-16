@@ -26,7 +26,7 @@ $(function () {
                 responseTotalRecCountKey: "d.results.Count",
                 dataSource: "http://igniteui.com/api/invoices?$top=1000&callback=?",
                 dataSourceUrl: "http://igniteui.com/api/invoices?$top=1000&callback=?",
-                filteringType: "remote",
+                filteringType: "local",
                 width: "250px",
                 textKey: "ProductName",
                 valueKey: "OrderID",

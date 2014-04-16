@@ -70,8 +70,7 @@ $.support.cors = true;
                     top: -10,
                     left: 10
                 },
-                helper: "clone",
-                cursor: 'pointer'
+                helper: "clone"
             });
         });
 });

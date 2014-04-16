@@ -37,8 +37,6 @@ function ColorPickerByIndex(min, max) {
                 width: "700px",
                 height: "500px",
                 windowRect: { left: 0.1, top: 0.1, height: 0.7, width: 0.7 },
-                verticalZoomable: true,
-                horizontalZoomable: true,
                 overviewPlusDetailPaneVisibility: "visible",
                 overviewPlusDetailPaneBackgroundImageUri: "http://jp.igniteui.com/images/samples/maps/world.png",
                 series: [{

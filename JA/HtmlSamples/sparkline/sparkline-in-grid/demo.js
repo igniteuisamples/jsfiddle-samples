@@ -19,14 +19,12 @@ $(function () {
 						 });
                 },
                 primaryKey: "ID",
-                rowTemplate: "<tr><td></td><td>${CompanyName}</td><td>${ContactName}</td>" +
-                    "<td>${ContactTitle}</td><td><div data-id='${ID}' class='order-sparkline'></div></td></tr>",
                 columns: [
                     { key: "ID", hidden: true },
                     { key: "CompanyName", headerText: "会社名" },
                     { key: "ContactName", headerText: "名前" },
                     { key: "ContactTitle", headerText: "役職" },
-                    { key: "Orders", headerText: "注文履歴" }
+                    { key: "Orders", headerText: "注文履歴", template: "<div data-id='${ID}' class='order-sparkline'></div>" }
                 ]
             });
 

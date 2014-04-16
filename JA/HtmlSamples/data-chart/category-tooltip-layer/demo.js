@@ -32,7 +32,7 @@ $(function () {
                     {
                         name: "2005Population",
                         type: "column",
-                        title: "2005 Population",
+                        title: "2005 人口",
                         xAxis: "NameAxis",
                         yAxis: "PopulationAxis",
                         valueMemberPath: "Pop2005",
@@ -43,7 +43,7 @@ $(function () {
                     {
                         name: "1995Population",
                         type: "column",
-                        title: "1995 Population",
+                        title: "1995 人口",
                         xAxis: "NameAxis",
                         yAxis: "PopulationAxis",
                         valueMemberPath: "Pop1995",
@@ -54,7 +54,7 @@ $(function () {
                     {
                         name: "categorySeries",
                         type: "categoryToolTipLayer",
-                        useInterpolation: true,
+                        useInterpolation: false,
                         transitionDuration: 150
                     }]
             });
