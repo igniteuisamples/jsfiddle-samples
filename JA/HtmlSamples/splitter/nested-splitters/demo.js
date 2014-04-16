@@ -1,6 +1,22 @@
 $(function () {
-            $("#splitter").igSplitter({ height: 700, panels: [{ size: 200, min: 100, max: 250, resizable: false }, { collapsible: true }] });
-            $("#detailSplitter").igSplitter({ orientation: "horizontal", panels: [{ size: 500, resizable: false, collapsible: true }, { size: 200, collapsible: true}] });
+            $("#splitter").igSplitter({
+                height: 700,
+                expanded: function (evt, ui) {
+                    $("#grid_headers").css("width", "100%");
+                    $("#grid").css("width", "100%");
+                },
+                panels: [
+                    { size: 200, min: 100, max: 250, resizable: false },
+                    { collapsible: true }
+                ]
+            });
+            $("#detailSplitter").igSplitter({
+                orientation: "horizontal",
+                panels: [
+                    { size: 500, resizable: false, collapsible: true },
+                    { size: 200, collapsible: true }
+                ]
+            });
             $("#tree").igTree({
                 dataSource: continentsWithCountriesAndCitiesCoordinates,
                 dataSourceType: "json",

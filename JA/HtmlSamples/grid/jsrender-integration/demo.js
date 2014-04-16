@@ -37,11 +37,11 @@ $(function () {
                         { headerText: "電話", key: "Phone", dataType: "string" },
                         {
                             headerText: "国名", key: "Country", dataType: "string",
-                            template: "<img width='20' height='15' src='http://jp.igniteui.com/images/samples/nw/countries/{{>Country}}.gif'></img>{{>Country}}"
+                            template: "<img width='26' height='15' src='http://jp.igniteui.com/images/samples/nw/countries/{{>Country}}.gif'></img> <span style='display: table-cell;vertical-align: middle;'>{{>Country}}</span>"
                         },
                         {
                             headerText: "生年月日", key: "BirthDate", dataType: "date",
-                            template: "<span style='color:{{if #view.hlp('toDate')(BirthDate) > #view.hlp('toDate')('1970-01-01T00:00:00.000')}}blue{{else}}red{{/if}};'>{{>BirthDate}}</span>"
+                            template: "<span style='color:{{if #view.hlp('toDate')(BirthDate) > #view.hlp('toDate')('1980-01-01T00:00:00.000')}}#4573D6{{else}}#F75F4F{{/if}};'>{{>BirthDate}}</span>"
                         }
                     ],
                 dataSource: northwindEmployees,

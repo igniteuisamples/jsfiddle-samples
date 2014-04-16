@@ -18,12 +18,14 @@ $(function () {
                 labelText: $("#buttonFilter").val(),
                 click: function (event) {
                     var expr = $("#exprTextEditor").igTextEditor("value") ||
-                            $("#exprNumericEditor").igNumericEditor("value") ||
-                            $("#exprDateEditor").igDateEditor("value"),
-                        condition = $("#conditionList").igCombo("option", "selectedItems")[0].value,
-                        columnDataSource = $("#filterColumn").igCombo("option", "dataSource"),
-                        filterColumn = columnDataSource[$("#filterColumn").igCombo("option", "selectedItems")[0].index].column;
-                    $("#grid").igGridFiltering("filter", ([{ fieldName: filterColumn, expr: expr, cond: condition }]));
+                        $("#exprNumericEditor").igNumericEditor("value") ||
+                        $("#exprDateEditor").igDateEditor("value"),
+                    condition = $("#conditionList").igCombo("option", "selectedItems")[0].value,
+                    columnDataSource = $("#filterColumn").igCombo("option", "dataSource"),
+                    filterColumn = columnDataSource[$( "#filterColumn" ).igCombo( "option", "selectedItems" )[0].index].column;
+                    if ( expr !== null ) {
+                        $("#grid").igGridFiltering("filter",([{ fieldName: filterColumn, expr: expr, cond: condition }]));
+                    }
                 }
             });
 
@@ -123,9 +125,24 @@ $(function () {
                 }
             });
             
-            $("#exprTextEditor").igTextEditor().css("height", "21px").hide().children().first().css("height", "19px");
-            $("#exprNumericEditor").igNumericEditor({ nullText: $.ig.GridFiltering.locale.equalsLabel }).css("height", "21px").children().first().css("height", "19px");
-            $("#exprDateEditor").igDateEditor().css("height", "21px").hide().children().first().css("height", "19px");
+            $( "#exprTextEditor" ).igTextEditor({
+                validatorOptions: {
+                    required: true
+                }
+            }).css( "height", "21px" ).hide().children().first().css( "height", "19px" );
+
+            $( "#exprNumericEditor" ).igNumericEditor( {
+                validatorOptions: {
+                    required: true
+                },
+                nullText: $.ig.GridFiltering.locale.equalsLabel
+            }).css( "height", "21px" ).children().first().css( "height", "19px" );
+
+            $( "#exprDateEditor" ).igDateEditor( {
+                validatorOptions: {
+                    required: true
+                }
+            }).css( "height", "21px" ).hide().children().first().css( "height", "19px" );
 
             $("#pageIndexList").igCombo({
                 width: "120px",
@@ -138,7 +155,7 @@ $(function () {
                 enableClearButton: false,
                 selectedItems: [{ index: 0 }],
                 selectionChanged: function (e, args) {
-                    $("#grid").igGridPaging("pageIndex", parseInt(args.items[0].value - 1));
+                    $( "#grid" ).igGridPaging( "pageIndex", parseInt( args.items[0].value - 1 ) );
                 }
             });
 
@@ -160,16 +177,27 @@ $(function () {
                         nds.push({ pIndex: i + 1 });
                     }
                     $("#pageIndexList").igCombo("option", "dataSource", nds);
-                    $("#pageIndexList").igCombo("option", "selectedItems", [{ index: 0 }]);
+                    $( "#pageIndexList" ).igCombo( "option", "selectedItems", [{ index: 0 }] );
                 }
-            });
+            } );
 
-            $("#rowNumberEditor").igNumericEditor();
+            $( "#rowNumberEditor" ).igNumericEditor( {
+                value: 0,
+                minValue: 0,
+                width: 150,
+                height: 23,
+                validatorOptions: {
+                    required: true
+                }
+            } );
 
             $("#buttonSelectRow").igButton({
                 labelText: $("#buttonSelectRow").val(),
-                click: function (event) {
-                    $("#grid").igGridSelection("selectRow", $("#rowNumberEditor").igNumericEditor("value"));
+                click: function ( event ) {
+                    $( "#rowNumberEditor" ).igNumericEditor( "validate" );
+                    if ( $( "#rowNumberEditor" ).igNumericEditor( "value" ) < $( "#grid" ).igGrid( "rows" ).length ) {
+                        $( "#grid" ).igGridSelection( "selectRow", $( "#rowNumberEditor" ).igNumericEditor( "value" ) );
+                    }
                 }
             });
 
@@ -182,13 +210,13 @@ $(function () {
                         apiViewer.log("インデックス " + val.index + " 行が選択されました");
                     });
                 }
-            });
+            } );
 
             /*----------------- Event Examples -------------------------*/
 
             $("#grid").on("iggridselectionrowselectionchanging", function (evt, ui) {
                 var message = "iggridselectionrowselectionchanging";
-                apiViewer.log(message);
+                apiViewer.log( message );
             });
 
             $("#grid").on("iggridselectionactiverowchanged", function (evt, ui) {

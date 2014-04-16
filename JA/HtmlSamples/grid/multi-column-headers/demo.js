@@ -22,10 +22,10 @@ $(function () {
                             headerText: "住所",
                             group: [
                                 { headerText: "住所", key: "Address", dataType: "string", width: "150px" },
-                                { headerText: "市", key: "City", dataType: "string", width: "100px" },
-                                { headerText: "郵便番号", key: "PostalCode", dataType: "string", width: "100px" }
+                                { headerText: "市", key: "City", dataType: "string", width: "100px" }
                             ]
-                        }
+                        },
+                            { headerText: "郵便番号", key: "PostalCode", dataType: "string", width: "100px" }
                         ]
                     },
                     {
