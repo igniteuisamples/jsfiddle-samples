@@ -54,7 +54,7 @@ $(function () {
                     {
                         name: "categorySeries",
                         type: "categoryToolTipLayer",
-                        useInterpolation: false,
+                        useInterpolation: true,
                         transitionDuration: 150
                     }]
             });

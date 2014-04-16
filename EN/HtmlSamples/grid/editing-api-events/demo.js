@@ -121,23 +121,17 @@ $(function () {
                     // note: if primaryKey is set and data in primary column contains numbers,
                     // then the dataType: "number" is required, otherwise, dataSource may misbehave
                     headerText: "Employee ID", key: "EmployeeID", dataType: "number"
-                },
-                {
+                }, {
                     headerText: "First Name", key: "FirstName", dataType: "string"
-                },
-                {
+                }, {
                     headerText: "Last Name", key: "LastName", dataType: "string"
-                },
-                {
+                }, {
                     headerText: "Title", key: "Title", dataType: "string"
-                },
-                {
+                }, {
                     headerText: "Birth Date", key: "BirthDate", dataType: "date"
-                },
-                {
-                    headerText: "Postal Code", key: "PostalCode", dataType: "string"
-                },
-                {
+                }, {
+                    headerText: "Postal Code", key: "PostalCode", dataType: "number"
+                }, {
                     headerText: "Country", key: "Country", dataType: "string"
                 }
                 ],
@@ -177,16 +171,13 @@ $(function () {
                         rowEditDialogContainment: "owner",
                         showReadonlyEditors: false,
                         enableDataDirtyException: false,
-                        columnSettings: [
-                        {
+                        columnSettings: [{
                             columnKey: "EmployeeID",
                             readOnly: true
-                        },
-                        {
+                        }, {
                             columnKey: "Title",
                             editorType: "text"
-                        },
-                        {
+                        }, {
                             columnKey: "Country",
                             editorType: "combo",
                             editorOptions: {

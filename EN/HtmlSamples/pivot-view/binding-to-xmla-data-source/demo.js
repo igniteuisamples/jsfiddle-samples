@@ -7,11 +7,12 @@ $.support.cors = true;
                     xmlaOptions: {
                         serverUrl: 'http://sampledata.infragistics.com/olap/msmdpump.dll',
                         catalog: 'Adventure Works DW Standard Edition',
-                        cube: 'Adventure Works'
+                        cube: 'Adventure Works',
+                        measureGroup: "Internet Sales",
                     },
-                    rows: "[Ship Date].[Calendar]",
-                    columns: "[Delivery Date].[Calendar]",
-                    measures: "[Measures].[Product Gross Profit Margin Status],[Measures].[Product Gross Profit Margin Goal]",
+                    rows: "[Sales Territory].[Sales Territory]",
+                    columns: "[Product].[Product Categories]",
+                    measures: "[Measures].[Internet Order Count]"
                 }
             });
         });

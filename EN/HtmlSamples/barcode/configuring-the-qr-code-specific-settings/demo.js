@@ -40,9 +40,9 @@ $(function () {
                 $("#barcode").igQRCodeBarcode("option", "eciHeaderDisplayMode", val);
             });
 
-            $("#dataInput").keydown(function ( event ) {
+            $("#dataInput").keydown(function () {
                 //check for Enter key
-                if (event.which == 13) {
+                if (event.keyCode == 13) {
                     $("#barcode").igQRCodeBarcode("option", "data", $("#dataInput").val());
                 }
             });
