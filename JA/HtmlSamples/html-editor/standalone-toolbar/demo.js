@@ -128,13 +128,21 @@ function getSelectionCoords() {
             $iframe = $('#htmlEditor_editor');
 
             $iframe.contents().find("body").on("mouseup", function (ev) {
-                var userSelection = window.frames[0].document.getSelection(),
+                var userSelection,
+                    userSelectionString,
                     $bold = $textToolbar.find("div[id*='Bold']"),
                     $italic = $textToolbar.find("div[id*='Italic']"),
                     $underline = $textToolbar.find("div[id*='Underline']"),
                     coord = getSelectionCoords();
 
-                if (userSelection.toString() !== "") {
+                if (window.frames[0].document.getSelection) {
+                    userSelection = window.frames[0].document.getSelection();
+                    userSelectionString = userSelection.toString();
+                } else {
+                    userSelection = window.frames[0].document.selection.createRange();
+                    userSelectionString = userSelection.text;
+                }
+                if (userSelectionString !== "") {
                     $toolbarHolder.parent().css({
                         position: 'relative'
                     });
@@ -163,7 +171,7 @@ function getSelectionCoords() {
                     }
 
                     $iframe.contents().find("body").on("mousemove", function (ev) {
-                        if (userSelection.toString() !== "") {
+                        if (userSelectionString !== "") {
                             if (mouseMoveCoord &&
                                 ((Math.abs(mouseMoveCoord.x - ev.pageX) > 50) ||
                                 (Math.abs(mouseMoveCoord.y - ev.pageY) > 50))) {

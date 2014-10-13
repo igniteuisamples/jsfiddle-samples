@@ -4,7 +4,7 @@ var data = [
             { id: 1, month: "February", min: 0, max: 750, consumption: 670, production: 620, ranges: [{ start: 0, end: 333 }, { start: 333, end: 567 }, { start: 567, end: 750 }] },
             { id: 2, month: "March", min: 0, max: 750, consumption: 670, production: 700, ranges: [{ start: 0, end: 320 }, { start: 320, end: 567 }, { start: 567, end: 750 }] },
             { id: 3, month: "April", min: 0, max: 750, consumption: 610, production: 666, ranges: [{ start: 0, end: 320 }, { start: 320, end: 567 }, { start: 567, end: 750 }] }
-        ];
+        ], bg;
 
         $(function () {
 
@@ -15,9 +15,8 @@ var data = [
                     { headerText: "Month", key: "month", dataType: "string", width: 100 },
                     { headerText: "Consumption (TWh)", key: "consumption", dataType: "number", width: 130 },
                     { headerText: "Production (TWh)", key: "production", dataType: "number", width: 120 },
-                    { headerText: "Consumption Graph (TWh)", key: "graph", width: 470 }
+                    { headerText: "Consumption Graph (TWh)", key: "graph", width: 470, template: "<div class='bullet-graph'></div>" }
                 ],
-                rowTemplate: "<tr><td>${id}</td><td>${month}</td><td>${consumption}</td><td>${production}</td><td><div class='bullet-graph'></div></td></tr>",
                 dataSource: data,
                 autoGenerateColumns: false,
                 rowsRendered: function (evt, ui) {
@@ -76,12 +75,21 @@ var data = [
                                 readOnly: true
                             }
                         ],
-                        editCellEnded: function (evt, ui) {
-                            if (ui.columnKey=="consumption") {
-                                $(".bullet-graph").eq(ui.rowID).igBulletGraph("option", "value", ui.value);
+                        editCellEnding: function (evt, ui) {
+                            if (ui.value != ui.oldValue) {
+                                bg = $(".bullet-graph").eq(ui.rowID).detach();
                             }
-                            if (ui.columnKey == "production") {
-                                $(".bullet-graph").eq(ui.rowID).igBulletGraph("option", "targetValue", ui.value);
+                        },
+                        editCellEnded: function (evt, ui) {
+                            if (ui.value != ui.oldValue) {
+                                $(".bullet-graph").eq(ui.rowID).remove();
+                                ui.owner.element.find("tr[data-id=" + ui.rowID + "]>td:eq(3)").append(bg);
+                                if (ui.columnKey == "consumption") {
+                                    $(".bullet-graph").eq(ui.rowID).igBulletGraph("option", "value", ui.value);
+                                }
+                                if (ui.columnKey == "production") {
+                                    $(".bullet-graph").eq(ui.rowID).igBulletGraph("option", "targetValue", ui.value);
+                                }
                             }
                         }
                     }],

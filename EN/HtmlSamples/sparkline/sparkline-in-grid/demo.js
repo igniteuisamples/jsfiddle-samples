@@ -19,14 +19,12 @@ $(function () {
 						 });
                 },
                 primaryKey: "ID",
-                rowTemplate: "<tr><td></td><td>${CompanyName}</td><td>${ContactName}</td>" +
-                    "<td>${ContactTitle}</td><td><div data-id='${ID}' class='order-sparkline'></div></td></tr>",
                 columns: [
                     { key: "ID", hidden: true },
                     { key: "CompanyName", headerText: "Company" },
                     { key: "ContactName", headerText: "Contact" },
                     { key: "ContactTitle", headerText: "Contact Title" },
-                    { key: "Orders", headerText: "Order History" }
+                    { key: "Orders", headerText: "Order History", template: "<div data-id='${ID}' class='order-sparkline'></div>" }
                 ]
             });
 

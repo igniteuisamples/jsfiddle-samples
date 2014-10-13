@@ -56,6 +56,7 @@ $(function () {
                         autoGenerateColumns: false,
                         autofitLastColumn: false,
                         primaryKey: "OrderID",
+                        autoCommit: true,
                         columns: [
                             { key: "OrderID", headerText: "Order ID", dataType: "number", width: "0%", hidden: true },
                             { key: "CustomerID", headerText: "Customer ID", dataType: "string", width: "0%", hidden: true },

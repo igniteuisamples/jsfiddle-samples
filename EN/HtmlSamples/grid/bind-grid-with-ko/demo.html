@@ -1,18 +1,18 @@
 <script src="http://igniteui.com/js/modernizr.min.js"></script>
 <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
 <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>
-<script src="http://cdn-na.infragistics.com/jquery/20132/latest/js/infragistics.core.js"></script>
-<script src="http://cdn-na.infragistics.com/jquery/20132/latest/js/infragistics.lob.js"></script>
+<script src="http://cdn-na.infragistics.com/igniteui/latest/js/infragistics.core.js"></script>
+<script src="http://cdn-na.infragistics.com/igniteui/latest/js/infragistics.lob.js"></script>
 <script src="http://igniteui.com/js/external/knockout-latest.js"></script>
 <script src="http://igniteui.com/js/external/knockout.mapping-latest.js"></script>
-<script src="http://cdn-na.infragistics.com/jquery/20132/latest/js/extensions/infragistics.ui.tree.knockout-extensions.js"></script>
-<script src="http://cdn-na.infragistics.com/jquery/20132/latest/js/extensions/infragistics.ui.editors.knockout-extensions.js"></script>
-<script src="http://cdn-na.infragistics.com/jquery/20132/latest/js/extensions/infragistics.datasource.knockoutjs.js"></script>
-<script src="http://cdn-na.infragistics.com/jquery/20132/latest/js/extensions/infragistics.ui.grid.knockout-extensions.js"></script>
+<script src="http://cdn-na.infragistics.com/igniteui/latest/js/extensions/infragistics.ui.tree.knockout-extensions.js"></script>
+<script src="http://cdn-na.infragistics.com/igniteui/latest/js/extensions/infragistics.ui.editors.knockout-extensions.js"></script>
+<script src="http://cdn-na.infragistics.com/igniteui/latest/js/extensions/infragistics.datasource.knockoutjs.js"></script>
+<script src="http://cdn-na.infragistics.com/igniteui/latest/js/extensions/infragistics.ui.grid.knockout-extensions.js"></script>
 <script src="http://igniteui.com/js/apiviewer.js"></script>
 <script src="http://igniteui.com/js-data/nw-customers-with-orders"></script>
-<link href="http://cdn-na.infragistics.com/jquery/20132/latest/css/themes/infragistics/infragistics.theme.css" rel="stylesheet"></link>
-<link href="http://cdn-na.infragistics.com/jquery/20132/latest/css/structure/infragistics.css" rel="stylesheet"></link>
+<link href="http://cdn-na.infragistics.com/igniteui/latest/css/themes/infragistics/infragistics.theme.css" rel="stylesheet"></link>
+<link href="http://cdn-na.infragistics.com/igniteui/latest/css/structure/infragistics.css" rel="stylesheet"></link>
 
 <div id="error-message" style="color: #FF0000; font-weight: bold;"></div>
     
@@ -35,7 +35,7 @@
                      {
                          // setting a primary key for the new row
                          ui.value = 'PK' + ui.value;
-                     },
+                     },                  
                      rowDeleting: function (evt, ui) {
                          var rowID = ui.rowID;
                          var selectedRow = $('#gridKO').igGridSelection('selectedRow');
@@ -67,16 +67,16 @@
        <fieldset>
            <legend>Edit Selected Row</legend> 
             <label><b>Customer ID:</b> </label>
-            <span id="idEditor" data-bind="text: (selectedItemID() > -1 && selectedItemID() < data().length) ? data()[selectedItemID()].ID : data()[0].ID, valueUpdate: 'afterkeydown'"></span>
+            <span id="idEditor" data-bind="text: (selectedItemID() > -1 && selectedItemID() < data().length && data().length>0) ? data()[selectedItemID()].ID : '', valueUpdate: 'afterkeydown'"></span>
             <br />
             <label><b>Contact Name:</b> </label>
-            <input id="nameEditor" type="text" data-bind="value: (selectedItemID() > -1 && selectedItemID() < data().length) ? data()[selectedItemID()].ContactName : data()[0].ContactName, valueUpdate: 'afterkeydown'"></input>
+            <input id="nameEditor" type="text" data-bind="value: (selectedItemID() > -1 && selectedItemID() < data().length) ? data()[selectedItemID()].ContactName : '', valueUpdate: 'afterkeydown'"></input>
             <br />
             <label><b>City:</b> </label>
-            <input id="cityEditor" type="text" data-bind="value: (selectedItemID() > -1 && selectedItemID() < data().length) ? data()[selectedItemID()].City : data()[0].City, valueUpdate: 'afterkeydown'"></input>
+            <input id="cityEditor" type="text" data-bind="value: (selectedItemID() > -1 && selectedItemID() < data().length) ? data()[selectedItemID()].City : '', valueUpdate: 'afterkeydown'"></input>
             <br />
             <label><b>Country:</b> </label>
-            <input id="countryEditor" type="text" data-bind="value: (selectedItemID() > -1 && selectedItemID() < data().length) ? data()[selectedItemID()].Country : data()[0].Country, valueUpdate: 'afterkeydown'"></input>
+            <input id="countryEditor" type="text" data-bind="value: (selectedItemID() > -1 && selectedItemID() < data().length) ? data()[selectedItemID()].Country : '', valueUpdate: 'afterkeydown'"></input>
             <br />   
        </fieldset>     
     </div>

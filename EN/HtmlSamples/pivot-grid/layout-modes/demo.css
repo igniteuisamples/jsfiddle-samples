@@ -1,3 +1,3 @@
-#pivotGridStandard, #pivotGridCompact {
-            float: left;
+.pivot-grid {
+            margin-bottom: 20px;
         }

@@ -12,7 +12,8 @@ $(function () {
                 dataSource: adventureWorks,
                 features: [
                     {
-                        name: "ColumnMoving"
+                        name: "ColumnMoving",
+                        columnMovingDialogContainment: "window"
                     }
                 ]
             });

@@ -1,6 +1,7 @@
 $(function () {
             var $pivotGridStandard = $("#pivotGridStandard"),
-            $pivotGridCompact = $("#pivotGridCompact"),
+            $pivotGridSuperCompact = $("#pivotGridSuperCompact"),
+            $pivotGridTree = $("#pivotGridTree"),
             dataSource = new $.ig.OlapFlatDataSource({
                 dataSource: sales,
                 metadata: {
@@ -46,31 +47,48 @@ $(function () {
                         ]
                     }
                 },
-                rows: "[Date].[Dates]",
-                columns: "[Product].[Product]",
+                rows: "[Date].[Dates],[Product].[Product]",
                 measures: "[Measures].[UnitsSold]"
             });
+
+            $pivotGridTree.igPivotGrid({
+                dataSource: dataSource,
+                rowHeadersLayout: "tree",
+                treeRowHeaderIndentation: 10,
+                compactRowHeaderIndentation: 20,
+                rowHeaderLinkGroupIndentation: 10,
+                allowHeaderRowsSorting: true,
+                gridOptions: {
+                    caption: "Tree Layout"
+                },
+                width: "100%",
+                height: "300px"
+            });
+
             $pivotGridStandard.igPivotGrid({
                 dataSource: dataSource,
-                compactColumnHeaders: false,
-                compactRowHeaders: false,
+                rowHeadersLayout: "standard",
                 isParentInFrontForRows: false,
                 gridOptions: {
                     caption: "Standard Layout"
                 },
-                width: "450px",
-                height: "450px"
+                width: "100%",
+                height: "300px"
             });
-            $pivotGridCompact.igPivotGrid({
+
+            $pivotGridSuperCompact.igPivotGrid({
                 dataSource: dataSource,
+                rowHeadersLayout: "superCompact",
                 compactColumnHeaders: true,
-                compactRowHeaders: true,
-                compactHeaderIndentation: 30,
+                compactRowHeaderIndentation: 20,
+                compactColumnHeaderIndentation: 30,
                 isParentInFrontForColumns: true,
                 gridOptions: {
-                    caption: "Compact Layout"
+                    caption: "Super Compact Layout"
                 },
-                width: "450px",
-                height: "450px"
+                width: "100%",
+                height: "300px"
             });
+
+
         });

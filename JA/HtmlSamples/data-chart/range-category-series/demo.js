@@ -4,7 +4,7 @@ $(function () {
                     width: "400px",
                     height: "400px",
                     dataSource: data,
-                    title: "ニューヨーク市 vs. フィラデルフィア",
+                    title: "ニューヨーク vs. フィラデルフィア",
                     subtitle: "気温の比較",
                     axes: [{
                         name: "xAxis",

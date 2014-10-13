@@ -40,6 +40,6 @@ var itemsModel, db = nwCustomersWithOrders;
             var apiViewer = new $.ig.apiViewer();
 
             itemsModel = new ItemsViewModel();
-            ko.applyBindings(itemsModel);
+            ko.applyBindings(itemsModel);          
         });
 });

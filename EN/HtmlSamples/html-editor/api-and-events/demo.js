@@ -83,14 +83,22 @@ $(function () {
             });
 
             $("#print").on("click", function () {
-                if (typeof document.getElementById("htmlEditor_editor").focus === "function")
+                var focusAndPrintType = "function";
+                if ($.ig.util.isIE8) {
+                    focusAndPrintType = "object"
+                }
+                if (typeof document.getElementById("htmlEditor_editor").focus === focusAndPrintType) {
                     document.getElementById("htmlEditor_editor").focus();
-                if (typeof document.getElementById("htmlEditor_editor").print === "function")
+                }
+                if (typeof document.getElementById("htmlEditor_editor").print === focusAndPrintType) {
                     document.getElementById("htmlEditor_editor").print();
-                if (typeof document.getElementById("htmlEditor_editor").contentWindow.focus === "function")
+                }
+                if (typeof document.getElementById("htmlEditor_editor").contentWindow.focus === focusAndPrintType) {
                     document.getElementById("htmlEditor_editor").contentWindow.focus();
-                if (typeof document.getElementById("htmlEditor_editor").contentWindow.print === "function")
+                }
+                if (typeof document.getElementById("htmlEditor_editor").contentWindow.print === focusAndPrintType) {
                     document.getElementById("htmlEditor_editor").contentWindow.print();
+                }
             });
 
             /*----------------- Instantiation -------------------------*/

@@ -1,0 +1,9 @@
+.ui-icon.ui-igtreegrid-expandbutton.ui-igtreegrid-expandbuttonexpanded.ui-icon-minus {
+            background: url(http://igniteui.com/images/samples/tree-grid/opened_folder.png) !important;
+            background-repeat: no-repeat;
+        }
+
+        .ui-icon.ui-igtreegrid-expandbutton.ui-icon-plus {
+            background: url(http://igniteui.com/images/samples/tree-grid/folder.png) !important;
+            background-repeat: no-repeat;
+        }

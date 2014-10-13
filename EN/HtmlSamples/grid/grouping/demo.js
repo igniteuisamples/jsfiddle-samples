@@ -15,6 +15,7 @@ $(function () {
                 features: [
                     {
                         name: 'GroupBy',
+                        groupByDialogContainment: "window",
                         columnSettings: [
                             {
                                 columnKey: "OrderDate",

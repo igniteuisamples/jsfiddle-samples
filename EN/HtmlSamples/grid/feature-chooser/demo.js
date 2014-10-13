@@ -16,18 +16,21 @@ $(function () {
                     {
                         name: "Sorting",
                         type: "local",
-                        mode: "multi"
+                        mode: "multi",
+                        sortingDialogContainment: "window"
                     },
                     {
                         name: "Filtering",
                         type: "local",
-                        mode: "advanced"
+                        mode: "advanced",
+                        filterDialogContainment: "window"
                     },
                     {
                         name: "Hiding"
                     },
                     {
-                        name: "ColumnMoving"
+                        name: "ColumnMoving",
+                        columnMovingDialogContainment: "window"
                     },
                     {
                         name: "Summaries"

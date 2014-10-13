@@ -29,7 +29,8 @@ $(function () {
                     {
                         name: "Filtering",
                         type: "local",
-                        mode: "advanced"
+                        mode: "advanced",
+                        filterDialogContainment: "window"
                     }
                 ]
             });

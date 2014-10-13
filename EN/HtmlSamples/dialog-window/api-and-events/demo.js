@@ -91,7 +91,7 @@ $(function () {
                     $("#maximizeDialog").igButton({ disabled: false });
                     $("#minimizeDialog").igButton({ disabled: false });
                     $("#pinDialog").igButton({ disabled: false });
-                    $("#unpinDialog").igButton({ disabled: false });
+                    $("#unpinDialog").igButton({ disabled: true });
                     $("#position").attr("disabled", false);
                 }
             });
@@ -112,6 +112,7 @@ $(function () {
                     $("#minimizeDialog").igButton({ disabled: true });
                     $("#pinDialog").igButton({ disabled: true });
                     $("#unpinDialog").igButton({ disabled: true });
+                    $("#position").attr("disabled", true);
                 }
             });
 

@@ -78,14 +78,26 @@ $(function () {
                 });
            
         
-            //Angle Transiton Duration Slider
-            $("#axisAngleSlider").slider({
+            //yAxis Angle Transiton Duration Slider
+            $("#yAxisAngleSlider").slider({
                 min: -180,
                 max: 180,
                 value: -90,
                 slide: function (event, ui) {
                     $("#chart").igDataChart("option", "axes", [{ name: "EnergyAxis", titleAngle: ui.value}]);
-                    $("#axisAngleLabel").text(ui.value);
+                    $("#yAxisAngleLabel").text(ui.value);
                 }
             });
+                
+                //xAxis Angle Transiton Duration Slider
+            $("#xAxisAngleSlider").slider({
+                min: -180,
+                max: 180,
+                value: -90,
+                slide: function (event, ui) {
+                    $("#chart").igDataChart("option", "axes", [{ name: "xAxis", titleAngle: ui.value }]);
+                    $("#xAxisAngleLabel").text(ui.value);
+                }
+            });
+                
             });

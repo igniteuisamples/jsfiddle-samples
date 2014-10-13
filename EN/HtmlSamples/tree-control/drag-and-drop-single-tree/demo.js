@@ -84,15 +84,15 @@ $(function () {
                 tolerance: "pointer",
                 activeClass: "ui-state-highlight",
                 accept: function (element) {
-                    var node = $("#tree").igTree("nodeFromElement", $(element));
+                    var path = $(element).attr("data-path");
 
-                    if (node.path == "0") {
+                    if (path == "0") {
                         return false;
                     }
 
                     deletedNode = $("#tree").igTree("findNodesByText", "Deleted");
                     if (deletedNode.length > 0) {
-                        var nodePathArray = node.path.split(".");
+                        var nodePathArray = path.split(".");
                         var DeletedNodePathArray = deletedNode[0].path.split(".");
                         if (nodePathArray[0] == DeletedNodePathArray[0] &&
                             nodePathArray[1] == DeletedNodePathArray[1]) {

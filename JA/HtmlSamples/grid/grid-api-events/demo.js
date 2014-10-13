@@ -25,6 +25,8 @@ $(function () {
                     filterColumn = columnDataSource[$( "#filterColumn" ).igCombo( "option", "selectedItems" )[0].index].column;
                     if ( expr !== null ) {
                         $("#grid").igGridFiltering("filter",([{ fieldName: filterColumn, expr: expr, cond: condition }]));
+                    } else {
+                        $("#grid").igGridFiltering("filter",[]);
                     }
                 }
             });
@@ -125,24 +127,11 @@ $(function () {
                 }
             });
             
-            $( "#exprTextEditor" ).igTextEditor({
-                validatorOptions: {
-                    required: true
-                }
-            }).css( "height", "21px" ).hide().children().first().css( "height", "19px" );
+            $( "#exprTextEditor" ).igTextEditor().css( "height", "21px" ).hide().children().first().css( "height", "19px" );
 
-            $( "#exprNumericEditor" ).igNumericEditor( {
-                validatorOptions: {
-                    required: true
-                },
-                nullText: $.ig.GridFiltering.locale.equalsLabel
-            }).css( "height", "21px" ).children().first().css( "height", "19px" );
+            $( "#exprNumericEditor" ).igNumericEditor({ nullText: $.ig.GridFiltering.locale.equalsLabel }).css( "height", "21px" ).children().first().css( "height", "19px" );
 
-            $( "#exprDateEditor" ).igDateEditor( {
-                validatorOptions: {
-                    required: true
-                }
-            }).css( "height", "21px" ).hide().children().first().css( "height", "19px" );
+            $( "#exprDateEditor" ).igDateEditor().css( "height", "21px" ).hide().children().first().css( "height", "19px" );
 
             $("#pageIndexList").igCombo({
                 width: "120px",

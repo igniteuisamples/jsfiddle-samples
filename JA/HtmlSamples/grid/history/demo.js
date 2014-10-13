@@ -163,7 +163,7 @@ $(function () {
     				var currState, undoState, state, prevState, stateOccurances;
     				// isBackForward = (window.History.storedStates.length - historyLength) === 1;
 
-    				if ($("#sample-title")[0] !== undefined && $("#sample-title")[0].textContent !== undefined && $("#sample-title")[0].textContent.toLowerCase() !== "history.js integration") {
+    				if ($("#sample-title")[0] !== undefined && $("#sample-title")[0].textContent !== undefined && $("#sample-title")[0].textContent.toLowerCase().indexOf("history.js") == -1) {
     					// This check is not related to history.js integaration. It's done to integrate the sample with the Samples Browser.
     					return;
     				}

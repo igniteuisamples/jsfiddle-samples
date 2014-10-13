@@ -18,12 +18,16 @@ $(function () {
                 labelText: $("#buttonFilter").val(),
                 click: function (event) {
                     var expr = $("#exprTextEditor").igTextEditor("value") ||
-                            $("#exprNumericEditor").igNumericEditor("value") ||
-                            $("#exprDateEditor").igDateEditor("value"),
-                        condition = $("#conditionList").igCombo("option", "selectedItems")[0].value,
-                        columnDataSource = $("#filterColumn").igCombo("option", "dataSource"),
-                        filterColumn = columnDataSource[$("#filterColumn").igCombo("option", "selectedItems")[0].index].column;
-                    $("#grid").igGridFiltering("filter", ([{ fieldName: filterColumn, expr: expr, cond: condition }]));
+                        $("#exprNumericEditor").igNumericEditor("value") ||
+                        $("#exprDateEditor").igDateEditor("value"),
+                    condition = $("#conditionList").igCombo("option", "selectedItems")[0].value,
+                    columnDataSource = $("#filterColumn").igCombo("option", "dataSource"),
+                    filterColumn = columnDataSource[$( "#filterColumn" ).igCombo( "option", "selectedItems" )[0].index].column;
+                    if ( expr !== null ) {
+                        $("#grid").igGridFiltering("filter",([{ fieldName: filterColumn, expr: expr, cond: condition }]));
+                    } else {
+                        $("#grid").igGridFiltering("filter",[]);
+                    }
                 }
             });
 
@@ -123,9 +127,11 @@ $(function () {
                 }
             });
             
-            $("#exprTextEditor").igTextEditor().css("height", "21px").hide().children().first().css("height", "19px");
-            $("#exprNumericEditor").igNumericEditor({ nullText: $.ig.GridFiltering.locale.equalsLabel }).css("height", "21px").children().first().css("height", "19px");
-            $("#exprDateEditor").igDateEditor().css("height", "21px").hide().children().first().css("height", "19px");
+            $( "#exprTextEditor" ).igTextEditor().css( "height", "21px" ).hide().children().first().css( "height", "19px" );
+
+            $( "#exprNumericEditor" ).igNumericEditor({ nullText: $.ig.GridFiltering.locale.equalsLabel }).css( "height", "21px" ).children().first().css( "height", "19px" );
+
+            $( "#exprDateEditor" ).igDateEditor().css( "height", "21px" ).hide().children().first().css( "height", "19px" );
 
             $("#pageIndexList").igCombo({
                 width: "120px",
@@ -138,7 +144,7 @@ $(function () {
                 enableClearButton: false,
                 selectedItems: [{ index: 0 }],
                 selectionChanged: function (e, args) {
-                    $("#grid").igGridPaging("pageIndex", parseInt(args.items[0].value - 1));
+                    $( "#grid" ).igGridPaging( "pageIndex", parseInt( args.items[0].value - 1 ) );
                 }
             });
 
@@ -160,16 +166,27 @@ $(function () {
                         nds.push({ pIndex: i + 1 });
                     }
                     $("#pageIndexList").igCombo("option", "dataSource", nds);
-                    $("#pageIndexList").igCombo("option", "selectedItems", [{ index: 0 }]);
+                    $( "#pageIndexList" ).igCombo( "option", "selectedItems", [{ index: 0 }] );
                 }
-            });
+            } );
 
-            $("#rowNumberEditor").igNumericEditor();
+            $( "#rowNumberEditor" ).igNumericEditor( {
+                value: 0,
+                minValue: 0,
+                width: 150,
+                height: 23,
+                validatorOptions: {
+                    required: true
+                }
+            } );
 
             $("#buttonSelectRow").igButton({
                 labelText: $("#buttonSelectRow").val(),
-                click: function (event) {
-                    $("#grid").igGridSelection("selectRow", $("#rowNumberEditor").igNumericEditor("value"));
+                click: function ( event ) {
+                    $( "#rowNumberEditor" ).igNumericEditor( "validate" );
+                    if ( $( "#rowNumberEditor" ).igNumericEditor( "value" ) < $( "#grid" ).igGrid( "rows" ).length ) {
+                        $( "#grid" ).igGridSelection( "selectRow", $( "#rowNumberEditor" ).igNumericEditor( "value" ) );
+                    }
                 }
             });
 
@@ -179,16 +196,17 @@ $(function () {
                     var rows = $("#grid").igGridSelection("selectedRows");
                     apiViewer.log("The number of selected rows is: " + rows.length);
                     $.each(rows, function (i, val) {
-                        apiViewer.log("Row with index " + val.index + " is selected");
+
+                        apiViewer.log("Row with id " + val.id + " is selected");
                     });
                 }
-            });
+            } );
 
             /*----------------- Event Examples -------------------------*/
 
             $("#grid").on("iggridselectionrowselectionchanging", function (evt, ui) {
                 var message = "iggridselectionrowselectionchanging";
-                apiViewer.log(message);
+                apiViewer.log( message );
             });
 
             $("#grid").on("iggridselectionactiverowchanged", function (evt, ui) {
@@ -220,17 +238,23 @@ $(function () {
                     // note: if primaryKey is set and data in primary column contains numbers,
                     // then the dataType: "number" is required, otherwise, dataSource may misbehave
                     headerText: "Employee ID", key: "EmployeeID", dataType: "number"
-                }, {
+                },
+                {
                     headerText: "First Name", key: "FirstName", dataType: "string"
-                }, {
+                },
+                {
                     headerText: "Last Name", key: "LastName", dataType: "string"
-                }, {
+                },
+                {
                     headerText: "Title", key: "Title", dataType: "string"
-                }, {
+                },
+                {
                     headerText: "Birth Date", key: "BirthDate", dataType: "date"
-                }, {
-                    headerText: "Postal Code", key: "PostalCode", dataType: "number"
-                }, {
+                },
+                {
+                    headerText: "Postal Code", key: "PostalCode", dataType: "string"
+                },
+                {
                     headerText: "Country", key: "Country", dataType: "string"
                 }
                 ],
@@ -260,7 +284,6 @@ $(function () {
                         ]
                     },
                     {
-
                         name: "Selection",
                         mode: "row",
                         multipleSelection: true
