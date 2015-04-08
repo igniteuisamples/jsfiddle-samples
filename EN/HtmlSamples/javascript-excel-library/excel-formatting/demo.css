@@ -1,9 +1,7 @@
-.right
-        {
+.right {
             float: right;
         }
 
-        #exportButton
-        {
+        #exportButton {
             float: left;
         }

@@ -62,19 +62,12 @@ $(function () {
                 }]
             });
 
-            $("#cbxIndicator").igCombo({
-                width: "400px",
-                enableClearButton: false,
-                mode: "dropdown",
-                dataSource: indicators,
-                textKey: "text",
-                valueKey: "key",
-                selectedItems: [{ index: 17 }],
-                selectionChanged: function (evt, ui) {
-                    if (ui.items && ui.items[0]) {
-                        changeIndicator(ui.items[0].value);
-                    }
-                }
+            $.each(indicators, function (index, item) {
+                $('#indicatorTypes').append($('<option></option>').val(item.key).html(item.text));
+            });
+
+            $("#indicatorTypes").change(function () {
+                changeIndicator($(this).val());
             });
 
         });

@@ -36,7 +36,7 @@
                      {
                          // setting a primary key for the new row
                          ui.value = 'PK' + ui.value;
-                     },
+                     },                  
                      rowDeleting: function (evt, ui) {
                          var rowID = ui.rowID;
                          var selectedRow = $('#gridKO').igGridSelection('selectedRow');
@@ -68,16 +68,16 @@
        <fieldset>
            <legend>選択した行の編集</legend> 
             <label><b>顧客 ID:</b> </label>
-            <span id="idEditor" data-bind="text: (selectedItemID() > -1 && selectedItemID() < data().length) ? data()[selectedItemID()].ID : data()[0].ID, valueUpdate: 'afterkeydown'"></span>
+            <span id="idEditor" data-bind="text: (selectedItemID() > -1 && selectedItemID() < data().length && data().length>0) ? data()[selectedItemID()].ID : '', valueUpdate: 'afterkeydown'"></span>
             <br />
             <label><b>名前:</b> </label>
-            <input id="nameEditor" type="text" data-bind="value: (selectedItemID() > -1 && selectedItemID() < data().length) ? data()[selectedItemID()].ContactName : data()[0].ContactName, valueUpdate: 'afterkeydown'"></input>
+            <input id="nameEditor" type="text" data-bind="value: (selectedItemID() > -1 && selectedItemID() < data().length) ? data()[selectedItemID()].ContactName : '', valueUpdate: 'afterkeydown'"></input>
             <br />
             <label><b>市:</b> </label>
-            <input id="cityEditor" type="text" data-bind="value: (selectedItemID() > -1 && selectedItemID() < data().length) ? data()[selectedItemID()].City : data()[0].City, valueUpdate: 'afterkeydown'"></input>
+            <input id="cityEditor" type="text" data-bind="value: (selectedItemID() > -1 && selectedItemID() < data().length) ? data()[selectedItemID()].City : '', valueUpdate: 'afterkeydown'"></input>
             <br />
             <label><b>国名:</b> </label>
-            <input id="countryEditor" type="text" data-bind="value: (selectedItemID() > -1 && selectedItemID() < data().length) ? data()[selectedItemID()].Country : data()[0].Country, valueUpdate: 'afterkeydown'"></input>
+            <input id="countryEditor" type="text" data-bind="value: (selectedItemID() > -1 && selectedItemID() < data().length) ? data()[selectedItemID()].Country : '', valueUpdate: 'afterkeydown'"></input>
             <br />   
        </fieldset>     
     </div>

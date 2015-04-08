@@ -3,19 +3,19 @@ $(function () {
             <li>
                 <a href="http://www.facebook.com/infragistics" target="_blank">
                     <img src='http://jp.igniteui.com/images/samples/popover/facebook.jpg' />
-                    <span class="spanText">Join us on Facebook</span>
+                    <span class="spanText">Facebook</span>
                 </a>
             </li>
             <li>
                 <a href="http://twitter.com/infragistics" target="_blank">
                     <img src='http://jp.igniteui.com/images/samples/popover/twitter.jpg' />
-                    <span class="spanText">Follow us on Twitter</span>
+                    <span class="spanText">Twitter</span>
                 </a>
             </li>         
             <li>
                 <a href="http://www.youtube.com/user/infragistics" target="_blank">
                     <img src='http://jp.igniteui.com/images/samples/popover/youtube.jpg' />
-                    <span class="spanText">Watch our YouTube channel</span>
+                    <span class="spanText">YouTube チャネル</span>
                 </a>
             </li>
         </ul>
@@ -32,7 +32,7 @@ $(function () {
                 contentTemplate: $( '#contactUs-template' ).html(),
                 headerTemplate: {
                     closeButton: true,
-                    title: "We're social"
+                    title: "ソーシャル"
                 },
                 showOn: "click"
             } );
@@ -42,7 +42,7 @@ $(function () {
                 position: "start",
                 headerTemplate: {
                     closeButton: true,
-                    title: 'Google Map を使用して市の位置を表示します。'
+                    title: 'Google Maps を使用して市の位置を表示します。'
                 },
                 closeOnBlur: false,
                 animationDuration: 0,

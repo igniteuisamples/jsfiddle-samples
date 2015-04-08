@@ -63,18 +63,14 @@ $(function () {
                 dataSource: flatDS, //bound to flat data source,
                 autoGenerateColumns: false,
                 primaryKey: "employeeID",
+                foreignKey: "PID",
+                initialExpandDepth: 1,
                 columns: [
                     { headerText: "Employee ID", key: "employeeID", width: "200px", dataType: "number" },
                     { headerText: "First Name", key: "firstName", width: "220px", dataType: "string" },
                     { headerText: "Last Name", key: "lastName", width: "220px", dataType: "string" },
                     { headerText: "Reports To", key: "reportsTo", width: "130px", dataType: "number" }
-                ],
-                // tree grid specific options
-                key: "employeeID",
-                foreignKey: "PID",
-                dataSourceLayoutKey: "PID",
-                hierarchicalDataSource: false,
-                initialExpandDepth: 1
+                ]
             });
 
 
@@ -82,7 +78,7 @@ $(function () {
                 width: "100%",
                 dataSource: hierarchicalDS, //Project Plan data,
                 autoGenerateColumns: false,
-                primaryKey: "Id",
+                primaryKey: "id",
                 columns: [
                     { headerText: "ID", key: "id", width: "120px", dataType: "number" },
                     { headerText: "Tasks", key: "tasks", width: "250px", dataType: "string" },
@@ -91,8 +87,8 @@ $(function () {
                     { headerText: "Duration", key: "duration", width: "100px", dataType: "string" },
                     { headerText: "Progress", key: "progress", width: "130px", dataType: "string" }
                 ],
-                dataSourceLayoutKey: "products",
+                childDataKey: "products",
                 initialExpandDepth: 1,
-                renderExpandColumn: true
+                renderExpansionIndicatorColumn: true
             });
             });

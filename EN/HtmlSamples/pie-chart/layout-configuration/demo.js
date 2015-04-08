@@ -58,9 +58,9 @@ $(function () {
                 mode: "dropdown",
                 selectionChanged: function (evt, ui) {
                     if ($.isArray(ui.items) && ui.items[0] != undefined) {
-                        $("#chart1").igPieChart("option", "labelsPosition", ui.items[0].value);
-                        $("#labelExtent").slider("option", "disabled", ui.items[0].value != "outsideEnd");
-                        $("#leaderLine").igCombo("option", "disabled", ui.items[0].value != "outsideEnd");
+                        $("#chart1").igPieChart("option", "labelsPosition", ui.items[0].data.value);
+                        $("#labelExtent").slider("option", "disabled", ui.items[0].data.value != "outsideEnd");
+                        $("#leaderLine").igCombo("option", "mode", ui.items[0].data.value != "outsideEnd" ? "readonly" : "editable");
                     }
                 }
             });
@@ -70,7 +70,7 @@ $(function () {
                 mode: "dropdown",
                 selectionChanged: function (evt, ui) {
                     if ($.isArray(ui.items) && ui.items[0] != undefined) {
-                        $("#chart1").igPieChart("option", "leaderLineType", ui.items[0].value);
+                        $("#chart1").igPieChart("option", "leaderLineType", ui.items[0].data.value);
                     }
                 }
             });

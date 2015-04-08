@@ -27,22 +27,22 @@ $(function () {
                     ]
                 });
 
-                if ($("#videoPlayer1").igVideoPlayer("supports_video"))
+                if ($("#videoPlayer1").igVideoPlayer("supportsVideo"))
                     $("#html5Video").html($("#html5Video").html() + '<span class="green">はい</span>');
                 else
                     $("#html5Video").html($("#html5Video").html() + '<span class="red">いいえ</span>');
 
-                if ($("#videoPlayer1").igVideoPlayer("supports_h264_baseline_video"))
+                if ($("#videoPlayer1").igVideoPlayer("supportsH264BaselineVideo"))
                     $("#h264Video").html($("#h264Video").html() + '<span class="green">はい</span>');
                 else
                     $("#h264Video").html($("#h264Video").html() + '<span class="red">いいえ</span>');
 
-                if ($("#videoPlayer1").igVideoPlayer("supports_ogg_theora_video"))
+                if ($("#videoPlayer1").igVideoPlayer("supportsOggTheoraVideo"))
                     $("#oggVideo").html($("#oggVideo").html() + '<span class="green">はい</span>');
                 else
                     $("#oggVideo").html($("#oggVideo").html() + '<span class="red">いいえ</span>');
 
-                if ($("#videoPlayer1").igVideoPlayer("supports_webm_video"))
+                if ($("#videoPlayer1").igVideoPlayer("supportsWebmVideo"))
                     $("#webMVideo").html($("#webMVideo").html() + '<span class="green">はい</span>');
                 else
                     $("#webMVideo").html($("#webMVideo").html() + '<span class="red">いいえ</span>');
@@ -86,7 +86,7 @@ $(function () {
                     $("#videoPlayer1").igVideoPlayer("option", "volume", value / 100);
                 });
 
-                if ($("#videoPlayer1").igVideoPlayer("supports_video") === false) {
+                if ($("#videoPlayer1").igVideoPlayer("supportsVideo") === false) {
                     $("#rightControls").hide();
                     $("#copyrightContainer").hide();
                 }

@@ -58,7 +58,7 @@ $.ig.loader({
 
             $("#seriesType").igCombo({
                 selectionChanged: function (evt, ui) {
-                    if ($.isArray(ui.items) && ui.items[0] != undefined) {
+                    if (ui.items[0].data.value != undefined) {
                         $("#chart1").igDataChart("option", "series", [{
                             name: "series1", remove: true
                         }, {
@@ -66,7 +66,7 @@ $.ig.loader({
                         }, {
                             name: "series1",
                             title: 'Budget',
-                            type: ui.items[0].value,
+                            type: ui.items[0].data.value,
                             angleAxis: "angleAxis",
                             valueAxis: "radiusAxis",
                             valueMemberPath: "Budget",
@@ -75,7 +75,7 @@ $.ig.loader({
                         }, {
                             name: "series2",
                             title: 'Spending',
-                            type: ui.items[0].value,
+                            type: ui.items[0].data.value,
                             angleAxis: "angleAxis",
                             valueAxis: "radiusAxis",
                             valueMemberPath: "Spending",

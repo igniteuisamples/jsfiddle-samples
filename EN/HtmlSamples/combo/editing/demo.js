@@ -5,9 +5,7 @@ $(function () {
                 textKey: "ProductName",
                 valueKey: "ProductID",
                 dataSource: northwindProducts,
-                mode: "editable",
-                allowCustomValue: true,
-                showDropDownButton: false
+                mode: "editable"
             });
 
             $("#dropdownCombo").igCombo({
@@ -24,7 +22,8 @@ $(function () {
                 textKey: "ProductName",
                 valueKey: "ProductID",
                 dataSource: northwindProducts,
-                mode: "readonlylist"
+                mode: "readonlylist",
+                enableClearButton: false
             });
 
             $("#readonlyCombo").igCombo({
@@ -32,7 +31,8 @@ $(function () {
                 textKey: "ProductName",
                 valueKey: "ProductID",
                 dataSource: northwindProducts,
-                mode: "readonly"
+                mode: "readonly",
+                enableClearButton: false
             });
 
         });

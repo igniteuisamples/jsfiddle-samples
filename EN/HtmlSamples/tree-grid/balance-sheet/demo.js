@@ -10,8 +10,8 @@ $(function () {
                                         { "number": "1120", "name": "Lands and Buildings", "balance": "$147,948,060" },
                                         { "number": "1130", "name": "Increases during the year", "balance": "$147.73" },
                                         { "number": "1140", "name": "Decreases during the year", "balance": "" },
-                                        { "number": "1130", "name": "Accum. Depreciation, Buildings", "balance": "$526,620.38" },
-                                        { "number": "1140", "name": "Lands and Buildings, Total", "balance": "$953,007.95" }
+                                        { "number": "1132", "name": "Accum. Depreciation, Buildings", "balance": "$526,620.38" },
+                                        { "number": "1142", "name": "Lands and Buildings, Total", "balance": "$953,007.95" }
                                     ]
                                 },
                                 {
@@ -31,10 +31,10 @@ $(function () {
                             "number": "2000", "name": "Current assets", "balance": "", "assets": [
                                 {
                                     "number": "1125", "name": "Inventory", "balance": "", "assets": [
-                                        { "number": "1120", "name": "Resale Items", "balance": "$507,215.13" },
-                                        { "number": "1130", "name": "Finished Goods", "balance": "$135,842.95" },
-                                        { "number": "1140", "name": "Raw Material", "balance": "$497,898.10" },
-                                        { "number": "1130", "name": "Inventory, Total", "balance": "$897,898.10" }
+                                        { "number": "1121", "name": "Resale Items", "balance": "$507,215.13" },
+                                        { "number": "1131", "name": "Finished Goods", "balance": "$135,842.95" },
+                                        { "number": "1141", "name": "Raw Material", "balance": "$497,898.10" },
+                                        { "number": "1131", "name": "Inventory, Total", "balance": "$897,898.10" }
                                     ]
                                 }
                             ]
@@ -45,19 +45,15 @@ $(function () {
 
             $("#treegrid1").igTreeGrid({
                 width: "100%",
-                autoComit: true,
                 dataSource: dataSource,
                 autoGenerateColumns: false,
                 primaryKey: "number",
                 columns: [
-                    { headerText: "Number", key: "number", width: "250px", dataType: "number" },
-                    { headerText: "Name", key: "name", width: "250px", dataType: "string" },
-                    { headerText: "Balance", key: "balance", width: "100px", dataType: "string" }
+                    { headerText: "Number", key: "number", width: "40%", dataType: "number" },
+                    { headerText: "Name", key: "name", width: "40%", dataType: "string" },
+                    { headerText: "Balance", key: "balance", width: "20%", dataType: "string" }
                 ],
-                dataSourceLayoutKey: "assets",
-                initialExpandDepth: 2,
-                rendered: function (evt, ui) {
-                    ui.owner.element.igTreeGrid("toggleRowById", 1115);
-                }
+                childDataKey: "assets",
+                initialExpandDepth: 3
             });
         });

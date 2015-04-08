@@ -36,7 +36,7 @@ $(function () {
                 enableActiveItem: false,
                 selectionChanged: function (evt, ui) {
                     if (ui.items.length == 1) {
-                        var editMode = ui.items[0].value;
+                        var editMode = ui.items[0].data.value;
                         $("#grid").igGridUpdating("option", "editMode", editMode);
                     }
                 }
@@ -49,7 +49,7 @@ $(function () {
                 enableActiveItem: false,
                 selectionChanged: function (evt, ui) {
                     if (ui.items.length == 1) {
-                        var startEditTriggers = ui.items[0].value;
+                        var startEditTriggers = ui.items[0].data.value;
                         $("#grid").igGridUpdating("option", "startEditTriggers", startEditTriggers);
                     }
                 }

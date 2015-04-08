@@ -86,8 +86,8 @@ $(document).ready(function () {
 						popoverRight.igPopover("setContent", $.ig.formatter(rightMostValue, "date", "date"));
 					}
 					zoomParams = {
-						left: ui.chart.actualWindowRect ? ui.chart.actualWindowRect.left : 35,
-						width: ui.chart.actualWindowRect ? ui.chart.actualWindowRect.width : 30
+						left: ui.chart.actualWindowRect ? ui.chart.actualWindowRect.left : 0.35,
+						width: ui.chart.actualWindowRect ? ui.chart.actualWindowRect.width : 0.30
 					};
 				}
 			});

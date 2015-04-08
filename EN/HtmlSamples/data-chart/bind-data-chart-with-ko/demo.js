@@ -1,7 +1,7 @@
 $(function () {
             var dynamicModel,
                 overallProfit = 0,
-                MTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+               MTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
                 MONTHS = ["January", "February", "March", "April", "May", "June",
                         "July", "August", "September", "October", "November", "December"];
                 
@@ -50,26 +50,17 @@ $(function () {
                 this.profitColor = "#216EDD";
                 this.outlineColor = "black";
             	this.yearProfit = ko.observable(overallProfit * 1000000);
-            	this.months = MTHS;
-            	this.currMonth = ko.observable(MTHS[3]);
+            	this.months = ko.mapping.fromJS(MTHS);
+            	this.currMonth = ko.observableArray([MTHS[3]]);
             	this.currMonthLong = ko.computed(function () {
-            		return MONTHS[MTHS.indexOf(self.currMonth())];
+            		return MONTHS[MTHS.indexOf(self.currMonth()[0])];
             	});
             	this.formatMonth = function (value) {
             		return MTHS[value];
             	}
             	this.currentIndex = ko.computed(function () {
-            		return MTHS.indexOf(self.currMonth());
+            		return MTHS.indexOf(self.currMonth()[0]);
             	});
-                this.currentMonth = ko.computed({
-                    read: function () {
-                        return this.data[this.currentIndex()].month();
-                    },
-                    write: function (value) {
-                        this.data[this.currentIndex()].month(value);
-                    },
-                    owner: this
-                });
                 this.currentRevenue = ko.computed({
                     read: function () {
                         return this.data[this.currentIndex()].revenue();

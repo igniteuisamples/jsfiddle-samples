@@ -212,7 +212,7 @@ $(function () {
                 button: "spin",
                 value: 1,
                 minValue: 1,
-                maxValue: 29,
+                maxValue: 9,
                 width: 150,
                 height: 23
             });

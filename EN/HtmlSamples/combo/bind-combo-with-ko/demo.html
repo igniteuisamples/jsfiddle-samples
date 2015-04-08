@@ -12,23 +12,21 @@
 <h2 class="title">My Favourite Actors</h2>
     <div class="horizontal-container">
         <label>Selected Actor:</label>
-        <a data-bind="attr: { href: imdb_url, title: actorName_imdb }, text: actorName" href="#" target="_blank"></a>
+        <a data-bind="attr: { href: imdb_url, title: actorName_imdb }, text: selectedActorName" href="#" target="_blank"></a>
     </div>
 
     <div class="horizontal-container">
-        <input data-bind="value: newActor" type="text"></input>
+        <input data-bind="value: newActor" type="text" class="input-add-actor"></input>
         <input data-bind="click: addActor" type="button" value="Add"></input>
     </div>
 
 
     <div class="horizontal-container">
-        <span id="comboActors" data-bind="igCombo: { 
-                text: actorName,
+		<span id="comboActors" data-bind="igCombo: {
                 dataSource: actors,
                 textKey: 'name',
                 valueKey: 'id',
-                allowCustomValue : true,
-                enableSelectionChangedUpdate: true,
+	            selectedItems: selectedActor,
                 width: '200',
                 mode: 'dropdown',
                 enableClearButton: false
@@ -36,5 +34,5 @@
         <input data-bind="click: removeActor" type="button" value="Remove"></input>
     </div>
     <div class="horizontal-container">
-        <select id="listboxActors" data-bind="options: actorsNames, value: actorName"></select>
+		<select id="listboxActors" data-bind="options: actors, selectedOptions: selectedActor, optionsValue: 'id', optionsText: 'name'"></select>
     </div>

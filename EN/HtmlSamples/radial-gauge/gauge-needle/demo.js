@@ -60,6 +60,7 @@ $(function () {
                 max: 1,
                 step: 0.01,
                 value: 0,
+                disabled: true,
                 slide: function (event, ui) {
                     $("#radialgauge").igRadialGauge("option", "needleEndWidthRatio", ui.value);
                     $("#endWidthRatioLabel").text(ui.value);

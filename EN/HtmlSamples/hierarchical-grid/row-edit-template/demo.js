@@ -96,6 +96,7 @@ $(function () {
                                 [
                                     {
                                         columnKey: "ShipName",
+                                        required: true,
                                         validatorOptions: { bodyAsParent: false, required: true, showIcon: true }
                                     }
                                 ]

@@ -40,16 +40,18 @@ $(function () {
             });
 
             //igEditors
-            $("#textEditor").igTextEditor();
-            $("#dateEditor").igDateEditor();
-            $("#maskEditor").igMaskEditor();
-            $("#currencyEditor").igCurrencyEditor();
-            $("#numericEditor").igNumericEditor();
-            $("#percentEditor").igPercentEditor();
-            $("#datePicker").igDatePicker({ width: 149 });
+            $("#textEditor").igTextEditor({ width: 150 });
+            $("#dateEditor").igDateEditor({ width: 150 });
+            $("#maskEditor").igMaskEditor({ width: 150 });
+            $("#currencyEditor").igCurrencyEditor({ width: 150 });
+            $("#numericEditor").igNumericEditor({ width: 150 });
+            $("#percentEditor").igPercentEditor({ width: 150 });
+            $("#datePicker").igDatePicker({ width: 150 });
 
             //igCombo
             $("#combo").igCombo({
+                width: 150,
+                height: 20,
                 dataSource: [
                       { "ID": 1, "Name": "John Smith", "Age": 45 },
                       { "ID": 2, "Name": "Mary Johnson", "Age": 32 },

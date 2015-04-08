@@ -34,16 +34,17 @@
 			<div class="editor-container">
 				<label class="labels">Select Month:</label>
 				<div id="combo-month" data-bind="igCombo: {
-					text: currMonth,
+					selectedItems: currMonth,
 					dataSource: months,
-					enableSelectionChangedUpdate: true,
-                    mode: 'dropdown',
-					width: 100
+					mode: 'dropdown',
+					enableClearButton: false,
+					width: 100,
+					height: 21
 				}"></div>
 			</div>
 			<div class="editor-container">
 				<label class="labels">Month Name:</label>
-				<div id="ed-month" data-bind="igTextEditor: { value: currentMonth, width: 100, updateMode: 'immediate' }"></div>
+				<div id="ed-month" data-bind="igTextEditor: { value: currMonth, width: 100, updateMode: 'immediate', readOnly: true }"></div>
 			</div>
 			<div class="responsive-clear"></div>
 			<div class="editor-container">

@@ -17,27 +17,25 @@
             padding: 3px;
         }
         .ui-igbutton .ui-igbutton-forecolor, .button-split {
-            background-image: url(http://igniteui.com/igniteui/css/themes/infragistics/images/ui-icons_888888_256x240.png);
+            background-image: url('http://igniteui.com/igniteui/css/themes/infragistics/images/ui-icons_888888_256x240.png');
             background-size: 384px 370px;
         }
 
         #color-picker-circle .ui-igbutton .ui-igbutton-forecolor, .button-circle.ui-icon {
             background-position: -123px -230px;
-            margin-top: -6px;
-            margin-left: -6px;
+            background-image: url('http://igniteui.com/igniteui/css/themes/infragistics/images/ui-icons_888888_256x240.png');
         }
+
         #color-picker-triangle .ui-igbutton .ui-igbutton-forecolor, #split-button-circle .button-triangle,
          #split-button-triangle .button-triangle, #split-button-square .button-triangle.ui-icon {
-            background-position: -101px -10px;
-            background-image: url(http://igniteui.com/igniteui/css/structure/images/igGrid/filter-icons-333333.png);
+            background-position: -98px -8px;
+            background-image: url('http://igniteui.com/igniteui/css/structure/images/igGrid/filter-icons-333333.png');
             background-size: 606px 32px;
-            margin-top: -6px;
-            margin-left: -6px;
         }
+
         #color-picker-square .ui-igbutton .ui-igbutton-forecolor, .button-square.ui-icon {
             background-position: -148px -254px;
-            margin-top: -6px;
-            margin-left: -6px;
+            background-image: url('http://igniteui.com/igniteui/css/themes/infragistics/images/ui-icons_888888_256x240.png');
         }
         
     .ui-splitbutton .ui-igtoolbarbutton.ui-button {

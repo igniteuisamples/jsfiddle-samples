@@ -99,13 +99,10 @@ $(function () {
                     { headerText: "Type", key: "type", width: "230px", dataType: "string" },
                     { headerText: "Size in KB", key: "size", width: "130px", dataType: "number" }
                 ],
-                dataSourceLayoutKey: "files",
+                childDataKey: "files",
                 initialExpandDepth: 2,
-                renderExpandColumn: true,
+                renderExpansionIndicatorColumn: true,
                 features: [
-                {
-                    name: "Hiding"
-                },
                 {
                     name: "Sorting"
                 },

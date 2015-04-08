@@ -196,7 +196,8 @@ $(function () {
                     var rows = $("#grid").igGridSelection("selectedRows");
                     apiViewer.log("選択された行数: " + rows.length);
                     $.each(rows, function (i, val) {
-                        apiViewer.log("インデックス " + val.index + " 行が選択されました");
+
+                        apiViewer.log("ID " + val.id + " 行が選択されました");
                     });
                 }
             } );

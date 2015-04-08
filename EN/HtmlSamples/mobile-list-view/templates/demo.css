@@ -16,3 +16,6 @@
             .notes, .address {
                 margin-top: 1em;
             }
+            .itemContainer {
+                height:80px;
+            }

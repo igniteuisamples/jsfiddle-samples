@@ -26,7 +26,9 @@ var colors = [
                 dataSource: colors,
                 textKey: "Name",
                 valueKey: "Name",
-                multiSelection: "on"
+                multiSelection: {
+                    enabled: true
+                }
             });
 
             $("#checkboxSelectCombo").igCombo({
@@ -34,7 +36,10 @@ var colors = [
                 dataSource: colors,
                 textKey: "Name",
                 valueKey: "Name",
-                multiSelection: "onWithCheckboxes"
+                multiSelection: {
+                    enabled: true,
+                    showCheckboxes: true
+                }
             });
 
         });

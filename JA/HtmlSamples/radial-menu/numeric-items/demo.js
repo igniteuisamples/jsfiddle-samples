@@ -55,48 +55,48 @@ $(function () {
                         [
                             {
                                 header: "Arial",
-                                tag: "Arial",
-                                click: function (evt, ui) { setFontFamily(evt.item.tag); }
+                                name: "Arial",
+                                click: function (evt, ui) { setFontFamily(evt.item.name); }
                             },
                             {
                                 header: "Calibri",
-                                tag: "Calibri",
-                                click: function (evt, ui) { setFontFamily(evt.item.tag); }
+                                name: "Calibri",
+                                click: function (evt, ui) { setFontFamily(evt.item.name); }
                             },
                             {
                                 header: "Comic Sans",
-                                tag: "Comic Sans MS",
-                                click: function (evt, ui) { setFontFamily(evt.item.tag); }
+                                name: "Comic Sans MS",
+                                click: function (evt, ui) { setFontFamily(evt.item.name); }
                             },
                             {
                                 header: "Consolas",
-                                tag: "Consolas",
-                                click: function (evt, ui) { setFontFamily(evt.item.tag); }
+                                name: "Consolas",
+                                click: function (evt, ui) { setFontFamily(evt.item.name); }
                             },
                             {
                                 header: "Courier New",
-                                tag: "Courier New",
-                                click: function (evt, ui) { setFontFamily(evt.item.tag); }
+                                name: "Courier New",
+                                click: function (evt, ui) { setFontFamily(evt.item.name); }
                             },
                             {
                                 header: "Segoe",
-                                tag: "Segoe UI",
-                                click: function (evt, ui) { setFontFamily(evt.item.tag); }
+                                name: "Segoe UI",
+                                click: function (evt, ui) { setFontFamily(evt.item.name); }
                             },
                             {
                                 header: "Tahoma",
-                                tag: "Tahoma",
-                                click: function (evt, ui) { setFontFamily(evt.item.tag); }
+                                name: "Tahoma",
+                                click: function (evt, ui) { setFontFamily(evt.item.name); }
                             },
                             {
                                 header: "Times",
-                                tag: "Times New Roman",
-                                click: function (evt, ui) { setFontFamily(evt.item.tag); }
+                                name: "Times New Roman",
+                                click: function (evt, ui) { setFontFamily(evt.item.name); }
                             },
                             {
                                 header: "Verdana",
-                                tag: "Verdana",
-                                click: function (evt, ui) { setFontFamily(evt.item.tag); }
+                                name: "Verdana",
+                                click: function (evt, ui) { setFontFamily(evt.item.name); }
                             }
                         ]
                     },

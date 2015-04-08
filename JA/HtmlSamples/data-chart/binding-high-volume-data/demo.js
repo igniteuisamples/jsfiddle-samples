@@ -24,12 +24,12 @@ var currData, currDataSource, doGeneration, startTime = null;
 	        });
 	    };
 
-	    function refresh() {
-	        doGeneration();
-	        assignData();
-	    };
-
 	    $(function () {
+	        $("#btnRefresh").click(function () {
+	            doGeneration();
+	            assignData();
+	        });
+
 	        $("#slider").slider({
 	            min: 50000,
 	            max: 1000000,

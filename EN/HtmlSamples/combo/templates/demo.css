@@ -7,29 +7,17 @@
             text-align: center;
             padding: 2px;
         }
-        #comboHeaderTemplate
-        {
-            font-size: large;
-            font-weight: bold;
-            background-color: rgb(185, 9, 11);
-            color: White;
-        }
-        #comboFooterTemplate
-        {
-            font-size: small;
-            background-color: rgb(245, 245, 164);
-        }
         .empImage
         {
             float: left;
             width: 64px;
-            padding-top: 10px;
+            padding-top: 3px;
         }
         .empInfo
         {
             float: left;
-            padding: 5px;            
-            width: 195px;
+            padding-left: 5px;
+            width: 240px;
         }
         .empName
         {
@@ -37,6 +25,7 @@
         }
         .comboItemContainer
         {
-            width: 270px;
+            width: 325px;
             white-space: normal;
+            height: 70px;
         }

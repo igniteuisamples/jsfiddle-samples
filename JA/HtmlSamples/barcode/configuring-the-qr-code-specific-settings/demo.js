@@ -12,7 +12,7 @@ $(function () {
 
             $("#eciNumber").change(function () {
                 var val = $("#eciNumber").val().toLowerCase();
-                $("#barcode").igQRCodeBarcode("option", "eciNumber", val);
+                $("#barcode").igQRCodeBarcode("option", "eciNumber", parseInt(val));
             });
 
             $("#eccLevel").change(function () {
