@@ -20,7 +20,7 @@
             </div>
             <div class="row">
                 
-                <input id="orderDateIG" style="margin-top:5px" class="row-control" data-bind="igDateEditor: { value: orderDate }"></input>
+                <div id="orderDateIG" class="row-control" data-bind="igDateEditor: { value: orderDate, textAlign: 'right' }"></div>
                 <input id="orderDate" type="text" class="row-control" data-bind="value: orderDate"></input>
             </div>
         </div>
@@ -31,8 +31,8 @@
             </div>
             <div class="row">
                 
-                <div id="shipDateIG" class="gosho row-control" data-bind="igDatePicker: { value: shipDate, width: '205px' }"></div>
-                <div style="display: inline;position: relative; top: -5px;"><input id="shipDate" class="date-row-control row-control" data-bind="value: shipDate"></input></div>
+                <div id="shipDateIG" class="gosho row-control" data-bind="igDatePicker: { value: shipDate, textAlign: 'right' }"></div>
+                <input id="shipDate" class="date-row-control row-control" data-bind="value: shipDate"></input>
             </div>
         </div>
 
@@ -42,7 +42,7 @@
             </div>
             <div class="row">
                 
-                <input id="dueInDaysIG" class="row-control" data-bind="igNumericEditor: { value: dueInDays }"></input>
+                <div id="dueInDaysIG" class="row-control" data-bind="igNumericEditor: { value: dueInDays, textAlign: 'right' }"></div>
                 <input id="dueInDays" type="number" class="row-control" data-bind="value: dueInDays"></input>
             </div>
         </div>
@@ -53,7 +53,7 @@
             </div>
             <div class="row">
                 
-                <input id="customerNameIG" class="row-control" data-bind="igTextEditor: { value: customerName }"></input>
+                <div id="customerNameIG" class="row-control" data-bind="igTextEditor: { value: customerName, textAlign: 'right' }"></div>
                 <input id="customerNAme" type="text" class="row-control" data-bind="value: customerName"></input>
             </div>
         </div>
@@ -64,10 +64,11 @@
             </div>
             <div class="row">
                 
-                <input id="contactPhoneIG" class="row-control" data-bind="igMaskEditor: { 
+                <div id="contactPhoneIG" class="row-control" data-bind="igMaskEditor: {
                         value: contactPhone,
-                        inputMask: '000-000-0000'
-                    }"></input>
+                        inputMask: '000-000-0000',
+                        textAlign: 'right'
+                    }"></div>
                 <input id="contactPhone" type="text" class="row-control" data-bind="value: contactPhone"></input>
             </div>
         </div>
@@ -78,7 +79,7 @@
             </div>
             <div class="row">
                 
-                <input id="advancePaymentIG" class="row-control" data-bind="igCurrencyEditor: { value: advancePayment }"></input>
+                <div id="advancePaymentIG" class="row-control" data-bind="igCurrencyEditor: { value: advancePayment, textAlign: 'right' }"></div>
                 <input id="advancePayment" type="text" class="row-control" data-bind="value: advancePayment"></input>
             </div>
         </div>
@@ -89,9 +90,11 @@
             </div>
             <div class="row">
                 
-                <input id="discountPercentIG" class="row-control" data-bind="igPercentEditor: { 
-                        value: discountPercent, displayFactor : 1 
-                    }"></input>
+                <div id="discountPercentIG" class="row-control" data-bind="igPercentEditor: {
+                        value: discountPercent,
+                        displayFactor : 1,
+                        textAlign: 'right'
+                    }"></div>
                 <input id="discountPercent" type="text" class="row-control" data-bind="value: discountPercent"></input>
             </div>
         </div>

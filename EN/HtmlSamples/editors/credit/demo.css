@@ -1,0 +1,33 @@
+#container {
+            width: 100%;
+            min-width: 900px;
+            max-width: 900px;
+            display: inline-block;
+            background-image: url("http://s1.postimg.org/ip7nzwz2n/logo.jpg");
+            background-size: 100%;
+            background-repeat: no-repeat;
+            background-position: right bottom;
+        }
+
+        #igCheckboxEditorsContainer {
+            top: 0px;
+            left: 0px;
+            height: 500px;
+            width: 450px;
+            padding-top: 15px;
+            float: left;
+        }
+
+        #ValuesContainer {
+            top: 0px;
+            right: 0px;
+            height: 500px;
+            width: 300px;
+            padding-top: 15px;
+            float: right;
+            font-size: 18px;
+        }
+
+            #ValuesContainer.p {
+                font-size: 16px;
+            }

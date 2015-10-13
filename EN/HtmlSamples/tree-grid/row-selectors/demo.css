@@ -1,0 +1,43 @@
+#configureTreeGridRS {
+            width:100%;
+            overflow:hidden;
+            margin-top:20px;
+            background-color:#f3f3f3;
+        }
+        #checkboxModeTreeGridLabel {
+            margin:20px;
+            border-bottom:1px solid #ccc;
+            padding-bottom:5px;
+        }
+        .settingsRS {
+            padding:0 20px 10px;
+        }
+        .settingsRS {
+            float:left;
+        }
+        #sampleContainer fieldset {
+            margin:0;
+            padding:0;
+        }
+        #sampleContainer fieldset legend {
+            font-size:14px;
+            color:#333;
+            margin-bottom:10px;
+            font-weight:400;
+        }
+        #sampleContainer fieldset label {
+            margin:0 0 5px;
+            display:inline;
+        }
+        #sampleContainer fieldset label[for=rowSelectorNumberingModeEdit],#sampleContainer fieldset label[for=checkBoxModeEdit] {
+            display:block;
+        }
+        .settingsRS p {
+            width:100%;
+            overflow:hidden;
+            margin-bottom:5px;
+        }
+        .ui-checkbox-container {
+            float:left;
+            margin-right:5px;
+        }

@@ -3,18 +3,23 @@
 <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>
 <script src="http://cdn-na.infragistics.com/igniteui/latest/js/infragistics.core.js"></script>
 <script src="http://cdn-na.infragistics.com/igniteui/latest/js/infragistics.lob.js"></script>
-<script src="http://igniteui.com/js-data/nw-products"></script>
+<script src="http://igniteui.com/js-data/credit-cards"></script>
 <link href="http://cdn-na.infragistics.com/igniteui/latest/css/themes/infragistics/infragistics.theme.css" rel="stylesheet"></link>
 <link href="http://cdn-na.infragistics.com/igniteui/latest/css/structure/infragistics.css" rel="stylesheet"></link>
 
-<h4 class="combo-label">Editable</h4>
-    <div id="editableCombo"></div>
+<div class="payment-form">
+        <div id="paymentType" name="paymentType"></div>
+        <div id="payment-label"><label id="paymentTypeLabel" for="paymentType">This seller accepts credit card only</label></div>
+    </div>
+    <div class="card-form">
+        <div id="creditCardType"></div><img src="http://igniteui.com/images/samples/credit-cards/visa_logo_large.gif" id="cardLogo" class="card-logo" alt="Visa"></img>
 
-    <h4 class="combo-label">Not Editable</h4>
-    <div id="dropdownCombo"></div>
-
-    <h4 class="combo-label">Read-only, Shows Dropdown</h4>
-    <div id="readonlylistCombo"></div>
-
-    <h4 class="combo-label">Read-only, Dropdown Disabled</h4>
-    <div id="readonlyCombo"></div>
+        <div id="creditCardNumber"></div>
+        <div class="good-through ui-state-disabled">
+            <label>GOOD<br />THRU</label>
+        </div>
+        <div id="month" name="month"></div>
+        <div id="year"></div>
+        <input id="ccv"></input>
+    </div>
+    <input type="button" value="Buy" id="buy"></input>

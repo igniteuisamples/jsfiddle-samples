@@ -24,19 +24,19 @@ $(function () {
                 },
                 responseDataKey: "d.results.Results",
                 responseTotalRecCountKey: "d.results.Count",
-                dataSource: "http://igniteui.com/api/invoices?$top=1000&callback=?",
-                dataSourceUrl: "http://igniteui.com/api/invoices?$top=1000&callback=?",
-                filteringType: "local",
-                width: "250px",
+                dataSource: "http://igniteui.com/api/products?callback=?",
+                width: "400px",
                 textKey: "ProductName",
-                valueKey: "OrderID",
+                valueKey: "ID",
                 virtualization: true,
                 autoComplete: true,
                 headerTemplate: "<div class='dropDownHeaderFooter'>製品</div>",
                 footerTemplate: "<div class='dropDownHeaderFooter'>製品数: {0} / {3}</div>",
-                itemTemplate: "<div>${ProductName} (${Quantity})</div>",
-                nullText: "製品を選択してください。",
+                itemTemplate: "<div>${ProductName} (${QuantityPerUnit})</div>",
+                placeHolder: "製品を選択してください。",
                 filterExprUrlKey: 'startsWith',
+                highlightMatchesMode: "startsWith",
+                filteringCondition: "startsWith",
                 selectionChanged: function (evt, ui) {
                     //  Clear the selected item table and hide the div
                     $("#table").empty();
@@ -44,11 +44,10 @@ $(function () {
                     //  Add selected item data only if an item has been selected
                     if (ui.items && ui.items[0]) {
                         //  Get the selected item
-                        var item = $("#combo").igCombo("itemByIndex", ui.items[0].index);
-                        //  Display item.index, item.value and item.text properties
-                        addItemValue($("#table"), item, "index");
-                        addItemValue($("#table"), item, "value");
-                        addItemValue($("#table"), item, "text");
+                        var itemData = ui.items[0].data;
+                        //  Display item's valueKey and textKey settings
+                        addItemValue($("#table"), itemData, ui.owner.options.valueKey);
+                        addItemValue($("#table"), itemData, ui.owner.options.textKey);
                         //  Show the selected item div
                         $("#itemData").fadeIn(500);
                     }

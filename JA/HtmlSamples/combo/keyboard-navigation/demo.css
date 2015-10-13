@@ -1,0 +1,20 @@
+.combo-label {
+            margin-bottom: .5em;
+        }
+
+        .tooltipStyle {
+            max-width: 400px;
+        }
+
+        .glowing-border {
+            outline: none !important;
+            border-color: #8dff71 !important;
+            box-shadow: 0 0 10px #8dff71 !important;
+            background-color: #CBFF99;
+        }
+
+        .normal {
+            border: 1px solid #bcbcbc;
+            background-color: #ffffff;
+            box-shadow: 0 0 5px #bcbcbc !important;
+        }

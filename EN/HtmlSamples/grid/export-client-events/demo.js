@@ -2,18 +2,18 @@ $(function () {
 $.ig.loader({
         scriptPath: "http://cdn-na.infragistics.com/igniteui/latest/js/",
         cssPath: "http://cdn-na.infragistics.com/igniteui/latest/css/",
-        resources: 'modules/infragistics.util.js,' +
-                       'modules/infragistics.documents.core.js,' +
-                       'modules/infragistics.excel.js,' +
-                    'modules/infragistics.gridexcelexporter.js,' +
-                       'igGrid.Hiding,' +
-                       'igGrid.Filtering,' +
-                       'igGrid.Sorting,' +
-                       'igGrid.Paging,' +
-                       'igGrid.Summaries' 
+        resources: 'igGrid,' +
+            'igGrid.Hiding,' +
+            'igGrid.Filtering,' +
+            'igGrid.Sorting,' +
+            'igGrid.Paging,' +
+            'igGrid.Summaries,' +
+            'modules/infragistics.documents.core.js,' +
+            'modules/infragistics.excel.js,' +
+            'modules/infragistics.gridexcelexporter.js'
     });
-            $.ig.loader(function() {
-                $(function() {
+        $.ig.loader(function () {
+            $(function () {
                 var data = [
                     { 'ProductID': 1, 'Name': 'Omnis ut illum nisi.', 'ProductNumber': 2973311236, "InStock": true, "Quantity": 56, VendorWebsite: 'http://infragistics.com/', },
                     { 'ProductID': 2, 'Name': 'Quis quibusdam qui.', 'ProductNumber': 5907101619, "InStock": false, "Quantity": 0, VendorWebsite: 'http://infragistics.com/', },
@@ -54,42 +54,41 @@ $.ig.loader({
                        }
                     ]
                 });
+		
+                $("#exportButton").on("click", function () {
+                    $.ig.GridExcelExporter.exportGrid($("#grid"),
+				        {
+				            fileName: "igGrid",
+				            gridFeatureOptions: { "sorting": "applied", "filtering": "applied", paging: "currentPage", "summaries": "applied" },
+				        },
+                        {
+                            headerCellExported: function (e, args) {
+                                if (args.columnKey == "Quantity") {
+							        args.xlRow.setCellValue(args.columnIndex, "Available Quantity");
+						        }
+					        },
+                            cellExporting: function (e, args) {
+                                if (args.columnKey == "Quantity" && args.cellValue > 15) {
+                                    args.xlRow.getCellFormat(args.columnIndex).font().bold(1);
+                                }
+                            },
+                            cellExported: function (e, args) {
+                                if (args.xlRow.index() == 0) {
+                                    return;
+                                }
+
+                                if (args.columnKey == 'VendorWebsite') {
+                                    var xlRow = args.xlRow;
+                                    xlRow.cells(args.columnIndex).applyFormula('=HYPERLINK("' + args.cellValue + '")');
+                                }
+                            },
+					        rowExported: function (e, args) {
+						        if (args.xlRow.index() == args.grid.igGrid("allRows").length - 1) {
+						            $('<div style="font-size:20px;">Last row exported, download starts!!</div>').insertBefore('#exportButton').delay(1000).fadeOut();
+						        }
+					        }
+                        });
+                });
             });
         });
-		
-		function exportGrid() {
-			$.ig.GridExcelExporter.export($("#grid"),
-				{
-				    fileName: "igGrid",
-				    gridFeatureOptions: { "sorting": "applied", "filtering": "applied", paging: "currentPage", "summaries": "applied" },
-				},
-                {
-                    headerCellExported: function(e, args) {
-                        if (args.columnKey == "Quantity") {
-							args.xlRow.setCellValue(args.columnIndex, "Available Quantity");
-						}
-					},
-                    cellExporting: function(e, args) {
-                        if (args.columnKey == "Quantity" && args.cellValue > 15) {
-                            args.xlRow.getCellFormat(args.columnIndex).font().bold(1);
-                        }
-                    },
-                    cellExported: function(e, args) {
-                        if (args.xlRow.index() == 0) {
-                            return;
-                        }
-
-                        if (args.columnKey == 'VendorWebsite') {
-                            var xlRow = args.xlRow;
-                            xlRow.cells(args.columnIndex).applyFormula('=HYPERLINK("' + args.cellValue + '")');
-                        }
-                    },
-					rowExported: function (e, args) {
-						if (args.xlRow.index() == args.grid.igGrid("allRows").length - 1) {
-						    //alert("");
-						    $('<div style="font-size:20px;">Last row exported, download starts!!</div>').insertBefore('#exportButton').delay(1000).fadeOut();
-						}
-					}
-                });
-		};
 });

@@ -5,9 +5,10 @@ $(function () {
                 textKey: "ProductName",
                 valueKey: "ProductID",
                 dataSource: northwindProducts,
-                autoComplete: true,
                 filteringType: "local",
-                renderMatchItems: "startsWith"
+                highlightMatchesMode: "startsWith",
+                filteringCondition: "startsWith",
+                autoComplete: true
             });
 
             $("#filterContainsCombo").igCombo({
@@ -16,8 +17,8 @@ $(function () {
                 valueKey: "ProductID",
                 dataSource: northwindProducts,
                 filteringType: "local",
-                filterCondition: "contains",
-                renderMatchItems: "contains"
+                filteringCondition: "contains",
+                highlightMatchesMode: "contains"
             });
 
             $("#caseSensitiveCombo").igCombo({
@@ -26,8 +27,9 @@ $(function () {
                 valueKey: "ProductID",
                 dataSource: northwindProductsEN,
                 filteringType: "local",
-                autoComplete: true,
-                caseSensitive: true
+                autoSelectFirstMatch: true,
+                caseSensitive: true,
+                autoComplete: true
             });
 
         });

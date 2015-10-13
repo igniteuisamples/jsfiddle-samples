@@ -1,0 +1,46 @@
+#figuresArea {
+            margin: 0px 0px 40px 0px;
+        }
+
+        #circle, #triangle, #rectangle, #square {
+            padding: 0px 0px 0px 60px;
+        }
+
+        .manipulator-container {
+            border-bottom: 1px solid black;
+            padding: 0px 0px 5px 0px;
+            width: 300px;
+        }
+
+        .ui-button {
+            width: 18px;
+            height: 18px;
+            padding: 3px;
+        }
+
+        .ui-igbutton .ui-igbutton-forecolor, .button-split {
+            background-image: url('http://cdn-na.infragistics.com/igniteui/2015.1/latest/css/themes/infragistics/images/ui-icons_888888_256x240.png');
+            background-size: 384px 370px;
+        }
+
+        #color-picker-circle .ui-igbutton .ui-igbutton-forecolor, .button-circle.ui-icon {
+            background-position: -123px -230px;
+            background-image: url('http://cdn-na.infragistics.com/igniteui/2015.1/latest/css/themes/infragistics/images/ui-icons_888888_256x240.png');
+        }
+
+        #color-picker-triangle .ui-igbutton .ui-igbutton-forecolor, #split-button-circle .button-triangle,
+        #split-button-triangle .button-triangle, #split-button-square .button-triangle.ui-icon {
+            background-position: -98px -8px;
+            background-image: url('http://cdn-na.infragistics.com/igniteui/2015.1/latest/css/structure/images/igGrid/filter-icons-333333.png');
+            background-size: 606px 32px;
+        }
+
+        #color-picker-square .ui-igbutton .ui-igbutton-forecolor, .button-square.ui-icon {
+            background-position: -148px -254px;
+            background-image: url('http://cdn-na.infragistics.com/igniteui/2015.1/latest/css/themes/infragistics/images/ui-icons_888888_256x240.png');
+        }
+
+        .ui-splitbutton .ui-igtoolbarbutton.ui-button {
+            margin: 0;
+            border: none !important; /* Needed to prevent various jquery ui interaction state scenarios */
+        }

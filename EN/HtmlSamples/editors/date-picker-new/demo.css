@@ -1,0 +1,39 @@
+#container {
+            width: 750px;
+            display: inline-block;
+        }
+
+        .p {
+            margin-top: 15px;
+        }
+
+        .header {
+            color: #888;
+        }
+
+        #igDatePickersContainer {
+            height: 400px;
+            width: 450px;
+            padding-top: 15px;
+            float: left;
+        }
+
+        #ValuesContainer {
+            top: 0px;
+            right: 0px;
+            height: 500px;
+            width: 300px;
+            padding-top: 15px;
+            float: right;
+            font-size: 16px;
+        }
+
+        #ValuesContainer.p {
+            font-size: 16px;
+        }
+
+        #container h4  {
+            font-size: 16px;
+            margin-bottom: .3em;
+            margin-bottom: .3em;
+        }

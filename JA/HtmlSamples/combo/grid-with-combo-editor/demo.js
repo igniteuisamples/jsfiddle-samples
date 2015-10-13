@@ -23,7 +23,7 @@ $(function () {
                 var i, category;
                 for (i = 0; i < northWindCategoriesJSON.length; i++) {
                     category = northWindCategoriesJSON[i];
-                    if (category.ID === val) {
+                    if (category.ID == val) {
                         val = category.Name;
                     }
                 }

@@ -46,7 +46,7 @@
                         </tr>
                         <tr>
                             <td>
-                                <b>市:</b>
+                                <b>市/州:</b>
                             </td>
                             <td>
                                 <input id="cityEditor" type="text" data-bind="value: Records()[0].City, valueUpdate: 'afterkeydown'"></input>
@@ -77,7 +77,7 @@
                         </tr>
                         <tr>
                             <td>
-                                <b>出荷名:</b>
+                                <b>配送先:</b>
                             </td>
                             <td>
                                 <input id="Text1" type="text" data-bind="value: Records()[0].Orders()[0].ShipName, valueUpdate: 'afterkeydown'"></input>
@@ -132,7 +132,7 @@
                        { key: 'EmployeeID', headerText: '社員 ID', width: '5%', dataType: 'number' },
                        { key: 'FirstName', headerText: '名前', width: '25%', dataType: 'string' },
                        { key: 'LastName', headerText: '名字', width: '25%', dataType: 'string' },
-                       { key: 'City', headerText: '市', width: '20%', dataType: 'string' },
+                       { key: 'City', headerText: '市/州', width: '20%', dataType: 'string' },
                        { key: 'Country', headerText: '国名', width: '20%', dataType: 'string' }
                    ],
                    columnLayouts: [
@@ -166,7 +166,7 @@
                            ],
                            columns: [
                                { key: 'OrderID', headerText: '注文 ID', width: '5%', dataType: 'number' },
-                               { key: 'ShipName', headerText: '出荷名', width: '20%', dataType: 'string' },
+                               { key: 'ShipName', headerText: '配送先', width: '20%', dataType: 'string' },
                                { key: 'Freight', headerText: '輸送', width: '20%', dataType: 'string' },
                                { key: 'ShipPostalCode', headerText: '郵便番号', width: '20%', dataType: 'string' },
                                { key: 'OrderDate', headerText: '注文日', width: '30%', dataType: 'date' }

@@ -2,19 +2,19 @@ $(function () {
 $.ig.loader({
                 scriptPath: "http://cdn-na.infragistics.com/igniteui/latest/js/",
                 cssPath: "http://cdn-na.infragistics.com/igniteui/latest/css/",
-                resources: 'modules/infragistics.util.js,' +
-                    'modules/infragistics.documents.core.js,' +
-                    'modules/infragistics.excel.js,' +
-                    'modules/infragistics.gridexcelexporter.js,' +
+                resources: 'igGrid,' +
                     'igGrid.Hiding,' +
                     'igGrid.Filtering,' +
                     'igGrid.Sorting,' +
                     'igGrid.Paging,' +
-                    'igGrid.Summaries'
+                    'igGrid.Summaries,' +
+                    'modules/infragistics.documents.core.js,' +
+                    'modules/infragistics.excel.js,' +
+                    'modules/infragistics.gridexcelexporter.js'
             });
-            $.ig.loader(function() {
+        $.ig.loader(function () {
 
-                $(function() {
+            $(function () {
                     var data = [
                         { 'ProductID': 1, 'Name': 'Omnis ut illum nisi.', 'ProductNumber': 2973311236, "InStock": true, "Quantity": 56 },
                         { 'ProductID': 2, 'Name': 'Quis quibusdam qui.', 'ProductNumber': 5907101619, "InStock": false, "Quantity": 0 },
@@ -61,14 +61,14 @@ $.ig.loader({
                             }
                         ]
                     });
+
+                $("#exportButton").on("click", function () {
+                    $.ig.GridExcelExporter.exportGrid($("#grid"), {
+                        fileName: "igGrid",
+                        gridFeatureOptions: { "sorting": "applied", "filtering": "applied", paging: "currentPage", "summaries": "applied" },
+                        columnsToSkip: ["ProductID"]
+                    });
                 });
             });
-
-            function exportGrid() {
-                $.ig.GridExcelExporter.export($("#grid"), {
-                    fileName: "igGrid",
-                    gridFeatureOptions: { "sorting": "applied", "filtering": "applied", paging: "currentPage", "summaries": "applied" },
-                    columnsToSkip: ["ProductID"]
-                });
-            }
+        });
 });

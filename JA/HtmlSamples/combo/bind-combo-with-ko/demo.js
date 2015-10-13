@@ -23,65 +23,70 @@ $(function () {
             //  The array of actor objects and a computed array of actor names 
             //  for the plain SELECT which cannot work with objects
             this.actors = ko.observableArray(self.actorsList);
-            this.actorsNames = ko.computed(function () {
-                var names = [];
-                for (var i = 0; i < self.actors().length; i++) {
-                    names.push(self.actors()[i].name);
-                }
-                return names;
-            });
 
             //  The name of the currently selected actor.
-            this.actorName = ko.observable(self.actors()[0].name);
+            this.selectedActor = ko.observableArray([self.actors()[0].id]);
+            this.index = ko.observable(0);
+            this.selectedActorName = ko.computed(function () {
+            	var id = self.selectedActor()[0]
+            	for (i = 0; i < self.actorsList.length; i++) {
+            		if (self.actorsList[i].id === id) {
+            			return self.actorsList[i].name;
+            		}
+            	}
+            });
 
             //  Members that facilicate actor list manipulations
             this.newActor = ko.observable("");
             this.addActor = function () {
-                if (!self.findActorRecord(self.newActor())) {
-                    self.actors.push({
-                        id: "",
-                        name: self.newActor()
-                    });
+            	var newActObj;
+            	if (self.newActor() !== "" && !self.findActorRecord(self.newActor())) {
+            		newActObj = {
+            			id: "new" + self.index(),
+            			name: self.newActor()
+            		};
+            		self.index(self.index() + 1);
+            		self.actors.push(newActObj);
+            		self.selectedActor([newActObj.id]);
+            		self.newActor("");
                 }
-                self.actorName(self.newActor());
-                self.newActor("");
             }
 
             this.removeActor = function () {
                 self.actors.remove(function (item) {
-                    return item.name === self.actorName();
+                    return item.id === self.selectedActor()[0];
                 });
                 self.newActor("");
 
                 if (self.actors().length > 0) {
-                    self.actorName(self.actors()[0].name);
+                    self.selectedActor([self.actors()[0].id]);
                 }
                 else {
-                    self.actorName("");
+                    self.selectedActor("");
                 }
             }
 
             //  Members that facilitte IMDB hyperlinks
-            this.findActorRecord = function (actorName) {
+            this.findActorRecord = function (selectedActor) {
                 for (var i = 0; i < self.actors().length; i++) {
-                    if (self.actors()[i].name === actorName) {
+                    if (self.actors()[i].name === selectedActor) {
                         return self.actors()[i];
                     }
                 }
             }
 
             this.imdb_url = ko.computed(function () {
-                var actor = self.findActorRecord(self.actorName());
+                var actor = self.findActorRecord(self.selectedActor());
                 if (actor && actor.id) {
                     return "http://www.imdb.com/name/" + actor.id + "/";
                 }
                 else {
-                    return "http://www.imdb.com/find?q=" + encodeURIComponent(self.actorName()) + "&s=nm";
+                	return "http://www.imdb.com/find?q=" + encodeURIComponent(self.selectedActorName()) + "&s=nm";
                 }
             });
 
             this.actorName_imdb = ko.computed(function () {
-                return self.actorName() + " at IMDB";
+            	return self.selectedActorName() + " at IMDB";
             });
         }
 
@@ -94,7 +99,7 @@ $(function () {
                     labelText: $(this).val(),
                     centerLabel: true,
                     width: 80,
-                    height: 26
+                    height: 32
                 });
             });
         });

@@ -1,0 +1,21 @@
+form
+        {
+            width: 300px;
+            font-size: 1.1em;
+        }
+        .align .ui-igedit-container:nth-of-type(1)
+        {
+            float: left;
+        }
+        .label
+        {
+            display: block;
+            float:left;
+            margin-top: 5px;
+            width: 90px;
+        }
+        .label.small
+        {
+            width: 60px;
+            padding-left: 10px;
+        }

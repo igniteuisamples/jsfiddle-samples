@@ -59,7 +59,7 @@ $(function () {
                 rowHeaderLinkGroupIndentation: 10,
                 allowHeaderRowsSorting: true,
                 gridOptions: {
-                    caption: "Tree Layout"
+                    caption: "ツリー レイアウト"
                 },
                 width: "100%",
                 height: "300px"
@@ -84,7 +84,7 @@ $(function () {
                 compactColumnHeaderIndentation: 30,
                 isParentInFrontForColumns: true,
                 gridOptions: {
-                    caption: "コンパクト レイアウト"
+                    caption: "スーパー コンパクト レイアウト"
                 },
                 width: "100%",
                 height: "300px"

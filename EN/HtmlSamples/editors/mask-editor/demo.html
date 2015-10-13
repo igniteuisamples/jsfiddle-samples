@@ -1,0 +1,35 @@
+<script src="http://igniteui.com/js/modernizr.min.js"></script>
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>
+<script src="http://cdn-na.infragistics.com/igniteui/latest/js/infragistics.core.js"></script>
+<script src="http://cdn-na.infragistics.com/igniteui/latest/js/infragistics.lob.js"></script>
+<link href="http://cdn-na.infragistics.com/igniteui/latest/css/themes/infragistics/infragistics.theme.css" rel="stylesheet"></link>
+<link href="http://cdn-na.infragistics.com/igniteui/latest/css/structure/infragistics.css" rel="stylesheet"></link>
+
+<div id="container">
+        <div id="igMaskEditorsContainer">
+            <form id="form" action="javascript:console.log('Submit');">
+                <h4>Raw text:</h4>
+                <div id="msk1"></div>
+                <h4>Raw text with required prompts:</h4>
+                <div id="msk2"></div>
+                <h4>Raw text with all prompts:</h4>
+                <div id="msk3"></div>
+                <h4>Raw text with literals:</h4>
+                <div id="msk4"></div>
+                <h4>Raw text with required prompts and literals:</h4>
+                <div id="msk5"></div>
+                <h4>All text (default value):</h4>
+                <div id="msk6"></div>
+                <br />
+                <input type="submit" id="submitBtn" value="Submit"></input>
+            </form>
+        </div>
+
+        <div id="ValuesContainer">
+            <h3>Submitted Values:</h3>
+            <div class="divHeight">
+                <p class="pStyle" id="results">
+            </div>
+        </div>
+    </div>

@@ -1,0 +1,16 @@
+.theme-container {
+        font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
+        line-height: 1.42857143;
+        color: #ebebeb;
+        background-color: #2b3e50;
+        padding: 10px;
+        margin-top: 20px;
+        }
+
+        .ui-tabs .ui-tabs-panel{
+            margin-top: auto;
+        }
+        .igsb-sample-desc
+        {
+            font-size: 16px;
+        }

@@ -5,9 +5,12 @@ $(function () {
                 filteringType: "remote",
                 renderMatchItems: "contains",
                 responseDataKey: "d.results",
-                valueKey: "ProductName",
-                width: "270px",
-                dataSource: 'http://igniteui.com/api/invoices?&$top=1500&callback=?'
+                valueKey: "OrderID",
+                textKey: "ShipName",
+                itemTemplate: "${ShipName} (ID: ${OrderID})",
+                width: "370px",
+                dataSourceUrl: 'http://igniteui.com/api/orders?&$top=1500&callback=?',
+                responseDataType: "json"
             });
 
         });

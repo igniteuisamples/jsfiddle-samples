@@ -93,6 +93,10 @@ $(function () {
                         enableAddRow: false,
                         enableDeleteRow: true,
                         columnSettings: [
+							{
+								columnKey: "ProductID",
+								readOnly: true
+							},
                             {
                                 columnKey: "Total",
                                 editorType: "numeric",

@@ -61,10 +61,10 @@ $(function () {
                 labelText: $("#deleteRow").val(),
                 click: function (e) {
                     var rowIndex = $("#rowSelect").igNumericEditor("option", "value"),
-                        tr = $("#grid").igGrid("rowAt", parseInt(rowIndex-1));
+                        tr = $("#grid").igGrid("rowAt", parseInt(rowIndex-1)), pkValue;
                     if (!tr) return;
-
-                    $("#grid").igGridUpdating("deleteRow", rowIndex-1, tr);
+                    pkValue = parseInt($(tr).attr("data-id"));
+                    $("#grid").igGridUpdating("deleteRow", pkValue);
                 }
             });
 
@@ -72,6 +72,7 @@ $(function () {
                 labelText: $("#addRow").val(),
                 click: function (e) {
                     var rowObj = {
+                        "EmployeeID": $("#grid").igGrid("rows").length + 1,
                         "FirstName": $("#firstName").val(),
                         "LastName": $("#lastName").val(),
                         "Title": $("#title").val(),
@@ -197,9 +198,9 @@ $(function () {
                             columnKey: "BirthDate",
                             editorType: "datepicker",
                             validation: true,
+                            required: true,
                             editorOptions: {
-                                maxValue: new Date(),
-                                required: true
+                                maxValue: new Date()
                             }
                         }]
                     }]
@@ -209,7 +210,7 @@ $(function () {
 
             $("#rowSelect").igNumericEditor({
                 dataMode: "sbyte",
-                button: "spin",
+                buttonType: "spin",
                 value: 1,
                 minValue: 1,
                 maxValue: 9,
@@ -234,18 +235,18 @@ $(function () {
                 required: true
             });
 
-            $("#country").igEditor({
+            $("#country").igTextEditor({
                 width: 80,
                 height: 23,
-                button: "dropdown",
+                buttonType: "dropdown",
                 listItems: countries,
                 value: countries[1]
             });
 
-            $("#title").igEditor({
+            $("#title").igTextEditor({
                 width: 150,
                 height: 23,
-                button: "dropdown",
+                buttonType: "dropdown",
                 listItems: titles,
                 value: titles[1]
             });
@@ -254,6 +255,6 @@ $(function () {
                 width: 100,
                 height: 23,
                 inputMask: ">00000",
-                dataMode: "rawtext"
+                dataMode: "rawText"
             });
         });

@@ -59,9 +59,9 @@ $(function () {
                     { key: "LastName", headerText: "名字", dataType: "string", width: "20%" },
                     { key: "FirstName", headerText: "名前", dataType: "string", width: "20%" },
                     { key: "Title", headerText: "役職", dataType: "string", width: "20%" },
-                    { key: "City", headerText: "市", dataType: "string", width: "15%" },
+                    { key: "City", headerText: "市/州", dataType: "string", width: "15%" },
                     { key: "IsUSA", headerText: "米国内", unbound: true, dataType: "bool", width: "15%", format: "checkbox" },
-                    { key: "Region", headerText: "領域", dataType: "string", width: "10%" },
+                    { key: "Region", headerText: "地域", dataType: "string", width: "10%" },
                     { key: "Country", headerText: "国名", dataType: "string", width: "0%", hidden: true }
                 ],
                 autoGenerateLayouts: false,
@@ -78,7 +78,7 @@ $(function () {
                             { key: "CustomerID", headerText: "顧客 ID", dataType: "string", width: "15%" },
                             { key: "Freight", headerText: "輸送", dataType: "number", format:"0.00", width: "15%" },
                             { key: "FreightExpence", headerText: "輸送費", unbound: true, dataType: "number", format: "0.00", width: "20%", formula: "CalculateFreightExpence" },
-                            { key: "ShipName", headerText: "出荷名", dataType: "string", width: "25%" },
+                            { key: "ShipName", headerText: "配送先", dataType: "string", width: "25%" },
                             { key: "ShipCity", headerText: "配送先市町村", dataType: "string", width: "15%" },
                         ],
                         features: [

@@ -1,0 +1,41 @@
+<script src="http://igniteui.com/js/modernizr.min.js"></script>
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>
+<script src="http://igniteui.com/js/angular.min.js"></script>
+<script src="http://cdn-na.infragistics.com/igniteui/latest/js/infragistics.core.js"></script>
+<script src="http://cdn-na.infragistics.com/igniteui/latest/js/infragistics.lob.js"></script>
+<script src="../../igniteui/js/extensions/igniteui-angular.js"></script>
+<script src="http://igniteui.com/js-data/northwind"></script>
+<link href="http://cdn-na.infragistics.com/igniteui/latest/css/themes/infragistics/infragistics.theme.css" rel="stylesheet"></link>
+<link href="http://cdn-na.infragistics.com/igniteui/latest/css/structure/infragistics.css" rel="stylesheet"></link>
+<link href="http://igniteui.com/css/bootstrap/bootstrap.min.css" rel="stylesheet"></link>
+
+<div ng-app="sampleApp" ng-controller="hierarchicalGridController">
+        <div class="row">
+            <div class="col-md-12">
+                <ig-hierarchical-grid id="grid1" data-source="data" width="100%" height="400px" auto-commit="true" auto-generate-columns="false" auto-generate-layouts="false">
+                    <columns>
+                        <column key="FirstName" header-text="First Name" width="25%" data-type="string"></column>
+                        <column key="LastName" header-text="Last Name" width="25%" data-type="string"></column>
+                        <column key="Title" header-text="Title" width="25%" data-type="string"></column>
+                        <column key="BirthDate" header-text="Birth Date" width="25%" data-type="date"></column>
+                    </columns>
+                    <column-layouts>
+                        <column-layout key="Orders" response-data-key="results" primary-key="OrderID" auto-generate-columns="false" width="100%">
+                            <columns>
+                                <column key="OrderID" header-text="Order ID" width="25%" data-type="string"></column>
+                                <column key="Freight" header-text="Freight" width="25%" data-type="string"></column>
+                                <column key="ShipName" header-text="Ship Name" width="25%" data-type="string"></column>
+                                <column key="ShipAddress" header-text="Ship Address" width="25%" data-type="string"></column>
+                            </columns>
+                            <features>
+                                <feature name="Paging" page-size="10"></feature>
+                                <feature name="Sorting"></feature>
+                            </features>
+                        </column-layout>
+                    </column-layouts>
+                </ig-hierarchical-grid>
+
+            </div>
+        </div>
+    </div>

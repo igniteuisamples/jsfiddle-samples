@@ -1,0 +1,8 @@
+#tree {
+            overflow: hidden;
+        }
+        @media all and (max-width: 480px) {
+            #splitter {
+                font-size: 16px;
+            }
+        }

@@ -2,25 +2,26 @@ $(function () {
 
             $("#defaultDateEditor").igDateEditor({
                 width: 200,
-                value: new Date()
+                value: "09/09/2015"
             });
 
             $("#dateTimeEditor").igDateEditor({
                 width: 200,
                 dateInputFormat: "dateTime",
-                value: new Date()
+                value: "09/09/2015"
             });
 
             $("#timeEditor").igDateEditor({
                 width: 200,
                 dateInputFormat: "time",
-                value: new Date()
+                value: "09/09/2015"
             });
 
-            $("#contraintEditor").igDateEditor({
+            $("#constraintEditor").igDateEditor({
                 width: 200,
-                minValue: new Date(),
-                maxValue: new Date(),
+                minValue: "24/09/2012",
+                maxValue: "24/09/2018",
+                value: "09/09/2015",
                 nullText: "Enter Today's Date",
                 hideMaskOnFocus: true
             });

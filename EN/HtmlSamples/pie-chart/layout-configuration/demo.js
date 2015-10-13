@@ -59,8 +59,9 @@ $(function () {
                 selectionChanged: function (evt, ui) {
                     if ($.isArray(ui.items) && ui.items[0] != undefined) {
                         $("#chart1").igPieChart("option", "labelsPosition", ui.items[0].data.value);
+
                         $("#labelExtent").slider("option", "disabled", ui.items[0].data.value != "outsideEnd");
-                        $("#leaderLine").igCombo("option", "mode", ui.items[0].data.value != "outsideEnd" ? "readonly" : "editable");
+                        $("#leaderLine").igCombo("option", "disabled", ui.items[0].data.value != "outsideEnd" ? true : false);
                     }
                 }
             });

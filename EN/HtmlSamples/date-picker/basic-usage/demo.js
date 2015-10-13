@@ -1,5 +1,0 @@
-$(function () {
-
-            $("#datePicker").igDatePicker();
-
-        });

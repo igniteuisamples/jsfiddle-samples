@@ -52,7 +52,9 @@ $(function () {
                         useInterpolation: true,
                         transitionDuration: 250,
                         thickness: 1,
-                        opacity: 0.6
+                        opacity: 0.3,
+                        brush: "orange",
+                        outline: "black"
                     }]
             });
 

@@ -2,15 +2,14 @@ $(function () {
 $.ig.loader({
                 scriptPath: "http://cdn-na.infragistics.com/igniteui/latest/js/",
                 cssPath: "http://cdn-na.infragistics.com/igniteui/latest/css/",
-                resources: 'modules/infragistics.util.js,' +
+                resources:'igGrid,' +
                     'modules/infragistics.documents.core.js,' +
                     'modules/infragistics.excel.js,' +
-                    'modules/infragistics.gridexcelexporter.js,' +
-                    'igGrid'
+                    'modules/infragistics.gridexcelexporter.js' 
             });
 
-            $.ig.loader(function() {
-                $(function() {
+        $.ig.loader(function () {
+            $(function () {
                     var data = [
                         { 'ProductID': 1, 'Name': 'Omnis ut illum nisi.', 'ProductNumber': '2973311236' },
                         { 'ProductID': 2, 'Name': 'Quis quibusdam qui.', 'ProductNumber': '5907101619' },
@@ -36,12 +35,12 @@ $.ig.loader({
                         dataSource: data,
                         primaryKey: "ProductID"
                     });
+
+                    $("#exportButton").on("click", function () {
+                        $.ig.GridExcelExporter.exportGrid($("#grid"), {
+                            fileName: "igGrid"
+                        });
+                    });
                 });
             });
-
-            function exportGrid() {
-                $.ig.GridExcelExporter.export($("#grid"), {
-                    fileName: "igGrid"
-                });
-            };
 });

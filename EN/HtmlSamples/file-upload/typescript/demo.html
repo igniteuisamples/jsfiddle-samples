@@ -1,0 +1,55 @@
+<script src="http://igniteui.com/js/modernizr.min.js"></script>
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>
+<script src="http://cdn-na.infragistics.com/igniteui/latest/js/infragistics.core.js"></script>
+<script src="http://cdn-na.infragistics.com/igniteui/latest/js/infragistics.lob.js"></script>
+<script src="http://igniteui.com/TypeScriptSamples/file-upload/typescript.js"></script>
+<link href="http://cdn-na.infragistics.com/igniteui/latest/css/themes/infragistics/infragistics.theme.css" rel="stylesheet"></link>
+<link href="http://cdn-na.infragistics.com/igniteui/latest/css/structure/infragistics.css" rel="stylesheet"></link>
+
+<div id="igUpload"></div>
+    <div class="container-info">
+        <label>
+            Average Speed:
+            <span id="speed">0</span>
+            KB/S
+        </label>
+    </div>
+    <div class="container-info">
+        <label>
+            Uploaded Files:
+            <span id="uploadedFiles">0</span>
+        </label>
+    </div>
+    <div class="container-info">
+        <label>
+            Uploaded:
+            <span id="uploaded">0</span>
+            KB
+        </label>
+    </div>
+    <div class="container-info">
+        <label>
+            To be uploaded:
+            <span id="toUpload">0</span>
+            KB
+        </label>
+    </div>
+    <div class="container-info">
+        <label>
+            Time Elapsed:
+            <span id="timeElapsed">0</span>
+            sec
+        </label>
+    </div>
+    <div class="container-info">
+        <label>
+            Time Left:
+            <span id="timeLeft">0</span>
+            sec
+        </label>
+    </div>
+    <div id="error" class="error-info">
+        You cannot upload files larger than 1 MB
+    </div>
+    <input type="hidden" id="hdnStartTimer" value="false"></input>

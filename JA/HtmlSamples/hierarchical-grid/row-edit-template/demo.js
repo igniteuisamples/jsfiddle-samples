@@ -26,6 +26,7 @@ $(function () {
                             [
                             {
                                 columnKey: "LastName",
+                                required: true,
                                 validatorOptions: { bodyAsParent: false, required: true, showIcon: true }
                             }]
                     }
@@ -44,7 +45,7 @@ $(function () {
                     { key: "LastName", headerText: "名字", dataType: "string", width: "15%" },
                     { key: "Title", headerText: "役職", dataType: "string", width: "25%" },
                     { key: "Address", headerText: "住所", dataType: "string", width: "25%" },
-                    { key: "City", headerText: "市", dataType: "string", width: "20%" }
+                    { key: "City", headerText: "市/州", dataType: "string", width: "20%" }
                 ],
                 childrenDataProperty: "Orders",
                 autoGenerateLayouts: false,
@@ -61,7 +62,7 @@ $(function () {
                             { key: "OrderID", headerText: "注文 ID", dataType: "number", width: "0%", hidden: true },
                             { key: "CustomerID", headerText: "顧客 ID", dataType: "string", width: "0%", hidden: true },
                             { key: "Freight", headerText: "輸送", dataType: "string", width: "15%" },
-                            { key: "ShipName", headerText: "出荷名", dataType: "string", width: "20%" },
+                            { key: "ShipName", headerText: "配送先", dataType: "string", width: "20%" },
                             { key: "ShipAddress", headerText: "配送先住所", dataType: "string", width: "25%" },
                             { key: "ShipCity", headerText: "配送先市町村", dataType: "string", width: "20%" },
                             { key: "ShipCountry", headerText: "配送先の国", dataType: "string", width: "20%" }
@@ -96,6 +97,7 @@ $(function () {
                                 [
                                     {
                                         columnKey: "ShipName",
+                                        required: true,
                                         validatorOptions: { bodyAsParent: false, required: true, showIcon: true }
                                     }
                                 ]

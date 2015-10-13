@@ -59,7 +59,10 @@
                 { headerText: 'Contact Name', key: 'ContactName', dataType: 'string', width: '25%' },
                 { headerText: 'City', key: 'City', dataType: 'string', width: '25%' },
                 { headerText: 'Country', key: 'Country', dataType: 'string', width: '25%' }
-            ]
+            ],
+            rendered: function (evt, ui) {
+                $('#gridKO').igGridSelection('selectRow', 0);
+            }
         }">
     </table>
     

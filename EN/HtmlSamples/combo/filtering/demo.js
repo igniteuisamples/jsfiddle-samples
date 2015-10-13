@@ -7,7 +7,8 @@ $(function () {
                 dataSource: northwindProducts,
                 filteringType: "local",
                 highlightMatchesMode: "startsWith",
-                filteringCondition: "startsWith"
+                filteringCondition: "startsWith",
+                autoComplete: true
             });
 
             $("#filterContainsCombo").igCombo({
@@ -27,7 +28,8 @@ $(function () {
                 dataSource: northwindProductsEN,
                 filteringType: "local",
                 autoSelectFirstMatch: true,
-                caseSensitive: true
+                caseSensitive: true,
+                autoComplete: true
             });
 
         });

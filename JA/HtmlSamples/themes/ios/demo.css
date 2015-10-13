@@ -1,0 +1,4 @@
+.ui-helper-clearfix:after {
+            content: "";
+            display: table;
+        }

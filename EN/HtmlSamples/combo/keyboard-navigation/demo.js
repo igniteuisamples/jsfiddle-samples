@@ -112,7 +112,7 @@ $(function () {
 	"Press <b>Ctrl</b> + <b>Home</b> to Move to very first item in drop down when Drop down is opened",
 	"Press <b>Up arrow</b> to Close drop down if opened or Move to previous item",
 	"Type some value, for example 'text' and Press <b>Esc key</b> to clear the content when there isn't selected item",
-	"While holding <b>Shift</b> + <b>Up/Down arrows</b> the active (highlighted) items will be changed, if you wamt to select them, just release <b>Shift key</b>",
+	"While holding <b>Shift</b> + <b>Up/Down arrows</b> the active (highlighted) items will be changed, if you want to select them, just release <b>Shift key</b>",
     "Press <b>Esc key</b> in order to close the drop down when item/items are selected",
                 ];
 

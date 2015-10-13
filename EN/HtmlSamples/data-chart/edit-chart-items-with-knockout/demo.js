@@ -110,12 +110,11 @@ $(function () {
             }
             $(".combo-container").on("igcombotextchanged", "#combo1", function (event, ui) {
                 globalItem = parseInt(ui.text, 10);
-            }).on("igcombodatabound", "#combo1", function (event, ui) {
-                ui.owner.text(globalItem);
-                if (ui.owner.text() === "") {
-                    ui.owner.selectedIndex(globalIndex);
-                    if (ui.owner.text() === "") {
-                        ui.owner.selectedIndex(globalIndex - 1);
+            }).on("igcomboitemsrendered", "#combo1", function (event, ui) {
+            	if (ui.owner.selectedItems() === null || ui.owner.selectedItems().length === 0) {
+            		ui.owner.index(globalIndex);
+            		if (ui.owner.selectedItems() === null || ui.owner.selectedItems().length === 0) {
+                        ui.owner.index(globalIndex - 1);
                     }
                 }
             });

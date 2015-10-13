@@ -6,14 +6,14 @@ $(function () {
                     $("#grid").css("width", "100%");
                 },
                 panels: [
-                    { size: 200, min: 100, max: 250, resizable: false },
+                    { size: 200, min: 100, max: 250 },
                     { collapsible: true }
                 ]
             });
             $("#detailSplitter").igSplitter({
                 orientation: "horizontal",
                 panels: [
-                    { size: 500, resizable: false, collapsible: true },
+                    { size: 500, collapsible: true },
                     { size: 200, collapsible: true }
                 ]
             });
@@ -24,67 +24,93 @@ $(function () {
                     textKey: "Text",
                     valueKey: "Text",
                     childDataProperty: "Countries"
-                }
-            });
-            $("#map").igMap({
-                width: "100%",
-                height: "500px",
-                crosshairVisibility: "visible",
-                overviewPlusDetailPaneVisibility: "visible",
-                overviewPlusDetailPaneBackgroundImageUri: "http://igniteui.com/images/samples/splitter/world.png",
-                panModifier: "control",
-                backgroundContent: {
-                    type: "openStreet"
                 },
-                windowResponse: "immediate",
-                windowRect: {
-                    left: 0.27,
-                    top: 0.20,
-                    height: 0.45,
-                    width: 0.45
-                }
+                rendered: onTreeRendered,
+                selectionChanged: onTreeSelectionChanged
             });
 
-            $("#tree").on("igtreeselectionchanged", function (sender, eventArgs) {
+            function onTreeRendered(evt, ui) {
+                var unitedStatesNodeElement = ui.owner.nodesByValue("United States");
+                var unitedStatesNode = ui.owner.nodeFromElement(unitedStatesNodeElement);
+
+                initMap();
+                initCitiesGrid(unitedStatesNode.data.Cities);
+
+                ui.owner.expandToNode(unitedStatesNodeElement);
+                ui.owner.select(unitedStatesNodeElement);
+            }
+
+            function onTreeSelectionChanged (sender, eventArgs) {
                 var node = eventArgs.selectedNodes[0];
-                if (node.data.Cities) {
-                    $("#grid").igGrid({
-                        width: "100%",
-                        height: "100%",
-                        dataSource: node.data.Cities,
-                        features: [{
-                            name: "Selection",
-                            mode: "row",
-                            rowSelectionChanged: function (ui, args) {
-                                var selectedCity = $("#grid").data("igGrid").dataSource.dataView()[args.row.index];
-                                var geographic = geographichFromCentered({
-                                    latitude: selectedCity.Latitude,
-                                    longitude: selectedCity.Longitude,
-                                    radius: 0.5
-                                });
-                                var zoom = $("#map").igMap("zoomToGeographic", geographic);
-                            }
-                        }]
-                    });
-                }
-                var geographic = geographichFromCentered({
-                    latitude: node.data.Latitude,
-                    longitude: node.data.Longitude,
-                    radius: 23
-                });
-                var zoom = $("#map").igMap("zoomToGeographic", geographic);
+                zoomMapTo(node.data.Latitude, node.data.Longitude, 23);
+
+                $("#grid").igGrid("dataSourceObject", node.data.Cities);
+                $("#grid").igGrid("dataBind");
+
                 $("#detailSplitter").igSplitter("expandAt", 1);
-            });
+            }
+        
+            function initMap() {
+                var map = $("#map").igMap({
+                    width: "100%",
+                    height: "100%",
+                    crosshairVisibility: "visible",
+                    overviewPlusDetailPaneVisibility: "visible",
+                    overviewPlusDetailPaneBackgroundImageUri: "http://igniteui.com/images/samples/splitter/world.png",
+                    panModifier: "control",
+                    backgroundContent: {
+                        type: "openStreet"
+                    },
+                    windowResponse: "immediate",
+                    windowRect: {
+                        left: 0.27,
+                        top: 0.20,
+                        height: 0.45,
+                        width: 0.45
+                    }
+                });
+
+                return map;
+            }
+
+            function initCitiesGrid(dataSource) {
+                var grid = $("#grid").igGrid({
+                    width: "100%",
+                    height: "99%",
+                    dataSource: dataSource,
+                    defaultColumnWidth: "25%",
+                    features: [{
+                        name: "Selection",
+                        mode: "row",
+                        rowSelectionChanged: function (ui, args) {
+                            var selectedCity = $("#grid").data("igGrid").dataSource.dataView()[args.row.index];
+                            zoomMapTo(selectedCity.Latitude, selectedCity.Longitude, 0.5);
+                        }
+                    }]
+                });
+
+                return grid;
+            }
+
+            function zoomMapTo(latitude, longitude, radius) {
+                var geographic = geographichFromCentered({
+                    latitude: latitude,
+                    longitude: longitude,
+                    radius: radius
+                });
+
+                var zoom = $("#map").igMap("zoomToGeographic", geographic);
+            }
 
             //  Calculates the geographich coordinates of a square around a central point and radius
             function geographichFromCentered(centered) {
-                var geographic =
-                {
+                var geographic = {
                     left: centered.longitude - centered.radius,
                     top: centered.latitude - centered.radius,
                     width: centered.radius * 2,
                     height: centered.radius * 2
                 };
+
                 return geographic;
             }
         });

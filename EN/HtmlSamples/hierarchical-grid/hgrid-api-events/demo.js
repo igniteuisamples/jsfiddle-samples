@@ -28,11 +28,11 @@ $(function () {
             function ApplyFilter(grid) {
                 var expr = $("#exprTextEditor").igTextEditor("value") ||
                     $("#exprNumericEditor").igNumericEditor("value") ||
-                    $("#exprDateEditor").igDateEditor("value"),
+                    $("#exprDateEditor").data('igDateEditor').value(),
                   condition = $("#conditionList").igCombo("selectedItems")[0].data["cond"],
                 columnDataSource = $("#filterColumn").igCombo("option", "dataSource"),
                 filterColumn = $("#filterColumn").igCombo("selectedItems")[0].data.column;
-                if (expr !== null) {
+                if (expr !== null && expr !== undefined) {
                     grid.igGridFiltering("filter", ([{ fieldName: filterColumn, expr: expr, cond: condition }]));
                 } else {
                     grid.igGridFiltering("filter", []);
@@ -82,7 +82,7 @@ $(function () {
                         width: "100%",
                         columns: [
                             { key: "OrderID", headerText: "Order ID", dataType: "number", width: "10%" },
-                            { key: "Freight", headerText: "Freight", dataType: "string", width: "15%" },
+                            { key: "Freight", headerText: "Freight", dataType: "number", width: "15%" },
                             { key: "ShipName", headerText: "Ship Name", dataType: "string", width: "20%" },
                             { key: "ShipAddress", headerText: "Ship Address", dataType: "string", width: "25%" },
                             { key: "ShipCity", headerText: "Ship City", dataType: "string", width: "20%" },
@@ -168,11 +168,10 @@ $(function () {
             /*----------------- Method & Option Examples(Child Grid) -------------------------*/
             //function that returned the selected grid's selector
             function getChildGridIDSelector() {
-                var rowID = $("#SelectParentRowID").igCombo("value");
-                var row = $("#grid").igGrid("rowById", rowID, false);
-
-                //if no value is selected trigger validation for the igCombo for selection a parent row
-                if (rowID == null) {
+                var rowID = $("#SelectParentRowID").igCombo("value"),
+					row = $("#grid").igGrid("rowById", rowID, false);
+				//if no value is selected trigger validation for the igCombo for selection a parent row
+                if (rowID == null || !row.length) {
                     $("#SelectParentRowID").igCombo("validate");
                     return;
                 }
@@ -195,6 +194,7 @@ $(function () {
                 dataSourceType: "json",
                 valueKey: "EmployeeID",
                 dataSource: northwind,
+                filteringCondition: "equals",
                 validatorOptions: {
                     required: true,
                     validation: function (evt, ui) {
@@ -209,31 +209,47 @@ $(function () {
                 itemTemplate: "<table class='comboTable' cellspacing='0' cellpadding='4'><tbody><tr><td>${EmployeeID}</td> <td>${LastName}</td> <td>${FirstName}</td><tr></tbody></table>",
                 selectionChanged: function (evt, ui) {
                     //update the paging editors based on the total number of pages in the selected child grid 
-                    var childGridSelector = getChildGridIDSelector();
-                    var pageSize = $(childGridSelector).igGridPaging("pageSize");
-                    var totalRecords = $(childGridSelector).igGrid("option", "dataSource").results.length;
-                    var totalNumberOfPages = totalRecords / pageSize + 1;
-                    var sizeList = [];
-                    for (var i = 1; i <= totalNumberOfPages; i++) {
+                	var i, childGridSelector, pageSize, totalRecords, totalNumberOfPages, sizeList, $childGrid;
+					childGridSelector = getChildGridIDSelector();
+                	if (!childGridSelector) {
+						return;
+                	}
+                	$childGrid = $(childGridSelector);
+                	if (!$childGrid.length) {
+						return;
+                	}
+                	pageSize = $childGrid.igGridPaging("pageSize");
+                	totalRecords = $childGrid.igGrid("option", "dataSource").results.length;
+					totalNumberOfPages = totalRecords / pageSize + 1;
+					sizeList = [];
+                    for (i = 1; i <= totalNumberOfPages; i++) {
                         sizeList.push({ pIndex: i });
                     }
                     $("#pageIndexList").igCombo("option", "dataSource", sizeList);
-                    $("#pageIndexList").igCombo("option", "selectedItems", [{ index: 0 }]);
+                    $("#pageIndexList").igCombo("index", 0);
+                    $childGrid.find('tbody>tr[tabindex]').first().focus();
+                    ui.owner.textInput().focus();
                 }
-
             });
 
             $("#buttonDataBind").igButton({
                 labelText: $("#buttonDataBind").val(),
                 click: function (e) {
-                    $(getChildGridIDSelector()).igGrid("dataBind");
+                	var grid = $(getChildGridIDSelector());
+                	if (!grid.length) {
+						return;
+                	}
+                    grid.igGrid("dataBind");
                 }
             });
 
             $("#buttonFilter").igButton({
                 labelText: $("#buttonFilter").val(),
                 click: function (event) {
-                    var grid = $(getChildGridIDSelector());
+                	var grid = $(getChildGridIDSelector());
+                	if (!grid.length) {
+                		return;
+                	}
                     ApplyFilter(grid);
                 }
             });
@@ -378,8 +394,11 @@ $(function () {
                 enableClearButton: false,
                 selectedItems: [{ index: 0 }],
                 selectionChanged: function (e, args) {
-                    var grid = $(getChildGridIDSelector());
-                    var index = parseInt(args.items[0].data["pIndex"] - 1);
+					var index, grid = $(getChildGridIDSelector());
+                	if (!grid.length) {
+                		return;
+                	}
+                    index = parseInt(args.items[0].data["pIndex"] - 1);
                     ChangePageIndex(grid, index);
                 }
             });
@@ -395,10 +414,12 @@ $(function () {
                 ],
                 mode: "dropdown",
                 enableClearButton: false,
-                initialSelectedItems: [{ index: 1 }],
+                initialSelectedItems: [{ index: 2 }],
                 selectionChanged: function (e, args) {               
                     var grid = $(getChildGridIDSelector());
-
+                    if (!grid.length) {
+						return;
+                    }
                     var pageSize = args.items[0].data["size"];
                     var totalRecords = grid.igGrid("option", "dataSource").results.length;
                     var totalNumberOfPages = totalRecords / pageSize + 1;
@@ -411,7 +432,7 @@ $(function () {
                         sizeList.push({ pIndex: i });
                     }
                     $("#pageIndexList").igCombo("option", "dataSource", sizeList);
-                    $("#pageIndexList").igCombo("option", "selectedItems", [{ index: 0 }]);
+                    $("#pageIndexList").igCombo("index", 0);
                 }
             });
 
@@ -428,11 +449,13 @@ $(function () {
             $("#buttonSelectRow").igButton({
                 labelText: $("#buttonSelectRow").val(),
                 click: function (event) {
+                	var index, grid = $(getChildGridIDSelector());
+                	if (!grid.length) {
+                		return;
+                	}
                     $("#rowNumberEditor").igNumericEditor("validate");
-
-                    if ($("#rowNumberEditor").igNumericEditor("value") < $(getChildGridIDSelector()).igGrid("rows").length) {
-                        var grid = $(getChildGridIDSelector());
-                        var index = $("#rowNumberEditor").igNumericEditor("value");
+                    index = $("#rowNumberEditor").igNumericEditor("value");
+                    if (index < grid.igGrid("rows").length) {
                         SelectRow(grid, index);
                     }
                 }
@@ -441,7 +464,10 @@ $(function () {
             $("#buttonSelectedRows").igButton({
                 labelText: $("#buttonSelectedRows").val(),
                 click: function (event) {
-                    var grid = $(getChildGridIDSelector());
+                	var grid = $(getChildGridIDSelector());
+                	if (!grid.length) {
+						return;
+                	}
                     GetSelectedRows(grid);
                 }
             });
