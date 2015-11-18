@@ -1,0 +1,126 @@
+<script src="http://jp.igniteui.com/js/modernizr.min.js"></script>
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>
+<script src="http://cdn-na.infragistics.com/igniteui/latest/js/infragistics.core.js"></script>
+<script src="http://cdn-na.infragistics.com/igniteui/latest/js/infragistics.lob.js"></script>
+<link href="http://cdn-na.infragistics.com/igniteui/latest/css/themes/infragistics/infragistics.theme.css" rel="stylesheet"></link>
+<link href="http://cdn-na.infragistics.com/igniteui/latest/css/structure/infragistics.css" rel="stylesheet"></link>
+<script src="http://cdn-na.infragistics.com/igniteui/latest/js/i18n/infragistics-ja.js"></script>
+
+<p>ローンの月賦を決定するには、ローン計算機を使用してください。</p>
+    <div id="container">
+        <div id="igCheckboxEditorsContainer">
+            <form id="form" action="javascript:console.log('送信');">
+                <table>
+                    <tr>
+                        <td>
+                            <div class="divHeight"><div id="firstName"></div></div>
+                        </td>
+                        <td>
+                            名前
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="divHeight"><div id="lastName"></div></div>
+                        </td>
+                        <td>
+                            名字
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="divHeight"><div id="creditAmount"></div></div>
+                        </td>
+                        <td>
+                            ローンの元本
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="divHeight"><div id="currency"></div></div>
+                        </td>
+                        <td>
+                            通貨
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="divHeight"><div id="interestRate"></div></div>
+                        </td>
+                        <td>
+                            利率
+                        </td>
+                    </tr>
+                     <tr>
+                        <td>
+                            <div class="divHeight"><div id="startDateOfCredit"></div></div>
+                        </td>
+                        <td>
+                            ローン開始日
+                        </td>
+                    </tr> 
+                    <tr>
+                        <td>
+                            <div class="divHeight"><div id="term"></div> </div>
+                        </td>
+                        <td>
+                            返済期間
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="divHeight"><div id="salaryInBank"></div><label> 給与の銀行振り込み</label></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="divHeight"><div id="pin"></div> </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="divHeight"><input type="submit" id="submitBtn" value="送信"></input></div>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+
+        <div id="valuesContainer">
+            <h3>ローンの詳細情報:</h3>
+            <br />
+            <table class="creditTable">
+                <tr>
+                    <td>
+                        元本:          
+                    </td>
+                    <td>
+            <div class="divHeight">
+                            <div id="resultCredit"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        支払い額合計:                      
+                    </td>
+                    <td>
+                        <div class="divHeight">
+                            <div id="returnValue"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        月の支払い: 
+                    </td>
+                    <td>
+                        <div class="divHeight">
+                            <div id="monthlyPaymentValue"></div>
+            </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>

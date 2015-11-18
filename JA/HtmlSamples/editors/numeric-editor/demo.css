@@ -1,0 +1,34 @@
+#container {
+		width: 100%;
+		min-width: 900px;
+		max-width: 900px;
+		display:inline-block;
+	}     
+
+	#ValuesContainer {
+		top: 0px;
+		right: 0px;
+		height: 500px;
+		width: 300px;
+		padding-top: 15px;
+		float:right;
+		font-size: 18px;
+	}
+
+	#ValuesContainer.p
+	{
+		font-size:16px;
+	}   
+        
+    #igEditorsContainer {
+        top: 0px;
+        left: 0px;
+        height: 500px;
+        width: 450px;
+        padding-top: 15px;
+        float:left;
+    }
+
+ 	.divHeight label {
+ 		margin-left: 10px;
+	}

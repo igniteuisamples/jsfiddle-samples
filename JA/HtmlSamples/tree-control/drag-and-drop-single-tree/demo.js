@@ -55,7 +55,8 @@ $(function () {
                     customDropValidation: function (element) {
                         // Validates the drop target
                         var droppableNode = $(this),
-							draggableNode = $(element);
+							draggableNode = $(element),
+                            listContainer = droppableNode.closest("ul");
 
                         if (draggableNode.attr("data-path") == "0") {
                             return false;
@@ -72,6 +73,10 @@ $(function () {
                         }
 
                         if (droppableNode.is('a') && droppableNode.closest('li[data-role=node]').attr('data-value') === 'File') {
+                            return false;
+                        }
+                        
+                        if (!droppableNode.is('a') && listContainer.length && listContainer.attr("data-depth") === "0") {
                             return false;
                         }
 

@@ -19,11 +19,11 @@ $(function () {
                 click: function (event) {
                     var expr = $("#exprTextEditor").igTextEditor("value") ||
                         $("#exprNumericEditor").igNumericEditor("value") ||
-                        $("#exprDateEditor").igDateEditor("value"),
+                        $("#exprDateEditor").data('igDateEditor').value(),
                       condition = $("#conditionList").igCombo("selectedItems")[0].data["cond"],
                     columnDataSource = $("#filterColumn").igCombo("option", "dataSource"),
                     filterColumn = $("#filterColumn").igCombo("selectedItems")[0].data.column;
-                    if (expr !== null) {
+                    if (expr !== null && expr !== undefined) {
                         $("#grid").igGridFiltering("filter", ([{ fieldName: filterColumn, expr: expr, cond: condition }]));
                     } else {
                         $("#grid").igGridFiltering("filter", []);

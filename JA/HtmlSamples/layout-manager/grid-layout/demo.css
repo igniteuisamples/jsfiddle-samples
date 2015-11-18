@@ -1,18 +1,67 @@
-ul
-        {
+ul {
             list-style-type: none;
             font-family: Verdana;
         }
-        #layout {
-            position: relative;
+
+        #layout-wrapper {
+            padding: 5px;
+            border: 1px solid #eee;
         }
 
+        #layout {
+            position: relative;
+        }        
+
         .ig-layout-item {
-            font-size: 20px;
+            padding: 5px;
+        }
+
+            .ig-layout-item > div {
+                position: absolute;
+                padding: 5px;
+                height: auto;
+                bottom: 0;
+                top: 0;
+                left: 0;
+                right: 0;
+                margin: 5px;
+                border: 1px solid #eee;
+            }  
+
+        .box {
+            background-color: #BBDEFB;
+            color: grey;
+        }
+
+        .box-title {
+            font-size: 16px;
+            padding-bottom: 5px;
+        }
+
+        .box table td {
+            padding: 0;
+        }
+        
+        .box-body-big-text {
+            font-size: 60px;
+        }
+
+        @media all and (max-width: 1024px) {
+            .box-title {
+                font-size: 12px;
+            }
+
+            .box-body-big-text {
+                font-size: 46px;
+            }
         }
 
         @media all and (max-width: 480px) {
-            .ig-layout-item {
-                font-size: 16px;
+            .box-title {
+                font-size: 12px;
+            }
+
+            .box-body-big-text {
+                font-size: 22px;
             }
         }

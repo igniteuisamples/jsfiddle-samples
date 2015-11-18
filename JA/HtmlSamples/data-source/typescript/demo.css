@@ -1,0 +1,13 @@
+.standard-grid {
+            width: 100%;
+            border-top: 1px solid #b1b1b1;
+            border-right: 1px solid #b1b1b1;
+            border-spacing: 0;
+        }
+
+        .standard-grid th, .standard-grid td {
+            text-align: left;
+            border-bottom: 1px solid #b1b1b1;
+            border-left: 1px solid #b1b1b1;
+            padding: 4px;
+        }

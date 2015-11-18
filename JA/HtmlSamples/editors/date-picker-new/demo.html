@@ -1,0 +1,32 @@
+<script src="http://jp.igniteui.com/js/modernizr.min.js"></script>
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>
+<script src="http://cdn-na.infragistics.com/igniteui/latest/js/infragistics.core.js"></script>
+<script src="http://cdn-na.infragistics.com/igniteui/latest/js/modules/i18n/regional/infragistics.ui.regional-ja.js"></script>
+<script src="http://cdn-na.infragistics.com/igniteui/latest/js/infragistics.lob.js"></script>
+<link href="http://cdn-na.infragistics.com/igniteui/latest/css/themes/infragistics/infragistics.theme.css" rel="stylesheet"></link>
+<link href="http://cdn-na.infragistics.com/igniteui/latest/css/structure/infragistics.css" rel="stylesheet"></link>
+<script src="http://cdn-na.infragistics.com/igniteui/latest/js/i18n/infragistics-ja.js"></script>
+
+<div id="container">
+        <div id="igDatePickersContainer">
+            <form id="form" name="FormSubmit" action="javascript:console.log('送信');">
+                <h4>開始日</h4>
+                <input id="datePicker1" type="date" name="startDayPicker"></input>
+                <h4>終了日</h4>
+                <input id="datePicker2" type="date" name="endDatePicker"></input>               
+                <h4>DatePicker の dataMode オプションを変更</h4>
+                <input id="dataModeCombo"></input>
+                <br />
+                <br />
+                <input type="submit" id="submitBtn" value="送信"></input>
+            </form>
+        </div>
+
+        <div id="ValuesContainer">
+            <h4>DatePicker の送信された値:</h4>
+            <div class="divHeight">
+                <p class="pStyle" id="results">
+            </div>
+        </div>
+    </div>

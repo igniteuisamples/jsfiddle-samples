@@ -3,9 +3,39 @@
 <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>
 <script src="http://cdn-na.infragistics.com/igniteui/latest/js/infragistics.core.js"></script>
 <script src="http://cdn-na.infragistics.com/igniteui/latest/js/infragistics.lob.js"></script>
+<script src="http://cdn-na.infragistics.com/igniteui/latest/js/infragistics.dv.js"></script>
+<script src="http://jp.igniteui.com/js-data/last-month-run-km"></script>
+<script src="http://jp.igniteui.com/js-data/running-speed"></script>
 <link href="http://cdn-na.infragistics.com/igniteui/latest/css/themes/infragistics/infragistics.theme.css" rel="stylesheet"></link>
 <link href="http://cdn-na.infragistics.com/igniteui/latest/css/structure/modules/infragistics.ui.layout.css" rel="stylesheet"></link>
 <link href="http://cdn-na.infragistics.com/igniteui/latest/css/structure/infragistics.css" rel="stylesheet"></link>
 <script src="http://cdn-na.infragistics.com/igniteui/latest/js/i18n/infragistics-ja.js"></script>
 
-<div id="layout"></div>
+<div id="layout-wrapper">
+        <div id="layout">
+            <div>
+                <div class="box">
+                    <div class="box-title">Last Run Speed</div>
+                    <div id="speedLineChart" class="chartElement"></div>
+                </div>
+            </div>
+            <div>
+                <div class="box">
+                    <div class="box-title">Total Distance Last Week</div>
+                    <div class="box-body-big-text">49 km</div>
+                </div>
+            </div>
+            <div>
+                <div class="box">
+                    <div class="box-title">Total Cal Last Week</div>
+                    <div class="box-body-big-text">3675 cal</div>
+                </div>
+            </div>
+            <div>
+                <div class="box">
+                    <div class="box-title">Total Distance Last Month</div>
+                    <div id="totalKmBarChart" class="chartElement"></div>
+                </div>
+            </div>
+        </div>
+    </div>

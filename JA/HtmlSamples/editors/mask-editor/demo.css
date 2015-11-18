@@ -1,0 +1,40 @@
+#container
+        {
+            width: 750px;
+            display: inline-block;
+        }
+        .p
+        {
+            margin-top: 15px;
+        }
+        .header{
+            color: #888;
+        }
+        #igMaskEditorsContainer
+        {
+            height: 400px;
+            width: 450px;
+            padding-top: 15px;
+            float: left;
+        }
+
+        #ValuesContainer
+        {
+            top: 0px;
+            right: 0px;
+            height: 500px;
+            width: 300px;
+            padding-top: 15px;
+            float: right;
+            font-size: 18px;
+        }
+
+            #ValuesContainer.p
+            {
+                font-size: 16px;
+            }
+
+        #form h4
+        {
+            margin-bottom: .3em;
+        }

@@ -54,7 +54,16 @@ $(function () {
                     { headerText: "残高", key: "balance", width: "20%", dataType: "number", formatter: balanceSum, template: "$ ${balance}" }
                 ],
                 childDataKey: "assets",
-                initialExpandDepth: 3
+                initialExpandDepth: 3,
+                features: [
+                    {
+                        name: "Resizing"
+                    },
+                    {
+                        name: "ColumnMoving",
+                        columnMovingDialogContainment: "window"
+                    }
+                ]
             });
         });
         function balanceSum(val, record) {

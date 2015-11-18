@@ -1,17 +1,17 @@
 $(function () {
 $.ig.loader({
-            scriptPath: "http://cdn-na.infragistics.com/igniteui/latest/js/",
-            cssPath: "http://cdn-na.infragistics.com/igniteui/latest/css/",
-            resources: 'igGrid,' +
-                'igGrid.Hiding,' +
-                'igGrid.Filtering,' +
-                'igGrid.Sorting,' +
-                'igGrid.Paging,' +
-                'igGrid.Summaries,' +
-                'modules/infragistics.documents.core.js,' +
-                'modules/infragistics.excel.js,' +
-                'modules/infragistics.gridexcelexporter.js'
-        });
+        scriptPath: "http://cdn-na.infragistics.com/igniteui/latest/js/",
+        cssPath: "http://cdn-na.infragistics.com/igniteui/latest/css/",
+        resources: 'igGrid,' +
+            'igGrid.Hiding,' +
+            'igGrid.Filtering,' +
+            'igGrid.Sorting,' +
+            'igGrid.Paging,' +
+            'igGrid.Summaries,' +
+            'modules/infragistics.documents.core.js,' +
+            'modules/infragistics.excel.js,' +
+            'modules/infragistics.gridexcelexporter.js'
+    });
         $.ig.loader(function () {
             $(function () {
                 var data = [
@@ -25,7 +25,7 @@ $.ig.loader({
                     { 'ProductID': 31, 'Name': 'Nihil magnam aut ut.', 'ProductNumber': 5652753011, "InStock": true, "Quantity": 41, VendorWebsite: 'http://infragistics.com/' },
                     { 'ProductID': 32, 'Name': 'Repellendus dolorum.', 'ProductNumber': 8807902556, "InStock": true, "Quantity": 10, VendorWebsite: 'http://infragistics.com/' },
                     { 'ProductID': 43, 'Name': 'Odit ut quo minus.', 'ProductNumber': 1083007847, "InStock": false, "Quantity": 0, VendorWebsite: 'http://infragistics.com/' }
-                ];
+                    ];
 
                 $("#grid").igGrid({
                     autoGenerateColumns: false,
@@ -38,7 +38,7 @@ $.ig.loader({
                         { headerText: "仕入先の web サイト", key: "VendorWebsite", width: "220px", template: '<a href="${VendorWebsite}">${VendorWebsite}</a>' }
                     ],
                     dataSource: data,
-                    width: "100%",
+                        width: "100%",
                     primaryKey: "ProductID",
                     features: [
                        {
@@ -54,19 +54,19 @@ $.ig.loader({
                        }
                     ]
                 });
-
+		
                 $("#exportButton").on("click", function () {
-                    $.ig.GridExcelExporter.export($("#grid"),
-                        {
-                            fileName: "igGrid",
-                            gridFeatureOptions: { "sorting": "applied", "filtering": "applied", paging: "currentPage", "summaries": "applied" },
-                        },
+                    $.ig.GridExcelExporter.exportGrid($("#grid"),
+				        {
+				            fileName: "igGrid",
+				            gridFeatureOptions: { "sorting": "applied", "filtering": "applied", paging: "currentPage", "summaries": "applied" },
+				        },
                         {
                             headerCellExported: function (e, args) {
                                 if (args.columnKey == "Quantity") {
-                                    args.xlRow.setCellValue(args.columnIndex, "利用可能な数量");
-                                }
-                            },
+							        args.xlRow.setCellValue(args.columnIndex, "利用可能な数量");
+						        }
+					        },
                             cellExporting: function (e, args) {
                                 if (args.columnKey == "Quantity" && args.cellValue > 15) {
                                     args.xlRow.getCellFormat(args.columnIndex).font().bold(1);
@@ -82,13 +82,12 @@ $.ig.loader({
                                     xlRow.cells(args.columnIndex).applyFormula('=HYPERLINK("' + args.cellValue + '")');
                                 }
                             },
-                            rowExported: function (e, args) {
-                                if (args.xlRow.index() == args.grid.igGrid("allRows").length - 1) {
-                                    $('<div style="font-size:20px;">エクスポートが正常に完了しました。ダウンロードを開始しています。</div>').insertBefore('#exportButton').delay(1000).fadeOut();
-                                }
-                            }
+					        rowExported: function (e, args) {
+						        if (args.xlRow.index() == args.grid.igGrid("allRows").length - 1) {
+						            $('<div style="font-size:20px;">エクスポートが正常に完了しました。ダウンロードを開始しています。</div>').insertBefore('#exportButton').delay(1000).fadeOut();
+						        }
+					        }
                         });
-
                 });
             });
         });

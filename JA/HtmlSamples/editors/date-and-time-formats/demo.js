@@ -2,27 +2,28 @@ $(function () {
 
             $("#defaultDateEditor").igDateEditor({
                 width: 200,
-                value: new Date()
+                value: new Date(2015, 9, 9)
             });
 
             $("#dateTimeEditor").igDateEditor({
                 width: 200,
                 dateInputFormat: "dateTime",
-                value: new Date()
+                value: new Date(2015, 9, 9, 9, 9)
             });
 
             $("#timeEditor").igDateEditor({
                 width: 200,
                 dateInputFormat: "time",
-                value: new Date()
+                value: new Date(2015, 9, 9, 9, 9)
             });
 
-            $("#contraintEditor").igDateEditor({
+            $("#constraintEditor").igDateEditor({
                 width: 200,
-                minValue: new Date(),
-                maxValue: new Date(),
+                minValue: new Date(2012, 9, 24),
+                maxValue: new Date(2018, 9, 24),
+                value: new Date(2015, 9, 9),
                 nullText: "今日の日付の入力",
-                hideMaskOnFocus: true
+                unfilledCharsPrompt: " "
             });
 
         });

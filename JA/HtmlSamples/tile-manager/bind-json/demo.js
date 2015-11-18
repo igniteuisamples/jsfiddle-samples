@@ -1,40 +1,43 @@
-$(function () {
-            var options, optionsWide, optionsPhone;
-
-            optionsWide = {
+$(function () {            
+            var options = {
+                width: "100%",
+                height: "500px",
                 marginLeft: 10,
                 marginTop: 10,
-                rightPanelTilesWidth: 200,
-                rightPanelTilesHeight: 156,
-                dataSource: dataSource,
-                maximizedState: '<h3>${name}</h3><img src="${picture}" title="${name}" alt="error" /><p class="text">${text}</p>' +
-                '<div style="clear: both"><span class="color">スキル:</span></div>' +
-                '<ul class="skills">{{each ${skills} }}<li>${skills.description}</li>{{/each}}</ul>' +
-                '<div class="linkedIn"><span class="color">LinkedIn:</span> <a href="${linkedin}" target="_blank">http://www.linkedin.com/profile</a></div>',
-                minimizedState: '<h4>${name}</h4><img src="${picture}" class="minimized" title="${name}" alt="error" />',
-                rendered: function (event, ui) {
-                    $('#dashboard').find('ul').igTree();
-                }
+                dataSource: recipes,
+                items: [
+                    { rowIndex: 0, colIndex: 0, rowSpan: 1, colSpan: 1 },
+                    { rowIndex: 0, colIndex: 1, rowSpan: 2, colSpan: 2 },
+                    { rowIndex: 1, colIndex: 0, rowSpan: 1, colSpan: 1 },
+                    { rowIndex: 2, colIndex: 0, rowSpan: 1, colSpan: 1 },
+                    { rowIndex: 2, colIndex: 1, rowSpan: 1, colSpan: 1 },
+                    { rowIndex: 2, colIndex: 2, rowSpan: 1, colSpan: 1 }
+                ],
+                maximizedTileIndex: 1,
+                maximizedState: $("#maximized-state").html(),
+                minimizedState: $("#minimized-state").html()
             }
-
-            optionsPhone = {
-                rightPanelTilesWidth: 100,
-                rightPanelTilesHeight: 166,
-                dataSource: dataSource,
-                maximizedState: '<h3>${name}</h3><img src="${picture}" title="${name}" alt="error" /><p class="text">${text}</p>' +
-                '<div style="clear: both"><span class="color">スキル:</span></div>' +
-                '<ul class="skills">{{each ${skills} }}<li>${skills.description}</li>{{/each}}</ul>' +
-                '<div class="linkedIn"><span class="color">LinkedIn:</span> <a href="${linkedin}" target="_blank">http://www.linkedin.com/profile</a></div>',
-                minimizedState: '<h4>${name}</h4><img src="${picture}" class="minimized" title="${name}" alt="error" />',
-                rendered: function (event, ui) {
-                    $('#dashboard').find('ul').igTree();
-                }
-            }
-
-            if ($(window).width() > 430) {
-                options = optionsWide;
-            } else {
-                options = optionsPhone;
-            }
-            $('#dashboard').igTileManager(options);
+            
+            $("#dashboard").igTileManager(options);
         });
+     
+        <div class="item-inner-container" style="background-image: url(${picture}); 
+            filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='${picture}',sizingMethod='scale');">
+            <div class="max-title-and-ingredients-container">
+                <h3>${name}</h3>
+                <ul class="ingredients">
+                    {{each ${ingredients} }}
+                        <li>${ingredients.description}</li>
+                    {{/each}}
+                </ul>
+            </div>
+        </div>
+     
+        <div class="item-inner-container" style="background-image: url(${picture});
+            filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='${picture}',sizingMethod='scale');">
+            <div class="minimized-title-container">
+                <div class="minimized-title">
+                    ${name}
+                </div>
+            </div>
+        </div>

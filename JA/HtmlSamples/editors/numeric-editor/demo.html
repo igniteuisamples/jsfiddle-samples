@@ -1,0 +1,31 @@
+<script src="http://jp.igniteui.com/js/modernizr.min.js"></script>
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>
+<script src="http://cdn-na.infragistics.com/igniteui/latest/js/infragistics.core.js"></script>
+<script src="http://cdn-na.infragistics.com/igniteui/latest/js/infragistics.lob.js"></script>
+<link href="http://cdn-na.infragistics.com/igniteui/latest/css/themes/infragistics/infragistics.theme.css" rel="stylesheet"></link>
+<link href="http://cdn-na.infragistics.com/igniteui/latest/css/structure/infragistics.css" rel="stylesheet"></link>
+<script src="http://cdn-na.infragistics.com/igniteui/latest/js/i18n/infragistics-ja.js"></script>
+
+<div id="container">
+        <div id="igEditorsContainer">
+            <form id="form" action="javascript:console.log('送信');">
+                <div class="divHeight"><div id="productName"></div></div>
+                <div class="divHeight"><div id="orderedUnits"></div></div>
+                <div class="divHeight"><div id="unitsInStock"></div><label>在庫数</label></div>
+                <div class="divHeight"><div id="unitPrice"></div></div>
+                <div class="divHeight"><div id="oldPrice"></div><label>以前の価格</label></div>
+                <div class="divHeight"><div id="dueInDays"></div><label>締め切り</label></div>
+                <div class="divHeight"><div id="listItems"></div> </div>
+                <div class="divHeight"><div id="negativePattern"></div> </div>
+                <div class="divHeight"><input type="submit" id="submitBtn" value="送信"></input></div>
+            </form>
+        </div>
+
+        <div id="ValuesContainer">
+            <h3> 送信した値:</h3>
+            <div class="divHeight">
+                <p class="pStyle" id="results">
+            </div>
+        </div>
+    </div>

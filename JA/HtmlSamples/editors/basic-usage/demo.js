@@ -12,4 +12,6 @@ $(function () {
 
             $("#percentEditor").igPercentEditor();
 
+            $("#checkboxEditor").igCheckboxEditor({size:"large"});
+
         });

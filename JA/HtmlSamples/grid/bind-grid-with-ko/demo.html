@@ -60,7 +60,10 @@
                 { headerText: '名前', key: 'ContactName', dataType: 'string', width: '25%' },
                 { headerText: '市', key: 'City', dataType: 'string', width: '25%' },
                 { headerText: '国名', key: 'Country', dataType: 'string', width: '25%' }
-            ]
+            ],
+            rendered: function (evt, ui) {
+                $('#gridKO').igGridSelection('selectRow', 0);
+            }
         }">
     </table>
     

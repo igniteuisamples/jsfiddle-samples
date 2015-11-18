@@ -1,0 +1,14 @@
+.ui-igpopover > .ui-widget-content {
+            padding: 5px;
+        }
+
+        .mapsInput {
+            width: 200px;
+        }
+
+        .spanText {
+            margin-left: 5px;
+            font-family: "Segoe UI", Arial, sans-serif;
+            outline: none;
+            font-size: 1.1em;
+        }

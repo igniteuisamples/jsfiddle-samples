@@ -51,22 +51,21 @@ $.ig.loader({
                     ],
                     dataSource: data
                 });
-            });
 
-            var exportingIndicator = $('<div>');
-
-            $('#exportButton').on('click', function () {
-                var gridExcelExporter = new $.ig.GridExcelExporter();
-                var $grid = $('#grid');
-                gridExcelExporter.export($grid, {
-                    gridStyling: "applied",
-                }, {
-                    exportStarting: function (e, args) {
-                        showExportingIndicator(args.grid, exportingIndicator);
-                    },
-                    success: function () {
-                        hideExportingIndicator(exportingIndicator);
-                    },
+                var exportingIndicator = $('<div>');
+                $('#exportButton').on('click', function () {
+                    var gridExcelExporter = new $.ig.GridExcelExporter();
+                    var $grid = $('#grid');
+                    gridExcelExporter.exportGrid($grid, {
+                        gridStyling: "applied",
+                    }, {
+                        exportStarting: function (e, args) {
+                            showExportingIndicator(args.grid, exportingIndicator);
+                        },
+                        success: function () {
+                            hideExportingIndicator(exportingIndicator);
+                        },
+                    });
                 });
             });
 

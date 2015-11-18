@@ -27,7 +27,7 @@ $(function () {
                             },
                             {
                                 columnKey: "PostalCode",
-                                classes: "ui-hidden-phone"
+                                classes: "ui-hidden-phone"                               
                             }
                         ]
                     },
@@ -35,7 +35,36 @@ $(function () {
                         name: "Filtering",
                         type: "local",
                         mode: "simple",
-                        filterDialogContainment: "window"
+                        filterDialogContainment: "window",
+                        columnSettings: [
+                            {
+                                columnKey: "PostalCode",
+                                customConditions: [
+                                    {
+                                        labelText: "USA",
+                                        expressionText: "98###",
+                                        requireExpr: false,
+                                        filterFunc: filterUSAPostalCodes
+                                    },
+                                    {
+                                        labelText: "UK",
+                                        expressionText: "UK 郵便番号",
+                                        requireExpr: false,
+                                        filterFunc: filterUKPostalCodes
+                                    }
+                                ]
+                            },
+                            {
+                                columnKey: "City",
+                                customConditions: [
+                                    {
+                                        labelText: "国",
+                                        requireExpr: true,
+                                        filterFunc: filterInCountry
+                                    }
+                                ]
+                            }
+                        ]
                     }
                 ]
             });
@@ -73,8 +102,55 @@ $(function () {
                         name: "Filtering",
                         type: "local",
                         mode: "advanced",
-                        filterDialogContainment: "window"
+                        filterDialogContainment: "window",
+                        columnSettings: [
+                            {
+                                columnKey: "PostalCode",
+                                customConditions: [
+                                    {
+                                        labelText: "USA",
+                                        expressionText: "98###",
+                                        requireExpr: false,
+                                        filterFunc: filterUSAPostalCodes
+                                    },
+                                    {
+                                        labelText: "UK",
+                                        expressionText: "UK 郵便番号",
+                                        requireExpr: false,
+                                        filterFunc: filterUKPostalCodes
+                                    }
+                                ]
+                            },
+                            {
+                                columnKey: "City",
+                                customConditions: [
+                                    {
+                                        labelText: "国",
+                                        requireExpr: true,
+                                        filterFunc: filterInCountry
+                                    }
+                                ]
+                            }
+                        ]
                     }
                 ]
             });
+        }
+        
+        function filterUKPostalCodes(value, expression, dataType, ignoreCase, preciseDateFormat) {
+            return !value.startsWith("98");
+        }
+
+        function filterUSAPostalCodes(value, expression, dataType, ignoreCase, preciseDateFormat) {
+            return value.startsWith("98");
+        }
+
+        function filterInCountry(value, expression, dataType, ignoreCase, preciseDateFormat) {
+            if (expression === "UK") {
+                return value === "London";
+            }
+
+            else if (expression === "USA") {
+                return value !== "London";
+            }
         }

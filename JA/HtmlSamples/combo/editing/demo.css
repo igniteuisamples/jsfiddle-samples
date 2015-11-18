@@ -1,1 +1,37 @@
-.combo-label {margin-bottom:.5em;}
+.payment-form {
+            width:100%;overflow:hidden;
+        }
+        #paymentType {
+            float:left;
+        }
+        #payment-label {
+            line-height:32px;
+            margin-left:210px;
+        }
+        .card-form {
+            width: 350px;
+            border: 2px solid #0094ff;
+            border-radius: 15px;
+            padding: 25px 15px 0px 15px;
+        }
+
+        .card-logo {
+            margin-left: 9px;
+        }
+
+        .ui-igcombo-wrapper,
+        .ui-igedit {
+            margin-bottom: 25px;
+        }
+
+        #creditCardNumber .ui-igcombo-button { display: none; }
+
+        .good-through {
+            float: left;
+            margin-right: 5px;
+        }
+
+        #buy {
+            margin-top: 10px;
+            margin-left: 260px;
+        }
