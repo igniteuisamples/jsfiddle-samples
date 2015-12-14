@@ -8,5 +8,29 @@
 <link href="http://cdn-na.infragistics.com/igniteui/latest/css/structure/infragistics.css" rel="stylesheet"></link>
 <script src="http://cdn-na.infragistics.com/igniteui/latest/js/i18n/infragistics-ja.js"></script>
 
+<script id="maximized-state" type="text/template">
+        <div class="item-inner-container" style="background-image: url(${picture}); 
+            filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='${picture}',sizingMethod='scale');">
+            <div class="max-title-and-ingredients-container">
+                <h3>${name}</h3>
+                <ul class="ingredients">
+                    {{each ${ingredients} }}
+                        <li>${ingredients.description}</li>
+                    {{/each}}
+                </ul>
+            </div>
+        </div>
+    </script>
+<script id="minimized-state" type="text/template">
+        <div class="item-inner-container" style="background-image: url(${picture});
+            filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='${picture}',sizingMethod='scale');">
+            <div class="minimized-title-container">
+                <div class="minimized-title">
+                    ${name}
+                </div>
+            </div>
+        </div>
+    </script>
+
 <div id="dashboard" class="dashboard">
     </div>

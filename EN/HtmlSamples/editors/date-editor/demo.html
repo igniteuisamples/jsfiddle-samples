@@ -6,30 +6,33 @@
 <link href="http://cdn-na.infragistics.com/igniteui/latest/css/themes/infragistics/infragistics.theme.css" rel="stylesheet"></link>
 <link href="http://cdn-na.infragistics.com/igniteui/latest/css/structure/infragistics.css" rel="stylesheet"></link>
 
-<div id="container">
-        <div id="igDateEditorsContainer">
-            <form id="form" name="FormSubmit" action="javascript:console.log('Submit');">
-                <h4>Using Spin Buttons</h4>
-                <div id="dateEditor1"></div>
-                <h4>Using Range</h4>
-                <div id="dateEditor2"></div>
-                <h4>dataMode editModeText</h4>
-                <div id="dateEditor3"></div>
-                <h4>dataMode displayModeText</h4>
-                <div id="dateEditor4"></div>
-                <h4>Read Only</h4>
-                <div id="dateEditor5"></div>
-                <h4>disabled</h4>
-                <div id="dateEditor6"></div>
-                <br />
-                <input type="submit" id="submitBtn" value="Submit"></input>
-            </form>
+<h3>Book your flight</h3>
+    <div class="group-fields">
+        <label for="currentTime">Right now it is</label>
+        <input id="currentTime"></input>
+    </div>
+    <div class="group-fields clearfix">
+        <div>
+            <label for="departure">Departure</label>
+            <input id="departure"></input>
         </div>
-
-        <div id="ValuesContainer">
-            <h3>Submitted Values:</h3>
-            <div class="divHeight">
-                <p class="pStyle" id="results">
-            </div>
+        <div>
+            <label for="departureTime">Around</label>
+            <input id="departureTime"></input>
         </div>
     </div>
+    <div class="group-fields clearfix">
+        <div>
+            <label for="return">Return</label>
+            <input id="return"></input>
+        </div>
+        <div>
+            <label for="returnTime">Around</label>
+            <input id="returnTime"></input>
+        </div>
+    </div>
+    <div class="group-fields">
+        <input id="oneWayTicket"></input>
+        <label for="oneWayTicket" class="inline">One way ticket</label><br />
+    </div>
+    <input type="button" value="Book"></input>

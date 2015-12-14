@@ -8,4 +8,13 @@
 <link href="http://cdn-na.infragistics.com/igniteui/latest/css/structure/infragistics.css" rel="stylesheet"></link>
 <script src="http://cdn-na.infragistics.com/igniteui/latest/js/i18n/infragistics-ja.js"></script>
 
+<script id="colTmpl" type="text/template">
+        $ ${UnitPrice} 
+        {{if parseInt(${UnitPrice}) >= parseInt(${DeltaPrice}) }} 
+        <img width='10' height='15' src= 'http://jp.igniteui.com/images/samples/templating-engine/colTemplateWithConditionalCell/arrowUp.gif' />
+        {{else}}
+        <img width='10' height='15' src= 'http://jp.igniteui.com/images/samples/templating-engine/colTemplateWithConditionalCell/arrowDown.gif' />
+        {{/if}}
+    </script>
+
 <table id="resultGrid"></table>

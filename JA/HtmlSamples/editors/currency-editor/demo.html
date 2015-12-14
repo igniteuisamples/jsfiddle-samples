@@ -7,19 +7,21 @@
 <link href="http://cdn-na.infragistics.com/igniteui/latest/css/structure/infragistics.css" rel="stylesheet"></link>
 <script src="http://cdn-na.infragistics.com/igniteui/latest/js/i18n/infragistics-ja.js"></script>
 
-<div class="currencyEditors">
-        <h4>デフォルトの構成</h4>
-        <div id="defaultCurrencyEditor"></div>
-    
-        <h4>負の数のパターン</h4>
-        <div id="currencyEditor"></div>
-
-        <h4>10 進数およびグループ セパレーターの構成</h4>
-        <div id="currencyEditor2"></div>
-
-        <h4>リスト項目の構成</h4>
-        <div id="currencyEditor3"></div>
-
-        <h4>スピン ボタンの構成</h4>
-        <div id="currencyEditor4"></div>
+<div id="payment" class="clearfix">
+        <div id="salary">
+            <h2>売上総利益</h2>
+            <p id="gross">￥738990.00</p>
+            <h2>当期純利益</h2>
+            <p id="nett">￥773022.95</p>
+        </div>
+        <div id="deduction">
+            <label for="federalTax">国税</label>
+            <input id="federalTax"></input>
+            <label for="stateTax">地方税</label>
+            <input id="stateTax"></input>
+            <label for="socialSecurity">国民年金</label>
+            <input id="socialSecurity"></input>
+            <label for="medicare">医療保険</label>
+            <input id="medicare"></input>
+        </div>
     </div>

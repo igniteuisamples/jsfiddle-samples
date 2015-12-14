@@ -20,24 +20,3 @@ $(function () {
             
             $("#dashboard").igTileManager(options);
         });
-     
-        <div class="item-inner-container" style="background-image: url(${picture}); 
-            filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='${picture}',sizingMethod='scale');">
-            <div class="max-title-and-ingredients-container">
-                <h3>${name}</h3>
-                <ul class="ingredients">
-                    {{each ${ingredients} }}
-                        <li>${ingredients.description}</li>
-                    {{/each}}
-                </ul>
-            </div>
-        </div>
-     
-        <div class="item-inner-container" style="background-image: url(${picture});
-            filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='${picture}',sizingMethod='scale');">
-            <div class="minimized-title-container">
-                <div class="minimized-title">
-                    ${name}
-                </div>
-            </div>
-        </div>

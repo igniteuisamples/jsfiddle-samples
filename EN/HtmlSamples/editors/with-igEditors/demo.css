@@ -1,0 +1,88 @@
+#main
+        {
+            border: solid 1px black;
+            height: 270px;
+        }
+
+        #main > img
+        {
+            height: 250px;
+            float: left;
+        }
+
+        #shoeInfo
+        {
+            margin-left: 190px;
+        }
+
+        #brand
+        {
+            color: #ccc;
+        }
+
+        #shoeInfo p
+        {
+            margin-top: 20px;
+        }
+
+        #cost
+        {
+            border: solid 1px black;
+            border-top: 0px;
+            height: 100px;
+            padding-top: 20px;
+        }
+
+        #promo
+        {
+            float: left;
+            margin-left: 20px;
+        }
+
+        #promo > p
+        {
+            margin-bottom: 5px;
+        }
+
+        #cost > p
+        {
+            float: right;
+            margin-right: 20px;
+            font-size: 16px;
+        }
+
+        .info
+        {
+           
+            color: #808080;
+            vertical-align: top;
+        }
+        .tip
+        {
+            height:16px;
+            width:16px;                
+            vertical-align: top;
+            margin:0 2px 0 5px;
+        }
+
+        @media only screen and (max-width:480px)
+        {
+            #main
+            {
+                height: 30%;
+            }
+            #shoeSize, #shoeColor, #quantity, #promoCode
+            {
+                width: 150px;
+
+            }
+            #cost
+            {
+                    height: 120px;
+            }
+            #cost > p
+            {
+                font-size: 14px;
+                margin-top:20px;
+            }
+        }

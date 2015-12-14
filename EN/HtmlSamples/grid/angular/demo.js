@@ -20,14 +20,4 @@ var sampleApp = angular.module('sampleApp', ['igniteui-directives']);
                 UnitPrice: null
             };
         });
-     
-        {{if ${UnitPrice} == null }}
-        N/A
-        {{elseif ${UnitPrice} >= (Math.random()+0.5)*${UnitPrice} }}
-        $ ${UnitPrice}
-        <img width='10' height='15' src='http://igniteui.github.io/igniteui-angular/samples/images/arrowUp.gif' />
-        {{else}}
-        $ ${UnitPrice}
-        <img width='10' height='15' src='http://igniteui.github.io/igniteui-angular/samples/images/arrowDown.gif' />
-        {{/if}}
 });

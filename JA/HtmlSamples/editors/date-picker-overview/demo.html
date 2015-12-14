@@ -7,33 +7,33 @@
 <link href="http://cdn-na.infragistics.com/igniteui/latest/css/structure/infragistics.css" rel="stylesheet"></link>
 <script src="http://cdn-na.infragistics.com/igniteui/latest/js/i18n/infragistics-ja.js"></script>
 
-<table>
-        <tbody>
-            <tr>
-                <td>
-                    <label>目的地</label>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <div id="city"></div>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <div id="checkIn"></div>
-                </td>
-            </tr>
-             <tr>
-                <td>
-                    <div id="checkOut"></div>
-                </td>
-            </tr>
-             <tr>
-                <td>
-                    <button id="book">予約</button>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    <div id="registration"></div>
+<h3>航空券の予約</h3>
+    <div class="group-fields">
+        <label for="currentTime">今日</label>
+        <input id="currentTime"></input>
+    </div>
+    <div class="group-fields clearfix">
+        <div>
+            <label for="departure">往路</label>
+            <input id="departure"></input>
+        </div>
+        <div>
+            <label for="departureTime">前後</label>
+            <input id="departureTime"></input>
+        </div>
+    </div>
+    <div class="group-fields clearfix">
+        <div>
+            <label for="return">復路</label>
+            <input id="return"></input>
+        </div>
+        <div>
+            <label for="returnTime">前後</label>
+            <input id="returnTime"></input>
+        </div>
+    </div>
+    <div class="group-fields">
+        <input id="oneWayTicket"></input>
+        <label for="oneWayTicket">片道</label>
+    </div>
+    <input type="button" value="予約"></input>

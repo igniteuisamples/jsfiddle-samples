@@ -7,14 +7,12 @@ var data = [
 
         $(function () {
             $("#datePicker1").igDatePicker({
-                width: "200px",
                 minValue: new Date(2015, 6, 1),
                 locale: "ja",
                 regional: "ja"
             });
 
             $("#datePicker2").igDatePicker({
-                width: "200px",
                 maxValue: new Date(2018, 8, 8),
                 locale: "ja",
                 regional: "ja"
@@ -24,11 +22,10 @@ var data = [
                 dataSource: data,
                 valueKey: "ID",
                 textKey: "dataMode",
-                width: "200px",
                 placeHolder: "change dataMode",
                 enableClearButton: false,
                 mode: "dropdown",
-                initialSelectedItems: [{ index: 0 }],               
+                initialSelectedItems: [{ index: 0 }],
                 selectionChanged: function (evt, ui) {
                     var selectedMode = ui.items[0].data.dataMode;
                     $("#datePicker1").igDatePicker("option", "dataMode", selectedMode);
@@ -38,12 +35,12 @@ var data = [
                 }
             });
 
-            var headers = $('h4');
+            var headers = $('.group-fields label');
             $("#form").submit(function (event) {
                 var submittedValues = $("#form").serializeArray();
                 $(".p").remove();
                 for (var i = 0 ; i < submittedValues.length; i++) {
-                    $("#results").append("<p class='p'><span class='header'>" + headers[i].textContent + ": " + "</span>  <b>" + submittedValues[i].value + "</b></p>");
+                    $("#results").append("<p class='p'><span class='header'>" + headers[i].textContent + ": " + "</span>  <strong>" + submittedValues[i].value + "</strong></p>");
                 }
                 return false;
             });

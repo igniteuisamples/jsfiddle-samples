@@ -1,31 +1,32 @@
 $(function () {
 $(document).ready(function () {
-
-            $('#firstName').igMaskEditor({
-                inputMask: ">L<?????????????"
+            $("#email").igTextEditor({
+                placeHolder: "john@email.com",
+                validatorOptions: {
+                    email: true
+                }
             });
 
-            $('#middleName').igMaskEditor({
-                width: '50px',
-                inputMask: ">L"
+            $("#serialNumber").igMaskEditor({
+                inputMask: 'AAAA-AAAA-AAAA-AAAA',
+                dataMode: "rawTextWithLiterals"
             });
 
-            $('#lastName').igMaskEditor({
-                inputMask: ">L>CCCCCCCCCCC"
+            $("#zipCode").igMaskEditor({
+                inputMask: '00000',
+                dataMode: "allText"
             });
 
-            $('#state').igMaskEditor({
-                width: '50px',
-                inputMask: ">LL"
+            $("#phone").igMaskEditor({
+                inputMask: '(000) 000-000',
+                dataMode: "rawText"
             });
 
-            $('#zipcode').igMaskEditor({
-                width: '80px',
-                inputMask: "00099"
-            });
-
-            $('#phone').igMaskEditor({
-                inputMask: "(000) 000-0000"
+            $("#btn").click(function () {
+                $("#email").igTextEditor("option", "value", "");
+                $("#serialNumber").igMaskEditor("option", "value", "");
+                $("#zipCode").igMaskEditor("option", "value", "");
+                $("#phone").igMaskEditor("option", "value", "");
             });
         });
 });

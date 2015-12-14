@@ -30,7 +30,7 @@ $(function () {
             });
 
             function onTreeRendered(evt, ui) {
-                var unitedStatesNodeElement = ui.owner.nodesByValue("United States");
+                var unitedStatesNodeElement = ui.owner.nodeByPath("0_0");
                 var unitedStatesNode = ui.owner.nodeFromElement(unitedStatesNodeElement);
 
                 initMap();

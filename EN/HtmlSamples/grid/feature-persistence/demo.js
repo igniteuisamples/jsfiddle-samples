@@ -2,6 +2,7 @@ $(function () {
             $("#grid").igGrid({
                 primaryKey: "EmployeeID",
                 width: '100%',
+                defaultColumnWidth: "15%",
                 columns: [
                    { headerText: "Employee ID", key: "EmployeeID", dataType: "number" },
                    { headerText: "First Name", key: "FirstName", dataType: "string" },

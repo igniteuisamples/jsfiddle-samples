@@ -7,25 +7,21 @@
 <link href="http://cdn-na.infragistics.com/igniteui/latest/css/structure/infragistics.css" rel="stylesheet"></link>
 <script src="http://cdn-na.infragistics.com/igniteui/latest/js/i18n/infragistics-ja.js"></script>
 
-<div id="container">
-        <div id="igEditorsContainer">
-            <form id="form" action="javascript:console.log('送信');">
-                <div class="divHeight"><div id="productName"></div></div>
-                <div class="divHeight"><div id="orderedUnits"></div></div>
-                <div class="divHeight"><div id="unitsInStock"></div><label>在庫数</label></div>
-                <div class="divHeight"><div id="unitPrice"></div></div>
-                <div class="divHeight"><div id="oldPrice"></div><label>以前の価格</label></div>
-                <div class="divHeight"><div id="dueInDays"></div><label>締め切り</label></div>
-                <div class="divHeight"><div id="listItems"></div> </div>
-                <div class="divHeight"><div id="negativePattern"></div> </div>
-                <div class="divHeight"><input type="submit" id="submitBtn" value="送信"></input></div>
-            </form>
+<div id="payment" class="clearfix">
+        <div id="salary">
+            <h2>売上総利益</h2>
+            <p id="gross">￥738990.00</p>
+            <h2>当期純利益</h2>
+            <p id="nett">￥773022.95</p>
         </div>
-
-        <div id="ValuesContainer">
-            <h3> 送信した値:</h3>
-            <div class="divHeight">
-                <p class="pStyle" id="results">
-            </div>
+        <div id="deduction">
+            <label for="federalTax">国税 %</label>
+            <input id="federalTax"></input>
+            <label for="stateTax">地方税 %</label>
+            <input id="stateTax"></input>
+            <label for="socialSecurity">国民年金 %</label>
+            <input id="socialSecurity"></input>
+            <label for="medicare">医療保険 %</label>
+            <input id="medicare"></input>
         </div>
     </div>

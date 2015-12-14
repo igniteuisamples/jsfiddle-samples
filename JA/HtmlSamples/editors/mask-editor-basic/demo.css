@@ -1,21 +1,19 @@
-form
-        {
-            width: 300px;
-            font-size: 1.1em;
+h3 {
+            font-size:20px;
+            margin-bottom:20px;
         }
-        .align .ui-igedit-container:nth-of-type(1)
-        {
-            float: left;
+        .group-fields {
+            margin-bottom: 10px;
         }
-        .label
-        {
+        .group-fields label {
             display: block;
-            float:left;
-            margin-top: 5px;
-            width: 90px;
+            line-height:18px;
         }
-        .label.small
-        {
-            width: 60px;
-            padding-left: 10px;
+        .group-fields .ui-igedit-container {
+            width: 300px;
+        }
+        @media screen and (max-width:360px) {
+            .group-fields .ui-igedit-container {
+                width: 250px;
+            }
         }

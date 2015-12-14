@@ -8,20 +8,65 @@
 <script src="http://cdn-na.infragistics.com/igniteui/latest/js/i18n/infragistics-ja.js"></script>
 
 <form id="validationForm" action="" method="post">
-        <fieldset>
-            <h4> フィードバック フォーム</h4>
-            <p> 名前の入力: (onsubmit の検証、必須)</p>
-            <input type="text" id="grpEdit1"></input>
-            <p> 日付の入力: (onblur の検証、送信で必須ではない)</p>
-            <input type="text" id="grpEdit2"></input>
-            <p> 評価: (onsubmit の検証、最小値 = 1.5) </p>
-            <div id="rating"></div>
-            <p> サブスクライブ : (onsubmit の検証、必須)</p>
-            <div id="igCheckboxEditor"></div>
-            <p> 2 つ以上のお気に入り製品を選択: (onsubmit の検証、必須) </p>
-            <div id='combo2'></div>
-            <br />
-            <br />
-            <input type="submit" value="送信"></input>
-        </fieldset>
+        <div class="group-fields clearfix">
+            <div class="odd">
+                <label>名前*</label>
+                <input class="group" type="text" id="firstName"></input>
+            </div>
+            <div class="even">
+                <label>名字*</label>
+                <input class="group" type="text" id="lastName"></input>
+            </div>
+        </div>
+        <div class="group-fields clearfix">
+            <div class="odd">
+                <label>メール*</label>
+                <input class="group" type="text" id="email"></input>
+            </div>
+            <div class="even">
+                <label>携帯電話</label>
+                <input class="group" type="text" id="phone"></input>
+            </div>
+        </div>
+        <div class="group-fields clearfix">
+            <div class="odd">
+                <label>パスワードの作成*</label>
+                <input class="group" type="password" id="createPassword"></input>
+            </div>
+            <div class="even">
+                <label>パスワードの確認*</label>
+                <input class="group" type="password" id="confirmPassword"></input>
+            </div>
+        </div>
+        <div class="group-fields clearfix">
+            <div class="odd">
+                <label>生年月日*</label>
+                <input class="group" id="dateOfBirth"></input>
+            </div>
+            <div class="even">
+                <label>性別*</label>
+                <input id='gender'></input>
+            </div>
+        </div>
+        <div class="group-fields clearfix">
+            <div class="odd">
+                <label>趣味 (2 以上を選択してください)*</label>
+                <div id='igComboInterests'></div>
+            </div>
+            <div class="even">
+                <label>記事の評価</label>
+                <div id="rating"></div>
+            </div>
+        </div>
+        <div class="group-fields clearfix">
+            <div class="odd">
+                <label class="inline">契約条件に同意*</label>
+                <div id="igCheckboxAccept"></div>
+            </div>
+            <div class="even">
+                <label class="inline">デイリー メールに加入</label>
+                <div id="igCheckboxSubscribe"></div>
+            </div>
+        </div>
+        <input type="submit" value="サインアップ"></input>
     </form>

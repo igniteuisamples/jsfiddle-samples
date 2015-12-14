@@ -7,20 +7,65 @@
 <link href="http://cdn-na.infragistics.com/igniteui/latest/css/structure/infragistics.css" rel="stylesheet"></link>
 
 <form id="validationForm" action="" method="post">
-        <fieldset>
-            <h4> Feedback form</h4>
-            <p> Enter your name: (Validation onsubmit, required)</p>
-            <input type="text" id="grpEdit1"></input>
-            <p> Enter date: (Validation onblur, not required on submit)</p>
-            <input type="text" id="grpEdit2"></input>
-            <p> Give us rating: ( Validation onsubmit, minimum value = 1.5) </p>
-            <div id="rating"></div>
-            <p> Subscribe for free samples : (Validation onsubmit,required)</p>
-            <div id="igCheckboxEditor"></div>
-            <p> Select your two or more favourite products: (Validation onsubmit, required) </p>
-            <div id='combo2'></div>
-            <br />
-            <br />
-            <input type="submit" value="Submit"></input>
-        </fieldset>
+        <div class="group-fields clearfix">
+            <div class="odd">
+                <label>First name*</label>
+                <input class="group" type="text" id="firstName"></input>
+            </div>
+            <div class="even">
+                <label>Last name*</label>
+                <input class="group" type="text" id="lastName"></input>
+            </div>
+        </div>
+        <div class="group-fields clearfix">
+            <div class="odd">
+                <label>Email*</label>
+                <input class="group" type="text" id="email"></input>
+            </div>
+            <div class="even">
+                <label>Mobile phone</label>
+                <input class="group" type="text" id="phone"></input>
+            </div>
+        </div>
+        <div class="group-fields clearfix">
+            <div class="odd">
+                <label>Create password*</label>
+                <input class="group" type="password" id="createPassword"></input>
+            </div>
+            <div class="even">
+                <label>Confirm password*</label>
+                <input class="group" type="password" id="confirmPassword"></input>
+            </div>
+        </div>
+        <div class="group-fields clearfix">
+            <div class="odd">
+                <label>Date of birth*</label>
+                <input class="group" id="dateOfBirth"></input>
+            </div>
+            <div class="even">
+                <label>Gender*</label>
+                <input id='gender'></input>
+            </div>
+        </div>
+        <div class="group-fields clearfix">
+            <div class="odd">
+                <label>Your interests (Select at least 2)*</label>
+                <div id='igComboInterests'></div>
+            </div>
+            <div class="even">
+                <label>How do you rate our articles</label>
+                <div id="rating"></div>
+            </div>
+        </div>
+        <div class="group-fields clearfix">
+            <div class="odd">
+                <label class="inline">I accept the Terms and Conditions *</label>
+                <div id="igCheckboxAccept"></div>
+            </div>
+            <div class="even">
+                <label class="inline">Subscribe for our daily mail digest</label>
+                <div id="igCheckboxSubscribe"></div>
+            </div>
+        </div>
+        <input type="submit" value="Sign Up"></input>
     </form>

@@ -7,13 +7,23 @@
 <link href="http://cdn-na.infragistics.com/igniteui/latest/css/structure/infragistics.css" rel="stylesheet"></link>
 <script src="http://cdn-na.infragistics.com/igniteui/latest/js/i18n/infragistics-ja.js"></script>
 
-<form>
-        <div><span class="label"> 名前: </span> <span id="firstName"></span></div>
-        <div><span class="label"> ミドル ネーム: </span> <span id="middleName"></span></div>
-        <div><span class="label"> 名字: </span> <span id="lastName"></span></div>
-        <div class="align">
-            <span class="label"> 郵便番号: </span><div id="zipcode"></div>
-            <span class="label small"> 州: </span> <div id="state"></div>
+<h3>Ultimate 製品の登録</h3>
+    <form>
+        <div class="group-fields">
+            <label for="email">電子メール</label>
+            <input id="email"></input>
         </div>
-        <div><span class="label"> 電話: </span> <span id="phone"></span></div>
+        <div class="group-fields">
+            <label for="serialNumber">製品番号</label>
+            <input id="serialNumber"></input>
+        </div>
+        <div class="group-fields">
+            <label for="zipCode">郵便番号</label>
+            <input id="zipCode"></input>
+        </div>
+        <div class="group-fields">
+            <label for="phone">電話番号</label>
+            <input id="phone"></input>
+        </div>
+        <input id="btn" type="button" value="キャンセル"></input>
     </form>

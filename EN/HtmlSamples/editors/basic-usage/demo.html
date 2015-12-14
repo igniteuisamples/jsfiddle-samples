@@ -6,13 +6,67 @@
 <link href="http://cdn-na.infragistics.com/igniteui/latest/css/themes/infragistics/infragistics.theme.css" rel="stylesheet"></link>
 <link href="http://cdn-na.infragistics.com/igniteui/latest/css/structure/infragistics.css" rel="stylesheet"></link>
 
-<div id="editors">
-        
-        <p><input id="textEditor" value="John"></input></p>
-        <p><input id="dateEditor" value="07/27/2012"></input></p>
-        <p><input id="maskEditor" value="mask edit"></input></p>
-        <p><input id="currencyEditor" value="42"></input></p>
-        <p><input id="numericEditor" value="42"></input></p>
-        <p><input id="percentEditor" value="0.42"></input></p>
-        <p><input id="checkboxEditor" checked=""></input></p>
+<div id="container">
+        <div id="formContainer">
+            <p style="display: inline-block">Measurement units</p>
+            <input type="radio" name="radioMeasurement" id="radioMetric" value="metric" onchange="radioChange()" checked=""></input>
+            <label for="radioM">metric</label>
+            <input type="radio" name="radioMeasurement" id="radioImperial" value="imperial" onchange="radioChange()"></input>
+            <label for="radioI">imperial</label>
+
+            <div id="mainInfo">
+                <div class="element" style="margin-right: 40px;">
+                    <label for="client">Client</label>
+                    <input id="clientName" type="text" name="client"></input>
+                </div>
+
+                <div class="element" style="margin-right: 40px;">
+                    <label for="address">Delivery address</label>
+                    <input id="deliveryAddress" name="address"></input>
+                </div>
+                <div class="element">
+                    <label for="pricem3">Price per cubic meter</label>
+                    <input id="price" name="pricem3"></input>
+                </div>
+            </div>
+
+            <div id="client">
+                <div class="element" style="margin-right: 40px;">
+                    <label for="mail">Contact email</label>
+                    <input id="clientMail" name="mail"></input>
+                </div>
+
+                <div class="element" style="margin-right: 40px;">
+                    <label for="date">Delivery date</label>
+                    <input id="deliveryDate" name="date"></input>
+                </div>
+                <div class="element">
+                    <label for="amountm3">Amount in cubic meter</label>
+                    <input id="amount" name="amountm3"></input>
+                </div>
+            </div>
+
+            <div id="delivery">
+                <div class="element" style="margin-left: 240px; margin-right: 40px; margin-top: 20px;">
+                    <input id="freeDelivery" style="margin-right: 5px; display: inline-block"></input>
+                    <label for="checkbox" style="display: inline-block;">Apply free delivery</label>
+                </div>
+                <div class="element">
+                    <label for="applyDiscount">Apply discount</label>
+                    <input id="discount" name="applyDiscount"></input>
+                </div>
+            </div>
+
+            <div id="priceContainer">
+                <div id="submitPurchase">
+                    <p id="total">Total: </p>
+                    <input type="submit" id="createOrder" value="Create Purchase Order" style="height: 25px; width: 200px;" onclick="createNewOrder()"></input>
+                
+                    <div id="successMessageDiv">
+                        <p id="successMessage" style="display: inline-block;">
+                    </div>
+                </div>
+            </div>
+
+        </div>
     </div>

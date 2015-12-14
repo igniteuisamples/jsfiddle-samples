@@ -7,17 +7,21 @@
 <link href="http://cdn-na.infragistics.com/igniteui/latest/css/themes/infragistics/infragistics.theme.css" rel="stylesheet"></link>
 <link href="http://cdn-na.infragistics.com/igniteui/latest/css/structure/infragistics.css" rel="stylesheet"></link>
 
-<div id="container">
+<div id="container" class="clearfix">
         <div id="igDatePickersContainer">
             <form id="form" name="FormSubmit" action="javascript:console.log('Submit');">
-                <h4>Start Date</h4>
-                <input id="datePicker1" type="date" name="startDayPicker"></input>
-                <h4>End Date</h4>
-                <input id="datePicker2" type="date" name="endDatePicker"></input>               
-                <h4>Change DatePickers dataMode option</h4>
-                <input id="dataModeCombo"></input>
-                <br />
-                <br />
+                <div class="group-fields">
+                    <label for="datePicker1">Start Date</label>
+                    <input id="datePicker1" type="date" name="startDayPicker"></input>
+                </div>
+                <div class="group-fields">
+                    <label for="datePicker2">End Date</label>
+                    <input id="datePicker2" type="date" name="endDatePicker"></input>
+                </div>
+                <div class="group-fields">
+                    <label for="dataModeCombo">Change DatePickers dataMode option</label>
+                    <input id="dataModeCombo"></input>
+                </div>
                 <input type="submit" id="submitBtn" value="Submit"></input>
             </form>
         </div>

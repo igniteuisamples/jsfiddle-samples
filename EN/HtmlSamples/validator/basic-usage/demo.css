@@ -1,0 +1,98 @@
+.group-fields {
+            margin-bottom:20px;
+        }
+        .group-fields .odd {
+            float:left;
+            width:262px;
+        }
+        .group-fields .even{
+            float:left;
+            margin-left:20px;
+        }
+        .group-fields label {
+            display: block;
+            line-height: 20px;
+            font-family: 'Open Sans',Arial,sans-serif;
+            font-size: 13px;
+        }
+        .group-fields .ui-igedit-container {
+            box-sizing: content-box;
+        }
+        .group-fields input.group {
+            width:258px;
+            height:32px;
+        }
+        .group-fields .ui-igedit-container,.group-fields .ui-igcombo-wrapper {
+            width:260px;
+            height:34px;
+        }
+        .group-fields .ui-igpopover {
+            width:260px;
+        }
+        .group-fields input.group {
+            border-style: solid;
+            border-width: 1px;
+            border-color:#bcbcbc;
+        }
+        .group-fields input.group:hover {
+            border-color:#444;
+        }
+        .group-fields .ui-widget.ui-ignotify.ui-ignotify-inline {
+            margin-bottom:0;
+        }
+        .group-fields input.group.ui-ignotify-error {
+            border-color:#f33;
+        }
+        #igCheckboxAccept, #igCheckboxSubscribe {
+            float:left;
+            margin-right: 5px;
+        }
+        .group-fields .inline {
+            display:inline;
+        }
+        .clearfix:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        @media screen and (max-width:610px) {
+            .group-fields .odd {
+                float:left;
+                width:202px;
+            }
+            .group-fields input.group {
+                width:200px;
+            }
+            .group-fields .ui-igedit-container,.group-fields .ui-igcombo-wrapper {
+                width:202px;
+            }
+            .group-fields .ui-igpopover {
+                width:202px;
+            }
+        }
+        @media screen and (max-width:478px) {
+            .group-fields {
+                margin-bottom:0;
+            }
+            .group-fields .odd, .group-fields .even {
+                margin-bottom: 5px;
+            }
+            .group-fields .odd {
+                float:none;
+                width:262px;
+            }
+            .group-fields .even {
+                margin-left:0;
+            }
+            .group-fields input.group {
+                width:258px;
+                height:32px;
+            }
+            .group-fields .ui-igedit-container,.group-fields .ui-igcombo-wrapper {
+                width:260px;
+                height:34px;
+            }
+            .group-fields .ui-igpopover {
+             width:260px;
+             }
+        }

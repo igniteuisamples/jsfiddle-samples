@@ -1,3 +1,111 @@
-#editors p {
-            margin-bottom: .5em;
+#container
+        {
+            width: 100%;
+            min-width: 900px;
+            max-width: 900px;
+            display: inline-block;
+        }
+
+        #formContainer
+        {
+            top: 0px;
+            left: 0px;
+            height: 500px;
+            width: 750px;
+            padding-top: 15px;
+            float: left;
+            margin-left: 20px;
+        }
+
+        .element
+        {
+            width: 200px;
+            float: left;
+        }
+
+        input, label
+        {
+            display: inline-block;
+        }
+
+        #total
+        {
+            font-weight: bold;
+            font-size: large;
+            text-align: right;
+        }
+
+        #successMessageDiv
+        {
+            position: relative;
+            bottom: 0;
+            text-align: center;
+            font-size: larger;
+            color: green;
+        }
+
+        #client
+        {
+            margin-top: 85px;
+        }
+
+        #delivery
+        {
+            margin-top: 145px;
+        }
+
+        #submitPurchase{
+            float:right;
+            margin-right:75px;
+            margin-top:10px;
+        }
+
+        #mainInfo
+        {
+            margin-bottom: 80px;
+            margin-top: 25px;
+        }
+
+        @media only screen and (max-width: 780px)
+        {
+            #container
+            {
+                height: 600px;
+            }
+
+            .element
+            {
+                float: none;
+                margin: 10px 0 10px 0 !important;
+            }
+
+            #client
+            {
+                margin-top: 0;
+            }
+
+            #delivery
+            {
+                margin-top: 0;
+            }
+
+            #priceContainer
+            {
+                margin-top: 0;
+                margin-left: 0;
+            }
+
+            #mainInfo
+            {
+                margin-bottom: 0;
+            }
+
+            #successMessageDiv
+            {
+                text-align: unset;
+                position:absolute;
+            }
+            #submitPurchase{
+                float:left;
+            }
         }

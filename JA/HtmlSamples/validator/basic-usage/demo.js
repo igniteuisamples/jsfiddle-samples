@@ -1,19 +1,23 @@
 $(function () {
 $(document).ready(function () {
-            var data = [{ ID: "ID101", Name: "簡単クレンジング ミルク", Code: 101 },
-            { ID: "ID102", Name: "カモミール & ローズヒップ クリーム", Code: 102 },
-            { ID: "ID103", Name: "ハニー & オレンジ フェイシャル スクラブ", Code: 103 },
-            { ID: "ID104", Name: "ライム リップクリーム", Code: 104 },
-            { ID: "ID105", Name: "アルガン フェース マスク", Code: 105 },
-            { ID: "ID106", Name: "シー ハンド クリーム", Code: 106 },
-            { ID: "ID107", Name: "つばき & ローズ保湿クレンジング", Code: 107 },
-            { ID: "ID108", Name: "うる落ちアイメークアップ リムーバー", Code: 108 },
-            { ID: "ID109", Name: "ふっくら高保湿リップ バーム", Code: 109 },
-            { ID: "ID110", Name: "スーパーうるおいモイスチャライザー", Code: 110 },
-            { ID: "ID111", Name: "ディープ クレンジング マスク", Code: 111 }];
+            var data = [
+                { ID: "ID101", Name: "ビジネス", Code: 101 },
+                { ID: "ID102", Name: "料理", Code: 102 },
+                { ID: "ID103", Name: "ファッション", Code: 103 },
+                { ID: "ID104", Name: "ライフスタイル", Code: 104 },
+                { ID: "ID105", Name: "フォトグラフィー", Code: 105 },
+                { ID: "ID106", Name: "スポーツ", Code: 106 }];
 
-            $('#combo2').igCombo({
-                width: 400,
+            $('#gender').igTextEditor({
+                inputName: "gender",
+                listItems: ["Male", "Female"]
+            });
+
+            $("#phone").igMaskEditor({
+                inputMask: "(\\0\\01) 000-0000"
+            });
+
+            $('#igComboInterests').igCombo({
                 inputName: "products",
                 dataSource: data,
                 allowCustomValue: true,
@@ -23,45 +27,105 @@ $(document).ready(function () {
                     enabled: true
                 }
             });
+
             $("#rating").igRating({
                 precision: "half",
                 valueAsPercent: false
             });
-            $("#igCheckboxEditor").igCheckboxEditor();
 
-            $('#validationForm').igValidator({
-                required: true,
+            $("#dateOfBirth").igDatePicker({
+                datepickerOptions: { minDate: new Date(1920, 0, 1), maxDate: new Date(2015, 0, 1) }
+            });
+
+            $("#igCheckboxAccept").igCheckboxEditor();
+
+            $("#igCheckboxSubscribe").igCheckboxEditor();
+
+            $('#validationForm').igValidator({                
                 onsubmit: true,
                 successMessage: "有効",
                 fields: [{
-                    selector: "#grpEdit1",
-                    onblur: false
+                    required: true,
+                    selector: "#firstName",
+                    valueRange: [2],
+                    onblur: true,
+                    custom: function (value, fieldOptions) {
+                        var myRegEx = /^[a-zA-Z]+$/;
+                        var isValid = myRegEx.test(value);
+                        return isValid;
+                    }
+                },
+                {
+                    required: true,
+                    selector: "#lastName",
+                    valueRange: [2],
+                    onblur: true,
+                    custom: function (value, fieldOptions) {
+                        var myRegEx = /^[a-zA-Z]+$/;
+                        var isValid = myRegEx.test(value);
+                        return isValid;
+                    }
                 },
 				{
-				    selector: "#grpEdit2",
-				    date: true,
-				    required: false,
-				    onchange: true,
-				    valueRange: [new Date()]
-				}, {
+				    required: true,
+				    selector: "#dateOfBirth",
+				    date: true,				   
+				    onblur: true
+				},
+                {
+                    required: true,
+                    selector: "#gender",
+                    gender: true,
+                    onblur: true
+                },
+				{
+				    required: true,
+				    selector: "#email",
+				    email: true,				   
+				    onblur: true
+				},
+                {
+                    required: true,
+                    selector: "#createPassword",
+                    onblur: true,
+                    errorMessage: "8 以上の文字、1 数字、1 小文字 (a-z)、1 大文字を含む必要があります",
+                    custom: function(value, fieldOptions){
+                        var myRegEx  = /^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])([a-zA-Z0-9]{8,})$/;
+                        var isValid = myRegEx.test(value);						
+                        return isValid;
+                    }
+                },
+                {
+                    required: true,
+                    selector: "#confirmPassword",                    
+                    equalTo: "#createPassword",
+                    onblur: true,
+                },
+                {
 				    selector: "#rating",
 				    successMessage: "有効",
 				    onchange: true,
 				    valueRange: {
 				        min: 1.5,
-				        errorMessage: "1.5 星以上が必要 (カスタム メッセージ)"
+				        errorMessage: "星 {0} つ以上が必要 (カスタム メッセージ)"
 				    },
 				    notificationOptions: {
 				        mode: "popover"
 				    }
 				},
 				{
-				    selector: "#combo2",
+				    required: true,
+				    selector: "#igComboInterests",
 				    onchange: true,
 				    lengthRange: [2]
 				},
 				{
-				    selector: "#igCheckboxEditor",
+				    required: true,
+				    selector: "#igCheckboxAccept",
+				    onchange: true
+				},
+				{
+				    selector: "#igCheckboxSubscribe",
 				    onchange: true
 				}
                 ]

@@ -29,9 +29,9 @@ $(function () {
                     "name": "Pictures", "dateModified": "1/9/2014", "type": "File Folder", "size": 1825, "files": [
                         {
                             "name": "Jack's Birthday", "dateModified": "6/9/2014", "type": "File Folder", "size": 631, "files": [
-                                { "name": "Picture1.png", "dateModified": "6/9/2014", "type": "PNG image", "size": 493 },
-                                { "name": "Picture2.png", "dateModified": "6/9/2014", "type": "PNG image", "size": 88 },
-                                { "name": "Picture3.gif", "dateModified": "6/9/2014", "type": "GIF File", "size": 50 },
+                                { "name": "Picture11.png", "dateModified": "6/9/2014", "type": "PNG image", "size": 493 },
+                                { "name": "Picture12.png", "dateModified": "6/9/2014", "type": "PNG image", "size": 88 },
+                                { "name": "Picture13.gif", "dateModified": "6/9/2014", "type": "GIF File", "size": 50 },
                             ]
                         },
                         {
@@ -73,7 +73,7 @@ $(function () {
                     "name": "Projects", "dateModified": "7/4/2014", "type": "File Folder", "size": 4, "files": [
                         {
                             "name": "Visual Studio 2012", "dateModified": "7/4/2014", "type": "File Folder", "size": 1, "files": [
-                                { "name": "Project1.sln", "dateModified": "7/4/2014", "type": "Microsoft Visual Studio Solution", "size": 1 }
+                                { "name": "Project10.sln", "dateModified": "7/4/2014", "type": "Microsoft Visual Studio Solution", "size": 1 }
                             ]
                         },
                         {
@@ -101,13 +101,33 @@ $(function () {
                 ],
                 childDataKey: "files",
                 initialExpandDepth: 2,
-                renderExpansionIndicatorColumn: true,
                 features: [
+                {
+                    name: "Selection",
+                    multipleSelection: true
+                },
+                {
+                    name: "RowSelectors",
+                    enableCheckBoxes: true,
+                    checkBoxMode: "biState",
+                    enableSelectAllForPaging: true,
+                    enableRowNumbering: false
+                },
                 {
                     name: "Sorting"
                 },
                 {
-                    name: "Filtering"
+                    name: "Filtering",
+                    columnSettings: [
+                        {
+                            columnKey: "dateModified",
+                            condition: "after"
+                        },
+                        {
+                            columnKey: "size",
+                            condition: "greaterThan"
+                         }
+                        ]
                 },
                 {
                     name: "Paging",

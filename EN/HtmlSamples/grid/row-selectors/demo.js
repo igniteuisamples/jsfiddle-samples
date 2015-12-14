@@ -15,10 +15,11 @@ $(function () {
                 responseDataKey: "results",
                 dataSourceType: "json",
                 columns: [
-                    { headerText: "Employee ID", key: "ID", dataType: "number", width: "120px" },
+                    { headerText: "Employee ID", key: "ID", dataType: "number", width: "120px", hidden: true },
                     { headerText: "Name", key: "Name", dataType: "string" },
                     { headerText: "Title", key: "Title", dataType: "string"},
-                    { headerText: "Phone", key: "Phone", dataType: "string" }
+                    { headerText: "Phone", key: "Phone", dataType: "string" },
+                    { headerText: "Country", key: "Country", dataType: "string" }
                 ],
                 features: [
                     {
@@ -26,7 +27,7 @@ $(function () {
                         enableVerticalRendering: false,
                         columnSettings: [
                             {
-                                columnKey: 'ID',
+                                columnKey: 'Country',
                                 classes: 'ui-hidden-phone'
                             }
                         ]
@@ -50,10 +51,12 @@ $(function () {
                 responseDataKey: "results",
                 dataSourceType: "json",
                 columns: [
-                    { headerText: "Employee ID", key: "ID", dataType: "number", width: "120px" },
+                    { headerText: "Employee ID", key: "ID", dataType: "number", width: "120px", hidden: true },
                     { headerText: "Name", key: "Name", dataType: "string"},
                     { headerText: "Title", key: "Title", dataType: "string" },
-                    { headerText: "Phone", key: "Phone", dataType: "string" }
+                    { headerText: "Phone", key: "Phone", dataType: "string" },
+                    { headerText: "Country", key: "Country", dataType: "string" }
+
                 ],
                 features: [
                     {
@@ -61,7 +64,7 @@ $(function () {
                         enableVerticalRendering: false,
                         columnSettings: [
                             {
-                                columnKey: 'ID',
+                                columnKey: 'Country',
                                 classes: 'ui-hidden-phone'
                             }
                         ]
@@ -86,10 +89,12 @@ $(function () {
                 responseDataKey: "results",
                 dataSourceType: "json",
                 columns: [
-                    { headerText: "Employee ID", key: "ID", dataType: "number", width: "120px" },
+                    { headerText: "Employee ID", key: "ID", dataType: "number", width: "120px", hidden: true },
                     { headerText: "Name", key: "Name", dataType: "string" },
                     { headerText: "Title", key: "Title", dataType: "string" },
-                    { headerText: "Phone", key: "Phone", dataType: "string" }
+                    { headerText: "Phone", key: "Phone", dataType: "string" },
+                    { headerText: "Country", key: "Country", dataType: "string" }
+
                 ],
                 features: [
                     {
@@ -97,7 +102,7 @@ $(function () {
                         enableVerticalRendering: false,
                         columnSettings: [
                             {
-                                columnKey: 'ID',
+                                columnKey: 'Country',
                                 classes: 'ui-hidden-phone'
                             }
                         ]

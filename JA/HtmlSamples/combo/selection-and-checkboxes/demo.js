@@ -8,7 +8,7 @@ var colors = [
             { Name: "パープル" },
             { Name: "赤" },
             { Name: "白" },
-            { Name: "黄" },
+            { Name: "黄" }
         ];
 
         $(function () {

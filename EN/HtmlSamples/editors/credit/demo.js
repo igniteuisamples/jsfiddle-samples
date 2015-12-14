@@ -58,15 +58,18 @@ var listData = ["EUR", "USD", "GBP"];
         });
 
         $("#resultCredit").igCurrencyEditor({
-            readOnly: true
+            readOnly: true,
+            width: 150
         });
 
         $("#returnValue").igCurrencyEditor({
-            readOnly: true
+            readOnly: true,
+            width: 150
         });
 
         $("#monthlyPaymentValue").igCurrencyEditor({
-            readOnly: true
+            readOnly: true,
+            width: 150
         });
 
         $("#form").submit(function (event) {
@@ -98,6 +101,8 @@ var listData = ["EUR", "USD", "GBP"];
             var customerName = $('#lastName').igTextEditor("option", "value");
             var returnAmount = Math.round(getSumToReceive).toFixed(2);
             var monthlyPayment = Math.round(getMonthlyPaymentInterestRate).toFixed(2);
+            $(".info").remove();
+
             switch (selectedCurrency) {
                 case "EUR":
                     currencySymbol = "€";
@@ -119,8 +124,8 @@ var listData = ["EUR", "USD", "GBP"];
 
             $("#monthlyPaymentValue").igCurrencyEditor("option", "currencySymbol", currencySymbol);
             $("#monthlyPaymentValue").igCurrencyEditor("option", "value", monthlyPayment);
-
-            var output = "<p>" + "Dear Madam / Sir " + customerName + ", following are the details for your loan: " + "</p>";
+            
+            var output = "<p class=\"info\">" + "Dear Madam / Sir " + customerName + ", following are the details for your loan: " + "</p>";
             $(".creditTable").before(output);
             $("#valuesContainer").show();
             disableEditors();

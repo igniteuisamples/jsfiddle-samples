@@ -1,23 +1,5 @@
 $(function () {
-<div style="float: left; width:50%;" id="templateContainer">
-            <strong>${Name}</strong><br /><br />
-            <table id="dialogTmpTable" style="width: 100%;">
-                <colgroup>
-                    <col style="width: 30%;" />
-                    <col style="width: 70%;" />
-                </colgroup>
-                <tbody data-render-tmpl="true">
-                </tbody>
-            </table>
-            <div data-editor-for-imageurl="true"></div>
-        </div>
-     
-        <tr>
-            <td><strong>${headerText}</strong></td>
-            <td><input data-editor-for-${key}="true"/></td>
-        </tr>
-     
-        var northwindEmployees = [
+var northwindEmployees = [
             { "ID": 1, "Name": "Davolio, Nancy", "Title": "Sales Representative", "ImageUrl": "http://igniteui.com/images/samples/nw/employees/1.png", "Phone": "(206) 555-9857", "PhoneUrl": "tel:(206) 555-9857", "BirthDate": "\/Date(480808800000)\/", "HireDate": "\/Date(1224795600000)\/", "Country": "USA", "Languages": [{ name: "English" }, { name: "Russian" }] },
             { "ID": 2, "Name": "Fuller, Andrew", "Title": "Vice President, Sales", "ImageUrl": "http://igniteui.com/images/samples/nw/employees/2.png", "Phone": "(206) 555-9482", "PhoneUrl": "tel:(206) 555-9482", "BirthDate": "\/Date(433458000000)\/", "HireDate": "\/Date(1269640800000)\/", "Country": "USA", "Languages": [{ name: "English" }, { name: "German" }] },
             { "ID": 3, "Name": "Leverling, Janet", "Title": "Sales Representative", "ImageUrl": "http://igniteui.com/images/samples/nw/employees/3.png", "Phone": "(206) 555-3412", "PhoneUrl": "tel:(206) 555-3412", "BirthDate": "\/Date(268088400000)\/", "HireDate": "\/Date(1318453200000)\/", "Country": "USA", "Languages": [{ name: "English" }] },
@@ -139,7 +121,7 @@ $(function () {
                             }
                         ],
                         rowEditDialogOptions: {
-                            width: "530px",
+                            width: "560px",
                             height: "350px",
                             dialogTemplateSelector: "#dialogTemplate",
                             editorsTemplateSelector: "#editorsTemplate",

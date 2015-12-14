@@ -1,37 +1,37 @@
-#container {
-            width: 750px;
-            display: inline-block;
+h3 {
+            font-size: 20px;
+            margin-bottom: 20px;
         }
 
-        .p {
-            margin-top: 15px;
+        .group-fields {
+            margin-bottom: 10px;
         }
 
-        .header {
-            color: #888;
+        .group-fields label {
+            display: block;
+            line-height: 18px;
         }
 
-        #igDateEditorsContainer {
-            height: 400px;
-            width: 450px;
-            padding-top: 15px;
+        .group-fields .inline {
+            display: inline;
+        }
+
+        .group-fields .ui-igcheckbox-normal {
+            margin-right: 5px;
             float: left;
         }
 
-        #ValuesContainer {
-            top: 0px;
-            right: 0px;
-            height: 500px;
-            width: 300px;
-            padding-top: 15px;
-            float: right;
-            font-size: 16px;
+        .group-fields .ui-igedit-container {
+            width: 230px;
         }
 
-        #ValuesContainer.p {
-            font-size: 16px;
+        .clearfix:after {
+            content: "";
+            display: table;
+            clear: both;
         }
 
-        #form h4 {
-            margin-bottom: .3em;
+        .group-fields.clearfix > div {
+            float: left;
+            margin-right: 10px;
         }

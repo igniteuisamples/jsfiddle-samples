@@ -8,17 +8,21 @@
 <link href="http://cdn-na.infragistics.com/igniteui/latest/css/structure/infragistics.css" rel="stylesheet"></link>
 <script src="http://cdn-na.infragistics.com/igniteui/latest/js/i18n/infragistics-ja.js"></script>
 
-<div id="container">
+<div id="container" class="clearfix">
         <div id="igDatePickersContainer">
             <form id="form" name="FormSubmit" action="javascript:console.log('送信');">
-                <h4>開始日</h4>
-                <input id="datePicker1" type="date" name="startDayPicker"></input>
-                <h4>終了日</h4>
-                <input id="datePicker2" type="date" name="endDatePicker"></input>               
-                <h4>DatePicker の dataMode オプションを変更</h4>
-                <input id="dataModeCombo"></input>
-                <br />
-                <br />
+                <div class="group-fields">
+                    <label for="datePicker1">開始日</label>
+                    <input id="datePicker1" type="date" name="startDayPicker"></input>
+                </div>
+                <div class="group-fields">
+                    <label for="datePicker2">終了日</label>
+                    <input id="datePicker2" type="date" name="endDatePicker"></input>
+                </div>
+                <div class="group-fields">
+                    <label for="dataModeCombo">DatePicker の dataMode オプションを変更</label>
+                    <input id="dataModeCombo"></input>
+                </div>
                 <input type="submit" id="submitBtn" value="送信"></input>
             </form>
         </div>

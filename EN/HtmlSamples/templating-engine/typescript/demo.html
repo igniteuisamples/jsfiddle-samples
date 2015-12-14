@@ -7,4 +7,27 @@
 <link href="http://cdn-na.infragistics.com/igniteui/latest/css/themes/infragistics/infragistics.theme.css" rel="stylesheet"></link>
 <link href="http://cdn-na.infragistics.com/igniteui/latest/css/structure/infragistics.css" rel="stylesheet"></link>
 
+<script id="colTmpl" type="text/template">
+        <div class='tree'>
+            <ul>
+                {{each ${movies} }}
+                <li>
+                    ${movies.name}
+                    <ul>
+                        <li>Genre: ${movies.genre}</li>
+                        <li>Year: ${movies.year}</li>
+                        <li>
+                            <a>
+                                <span class='ratingLabel' style='float:left'>Rating:</span>
+                                <span class='rating'>${movies.rating}</span>
+                            </a>
+                        </li>
+                        <li class='clear'>Languages: ${movies.languages}</li>
+                        <li>Subtitles: ${movies.subtitles}</li>
+                    </ul>
+                    {{/each}}
+            </ul>
+        </div>
+    </script>
+
 <div id="resultGrid"></div>

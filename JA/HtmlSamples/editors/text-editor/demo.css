@@ -1,48 +1,26 @@
-#container {
-             width: 100%;
-             min-width: 900px;
-             max-width: 900px;
-            display: inline-block;
-         }
-
-         #igCheckboxEditorsContainer {
-             top: 0px;
-             left: 0px;
-             height: 500px;
-             width: 450px;
-             padding-top: 15px;
-            float: left;
-         }
-
-         #ValuesContainer {
-             top: 0px;
-             right: 0px;
-             height: 500px;
-             width: 300px;
-             padding-top: 15px;
-            float: right;
-             font-size: 18px;
-         }
-
-            #ValuesContainer.p {
-                font-size: 16px;
+h3 {
+            font-size:20px;
+            margin-bottom:20px;
         }
-
-        .readOnly, .disabled {
-               float: right;
-               font-size: 18px;  
-               margin-top: 5px;
-               margin-right: 10px;
-         }
-
-     .chk-container
-     {
-        margin-left: 30px;
-        display: inline-block;
-        vertical-align: top;
-     }
-
-     #readOnly + label, #disabled + label
-     {
-        padding-left: 5px;
-     }
+        .group-fields {
+            margin-bottom: 10px;
+        }
+        .group-fields label {
+            display: block;
+            line-height:18px;
+        }
+        .group-fields .inline {
+            display:inline;
+        }
+        .group-fields .ui-igcheckbox-normal {
+            margin-right: 5px;
+            float: left;
+        }
+        .group-fields .ui-igedit-container {
+            width: 250px;
+        }
+        @media screen and (min-width:360px) {
+            .group-fields .ui-igedit-container {
+                width: 300px;
+            }
+        }

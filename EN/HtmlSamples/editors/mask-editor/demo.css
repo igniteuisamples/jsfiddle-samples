@@ -1,40 +1,74 @@
-#container
-        {
-            width: 750px;
-            display: inline-block;
+#container {
+            width: 70%;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            padding: 20px;
         }
-        .p
-        {
-            margin-top: 15px;
+
+        .p {
+            margin-top: 5px;
         }
-        .header{
-            color: #888;
-        }
-        #igMaskEditorsContainer
-        {
-            height: 400px;
-            width: 450px;
-            padding-top: 15px;
+
+        #igMaskEditorsContainer {
             float: left;
         }
 
-        #ValuesContainer
-        {
-            top: 0px;
-            right: 0px;
-            height: 500px;
-            width: 300px;
-            padding-top: 15px;
-            float: right;
-            font-size: 18px;
+        .group-fields {
+            margin-bottom: 10px;
         }
 
-            #ValuesContainer.p
-            {
-                font-size: 16px;
-            }
+        .group-fields label {
+            display: block;
+            line-height: 18px;
+        }
 
-        #form h4
-        {
-            margin-bottom: .3em;
+        .group-fields .ui-igedit-container {
+            width: 250px;
+        }
+
+        #ValuesContainer {
+            float: right;
+            width: 50%;
+        }
+
+        #ValuesContainer.p {
+            font-size: 16px;
+        }
+
+        #container h4 {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        .clearfix:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        @media screen and (max-width:960px) {
+            #container {
+                width: 80%;
+            }
+        }
+
+        @media screen and (max-width:840px) {
+            #container {
+                width: 100%;
+            }
+        }
+
+        @media screen and (max-width:690px) {
+            #igMaskEditorsContainer, #ValuesContainer {
+                float: none;
+            }
+            #ValuesContainer {
+                margin-top: 20px;
+                width: auto;
+            }
+        }
+        @media screen and (max-width:365px) {
+            .group-fields .ui-igedit-container {
+                 width: 200px;
+            }
         }

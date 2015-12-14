@@ -1,12 +1,4 @@
 $(function () {
-$ ${UnitPrice} 
-        {{if parseInt(${UnitPrice}) >= parseInt(${DeltaPrice}) }} 
-        <img width='10' height='15' src= 'http://jp.igniteui.com/images/samples/templating-engine/colTemplateWithConditionalCell/arrowUp.gif' />
-        {{else}}
-        <img width='10' height='15' src= 'http://jp.igniteui.com/images/samples/templating-engine/colTemplateWithConditionalCell/arrowDown.gif' />
-        {{/if}}
-     
-        $(function () {
             var headerTextValues = ["製品名", "単価", "在庫数", "入荷待ち"];
             $('#resultGrid').igGrid({
                 dataSource: northwindProducts,
@@ -40,4 +32,3 @@ $ ${UnitPrice}
                 ]
             });
         });
-});

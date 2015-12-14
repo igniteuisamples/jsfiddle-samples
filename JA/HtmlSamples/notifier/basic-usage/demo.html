@@ -7,30 +7,42 @@
 <link href="http://cdn-na.infragistics.com/igniteui/latest/css/structure/infragistics.css" rel="stylesheet"></link>
 <script src="http://cdn-na.infragistics.com/igniteui/latest/js/i18n/infragistics-ja.js"></script>
 
-<h3>成功メッセージ</h3>
-    <input id="successEditor" placeholder="この要素をフォーカスします"></input>
-    <br />
-    <br />
+<h3>メッセージを参照してください</h3>    
     <input id="successEditor1"></input>
+    <br />
+    <br />
+    <br />
     <div>
-        <select id="state">
-            <option value="success" selected="">成功</option>
-            <option value="info">情報</option>
-            <option value="warning">警告</option>
-            <option value="error">エラー</option>
-        </select>
-        <label>モード:</label>
-        <select id="mode">
-            <option value="auto" selected="">自動</option>
-            <option value="popover">ポップオーバー</option>
-            <option value="inline">インライン</option>
-        </select>
-        <button id="show"> 表示</button>
-        <button id="hide"> 非表示</button>
+        <div class="float">
+            <label>メッセージ状態:</label>
+            <select id="state">
+                <option value="success" selected="">成功</option>
+                <option value="info">情報</option>
+                <option value="warning">警告</option>
+                <option value="error">エラー</option>
+            </select>
+        </div>
+        <div class="float">
+            <label>メッセージ モード:</label>
+            <select id="mode">
+                <option value="auto" selected="">自動</option>
+                <option value="popover">ポップオーバー</option>
+                <option value="inline">インライン</option>
+            </select>
+        </div>
+        <div class="float">
+            <label>ポップオーバー方向:</label>
+            <select id="direction">
+                <option value="top" selected="">上</option>
+                <option value="left">左</option>
+                <option value="right">右</option>
+                <option value="bottom">下</option>
+            </select>
+        </div> 
+        <div class="buttons">
+            <br />
+            <br />
+            <button id="show"> 表示</button>
+            <button id="hide"> 非表示</button>
+        </div>
     </div>
-
-    <h3>警告メッセージ</h3>    
-    <input id="warningEditor" placeholder="この要素をフォーカスします"></input>
-
-    <h3>エラー メッセージ</h3>   
-    <input id="errorEditor"></input>

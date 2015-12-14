@@ -7,28 +7,39 @@
 <link href="http://cdn-na.infragistics.com/igniteui/latest/css/structure/infragistics.css" rel="stylesheet"></link>
 <script src="http://cdn-na.infragistics.com/igniteui/latest/js/i18n/infragistics-ja.js"></script>
 
-<div id="container">
+<div id="container" class="clearfix">
         <div id="igMaskEditorsContainer">
             <form id="form" action="javascript:console.log('送信');">
-                <h4>RAW テキスト:</h4>
-                <div id="msk1"></div>
-                <h4>必要なプロンプトを持つ RAW テキスト:</h4>
-                <div id="msk2"></div>
-                <h4>すべてのプロンプトを持つ RAW テキスト:</h4>
-                <div id="msk3"></div>
-                <h4>リテラルを持つ RAW テキスト:</h4>
-                <div id="msk4"></div>
-                <h4>必要なプロンプトおよびリテラルを持つ RAW テキスト:</h4>
-                <div id="msk5"></div>
-                <h4>すべてのテキスト (デフォルト値):</h4>
-                <div id="msk6"></div>
-                <br />
+                <div class="group-fields">
+                    <label>RAW テキスト:</label>
+                    <div id="msk1"></div>
+                </div>
+                <div class="group-fields">
+                    <label>必要なプロンプトを持つ RAW テキスト:</label>
+                    <div id="msk2"></div>
+                </div>
+                <div class="group-fields">
+                    <label>すべてのプロンプトを持つ RAW テキスト:</label>
+                    <div id="msk3"></div>
+                </div>
+                <div class="group-fields">
+                    <label>リテラルを持つ RAW テキスト:</label>
+                    <div id="msk4"></div>
+                </div>
+                <div class="group-fields">
+                    <label>必要なプロンプトおよびリテラルを持つ RAW テキスト:</label>
+                    <div id="msk5"></div>
+                </div>
+                <div class="group-fields">
+                    <label>すべてのテキスト (デフォルト値):</label>
+                    <div id="msk6"></div>
+                </div>
                 <input type="submit" id="submitBtn" value="送信"></input>
             </form>
         </div>
 
         <div id="ValuesContainer">
-            <h3>送信した値:</h3>
+            <h4>送信した値:</h4>
             <div class="divHeight">
                 <p class="pStyle" id="results">
             </div>

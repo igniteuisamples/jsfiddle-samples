@@ -8,7 +8,7 @@ var colors = [
             { Name: "Purple" },
             { Name: "Red" },
             { Name: "White" },
-            { Name: "Yellow" },
+            { Name: "Yellow" }
         ];
 
         $(function () {

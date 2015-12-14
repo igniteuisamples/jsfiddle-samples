@@ -6,25 +6,21 @@
 <link href="http://cdn-na.infragistics.com/igniteui/latest/css/themes/infragistics/infragistics.theme.css" rel="stylesheet"></link>
 <link href="http://cdn-na.infragistics.com/igniteui/latest/css/structure/infragistics.css" rel="stylesheet"></link>
 
-<div id="container">
-        <div id="igEditorsContainer">
-            <form id="form" action="javascript:console.log('Submit');">
-                <div class="divHeight"><div id="productName"></div></div>
-                <div class="divHeight"><div id="orderedUnits"></div></div>
-                <div class="divHeight"><div id="unitsInStock"></div><label>Units in Stock</label></div>
-                <div class="divHeight"><div id="unitPrice"></div></div>
-                <div class="divHeight"><div id="oldPrice"></div><label>Old Price</label></div>
-                <div class="divHeight"><div id="dueInDays"></div><label>Due In Days</label></div>
-                <div class="divHeight"><div id="listItems"></div> </div>
-                <div class="divHeight"><div id="negativePattern"></div> </div>
-                <div class="divHeight"><input type="submit" id="submitBtn" value="Submit"></input></div>
-            </form>
+<div id="payment" class="clearfix">
+        <div id="salary">
+            <h2>Gross Income</h2>
+            <p id="gross">$ 6,000.00</p>
+            <h2>Net Income</h2>
+            <p id="nett">$ 6,276.32</p>
         </div>
-
-        <div id="ValuesContainer">
-            <h3> Submitted Values:</h3>
-            <div class="divHeight">
-                <p class="pStyle" id="results">
-            </div>
+        <div id="deduction">
+            <label for="federalTax">Federal Tax %</label>
+            <input id="federalTax"></input>
+            <label for="stateTax">State Tax %</label>
+            <input id="stateTax"></input>
+            <label for="socialSecurity">Social Security %</label>
+            <input id="socialSecurity"></input>
+            <label for="medicare">Medicare %</label>
+            <input id="medicare"></input>
         </div>
     </div>

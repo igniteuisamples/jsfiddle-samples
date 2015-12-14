@@ -1,74 +1,14 @@
-.divHeight {
-            height: 40px;
-            margin: 15px;
+h3 {
+            font-size:20px;
+            margin-bottom:20px;
         }
-
-        #container div h4 {
-            margin-bottom: 5px;
-            margin-left: 15px;
+        .group-fields {
+            margin-bottom: 10px;
         }
-
-        divHeight > span {
-            top: 20px;
+        .group-fields .inline {
+            display:inline;
         }
-
-        .pStyle {
-            display: inline-block;
-            background-position-y: center;
-        }
-
-        .pChechBoxStyle {
-            display: inline-block;
-            position: absolute;
-            left: 60px;
-        }
-
-        #container {
-            display: inline-block;
-            position: relative;
-            width: 100%;
-            min-width: 730px;
-            max-width: 730px;
-        }
-
-        #igCheckboxEditorsContainer {
-            position: relative;
-            top: 0px;
-            left: 0px;
-            height: 200px;
-            width: 150px;
-            padding-top: 15px;
-        }
-
-        #checkedStatusContainer {
-            position: absolute;
-            top: 0px;
-            left: 150px;
-            height: 200px;
-            width: 150px;
-            margin: 0px auto;
-            padding-top: 15px;
-        }
-
-        #ValuesContainer {
-            position: absolute;
-            top: 0px;
-            left: 300px;
-            height: 200px;
-            width: 180px;
-            padding-top: 15px;
-        }
-
-        #SubmitValuesContainer {
-            position: absolute;
-            float: right;
-            top: 0px;
-            left: 480px;
-            height: 200px;
-            width: 250px;
-            padding-top: 15px;
-        }
-        .clear
-        {
-            clear: both;
+        .group-fields .ui-igcheckbox-normal {
+            margin-right: 5px;
+            float: left;
         }

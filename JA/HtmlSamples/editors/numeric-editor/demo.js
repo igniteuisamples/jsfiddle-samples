@@ -1,87 +1,63 @@
 $(function () {
-var listData = [1.5, 2.5, 3.5, 4.5];
+$(document).ready(function () {
+            var listValues = [10, 15, 25, 28, 33, 35];
 
-        $('#productName').igTextEditor({
-            placeHolder: "製品名",
-            inputName: 'Product Name',
-            width: "300" 
-        });
+            function nettChange() {
 
-        $('#orderedUnits').igNumericEditor({
-            valueChanging: function (evt, ui) {
-                var unitsInStock = $("#unitsInStock").igNumericEditor('value');
-                $("#negativePattern").igNumericEditor("option", "value", unitsInStock - ui.newValue);
-            },
-            placeHolder: "注文した単位数",
-            inputName: 'Ordered Units',
-            width: "300",
-            dataMode: "int",
-            buttonType: "spin",
-            spinDelta: 2,
-            minValue: 0,
-            maxValue: 100,
-            spinWrapAround: false
-        });
+                var gross = 6000.00, nett, grossMadicare, grossSecurity, grossFederalTax, grossStateTax;
+                var federalTax = $("#federalTax").igNumericEditor("value");
+                var stateTax = $("#stateTax").igNumericEditor("value");
+                var socialSecurity = $("#socialSecurity").igNumericEditor("value");
+                var medicare = $("#medicare").igNumericEditor("value");
 
-        $('#unitsInStock').igNumericEditor({
-            inputName: 'Units In Stock',
-            width: "300",
-            disabled: true,
-            value: 9
-        });
+                grossSecurity = calculatePercent(gross, socialSecurity);
+                grossMadicare = calculatePercent(gross, medicare);
+                gross = gross - (grossSecurity + grossMadicare);
 
-        $('#unitPrice').igNumericEditor({
-            placeHolder: '単価',
-            inputName: 'Unit Price',
-            numericMinDecimals: 5,
-            numericMaxDecimals:6,
-            width: "300",
-            value: 1.75000
-        });
 
-        $('#oldPrice').igNumericEditor({
-            placeHolder: "以前の価格",
-            inputName: 'Old Price',
-            width: "300",
-            readOnly: true,
-            value: "13515,7",
-            numericDecimalSeparator: ",",
-            numericGroupSeparator: " "
-        });
+                grossFederalTax = calculatePercent(gross, federalTax);
+                grossStateTax = calculatePercent(gross, stateTax);
 
-        $('#dueInDays').igNumericEditor({
-            placeHolder: "締め切り",
-            inputName: 'Due In Days',
-            buttonType: "clear",
-            value: 0,
-            width: "300"
-        });
+                nett = gross - (grossFederalTax + grossStateTax);
 
-        $('#listItems').igNumericEditor({
-            placeHolder: '割引',
-            inputName: 'Discount',
-            listItems: listData,
-            spinWrapAround: true,
-            width: "300"
-        });       
+                return parseFloat(nett.toFixed(2));
 
-        $('#negativePattern').igNumericEditor({
-            placeHolder: '負の数のパターン',
-            inputName: 'Negative Pattern',
-            numericNegativePattern: "(n)",
-            width: "300"
-        });
+            }
 
-        $("#form").submit(function (event) {
-            var submittedValues = $("#form").serializeArray();
-            $(".p").remove();
-            $("#results").append("<p class='p'>製品名: " + submittedValues[0].value + "</p>");
-            $("#results").append("<p class='p'>注文した単位数: " + submittedValues[1].value + "</p>");
-            $("#results").append("<p class='p'>在庫数: </p>");
-            $("#results").append("<p class='p'>単価: " + submittedValues[2].value + "</p>");
-            $("#results").append("<p class='p'>以前の価格: " + submittedValues[3].value + "</p>");
-            $("#results").append("<p class='p'>締め切り: " + submittedValues[4].value + "</p>");
-            $("#results").append("<p class='p'>割引: " + submittedValues[5].value + "</p>");
-            $("#results").append("<p class='p'>負の数のパターン: " + submittedValues[6].value + "</p>");
+            function calculatePercent(value, percent) {
+                value = value * percent / 100;
+
+                return value;
+            }
+
+            function changingValues() {
+                var newNettIncome = nettChange().toLocaleString();
+                $("#nett").text("$ " + newNettIncome);
+            }
+
+            $("#federalTax").igNumericEditor({
+                listItems: listValues,
+                value: 10,
+                valueChanged: changingValues
+            });
+            $("#stateTax").igNumericEditor({
+                buttonType: "spin",
+                spinDelta: 0.01,
+                value: -5.53,
+                minValue: -5.53,
+                maxValue: 5.53,
+                valueChanged: changingValues
+            });
+            $("#socialSecurity").igNumericEditor({
+                value: -12.4,
+                minValue: -12.4,
+                maxValue: 12.4,
+                valueChanged: changingValues
+            });
+            $("#medicare").igNumericEditor({
+                value: 2.9,
+                valueChanged: changingValues
+            });
+
         });
 });

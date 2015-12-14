@@ -6,13 +6,23 @@
 <link href="http://cdn-na.infragistics.com/igniteui/latest/css/themes/infragistics/infragistics.theme.css" rel="stylesheet"></link>
 <link href="http://cdn-na.infragistics.com/igniteui/latest/css/structure/infragistics.css" rel="stylesheet"></link>
 
-<form>
-        <div><span class="label"> First Name: </span> <span id="firstName"></span></div>
-        <div><span class="label"> Middle Name: </span> <span id="middleName"></span></div>
-        <div><span class="label"> Last Name: </span> <span id="lastName"></span></div>
-        <div class="align">
-            <span class="label"> Zip Code: </span><div id="zipcode"></div>
-            <span class="label small"> State: </span> <div id="state"></div>
+<h3>Register your ultimate</h3>
+    <form>
+        <div class="group-fields">
+            <label for="email">Email</label>
+            <input id="email"></input>
         </div>
-        <div><span class="label"> Phone: </span> <span id="phone"></span></div>
+        <div class="group-fields">
+            <label for="serialNumber">Serial Number</label>
+            <input id="serialNumber"></input>
+        </div>
+        <div class="group-fields">
+            <label for="zipCode">Zip Code</label>
+            <input id="zipCode"></input>
+        </div>
+        <div class="group-fields">
+            <label for="phone">Phone Number</label>
+            <input id="phone"></input>
+        </div>
+        <input id="btn" type="button" value="Cancel"></input>
     </form>

@@ -1,19 +1,23 @@
 $(function () {
 $(document).ready(function () {
-            var data = [{ ID: "ID101", Name: "Soothing Cleansing Milk", Code: 101 },
-            { ID: "ID102", Name: "Chamomile and Rosehip Calming Day Cream", Code: 102 },
-            { ID: "ID103", Name: "Honey and Orange Facial Scrub", Code: 103 },
-            { ID: "ID104", Name: "Lime Lip balsam", Code: 104 },
-            { ID: "ID105", Name: "Argan Face mask", Code: 105 },
-            { ID: "ID106", Name: "Sea Hand cream", Code: 106 },
-            { ID: "ID107", Name: "Camellia and Rose Gentle Hydrating Cleanser", Code: 107 },
-            { ID: "ID108", Name: "Cornflower Eye Makeup Remover", Code: 108 },
-            { ID: "ID109", Name: "Extreme Nutritive Lip Balm", Code: 109 },
-            { ID: "ID110", Name: "Super Antioxidant Moisturiser", Code: 110 },
-            { ID: "ID111", Name: "Deep Cleansing Mask", Code: 111 }];
+            var data = [
+                { ID: "ID101", Name: "Business", Code: 101 },
+                { ID: "ID102", Name: "Cooking", Code: 102 },
+                { ID: "ID103", Name: "Fashion", Code: 103 },
+                { ID: "ID104", Name: "Lifestyle", Code: 104 },
+                { ID: "ID105", Name: "Photography", Code: 105 },
+                { ID: "ID106", Name: "Sports", Code: 106 }];
 
-            $('#combo2').igCombo({
-                width: 400,
+            $('#gender').igTextEditor({
+                inputName: "gender",
+                listItems: ["Male", "Female"]
+            });
+
+            $("#phone").igMaskEditor({
+                inputMask: "(\\0\\01) 000-0000"
+            });
+
+            $('#igComboInterests').igCombo({
                 inputName: "products",
                 dataSource: data,
                 allowCustomValue: true,
@@ -23,45 +27,105 @@ $(document).ready(function () {
                     enabled: true
                 }
             });
+
             $("#rating").igRating({
                 precision: "half",
                 valueAsPercent: false
             });
-            $("#igCheckboxEditor").igCheckboxEditor();
 
-            $('#validationForm').igValidator({
-                required: true,
+            $("#dateOfBirth").igDatePicker({
+                datepickerOptions: { minDate: new Date(1920, 0, 1), maxDate: new Date(2015, 0, 1) }
+            });
+
+            $("#igCheckboxAccept").igCheckboxEditor();
+
+            $("#igCheckboxSubscribe").igCheckboxEditor();
+
+            $('#validationForm').igValidator({                
                 onsubmit: true,
                 successMessage: "Valid",
                 fields: [{
-                    selector: "#grpEdit1",
-                    onblur: false
+                    required: true,
+                    selector: "#firstName",
+                    valueRange: [2],
+                    onblur: true,
+                    custom: function (value, fieldOptions) {
+                        var myRegEx = /^[a-zA-Z]+$/;
+                        var isValid = myRegEx.test(value);
+                        return isValid;
+                    }
+                },
+                {
+                    required: true,
+                    selector: "#lastName",
+                    valueRange: [2],
+                    onblur: true,
+                    custom: function (value, fieldOptions) {
+                        var myRegEx = /^[a-zA-Z]+$/;
+                        var isValid = myRegEx.test(value);
+                        return isValid;
+                    }
                 },
 				{
-				    selector: "#grpEdit2",
-				    date: true,
-				    required: false,
-				    onchange: true,
-				    valueRange: [new Date()]
-				}, {
+				    required: true,
+				    selector: "#dateOfBirth",
+				    date: true,				   
+				    onblur: true
+				},
+                {
+                    required: true,
+                    selector: "#gender",
+                    gender: true,
+                    onblur: true
+                },
+				{
+				    required: true,
+				    selector: "#email",
+				    email: true,				   
+				    onblur: true
+				},
+                {
+                    required: true,
+                    selector: "#createPassword",
+                    onblur: true,
+                    errorMessage: "Should contain at least 8 characters, 1 number, 1 lowercase character (a-z), 1 uppercase character",
+                    custom: function(value, fieldOptions){
+                        var myRegEx  = /^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])([a-zA-Z0-9]{8,})$/;
+                        var isValid = myRegEx.test(value);						
+                        return isValid;
+                    }
+                },
+                {
+                    required: true,
+                    selector: "#confirmPassword",                    
+                    equalTo: "#createPassword",
+                    onblur: true,
+                },
+                {
 				    selector: "#rating",
 				    successMessage: "Valid",
 				    onchange: true,
 				    valueRange: {
 				        min: 1.5,
-				        errorMessage: "At least 1.5 stars required (custom message)"
+				        errorMessage: "At least {0} star required (custom message)"
 				    },
 				    notificationOptions: {
 				        mode: "popover"
 				    }
 				},
 				{
-				    selector: "#combo2",
+				    required: true,
+				    selector: "#igComboInterests",
 				    onchange: true,
 				    lengthRange: [2]
 				},
 				{
-				    selector: "#igCheckboxEditor",
+				    required: true,
+				    selector: "#igCheckboxAccept",
+				    onchange: true
+				},
+				{
+				    selector: "#igCheckboxSubscribe",
 				    onchange: true
 				}
                 ]

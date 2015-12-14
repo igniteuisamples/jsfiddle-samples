@@ -1,11 +1,5 @@
 ul {
-            list-style-type: none;
-            font-family: Verdana;
-        }
-
-        #layout-wrapper {
-            padding: 5px;
-            border: 1px solid #eee;
+            list-style-type: none; 
         }
 
         #layout {
@@ -18,24 +12,25 @@ ul {
 
             .ig-layout-item > div {
                 position: absolute;
-                padding: 5px;
                 height: auto;
                 bottom: 0;
                 top: 0;
                 left: 0;
                 right: 0;
                 margin: 5px;
-                border: 1px solid #eee;
             }  
 
         .box {
-            background-color: #BBDEFB;
+            background-color: #fff;
+            border: 1px solid #888;
             color: grey;
         }
 
         .box-title {
+            color:#fff;
+            background-color:#888;
             font-size: 16px;
-            padding-bottom: 5px;
+            padding: 6px 0 10px 10px;
         }
 
         .box table td {
@@ -44,24 +39,48 @@ ul {
         
         .box-body-big-text {
             font-size: 60px;
+            margin-top: 15px;
+            text-align: center;
+            color: #f60;
         }
 
-        @media all and (max-width: 1024px) {
+       @media all and (max-width: 910px) {
             .box-title {
-                font-size: 12px;
+                font-size: 14px;
             }
 
             .box-body-big-text {
-                font-size: 46px;
+                font-size: 49px;
+                margin-top: 24px;
             }
         }
 
-        @media all and (max-width: 480px) {
+        @media all and (max-width: 740px) {
             .box-title {
                 font-size: 12px;
             }
-
             .box-body-big-text {
-                font-size: 22px;
+                font-size: 38px;
+                margin-top: 34px;
+            }
+        }
+
+        @media all and (max-width: 570px) {
+            .box-title {
+                font-size: 10px;
+            }
+            .box-body-big-text {
+                font-size: 20px;
+                margin-top: 47px;
+            }
+        }
+
+        @media all and (max-width: 360px) {
+            .box-title {
+                font-size: 10px;
+            }
+            .box-body-big-text {
+                font-size: 17px;
+                margin-top: 45px;
             }
         }

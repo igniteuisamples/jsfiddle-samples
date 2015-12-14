@@ -1,0 +1,33 @@
+div.float {
+            float: left;
+            margin-right: 10px;
+        }
+            div.float label {
+                display: block;
+                line-height: 20px;
+                font-family: 'Open Sans',Arial,sans-serif;
+                font-size: 13px;
+            }
+        select {
+            width: 150px;
+            height: 28px;
+            opacity: 1;
+        }        
+        button {
+            width: 70px;
+            height: 29px;
+            opacity: 1;           
+            float:left;           
+            margin-right:20px;
+            background-color: rgb(226, 226, 226);
+        }
+        div.buttons{
+            clear:both;
+        }
+        #successEditor1 {
+            margin-top: 20px;
+            margin-bottom: 0px;
+        }
+        @media screen and (max-width: 500px) {
+            div.float { clear: both; }
+        }

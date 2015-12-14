@@ -1,4 +1,6 @@
 $(function () {
+/*start-snippet*/
+        $(function () {
 
             // Data
             var populationData = [
@@ -64,3 +66,5 @@ $(function () {
             });
 
         });
+        /*end-snippet*/
+});

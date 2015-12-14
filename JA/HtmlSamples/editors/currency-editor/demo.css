@@ -1,3 +1,54 @@
-.currencyEditors h4 {
-            margin-bottom:.5em;
+#payment {
+            width: 50%;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            padding: 20px;
+        }
+
+        #salary {
+            float: left;
+        }
+
+        #salary > p {
+            margin-bottom: 20px;
+        }
+        
+        .sample-page h2 {
+            margin-top: 0;
+        }
+
+        #deduction {
+            float: right;
+        }
+
+        #deduction label {
+            display: block;
+        }
+        
+        .ui-igedit-container {
+            margin-bottom: 15px;
+        }
+
+        .clearfix:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        @media screen and (max-width:785px) {
+            #payment {
+                width: 60%;
+            }
+        }
+
+        @media screen and (max-width:685px) {
+            #payment {
+                width: 100%;
+            }
+        }
+
+        @media screen and (max-width:420px) {
+            #salary, #deduction {
+                float: none;
+            }
         }

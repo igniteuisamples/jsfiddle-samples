@@ -1,9 +1,7 @@
 $(function () {
 $(document).ready(function () {
             
-            $('#successEditor').igNotifier({ showOn: "focus", state: "success" });
-
-            $("#successEditor1").igNotifier({
+           $("#successEditor1").igNotifier({
                 direction: "right",
                 messages: {
                     info: "情報メッセージ。",
@@ -25,13 +23,17 @@ $(document).ready(function () {
                 $("#successEditor1").igNotifier("option", "mode", mode);
             });
 
+            $("#direction").on("change", function myfunction() {
+                var direction = $(this).find("option:selected").val();
+
+                $("#successEditor1").igNotifier("option", "direction", direction);
+            });
+
             $("#show").on("click", function myfunction() {
                 $("#successEditor1").igNotifier("show");
             });
             $("#hide").on("click", function myfunction() {
                 $("#successEditor1").igNotifier("hide");
-            });
-            $("#warningEditor").igNotifier({ showOn: "focus", messages: { info: "情報メッセージ。" }});
-            $("#errorEditor").igNotifier({ direction: "bottom", showOn: "focus", state: "error", mode: "popover" });
+            });          
         });
 });

@@ -6,30 +6,42 @@
 <link href="http://cdn-na.infragistics.com/igniteui/latest/css/themes/infragistics/infragistics.theme.css" rel="stylesheet"></link>
 <link href="http://cdn-na.infragistics.com/igniteui/latest/css/structure/infragistics.css" rel="stylesheet"></link>
 
-<h3>Success messages</h3>
-    <input id="successEditor" placeholder="focus me"></input>
-    <br />
-    <br />
+<h3>Check out my messages</h3>    
     <input id="successEditor1"></input>
+    <br />
+    <br />
+    <br />
     <div>
-        <select id="state">
-            <option value="success" selected="">success</option>
-            <option value="info">info</option>
-            <option value="warning">warning</option>
-            <option value="error">error</option>
-        </select>
-        <label>Mode:</label>
-        <select id="mode">
-            <option value="auto" selected="">auto</option>
-            <option value="popover">popover</option>
-            <option value="inline">inline</option>
-        </select>
-        <button id="show"> show</button>
-        <button id="hide"> hide</button>
+        <div class="float">
+            <label>Message state:</label>
+            <select id="state">
+                <option value="success" selected="">success</option>
+                <option value="info">info</option>
+                <option value="warning">warning</option>
+                <option value="error">error</option>
+            </select>
+        </div>
+        <div class="float">
+            <label>Message mode:</label>
+            <select id="mode">
+                <option value="auto" selected="">auto</option>
+                <option value="popover">popover</option>
+                <option value="inline">inline</option>
+            </select>
+        </div>
+        <div class="float">
+            <label>Popover direction:</label>
+            <select id="direction">
+                <option value="top" selected="">top</option>
+                <option value="left">left</option>
+                <option value="right">right</option>
+                <option value="bottom">bottom</option>
+            </select>
+        </div> 
+        <div class="buttons">
+            <br />
+            <br />
+            <button id="show"> show</button>
+            <button id="hide"> hide</button>
+        </div>
     </div>
-
-    <h3>Warning messages</h3>    
-    <input id="warningEditor" placeholder="focus me"></input>
-
-    <h3>Error messages</h3>   
-    <input id="errorEditor"></input>

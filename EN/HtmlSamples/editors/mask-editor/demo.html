@@ -6,28 +6,39 @@
 <link href="http://cdn-na.infragistics.com/igniteui/latest/css/themes/infragistics/infragistics.theme.css" rel="stylesheet"></link>
 <link href="http://cdn-na.infragistics.com/igniteui/latest/css/structure/infragistics.css" rel="stylesheet"></link>
 
-<div id="container">
+<div id="container" class="clearfix">
         <div id="igMaskEditorsContainer">
             <form id="form" action="javascript:console.log('Submit');">
-                <h4>Raw text:</h4>
-                <div id="msk1"></div>
-                <h4>Raw text with required prompts:</h4>
-                <div id="msk2"></div>
-                <h4>Raw text with all prompts:</h4>
-                <div id="msk3"></div>
-                <h4>Raw text with literals:</h4>
-                <div id="msk4"></div>
-                <h4>Raw text with required prompts and literals:</h4>
-                <div id="msk5"></div>
-                <h4>All text (default value):</h4>
-                <div id="msk6"></div>
-                <br />
+                <div class="group-fields">
+                    <label>Raw text:</label>
+                    <div id="msk1"></div>
+                </div>
+                <div class="group-fields">
+                    <label>Raw text with required prompts:</label>
+                    <div id="msk2"></div>
+                </div>
+                <div class="group-fields">
+                    <label>Raw text with all prompts:</label>
+                    <div id="msk3"></div>
+                </div>
+                <div class="group-fields">
+                    <label>Raw text with literals:</label>
+                    <div id="msk4"></div>
+                </div>
+                <div class="group-fields">
+                    <label>Raw text with required prompts and literals:</label>
+                    <div id="msk5"></div>
+                </div>
+                <div class="group-fields">
+                    <label>All text (default value):</label>
+                    <div id="msk6"></div>
+                </div>
                 <input type="submit" id="submitBtn" value="Submit"></input>
             </form>
         </div>
 
         <div id="ValuesContainer">
-            <h3>Submitted Values:</h3>
+            <h4>Submitted Values:</h4>
             <div class="divHeight">
                 <p class="pStyle" id="results">
             </div>

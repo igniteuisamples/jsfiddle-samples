@@ -37,7 +37,7 @@ $(function () {
 
             $("#speedLineChart").igDataChart({
                 width: "100%",
-                height: "284px",
+                height: "283px",
                 dataSource: runningSpeedData,
                 axes: [
                     {
@@ -63,15 +63,17 @@ $(function () {
                         valueMemberPath: "speedPerHour",
                         isTransitionInEnabled: true,
                         isHighlightingEnabled: true,
-                        thickness: 5
+                        brush: "#f60",
+                        thickness: 3
                     }
                 ]
             });
 
             $("#totalKmBarChart").igDataChart({
                 width: "100%",
-                height: "118px",
+                height: "117px",
                 dataSource: lastMonthKmRun,
+                outlines: ["rgba(0,0,0,0)"],
                 axes: [{
                     name: "monthDayAxis",
                     type: "categoryX",
@@ -90,7 +92,10 @@ $(function () {
                     isTransitionInEnabled: true,
                     xAxis: "monthDayAxis",
                     yAxis: "kmRunAxis",
-                    valueMemberPath: "kmRun"
+                    valueMemberPath: "kmRun",
+                    brush: "#f60",
+                    thickness: 0,
+                    radius: 0
                 }]
             });
         });

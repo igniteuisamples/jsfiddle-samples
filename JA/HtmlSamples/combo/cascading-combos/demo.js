@@ -49,7 +49,6 @@ var dsCountry, dsCascTowns, dsCountryCascading,
                 textKey: "txtCountry",
                 valueKey: "valCountry",
                 dataSource: dsCountry,
-                mode: "dropdown",
                 selectionChanged: function (evt, ui) {
                     var filteredCascDistrict = [];
                     if (ui.items && ui.items[0]) {
@@ -84,7 +83,6 @@ var dsCountry, dsCascTowns, dsCountryCascading,
             $("#comboDistrict").igCombo({
                 valueKey: "valDistrict",
                 textKey: "txtDistrict",
-                mode: "dropdown",
                 dataSource: [],
                 disabled: true,
                 selectionChanged: function (evt, ui) {
@@ -111,7 +109,6 @@ var dsCountry, dsCascTowns, dsCountryCascading,
             $("#comboTown").igCombo({
                 valueKey: "valTown",
                 textKey: "textTown",
-                mode: "dropdown",
                 disabled: true
             });
         });

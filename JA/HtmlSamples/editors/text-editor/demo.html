@@ -7,25 +7,35 @@
 <link href="http://cdn-na.infragistics.com/igniteui/latest/css/structure/infragistics.css" rel="stylesheet"></link>
 <script src="http://cdn-na.infragistics.com/igniteui/latest/js/i18n/infragistics-ja.js"></script>
 
-<div id="container">
-        <div id="igCheckboxEditorsContainer">
-            <form id="form" action="javascript:console.log('送信');">
-                <div class="divHeight"><div id="userName"></div></div>
-                <div class="divHeight"><div id="password"></div></div>
-                <div class="divHeight"><div id="firstName"></div></div>
-                <div class="divHeight"><div id="lastName"></div> <div class="chk-container"><div id="readOnly"></div><label>読み取り専用</label></div> </div>
-                <div class="divHeight"><div id="textArea"></div> <div class="chk-container"><div id="disabled"></div><label>無効</label></div> </div>
-                <div class="divHeight"><div id="dropdown"></div> </div>
-                <div class="divHeight"><div id="title"></div></div>
-                <div class="divHeight"><div id="nickname"></div></div>
-                <div class="divHeight"><input type="submit" id="submitBtn" value="送信"></input></div>
-            </form>
+<h3>Ultimate 製品の登録</h3>
+    <form>
+        <div class="group-fields">
+            <label for="email">電子メール</label>
+            <input id="email"></input>
         </div>
-
-        <div id="ValuesContainer">
-            <h3> 送信した値:</h3>
-            <div class="divHeight">
-                <p class="pStyle" id="results">
-            </div>
+        <div class="group-fields">
+            <label for="serialNumber">製品番号</label>
+            <input id="serialNumber"></input>
         </div>
-    </div>
+        <div class="group-fields">
+            <label for="zipCode">郵便番号</label>
+            <input id="zipCode"></input>
+        </div>
+        <div class="group-fields">
+            <label for="phone">電話番号</label>
+            <input id="phone"></input>
+        </div>
+        <div class="group-fields">
+            <label for="comment">コメント</label>
+            <div id="comment"></div>
+        </div>
+        <div class="group-fields">
+            <input id="readonly"></input>
+            <label for="readonly" id="lock" class="inline">編集のロック</label>
+        </div>
+        <div class="group-fields">
+            <input id="disable"></input>
+            <label for="disable" class="inline">送信の禁止</label>
+        </div>
+        <input id="btn" type="button" value="キャンセル"></input>
+    </form>

@@ -1,26 +1,4 @@
-$(function () {
-<ul>
-            <li>
-                <a href="http://www.facebook.com/infragistics" target="_blank">
-                    <img src='http://igniteui.com/images/samples/popover/facebook.jpg' />
-                    <span class="spanText">Join us on Facebook</span>
-                </a>
-            </li>
-            <li>
-                <a href="http://twitter.com/infragistics" target="_blank">
-                    <img src='http://igniteui.com/images/samples/popover/twitter.jpg' />
-                    <span class="spanText">Follow us on Twitter</span>
-                </a>
-            </li>         
-            <li>
-                <a href="http://www.youtube.com/user/infragistics" target="_blank">
-                    <img src='http://igniteui.com/images/samples/popover/youtube.jpg' />
-                    <span class="spanText">Watch our YouTube channel</span>
-                </a>
-            </li>
-        </ul>
-     
-        $( function ()
+$( function ()
         {
             $( '#IGlogo' ).igPopover( {
                 direction: "right",
@@ -60,4 +38,3 @@ $(function () {
             var data = [{ value: $( this )[0].value }];
             return $.ig.tmpl( imgTemplate, data );
         }
-});

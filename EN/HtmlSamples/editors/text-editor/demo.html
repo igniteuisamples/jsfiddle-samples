@@ -6,25 +6,35 @@
 <link href="http://cdn-na.infragistics.com/igniteui/latest/css/themes/infragistics/infragistics.theme.css" rel="stylesheet"></link>
 <link href="http://cdn-na.infragistics.com/igniteui/latest/css/structure/infragistics.css" rel="stylesheet"></link>
 
-<div id="container">
-        <div id="igCheckboxEditorsContainer">
-            <form id="form" action="javascript:console.log('Submit');">
-                <div class="divHeight"><div id="userName"></div></div>
-                <div class="divHeight"><div id="password"></div></div>
-                <div class="divHeight"><div id="firstName"></div></div>
-                <div class="divHeight"><div id="lastName"></div> <div class="chk-container"><div id="readOnly"></div><label>Read Only</label></div> </div>
-                <div class="divHeight"><div id="textArea"></div> <div class="chk-container"><div id="disabled"></div><label>Disable</label></div> </div>
-                <div class="divHeight"><div id="dropdown"></div> </div>
-                <div class="divHeight"><div id="title"></div></div>
-                <div class="divHeight"><div id="nickname"></div></div>
-                <div class="divHeight"><input type="submit" id="submitBtn" value="Submit"></input></div>
-            </form>
+<h3>Register your ultimate</h3>
+    <form>
+        <div class="group-fields">
+            <label for="email">Email</label>
+            <input id="email"></input>
         </div>
-
-        <div id="ValuesContainer">
-            <h3> Submitted Values:</h3>
-            <div class="divHeight">
-                <p class="pStyle" id="results">
-            </div>
+        <div class="group-fields">
+            <label for="serialNumber">Serial Number</label>
+            <input id="serialNumber"></input>
         </div>
-    </div>
+        <div class="group-fields">
+            <label for="zipCode">Zip Code</label>
+            <input id="zipCode"></input>
+        </div>
+        <div class="group-fields">
+            <label for="phone">Phone Number</label>
+            <input id="phone"></input>
+        </div>
+        <div class="group-fields">
+            <label for="comment">Comment</label>
+            <div id="comment"></div>
+        </div>
+        <div class="group-fields">
+            <input id="readonly"></input>
+            <label for="readonly" id="lock" class="inline">Lock for editing</label>
+        </div>
+        <div class="group-fields">
+            <input id="disable"></input>
+            <label for="disable" class="inline">Prevent from submission</label>
+        </div>
+        <input id="btn" type="button" value="Cancel"></input>
+    </form>
