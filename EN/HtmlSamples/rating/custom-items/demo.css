@@ -1,19 +1,19 @@
-#igRating1 .normal0 { background: transparent url("http://igniteui.com/images/samples/rating/slowempty.png") no-repeat; }
-       #igRating1 .normal1 { background: transparent url("http://igniteui.com/images/samples/rating/fastempty.png") no-repeat; }
-       #igRating1 .normal2 { background: transparent url("http://igniteui.com/images/samples/rating/fastestempty.png") no-repeat; }
-       #igRating1 .selected0 { background: transparent url("http://igniteui.com/images/samples/rating/slow.png") no-repeat; }
-       #igRating1 .selected1 { background: transparent url("http://igniteui.com/images/samples/rating/fast.png") no-repeat; }
-       #igRating1 .selected2 { background: transparent url("http://igniteui.com/images/samples/rating/fastest.png") no-repeat; }
-       #igRating1 .hovered0 { background: transparent url("http://igniteui.com/images/samples/rating/slow.png") no-repeat; }
-       #igRating1 .hovered1 { background: transparent url("http://igniteui.com/images/samples/rating/fast.png") no-repeat; }
-       #igRating1 .hovered2 { background: transparent url("http://igniteui.com/images/samples/rating/fastest.png") no-repeat; }
+#igRating1 .normal0 { background: transparent url("http://igniteui.com/images/samples/rating/slowempty.png") no-repeat !important; }
+       #igRating1 .normal1 { background: transparent url("http://igniteui.com/images/samples/rating/fastempty.png") no-repeat !important; }
+       #igRating1 .normal2 { background: transparent url("http://igniteui.com/images/samples/rating/fastestempty.png") no-repeat !important; }
+       #igRating1 .selected0 { background: transparent url("http://igniteui.com/images/samples/rating/slow.png") no-repeat !important; }
+       #igRating1 .selected1 { background: transparent url("http://igniteui.com/images/samples/rating/fast.png") no-repeat !important; }
+       #igRating1 .selected2 { background: transparent url("http://igniteui.com/images/samples/rating/fastest.png") no-repeat !important; }
+       #igRating1 .hovered0 { background: transparent url("http://igniteui.com/images/samples/rating/slow.png") no-repeat !important; }
+       #igRating1 .hovered1 { background: transparent url("http://igniteui.com/images/samples/rating/fast.png") no-repeat !important; }
+       #igRating1 .hovered2 { background: transparent url("http://igniteui.com/images/samples/rating/fastest.png") no-repeat !important; }
 
-       #igRating2 .normal0 { background: transparent url("http://igniteui.com/images/samples/rating/slowempty.png") no-repeat; }
-       #igRating2 .normal1 { background: transparent url("http://igniteui.com/images/samples/rating/fastempty.png") no-repeat; }
-       #igRating2 .normal2 { background: transparent url("http://igniteui.com/images/samples/rating/fastestempty.png") no-repeat; }
-       #igRating2 .selected0 { background: transparent url("http://igniteui.com/images/samples/rating/slow.png") no-repeat; }
-       #igRating2 .selected1 { background: transparent url("http://igniteui.com/images/samples/rating/fast.png") no-repeat; }
-       #igRating2 .selected2 { background: transparent url("http://igniteui.com/images/samples/rating/fastest.png") no-repeat; }
-       #igRating2 .hovered0 { background: transparent url("http://igniteui.com/images/samples/rating/slow.png") no-repeat; }
-       #igRating2 .hovered1 { background: transparent url("http://igniteui.com/images/samples/rating/fast.png") no-repeat; }
-       #igRating2 .hovered2 { background: transparent url("http://igniteui.com/images/samples/rating/fastest.png") no-repeat; }
+       #igRating2 .normal0 { background: transparent url("http://igniteui.com/images/samples/rating/slowempty.png") no-repeat !important; }
+       #igRating2 .normal1 { background: transparent url("http://igniteui.com/images/samples/rating/fastempty.png") no-repeat !important; }
+       #igRating2 .normal2 { background: transparent url("http://igniteui.com/images/samples/rating/fastestempty.png") no-repeat !important; }
+       #igRating2 .selected0 { background: transparent url("http://igniteui.com/images/samples/rating/slow.png") no-repeat !important; }
+       #igRating2 .selected1 { background: transparent url("http://igniteui.com/images/samples/rating/fast.png") no-repeat !important; }
+       #igRating2 .selected2 { background: transparent url("http://igniteui.com/images/samples/rating/fastest.png") no-repeat !important; }
+       #igRating2 .hovered0 { background: transparent url("http://igniteui.com/images/samples/rating/slow.png") no-repeat !important; }
+       #igRating2 .hovered1 { background: transparent url("http://igniteui.com/images/samples/rating/fast.png") no-repeat !important; }
+       #igRating2 .hovered2 { background: transparent url("http://igniteui.com/images/samples/rating/fastest.png") no-repeat !important; }

@@ -7,19 +7,16 @@
 <script src="http://cdn-na.infragistics.com/igniteui/latest/js/extensions/igniteui-angular.js"></script>
 <link href="http://cdn-na.infragistics.com/igniteui/latest/css/themes/infragistics/infragistics.theme.css" rel="stylesheet"></link>
 <link href="http://cdn-na.infragistics.com/igniteui/latest/css/structure/infragistics.css" rel="stylesheet"></link>
-<link href="http://igniteui.com/css/bootstrap/bootstrap.min.css" rel="stylesheet"></link>
 
-<div class="push-down-xl" ng-app="sampleApp" ng-controller="treeGridController">
-        <div class="row">
-                <ig-tree-grid id="grid1" data-source="tasks" width="100%" height="450px" primary-key="id" auto-commit="true" auto-generate-columns="false" child-data-key="products" render-expand-column="true">
-                    <columns>
-                        <column key="id" header-text="ID" width="100px" data-type="number"></column>
-                        <column key="tasks" header-text="Tasks" width="250px" data-type="string"></column>
-                        <column key="start" header-text="Start" width="100px" data-type="date"></column>
-                        <column key="finish" header-text="Finish" width="100px" data-type="date"></column>
-                        <column key="duration" header-text="Duration" width="100px" data-type="date"></column>
-                        <column key="progress" header-text="Progress" width="100px" data-type="percent"></column>
-                    </columns>
-                </ig-tree-grid>
-        </div>
+<div ng-app="sampleApp" ng-controller="treeGridController">
+        <ig-tree-grid id="grid1" data-source="tasks" width="100%" height="450px" primary-key="id" auto-commit="true" auto-generate-columns="false" child-data-key="products" render-expand-column="true">
+            <columns>
+                <column key="id" header-text="ID" width="100px" data-type="number"></column>
+                <column key="tasks" header-text="Tasks" width="250px" data-type="string"></column>
+                <column key="start" header-text="Start" width="100px" data-type="date"></column>
+                <column key="finish" header-text="Finish" width="100px" data-type="date"></column>
+                <column key="duration" header-text="Duration" width="100px" data-type="date"></column>
+                <column key="progress" header-text="Progress" width="100px" data-type="percent"></column>
+            </columns>
+        </ig-tree-grid>
     </div>

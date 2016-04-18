@@ -114,54 +114,6 @@ $(function () {
                 }
             });
 
-            //$("#split-button-triangle").igSplitButton({
-            //    items: [{
-            //        name: "circle",
-            //        label: "circle",
-            //        iconClass: "button-split button-circle"
-            //    }, {
-            //        name: "triangle",
-            //        label: "triangle",
-            //        iconClass: "button-triangle"
-            //    },
-            //    {
-            //        name: "square",
-            //        label: "square",
-            //        iconClass: "button-split button-square"
-            //    }],
-            //    defaultItemName: "triangle",
-            //    swapDefaultEnabled: true,
-            //    click: function (event, el) {
-            //        var elementToChangeId = event.target.firstChild.id.split("_")[0].split("-")[2];
-            //        var shape = event.target.firstChild.id.split("_")[1];
-            //        changeShape(elementToChangeId, shape);
-            //    }
-            //});
-
-            //$("#split-button-square").igSplitButton({
-            //    items: [{
-            //        name: "circle",
-            //        label: "circle",
-            //        iconClass: "button-split button-circle"
-            //    }, {
-            //        name: "triangle",
-            //        label: "triangle",
-            //        iconClass: "button-triangle"
-            //    },
-            //    {
-            //        name: "square",
-            //        label: "square",
-            //        iconClass: "button-split button-square"
-            //    }],
-            //    defaultItemName: "square",
-            //    swapDefaultEnabled: true,
-            //    click: function (event, el) {
-            //        var elementToChangeId = event.target.firstChild.id.split("_")[0].split("-")[2];
-            //        var shape = event.target.firstChild.id.split("_")[1];
-            //        changeShape(elementToChangeId, shape);
-            //    }
-            //});
-
             $("#color-picker-circle").igColorPickerSplitButton({
                 items: [{
                     name: "circlecolor",
@@ -177,39 +129,7 @@ $(function () {
                     circleCtx.strokeStyle = "#000";
                 }
             });
-
-            //$("#color-picker-triangle").igColorPickerSplitButton({
-            //    items: [{
-            //        name: "trianglecolor",
-            //        label: "Triangle Color",
-            //        iconClass: "ui-igbutton-forecolor"
-            //    }],
-            //    defaultItemName: "trianglecolor",
-            //    defaultColor: "#5F497A",
-            //    colorSelected: function (event, color) {
-            //        var triangleCtx = document.getElementById("triangle").getContext("2d");
-            //        triangleCtx.fillStyle = color.value;
-            //        triangleCtx.fill();
-            //        triangleCtx.strokeStyle = "#000";
-            //    }
-            //});
-
-            //$("#color-picker-square").igColorPickerSplitButton({
-            //    items: [{
-            //        name: "squarecolor",
-            //        label: "Square Color",
-            //        iconClass: "ui-igbutton-forecolor"
-            //    }],
-            //    defaultItemName: "squarecolor",
-            //    defaultColor: "#E36C09",
-            //    colorSelected: function (event, color) {
-            //        var squareCtx = document.getElementById("square").getContext("2d");
-            //        squareCtx.fillStyle = color.value;
-            //        squareCtx.fill();
-            //        squareCtx.strokeStyle = "#000";
-            //    }
-            //});
-
+            
             $("#font-color-picker-circle").igColorPickerSplitButton({
                 items: [{
                     name: "circlecolor",

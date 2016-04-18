@@ -1,9 +1,9 @@
-span.ui-icon.ui-icon-contact {
-            background-image: url('http://igniteui.com/igniteui/css/themes/infragistics/images/ui-icons_888888_256x240.png');
+span.ui-icon.ui-icon-clear-content {
+            background-image: url('http://igniteui.com/igniteui/css/themes/infragistics/images/ui-icons_888888_256x240.png')!important;
             background-position: -177px -97px;
         }
-     
-		/* Override sample's browser styles */
+
+        /* Override sample's browser styles */
     	#htmlEditor h1, #htmlEditor h2, #htmlEditor h3, #htmlEditor h4, #htmlEditor h5, #htmlEditor h6 { margin: 0px; }
     	#htmlEditor h1 { font-size: 1.9em; }
 		#sampleContainer { overflow: visible; }

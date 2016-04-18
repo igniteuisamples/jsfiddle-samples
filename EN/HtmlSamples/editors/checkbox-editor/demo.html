@@ -6,19 +6,28 @@
 <link href="http://cdn-na.infragistics.com/igniteui/latest/css/themes/infragistics/infragistics.theme.css" rel="stylesheet"></link>
 <link href="http://cdn-na.infragistics.com/igniteui/latest/css/structure/infragistics.css" rel="stylesheet"></link>
 
-<div id="editors">
-        <h3>Configure your Infragistics Professional</h3>
-        <div class="group-fields">
-            <div id="readOnly"></div>
-            <label for="readOnly" class="inline">UI component suite</label>
-        </div>
-        <div class="group-fields">
-            <div id="basic"></div>
-            <label for="basic" class="inline">Icon pack</label>
-        </div>
-        <div class="group-fields">
-            <div id="disable"></div>
-            <label for="disable" class="inline">Indigo Studio</label>
-        </div>
-        <button>Order now</button>
-    </div>
+<form id="form1">
+		<div id="editors">
+			<h3>Configure your Infragistics Professional</h3>
+			<div class="group-fields">
+				<div id="suite"></div>
+				<label for="suite" class="inline">UI component suite</label>
+			</div>
+			<div class="group-fields">
+				<div id="icon"></div>
+				<label for="icon" class="inline">Icon pack</label>
+			</div>
+			<div class="group-fields">
+				<div id="indigo"></div>
+				<label for="indigo" class="inline">Indigo Studio</label>
+			</div>
+			<input type="submit" id="order" value="Order now"></input>
+		</div>
+	</form>
+	<div class="submit-container">
+		<h3>Submitted Values</h3>
+		<div class="submit-container">
+			<p id="results">
+		</div>
+	</div>
+	<div class="clear"></div>

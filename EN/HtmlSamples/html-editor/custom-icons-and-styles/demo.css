@@ -1,139 +1,139 @@
 .ui-ightmleditor .ui-igbutton.ui-state-default .ui-igbutton-copy,
         .ui-ightmleditor .ui-igbutton.ui-state-default.ui-state-hover .ui-icon.ui-igbutton-copy
         {
-            background-image: url("http://igniteui.com/images/samples/html-editor/ig-html-editor-custom-styles-sprite.png");
+            background-image: url("http://igniteui.com/images/samples/html-editor/ig-html-editor-custom-styles-sprite.png")!important;
             background-position: 0 -160px;
         }
         .ui-ightmleditor .ui-igbutton.ui-state-default .ui-igbutton-cut,
         .ui-ightmleditor .ui-igbutton.ui-state-default.ui-state-hover .ui-igbutton-cut.ui-icon
         {
-            background-image: url("http://igniteui.com/images/samples/html-editor/ig-html-editor-custom-styles-sprite.png");
-            background-position: 0 0px;
+            background-image: url("http://igniteui.com/images/samples/html-editor/ig-html-editor-custom-styles-sprite.png")!important;
+            background-position: 0 0;
         }
         .ui-ightmleditor .ui-igbutton.ui-state-default .ui-igbutton-paste,
         .ui-ightmleditor .ui-igbutton.ui-state-default.ui-state-hover .ui-igbutton-paste.ui-icon
         {
-            background-image: url("http://igniteui.com/images/samples/html-editor/ig-html-editor-custom-styles-sprite.png");
+            background-image: url("http://igniteui.com/images/samples/html-editor/ig-html-editor-custom-styles-sprite.png")!important;
             background-position: 0 -176px;
         }
         .ui-ightmleditor .ui-igbutton.ui-state-default .ui-igbutton-bold ,
         .ui-ightmleditor .ui-igbutton.ui-state-default.ui-state-hover .ui-igbutton-bold.ui-icon
         {
-            background-image: url("http://igniteui.com/images/samples/html-editor/ig-html-editor-custom-styles-sprite.png");
+            background-image: url("http://igniteui.com/images/samples/html-editor/ig-html-editor-custom-styles-sprite.png")!important;
             background-position: 0 -336px;
         }
         .ui-ightmleditor .ui-igbutton.ui-state-default .ui-igbutton-italic ,
         .ui-ightmleditor .ui-igbutton.ui-state-default.ui-state-hover .ui-igbutton-italic.ui-icon
         {
-            background-image: url("http://igniteui.com/images/samples/html-editor/ig-html-editor-custom-styles-sprite.png");
+            background-image: url("http://igniteui.com/images/samples/html-editor/ig-html-editor-custom-styles-sprite.png")!important;
             background-position: 0 -400px;
         }
         .ui-ightmleditor .ui-igbutton.ui-state-default .ui-igbutton-underline ,
         .ui-ightmleditor .ui-igbutton.ui-state-default.ui-state-hover .ui-igbutton-underline.ui-icon
         {
-            background-image: url("http://igniteui.com/images/samples/html-editor/ig-html-editor-custom-styles-sprite.png");
+            background-image: url("http://igniteui.com/images/samples/html-editor/ig-html-editor-custom-styles-sprite.png")!important;
             background-position: 0 -464px;
         }
         .ui-ightmleditor .ui-igbutton.ui-state-default .ui-igbutton-strikethrough,
         .ui-ightmleditor .ui-igbutton.ui-state-default.ui-state-hover .ui-igbutton-strikethrough.ui-icon
         {
-            background-image: url("http://igniteui.com/images/samples/html-editor/ig-html-editor-custom-styles-sprite.png");
+            background-image: url("http://igniteui.com/images/samples/html-editor/ig-html-editor-custom-styles-sprite.png")!important;
             background-position: 0 -448px;
         }
         .ui-ightmleditor .ui-igbutton.ui-state-default .ui-igbutton-table,
         .ui-ightmleditor .ui-igbutton.ui-state-default.ui-state-hover .ui-igbutton-table.ui-icon
         {
-            background-image: url("http://igniteui.com/images/samples/html-editor/ig-html-editor-custom-styles-sprite.png");
+            background-image: url("http://igniteui.com/images/samples/html-editor/ig-html-editor-custom-styles-sprite.png")!important;
             background-position: 0 -192px;
         }
         .ui-ightmleditor .ui-igbutton.ui-state-default .ui-igbutton-addrow,
         .ui-ightmleditor .ui-igbutton.ui-state-default.ui-state-hover .ui-igbutton-addrow.ui-icon
         {
-            background-image: url("http://igniteui.com/images/samples/html-editor/ig-html-editor-custom-styles-sprite.png");
+            background-image: url("http://igniteui.com/images/samples/html-editor/ig-html-editor-custom-styles-sprite.png")!important;
             background-position: 0 -224px;
         }
         .ui-ightmleditor .ui-igbutton.ui-state-default .ui-igbutton-addcolumn,
         .ui-ightmleditor .ui-igbutton.ui-state-default.ui-state-hover .ui-igbutton-addcolumn.ui-icon
         {
-            background-image: url("http://igniteui.com/images/samples/html-editor/ig-html-editor-custom-styles-sprite.png");
+            background-image: url("http://igniteui.com/images/samples/html-editor/ig-html-editor-custom-styles-sprite.png")!important;
             background-position: 0 -256px;
         }
         .ui-ightmleditor .ui-igbutton.ui-state-default .ui-igbutton-removerow,
         .ui-ightmleditor .ui-igbutton.ui-state-default.ui-state-hover .ui-igbutton-removerow.ui-icon
         {
-            background-image: url("http://igniteui.com/images/samples/html-editor/ig-html-editor-custom-styles-sprite.png");
+            background-image: url("http://igniteui.com/images/samples/html-editor/ig-html-editor-custom-styles-sprite.png")!important;
             background-position: 0 -208px;
         }
         .ui-ightmleditor .ui-igbutton.ui-state-default .ui-igbutton-removecolumn,
         .ui-ightmleditor .ui-igbutton.ui-state-default.ui-state-hover .ui-igbutton-removecolumn.ui-icon
         {
-            background-image: url("http://igniteui.com/images/samples/html-editor/ig-html-editor-custom-styles-sprite.png");
+            background-image: url("http://igniteui.com/images/samples/html-editor/ig-html-editor-custom-styles-sprite.png")!important;
             background-position: 0 -240px;
         }
         .ui-ightmleditor .ui-igbutton.ui-state-default .ui-igbutton-addimage,
         .ui-ightmleditor .ui-igbutton.ui-state-default.ui-state-hover .ui-igbutton-addimage.ui-icon
         {
-            background-image: url("http://igniteui.com/images/samples/html-editor/ig-html-editor-custom-styles-sprite.png");
+            background-image: url("http://igniteui.com/images/samples/html-editor/ig-html-editor-custom-styles-sprite.png")!important;
             background-position: 0 -96px;
         }
         .ui-ightmleditor .ui-igbutton.ui-state-default .ui-igbutton-addlink,
         .ui-ightmleditor .ui-igbutton.ui-state-default.ui-state-hover .ui-igbutton-addlink.ui-icon
         {
-            background-image: url("http://igniteui.com/images/samples/html-editor/ig-html-editor-custom-styles-sprite.png");
+            background-image: url("http://igniteui.com/images/samples/html-editor/ig-html-editor-custom-styles-sprite.png")!important;
             background-position: 0 -128px;
         }
         .ui-ightmleditor .ui-igbutton.ui-state-default .ui-igbutton-unorderedlist,
         .ui-ightmleditor .ui-igbutton.ui-state-default.ui-state-hover .ui-igbutton-unorderedlist.ui-icon
         {
-            background-image: url("http://igniteui.com/images/samples/html-editor/ig-html-editor-custom-styles-sprite.png");
+            background-image: url("http://igniteui.com/images/samples/html-editor/ig-html-editor-custom-styles-sprite.png")!important;
             background-position: 0 -416px;
         }
         .ui-ightmleditor .ui-igbutton.ui-state-default .ui-igbutton-orderedlist,
         .ui-ightmleditor .ui-igbutton.ui-state-default.ui-state-hover .ui-igbutton-orderedlist.ui-icon
         {
-            background-image: url("http://igniteui.com/images/samples/html-editor/ig-html-editor-custom-styles-sprite.png");
+            background-image: url("http://igniteui.com/images/samples/html-editor/ig-html-editor-custom-styles-sprite.png")!important;
             background-position: 0 -432px;
         }
         .ui-ightmleditor .ui-igbutton.ui-state-default .ui-igbutton-viewsource-icon,
         .ui-ightmleditor .ui-igbutton.ui-state-default.ui-state-hover .ui-igbutton-viewsource-icon.ui-icon
         {
-            background-image: url("http://igniteui.com/images/samples/html-editor/ig-html-editor-custom-styles-sprite.png");
+            background-image: url("http://igniteui.com/images/samples/html-editor/ig-html-editor-custom-styles-sprite.png")!important;
             background-position: 0 -64px;
         }
         .ui-ightmleditor .ui-igbutton.ui-state-default .ui-igbutton-indent,
         .ui-ightmleditor .ui-igbutton.ui-state-default.ui-state-hover .ui-igbutton-indent.ui-icon
         {
-            background-image: url("http://igniteui.com/images/samples/html-editor/ig-html-editor-custom-styles-sprite.png");
+            background-image: url("http://igniteui.com/images/samples/html-editor/ig-html-editor-custom-styles-sprite.png")!important;
             background-position: 0 -368px;
         }
         .ui-ightmleditor .ui-igbutton.ui-state-default .ui-igbutton-removeindent,
         .ui-ightmleditor .ui-igbutton.ui-state-default.ui-state-hover .ui-igbutton-removeindent.ui-icon
         {
-            background-image: url("http://igniteui.com/images/samples/html-editor/ig-html-editor-custom-styles-sprite.png");
+            background-image: url("http://igniteui.com/images/samples/html-editor/ig-html-editor-custom-styles-sprite.png")!important;
             background-position: 0 -384px;
         }
         .ui-ightmleditor .ui-igbutton.ui-state-default .ui-igbutton-justifyright,
         .ui-ightmleditor .ui-igbutton.ui-state-default.ui-state-hover .ui-igbutton-justifyright.ui-icon
         {
-            background-image: url("http://igniteui.com/images/samples/html-editor/ig-html-editor-custom-styles-sprite.png");
+            background-image: url("http://igniteui.com/images/samples/html-editor/ig-html-editor-custom-styles-sprite.png")!important;
             background-position: 0 -320px;
         }
         .ui-ightmleditor .ui-igbutton.ui-state-default .ui-igbutton-justifyleft,
         .ui-ightmleditor .ui-igbutton.ui-state-default.ui-state-hover .ui-igbutton-justifyleft.ui-icon
         {
-            background-image: url("http://igniteui.com/images/samples/html-editor/ig-html-editor-custom-styles-sprite.png");
+            background-image: url("http://igniteui.com/images/samples/html-editor/ig-html-editor-custom-styles-sprite.png")!important;
             background-position: 0 -304px;
         }
         .ui-ightmleditor .ui-igbutton.ui-state-default .ui-igbutton-justifycenter,
         .ui-ightmleditor .ui-igbutton.ui-state-default.ui-state-hover .ui-igbutton-justifycenter.ui-icon
         {
-            background-image: url("http://igniteui.com/images/samples/html-editor/ig-html-editor-custom-styles-sprite.png");
+            background-image: url("http://igniteui.com/images/samples/html-editor/ig-html-editor-custom-styles-sprite.png")!important;
             background-position: 0 -272px;
         }
         .ui-ightmleditor .ui-igbutton.ui-state-default .ui-igbutton-justifyfull,
         .ui-ightmleditor .ui-igbutton.ui-state-default.ui-state-hover .ui-igbutton-justifyfull.ui-icon
         {
-            background-image: url("http://igniteui.com/images/samples/html-editor/ig-html-editor-custom-styles-sprite.png");
+            background-image: url("http://igniteui.com/images/samples/html-editor/ig-html-editor-custom-styles-sprite.png")!important;
             background-position: 0 -288px;
         }
         .ui-ightmleditor .ui-igtoolbar .ui-igbutton.ui-state-default {    

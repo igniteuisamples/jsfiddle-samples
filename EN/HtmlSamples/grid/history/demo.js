@@ -66,7 +66,7 @@ $(function () {
                         { headerText: "Assists", key: "assists", dataType: "number", width: "10%" },
                         { headerText: "Yellow C.", key: "yellow", dataType: "number", width: "10%" },
                         { headerText: "Red C.", key: "red", dataType: "number", width: "7%" },
-                        { headerText: "Salary", key: "salary", format: "currency", width: "8%" }
+                        { headerText: "Salary", key: "salary", dataType: "number", format: "currency", width: "8%" }
     				],
     				autofitLastColumn: false,
     				autoGenerateColumns: false,
@@ -336,9 +336,7 @@ $(function () {
             $("#forward").igButton().click(function () { window.history.forward(); });
             $("#copy").igButton().click(function () { window.prompt("Copy URL and open it in a new tab or browser", window.location); });
             $("#mail").igButton().click(function () {
-                var link = "mailto: "
-                         + "?subject=" + escape("List with Footballers")
-                         + "&body=" + escape("Use the following custom list with footballers: " + window.location);
+                var link = "mailto: ?subject= List with Footballers&body= Use the following custom list with footballers: " + escape(window.location);
                 window.location.href = link;
             });
         });

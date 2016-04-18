@@ -9,14 +9,11 @@
 <link href="http://cdn-na.infragistics.com/igniteui/latest/css/structure/infragistics.css" rel="stylesheet"></link>
 
 <div>
-        <span>
-            <a href="http://igniteui.com/HtmlSamples/javascript-excel-library/report.xlsx" download="">1. Download this sample Excel file</a>
-        </span>
-        <br />
-        <span>2. Click Choose File/Browse button below and pick the sample Excel file or another excel file.</span>
-        <br /><br />
-        <input type="file" id="input" onchange="handleFiles(this.files)" accept="application/vnd.ms-excel, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"></input>
-        <span id="result" style="display: none; color: red"></span>
-        <br /><br />
+        <ol>
+            <li>Download this <a href="http://igniteui.com/HtmlSamples/javascript-excel-library/report.xlsx" download="">sample  Excel file</a></li>
+            <li>Click Choose File/Browse button below and pick the sample Excel file or another excel file.</li>
+        </ol>
+        <input type="file" id="input" accept="application/vnd.ms-excel, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"></input>
+        <div id="result"></div>
         <table id="grid1"></table>
     </div>

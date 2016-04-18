@@ -41,3 +41,7 @@
             white-space: normal;
             height: 70px;
         }
+        li.ui-igcombo-listitem div.empImage a 
+        {
+            border: none
+        }

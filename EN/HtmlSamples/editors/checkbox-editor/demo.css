@@ -12,3 +12,37 @@ h3 {
             margin-right: 5px;
             float: left;
         }
+		form {
+			float: left;
+			width: 500px;
+			min-width: 500px;
+		}
+		.submit-container
+        {
+            top: 0px;
+            right: 0px;
+            min-width: 400px;
+            float: right;
+            font-size: 18px;
+        }
+
+			.submit-container h3 {
+				display: none;
+			}
+
+            .submit-container p
+            {
+                font-size: 16px;
+            }
+				.submit-container p.result {
+					margin-top: 10px;
+					margin-bottom: 10px;
+				}
+				.submit-container span.result-name {
+					font-weight: bold;
+					text-transform: capitalize;
+				}
+
+		.clear {
+			clear: both;
+		}

@@ -98,7 +98,7 @@ $(document).ready(function () {
 					var target = $(evt.originalEvent.target),
 						handle = target.hasClass("ui-igzoombar-window-handle") ?
 						target : lastTarget,
-						container = handle.igPopover("container").parent().parent();
+						container =handle ? handle.igPopover("container").parent().parent(): null;
 					if (target.hasClass("ui-igzoombar-window-handle")) {
 						lastTarget = target;
 					}
@@ -106,26 +106,28 @@ $(document).ready(function () {
 						currentlyDragged.igPopover("hide");
 					}
 					// show the popover if it's not already visible
-					if (!container.is(":visible")) {
+					if (container && !container.is(":visible")) {
 						handle.igPopover("show");
 					}
-					// update popovers position
-					handle.igPopover("setCoordinates", {
-						top: handle.offset().top - container.outerHeight(),
-						left: handle.offset().left - container.outerWidth() / 2 + 5
-					});
-					currentlyDragged = handle;
-					if (popoverTimeout > 0) {
-						clearTimeout(popoverTimeout);
+					if (handle) {
+						// update popovers position
+						handle.igPopover("setCoordinates", {
+							top: handle.offset().top - container.outerHeight(),
+							left: handle.offset().left - container.outerWidth() / 2 + 5
+						});
+						currentlyDragged = handle;
+						if (popoverTimeout > 0) {
+							clearTimeout(popoverTimeout);
+						}
+						popoverTimeout = setTimeout(function () {
+							popoverLeft.igPopover("hide");
+							popoverRight.igPopover("hide");
+							popoverTimeout = 0;
+						}, 2000);
+						// finally reset the buttonset
+						$("#buttonset input").removeAttr("checked");
+						$("#buttonset").buttonset("refresh");
 					}
-					popoverTimeout = setTimeout(function () {
-						popoverLeft.igPopover("hide");
-						popoverRight.igPopover("hide");
-						popoverTimeout = 0;
-					}, 2000);
-					// finally reset the buttonset
-					$("#buttonset input").removeAttr("checked");               
-					$("#buttonset").buttonset("refresh");
 				}
 			});
 			var lastSelectedButton;

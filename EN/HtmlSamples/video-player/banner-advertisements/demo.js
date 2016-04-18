@@ -17,14 +17,14 @@ var alternate = true;
                 title: 'Infragistics Presentation',
                 banners: [{
                     imageUrl: 'http://igniteui.com/images/samples/video-player/banner.png',
-                    link: 'http://quince.infragistics.com/',
+                    link: 'http://www.infragistics.com/',
                     times: [5, 20, 60],
                     visible: false,
                     closeBanner: true,
                     animate: true,
                     autohide: true,
                     hidedelay: 10000,
-                    width: "200px",
+                    width: "270px",
                     height: "67px"
                 }],
                 bannerVisible: function (sender, eventArgs) {

@@ -25,14 +25,13 @@ $(function () {
                                 action: '_tooltipAction'
                             },
                             imageButtonIcon: {
-                                value: "ui-icon-contact",
+                                value: "ui-icon-insert-email",
                                 action: '_buttonIconAction'
                             }
                         }
                     }]
                 }]
             });
-
         });
 
         function appendSignature(ui) {

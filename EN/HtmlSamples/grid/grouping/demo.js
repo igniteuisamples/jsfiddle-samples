@@ -25,7 +25,7 @@ $(function () {
                                         text: "After 8/1/1996:",
                                         customSummary: function (data) {
                                             var count = 0, date = new Date(1996, 7, 1);
-                                            $.map(data, function (d) {
+                                            $.map(data.array, function (d) {
                                                   if (d > date) {
                                                       count++;
                                                   }

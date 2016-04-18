@@ -1,23 +1,25 @@
 $(function () {
 $(document).ready(function () {
+        	$("#firstName").igTextEditor({
+        		placeHolder: "John",
+        	});
+        	$("#lastName").igTextEditor({
+        		placeHolder: "Anderson",
+        	});
+
             $("#email").igTextEditor({
-                placeHolder: "john@email.com",
-                validatorOptions: {
-                    email: true
-                }
+            	placeHolder: "john@email.com",
+            	validatorOptions: {
+            		email: true
+            	}
             });
 
-            $("#serialNumber").igTextEditor();
-
-            $("#zipCode").igNumericEditor({
-                placeHolder: "00000"
+            $("#password").igTextEditor({
+            	textMode: "password",
+            	placeHolder: "********"
             });
 
-            $("#phone").igNumericEditor({
-                placeHolder: "(555) 555-555"
-            });
-
-            $("#comment").igTextEditor({
+            $("#note").igTextEditor({
                 textMode: "multiline",
                 height: 100,
                 visibleItemsCount: 5
@@ -26,10 +28,10 @@ $(document).ready(function () {
             $('#readonly').igCheckboxEditor({
                 valueChanged: function (evt, ui) {
                     if (ui.newState == true) {
-                        $("#comment").igTextEditor("option", "readOnly", true);
+                        $("#note").igTextEditor("option", "readOnly", true);
                     }
                     else {
-                        $("#comment").igTextEditor("option", "readOnly", false);
+                        $("#note").igTextEditor("option", "readOnly", false);
                     }
 
                 }
@@ -44,28 +46,16 @@ $(document).ready(function () {
                 }
             });
 
-            $('#disable').igCheckboxEditor({
-                valueChanged: function (evt, ui) {
-                    if (ui.newState == true) {
-                        $("#comment").igTextEditor("option", "disabled", true);
-                    }
-                    else {
-                        $("#comment").igTextEditor("option", "disabled", false);
-                    }
-
-                }
-            });
-
             $("#btn").click(function () {
+                $("#firstName").igTextEditor("option", "value", "");
+                $("#lastName").igTextEditor("option", "value", "");
                 $("#email").igTextEditor("option", "value", "");
-                $("#serialNumber").igTextEditor("option", "value", "");
-                $("#zipCode").igNumericEditor("option", "value", "");
-                $("#phone").igNumericEditor("option", "value", "");
-                $("#comment").igTextEditor("option", "value", "");
+                $("#password").igTextEditor("option", "value", "");
+                $("#note").igTextEditor("option", "value", "");
                 $("#readonly").igCheckboxEditor("option", "checked", false);
-                $("#disable").igCheckboxEditor("option", "checked", false);
-                $("#comment").igTextEditor("option", "disabled", false);
-                $("#comment").igTextEditor("option", "readOnly", false);
+
+                $("#note").igTextEditor("option", "disabled", false);
+                $("#note").igTextEditor("option", "readOnly", false);
             });
         });
 });

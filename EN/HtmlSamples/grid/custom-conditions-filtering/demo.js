@@ -66,11 +66,11 @@ $(function () {
         }
 
         function filterCountryUSA(value, expression, dataType, ignoreCase, preciseDateFormat) {
-            return value.equals("USA");
+            return value === "USA";
         }
         function filterCountryCanada(value, expression, dataType, ignoreCase, preciseDateFormat) {
-            return value.equals("Canada");
+            return value === "Canada";
         }
         function filterAge(value, expression, dataType, ignoreCase, preciseDateFormat) {
-            return value.compareTo(21);
+            return value > 21;
         }

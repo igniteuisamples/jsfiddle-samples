@@ -20,16 +20,16 @@ $(function () {
                                 "<td colspan='2'>" +
                                     "<div class='btn-group' role='group' aria-label='...'>" +
                                         "<div class='btn-group' role='group'>" +
-                                            "<button type='button' class='btn btn-default dropdown-toggle' data-toggle='dropdown' aria-expanded='false'>" +
+                                            "<button type='button' class='btn btn-secondary dropdown-toggle' data-toggle='dropdown' aria-expanded='false'>" +
                                                 "Group by" +
                                                 "<span class='caret'></span>" +
                                             "</button>" +
                                             "<ul class='dropdown-menu' role='menu'>" +
-                                            "<li><a href='#' onclick='GroupBy(\"state\")'>State</a></li>" +
-                                                "<li><a href='#' onclick='GroupBy(\"division\")'>Division</a></li>" +
+                                            "<li><a class='dropdown-item' href='#' onclick='GroupBy(\"state\")'>State</a></li>" +
+                                                "<li><a class='dropdown-item' href='#' onclick='GroupBy(\"division\")'>Division</a></li>" +
                                         "</ul>" +
                                             "</div>" +
-                                        "<button type='button' class='btn btn-default' onclick='ChangeDirection()'>Change direction</button>" +
+                                        "<button type='button' class='btn btn-secondary' onclick='ChangeDirection()'>Change direction</button>" +
                                     "</div>" +
                                 "</div>" +
                                 "</td>" +

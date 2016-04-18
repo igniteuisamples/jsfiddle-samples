@@ -1,0 +1,65 @@
+#dashboard {
+            border: 1px solid #bcbcbc;
+        }
+
+        #dashboard .ig-layout-item {
+            z-index: 2;
+        }
+
+        .minimized-state-header {
+            font-size: 16px;
+            margin-bottom: 6px;
+        }
+
+        .minimized-state-body {
+            font-size: 14px;
+        }
+
+        .maximized-state-header {
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+
+        .maximized-state-body {
+            font-size: 16px;
+        }
+
+        .ui-igtilemanager.ui-igsplitter .ui-igsplitter-splitbar-vertical,
+        .ui-igsplitter-splitbar-vertical {
+            width: 6px;
+        }
+
+        .ui-igtilemanager.ui-igsplitter .ui-igsplitter-collapse-single-button,
+        .ui-igsplitter-collapse-single-button {
+            z-index: 1;
+            width: 25px;
+            height: 25px;
+            border: 1px solid #bcbcbc;
+            border-radius: 20px;
+            margin-left: -11px;
+        }
+
+        .ui-igsplitter-collapse-single-button .ui-icon-triangle-1-w {
+            background: url(http://igniteui.com/images/samples/tile-manager/collapsible-splitter/left-arrow-gray.svg) 0px 0px/16px 16px !important;
+        }
+
+        .ui-igsplitter-collapse-single-button.ui-state-hover .ui-icon-triangle-1-w {
+            background-image: url(http://igniteui.com/images/samples/tile-manager/collapsible-splitter/left-arrow-white.svg) !important;
+        }
+
+        .ui-igsplitter-collapse-single-button .ui-icon-triangle-1-e {
+            background: url(http://igniteui.com/images/samples/tile-manager/collapsible-splitter/right-arrow-gray.svg) 0px 0px/16px 16px !important;
+        }
+
+        .ui-igsplitter-collapse-single-button.ui-state-hover .ui-icon-triangle-1-e {
+            background-image: url(http://igniteui.com/images/samples/tile-manager/collapsible-splitter/right-arrow-white.svg) !important;
+        }
+
+        .ui-igsplitter-collapse-single-button .ui-icon:before,
+        .ui-igsplitter-collapse-single-button.ui-state-hover .ui-icon:before {
+            content: '';
+        }
+
+        body .ui-igsplitter-splitbar-vertical:last-child .ui-igsplitter-collapse-single-button {
+            display: none;
+        }

@@ -47,14 +47,17 @@
                 </ig-grid>
             </div>
             <div class="col-md-4">
-                <h3>Add Product</h3>
-                <div class="well well-sm">
-                    <input type="text" ng-model="newProduct.ProductName" class="form-control" placeholder="Supplier Name">
-                    <input type="text" ng-model="newProduct.QuantityPerUnit" class="form-control" placeholder="Units In Stock">
-                    <input type="number" ng-model="newProduct.UnitPrice" class="form-control" placeholder="Unit Price">
-                    <input type="button" value="Add row" ng-click="addProduct()" class="btn btn-default"></input>
-                </input></input></input></div>
-
+                <div class="card">
+                    <div class="card-header">
+                        <h4>Add Product</h4>
+                    </div>
+                    <div class="card-block">
+                        <input type="text" ng-model="newProduct.ProductName" class="form-control" placeholder="Supplier Name">
+                        <input type="text" ng-model="newProduct.QuantityPerUnit" class="form-control" placeholder="Units In Stock">
+                        <input type="text" ng-model="newProduct.UnitPrice" class="form-control" placeholder="Unit Price">
+                        <input type="button" value="Add row" ng-click="addProduct()" class="btn btn-secondary"></input>
+                    </input></input></input></div>
+                </div>
             </div>
         </div>
 
@@ -75,8 +78,8 @@
                     <td>{{product.ProductID}}</td>
                     <td><input type="text" ng-model="product.ProductName" class="form-control"></input></td>
                     <td>{{product.QuantityPerUnit}}</td>
-                    <td><input type="number" ng-model="product.UnitPrice" class="form-control" placeholder="{{product.UnitPrice}}"></input></td>
-                    <td><input type="button" value="Delete row" ng-click="deleteProduct($index)" class="btn btn-default"></input></td>
+                    <td><input type="text" ng-model="product.UnitPrice" class="form-control"></input></td>
+                    <td><input type="button" value="Delete row" ng-click="deleteProduct($index)" class="btn btn-secondary"></input></td>
                 </tr>
             </tbody>
         </table>

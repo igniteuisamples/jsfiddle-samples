@@ -21,27 +21,27 @@ $(function () {
                         columnSettings: [
                             {
                                 columnKey: "ID",
-                                classes: "hidden-tablet hidden-phone"
+                                classes: "hidden-md-down hidden-sm-down"
                             },
                             {
                                 columnKey: "ContactName",
-                                classes: "hidden-phone"
+                                classes: "hidden-sm-down"
                             },
                             {
                                 columnKey: "ContactTitle",
-                                classes: "hidden-tablet hidden-phone"
+                                classes: "hidden-md-down hidden-sm-down"
                             },
                             {
                                 columnKey: "Address",
-                                classes: "hidden-phone"
+                                classes: "hidden-sm-down"
                             },
                             {
                                 columnKey: "City",
-                                classes: "hidden-phone"
+                                classes: "hidden-sm-down"
                             },
                             {
                                 columnKey: "Country",
-                                classes: "hidden-tablet hidden-phone"
+                                classes: "hidden-md-down hidden-sm-down"
                             }
                         ]
                     }
