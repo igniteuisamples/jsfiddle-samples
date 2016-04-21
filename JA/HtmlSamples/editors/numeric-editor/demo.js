@@ -43,13 +43,13 @@ $(document).ready(function () {
             $("#stateTax").igNumericEditor({
                 buttonType: "spin",
                 spinDelta: 0.01,
-                value: -5.53,
+                value: -5.00,
                 minValue: -5.53,
                 maxValue: 5.53,
                 valueChanged: changingValues
             });
             $("#socialSecurity").igNumericEditor({
-                value: -12.4,
+                value: -10.0,
                 minValue: -12.4,
                 maxValue: 12.4,
                 valueChanged: changingValues

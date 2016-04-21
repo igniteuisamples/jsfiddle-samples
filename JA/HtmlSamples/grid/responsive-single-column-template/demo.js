@@ -6,6 +6,7 @@ $(function () {
                 height: "500px",
                 autoGenerateColumns: false,
                 columns: [
+                    { headerText: "Employee ID", key: "ID", dataType: "number", hidden: true },
                     { headerText: "Image", key: "ImageUrl", dataType: "string", template: "<img width='100' height='90' src='${ImageUrl}'></img>" },
                     { headerText: "Name", key: "Name", dataType: "string" },
                     { headerText: "Title", key: "Title", dataType: "string" },

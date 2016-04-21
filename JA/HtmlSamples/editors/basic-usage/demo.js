@@ -19,7 +19,18 @@ $('#clientName').igTextEditor({
             placeHolder: "2015/12/30"
         });
         $('#freeDelivery').igCheckboxEditor({
-            size: "small"
+        	size: "small",
+        	valueChanged: function (e, args) {
+        		var totalText = $("#total").text().replace("合計: ", ""),
+					total = parseFloat(totalText, 10);
+					
+        		if (args.newValue) {
+        			total = total - 20;
+        		} else {
+        			total = total + 20;
+        		}
+        		$("#total").text("合計: " + total);
+        	}
         });
         $('#price').igCurrencyEditor({
             value: "79",
@@ -46,6 +57,8 @@ $('#clientName').igTextEditor({
         $(document).delegate("#discount", "igpercenteditorblur", function (evt) {
             calculateTotalPrice();
         });
+
+        calculateTotalPrice();
 
         function radioChange() {
             var radioMetric = document.getElementById("radioMetric");
@@ -126,6 +139,6 @@ $('#clientName').igTextEditor({
 
         function createNewOrder() {
             $("#successMessage").text("注文書が作成されました。");
-            $("#successMessage").fadeOut(3000);
+            $("#successMessage").stop(true, true).fadeIn(200).fadeOut(3000);
         }
 });

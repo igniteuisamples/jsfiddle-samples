@@ -10,14 +10,11 @@
 <script src="http://cdn-na.infragistics.com/igniteui/latest/js/i18n/infragistics-ja.js"></script>
 
 <div>
-        <span>
-            <a href="http://jp.igniteui.com/HtmlSamples/javascript-excel-library/report.xlsx" download="">1. サンプル Excel ファイルのダウンロード</a>
-        </span>
-        <br />
-        <span>2. [ファイルを選択]/[参照...] ボタンをクリックして、サンプル Excel ファイルを選択します。</span>
-        <br /><br />
-        <input type="file" id="input" onchange="handleFiles(this.files)" accept="application/vnd.ms-excel, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"></input>
-        <span id="result" style="display: none; color: red"></span>
-        <br /><br />
+        <ol>
+            <li>サンプル <a href="http://jp.igniteui.com/HtmlSamples/javascript-excel-library/report.xlsx" download="">Excel ファイルのダウンロード</a></li>
+            <li>[ファイルを選択]/[参照...] ボタンをクリックして、サンプル Excel ファイルを選択します。</li>
+        </ol>
+        <input type="file" id="input" accept="application/vnd.ms-excel, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"></input>
+        <div id="result"></div>
         <table id="grid1"></table>
     </div>

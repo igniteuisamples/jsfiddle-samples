@@ -33,7 +33,7 @@ $(function () {
                                 action: '_tooltipAction'
                             },
                             imageButtonIcon: {
-                                value: "ui-icon-contact",
+                                value: "ui-icon-clear-content",
                                 action: '_buttonIconAction'
                             }
                         }

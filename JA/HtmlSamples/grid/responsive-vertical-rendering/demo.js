@@ -33,7 +33,7 @@ $(function () {
 
             $("#grid7").igGrid({
                 columns: [
-                    { headerText: "顧客 ID", key: "ID", dataType: "number", hidden: true },
+                    { headerText: "顧客 ID", key: "ID", dataType: "string", hidden: true },
                     { headerText: "会社名", key: "CompanyName", dataType: "string" },
                     { headerText: "名前", key: "ContactName", dataType: "string" },
                     { headerText: "連絡先", key: "ContactTitle", dataType: "string" },
@@ -41,6 +41,7 @@ $(function () {
                     { headerText: "市", key: "City", dataType: "string" },
                     { headerText: "国名", key: "Country", dataType: "string", hidden: true }
                 ],
+                primaryKey: "ID",
                 autoGenerateColumns: false,
                 dataSource: nwCustomersWithOrders,
                 height: "600px",
@@ -49,7 +50,7 @@ $(function () {
                     {
                         name: "Responsive",
                         enableVerticalRendering: true,
-                        reactOnContainerWidthChanges: true,                   
+                        reactOnContainerWidthChanges: true,
                         windowWidthToRenderVertically: null,
                         propertiesColumnWidth: "40%",
                         valuesColumnWidth: "60%",
@@ -69,10 +70,6 @@ $(function () {
                     {
                         name: "Sorting",
                         type: "local"
-                    },
-                    {
-                    	name: "Selection",
-						persist: false
                     }
                 ]
             });            

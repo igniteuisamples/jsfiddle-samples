@@ -20,16 +20,16 @@ $(function () {
                                 "<td colspan='2'>" +
                                     "<div class='btn-group' role='group' aria-label='...'>" +
                                         "<div class='btn-group' role='group'>" +
-                                            "<button type='button' class='btn btn-default dropdown-toggle' data-toggle='dropdown' aria-expanded='false'>" +
+                                            "<button type='button' class='btn btn-secondary dropdown-toggle' data-toggle='dropdown' aria-expanded='false'>" +
                                                 "グループ化" +
                                                 "<span class='caret'></span>" +
                                             "</button>" +
                                             "<ul class='dropdown-menu' role='menu'>" +
-                                            "<li><a href='#' onclick='GroupBy(\"state\")'>州</a></li>" +
-                                                "<li><a href='#' onclick='GroupBy(\"division\")'>地域</a></li>" +
+                                            "<li><a class='dropdown-item' href='#' onclick='GroupBy(\"state\")'>州</a></li>" +
+                                                "<li><a class='dropdown-item' href='#' onclick='GroupBy(\"division\")'>地域</a></li>" +
                                         "</ul>" +
                                             "</div>" +
-                                        "<button type='button' class='btn btn-default' onclick='ChangeDirection()'>順序を変更</button>" +
+                                        "<button type='button' class='btn btn-secondary' onclick='ChangeDirection()'>順序を変更</button>" +
                                     "</div>" +
                                 "</div>" +
                                 "</td>" +

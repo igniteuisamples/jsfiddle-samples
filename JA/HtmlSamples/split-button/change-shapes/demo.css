@@ -19,64 +19,64 @@
         }
 
         .ui-igbutton .ui-igbutton-forecolor, .button-split {
-            background-image: url('http://jp.igniteui.com/igniteui/css/themes/infragistics/images/ui-icons_888888_256x240.png');
+            background-image: url('http://jp.igniteui.com/igniteui/css/themes/infragistics/images/ui-icons_888888_256x240.png')!important;
             background-size: 384px 370px;
         }
 
         #color-picker-circle .ui-igbutton .ui-igbutton-forecolor, .button-circle.ui-icon {
             background-position: -123px -230px;
-            background-image: url('http://jp.igniteui.com/igniteui/css/themes/infragistics/images/ui-icons_888888_256x240.png');
+            background-image: url('http://jp.igniteui.com/igniteui/css/themes/infragistics/images/ui-icons_888888_256x240.png')!important;
         }
 
         #font-color-picker-circle .ui-igbutton .ui-igbutton-forecolor {
             background-position: 0 -448px;
-            background-image: url('http://jp.igniteui.com/igniteui/css/themes/metro/images/igHtmlEditor/html-editor-sprite.png');
+            background-image: url('http://jp.igniteui.com/igniteui/css/themes/metro/images/igHtmlEditor/html-editor-sprite.png')!important;
             background-size: auto;
         }
 
         #back-color-picker-circle .ui-igbutton .ui-igbutton-backcolor {
             background-position: 0 -464px;
-            background-image: url('http://jp.igniteui.com/igniteui/css/themes/metro/images/igHtmlEditor/html-editor-sprite.png');
+            background-image: url('http://jp.igniteui.com/igniteui/css/themes/metro/images/igHtmlEditor/html-editor-sprite.png')!important;
             background-size: auto;
         }
 
         #text-align-button-circle .ui-btn-justifyleft {
-            background-image: url(http://jp.igniteui.com/igniteui/css/themes/metro/images/igHtmlEditor/html-editor-sprite.png);
+            background-image: url('http://jp.igniteui.com/igniteui/css/themes/metro/images/igHtmlEditor/html-editor-sprite.png')!important;
             background-position: 0 -384px;
         }
 
         #text-align-button-circle .ui-btn-justifycenter {
-            background-image: url(http://jp.igniteui.com/igniteui/css/themes/metro/images/igHtmlEditor/html-editor-sprite.png);
+            background-image: url('http://jp.igniteui.com/igniteui/css/themes/metro/images/igHtmlEditor/html-editor-sprite.png')!important;
             background-position: 0 -400px;
         }
 
         #text-align-button-circle .ui-btn-justifyright {
-            background-image: url(http://jp.igniteui.com/igniteui/css/themes/metro/images/igHtmlEditor/html-editor-sprite.png);
+            background-image: url('http://jp.igniteui.com/igniteui/css/themes/metro/images/igHtmlEditor/html-editor-sprite.png')!important;
             background-position: 0 -416px;
         }
 
         #text-align-button-circle .ui-btn-justifyfull {
-            background-image: url(http://jp.igniteui.com/igniteui/css/themes/metro/images/igHtmlEditor/html-editor-sprite.png);
+            background-image: url('http://jp.igniteui.com/igniteui/css/themes/metro/images/igHtmlEditor/html-editor-sprite.png')!important;
             background-position: 0 -432px;
         }
 
         #text-style-button-circle .ui-btn-normal {
-            background-image: url(http://jp.igniteui.com/igniteui/css/themes/metro/images/igHtmlEditor/html-editor-sprite.png);
+            background-image: url('http://jp.igniteui.com/igniteui/css/themes/metro/images/igHtmlEditor/html-editor-sprite.png')!important;
             background-position: 0 -528px;
         }
 
         #text-style-button-circle .ui-btn-bold {
-            background-image: url(http://jp.igniteui.com/igniteui/css/themes/metro/images/igHtmlEditor/html-editor-sprite.png);
+            background-image: url('http://jp.igniteui.com/igniteui/css/themes/metro/images/igHtmlEditor/html-editor-sprite.png')!important;
             background-position: 0 -480px;
         }
 
         #text-style-button-circle .ui-btn-italic {
-            background-image: url(http://jp.igniteui.com/igniteui/css/themes/metro/images/igHtmlEditor/html-editor-sprite.png);
+            background-image: url('http://jp.igniteui.com/igniteui/css/themes/metro/images/igHtmlEditor/html-editor-sprite.png')!important;
             background-position: 0 -496px;
         }
 
         #text-style-button-circle .ui-btn-underline {
-            background-image: url(http://jp.igniteui.com/igniteui/css/themes/metro/images/igHtmlEditor/html-editor-sprite.png);
+            background-image: url('http://jp.igniteui.com/igniteui/css/themes/metro/images/igHtmlEditor/html-editor-sprite.png')!important;
             background-position: 0 -512px;
         }
 
@@ -85,13 +85,13 @@
         #split-button-triangle .button-triangle,
         #split-button-square .button-triangle.ui-icon {
             background-position: -98px -8px;
-            background-image: url('http://jp.igniteui.com/igniteui/css/structure/images/igGrid/filter-icons-333333.png');
+            background-image: url('http://jp.igniteui.com/igniteui/css/structure/images/igGrid/filter-icons-333333.png')!important;
             background-size: 606px 32px;
         }
 
         #color-picker-square .ui-igbutton .ui-igbutton-forecolor, .button-square.ui-icon {
             background-position: -148px -254px;
-            background-image: url('http://jp.igniteui.com/igniteui/css/themes/infragistics/images/ui-icons_888888_256x240.png');
+            background-image: url('http://jp.igniteui.com/igniteui/css/themes/infragistics/images/ui-icons_888888_256x240.png')!important;
         }
 
         .ui-splitbutton .ui-igtoolbarbutton.ui-button {

@@ -9,13 +9,15 @@ var data = [
             $("#datePicker1").igDatePicker({
                 minValue: new Date(2015, 6, 1),
                 locale: "ja",
-                regional: "ja"
+                regional: "ja",
+                dateDisplayFormat: "yy/MM/dd dddd"
             });
 
             $("#datePicker2").igDatePicker({
                 maxValue: new Date(2018, 8, 8),
                 locale: "ja",
-                regional: "ja"
+                regional: "ja",
+                dateDisplayFormat: "yy/MM/dd dddd"
             });
 
             $("#dataModeCombo").igCombo({
@@ -27,11 +29,15 @@ var data = [
                 mode: "dropdown",
                 initialSelectedItems: [{ index: 0 }],
                 selectionChanged: function (evt, ui) {
-                    var selectedMode = ui.items[0].data.dataMode;
+                	var selectedMode = ui.items[0].data.dataMode,
+                		value1, value2;
+					
+                	value1 = $("#datePicker1").igDatePicker("value");
                     $("#datePicker1").igDatePicker("option", "dataMode", selectedMode);
-                    $("#datePicker1").igDatePicker("option", "value", null);
+                    $("#datePicker1").igDatePicker("value", value1);
+                    value2 = $("#datePicker2").igDatePicker("value");
                     $("#datePicker2").igDatePicker("option", "dataMode", selectedMode);
-                    $("#datePicker2").igDatePicker("option", "value", null);
+                    $("#datePicker2").igDatePicker("value", value2);
                 }
             });
 

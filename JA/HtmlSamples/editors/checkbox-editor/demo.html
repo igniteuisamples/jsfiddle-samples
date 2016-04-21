@@ -7,19 +7,28 @@
 <link href="http://cdn-na.infragistics.com/igniteui/latest/css/structure/infragistics.css" rel="stylesheet"></link>
 <script src="http://cdn-na.infragistics.com/igniteui/latest/js/i18n/infragistics-ja.js"></script>
 
-<div id="editors">
-        <h3>Infragistics Professional の構成</h3>
-        <div class="group-fields">
-            <div id="readOnly"></div>
-            <label for="readOnly" class="inline">UI コンポーネント</label>
-        </div>
-        <div class="group-fields">
-            <div id="basic"></div>
-            <label for="basic" class="inline">アイコン パック</label>
-        </div>
-        <div class="group-fields">
-            <div id="disable"></div>
-            <label for="disable" class="inline">Indigo Studio</label>
-        </div>
-        <button>注文</button>
-    </div>
+<form id="form1">
+		<div id="editors">
+			<h3>Infragistics Professional の構成</h3>
+			<div class="group-fields">
+				<div id="suite"></div>
+				<label for="suite" class="inline">UI コンポーネント</label>
+			</div>
+			<div class="group-fields">
+				<div id="icon"></div>
+				<label for="icon" class="inline">アイコン パック</label>
+			</div>
+			<div class="group-fields">
+				<div id="indigo"></div>
+				<label for="indigo" class="inline">Indigo Studio</label>
+			</div>
+			<input type="submit" id="order" value="注文"></input>
+		</div>
+	</form>
+	<div class="submit-container">
+		<h3>送信した値</h3>
+		<div class="submit-container">
+			<p id="results">
+		</div>
+	</div>
+	<div class="clear"></div>

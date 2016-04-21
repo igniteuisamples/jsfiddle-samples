@@ -106,7 +106,15 @@ $(function () {
                                 columnKey: "IsPromotion",
                                 editorType: "bool",
                                 readOnly: true
-                            }
+                            },
+							{
+								columnKey: "UnitsInStock",
+								required: true
+							},
+							{
+								columnKey: "UnitPrice",
+								required: true
+							}
                         ]
                     }
                 ],

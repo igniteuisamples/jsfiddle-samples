@@ -66,7 +66,7 @@ $(function () {
                         { headerText: "アシスト", key: "assists", dataType: "number", width: "10%" },
                         { headerText: "イエローカード", key: "yellow", dataType: "number", width: "10%" },
                         { headerText: "レッドカード", key: "red", dataType: "number", width: "7%" },
-                        { headerText: "給与", key: "salary", format: "currency", width: "8%" }
+                        { headerText: "給与", key: "salary", dataType: "number", format: "currency", width: "8%" }
     				],
     				autofitLastColumn: false,
     				autoGenerateColumns: false,
@@ -336,9 +336,7 @@ $(function () {
             $("#forward").igButton().click(function () { window.history.forward(); });
             $("#copy").igButton().click(function () { window.prompt("URL をコピーして新しいタブまたはブラウザーで開く", window.location); });
             $("#mail").igButton().click(function () {
-                var link = "mailto: "
-                         + "?subject=" + escape("プレーヤーのリスト")
-                         + "&body=" + escape("プレーヤーのカスタム リストはこちら: " + window.location);
+                var link = "mailto: ?subject= プレーヤーのリスト&body= プレーヤーのカスタム リストはこちら: " + escape(window.location);
                 window.location.href = link;
             });
         });

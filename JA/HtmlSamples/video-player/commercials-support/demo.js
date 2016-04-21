@@ -24,7 +24,7 @@ $(function () {
                             "http://dl.infragistics.com/pg/2011-1/web/shared/videoplayer/videos/QuinceIntro_1.theora.ogv"],
                         startTime: 20,
                         title: 'Quince<br/>プレゼンテーション<br/>パート 1',
-                        link: 'http://quince.infragistics.com/'
+                        link: 'http://www.infragistics.com/'
                     },
                     {
                         sources: [
@@ -33,7 +33,7 @@ $(function () {
                             "http://dl.infragistics.com/pg/2011-1/web/shared/videoplayer/videos/QuinceIntro_Part3_1.theora.ogv"],
                         startTime: 100,
                         title: 'Quince<br/>プレゼンテーション<br/>パート 2',
-                        link: 'http://quince.infragistics.com/'
+                        link: 'http://www.infragistics.com/'
                     }],
                     adMessage: {
                         hideDelay: 13000

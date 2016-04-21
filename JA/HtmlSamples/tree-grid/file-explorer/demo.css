@@ -6,3 +6,9 @@
             background: url(http://jp.igniteui.com/images/samples/tree-grid/folder.png) !important;
             background-repeat: no-repeat;
         }
+		.ui-icon-plus:before {
+		    content: '' !important;
+		}
+		.ui-icon-minus:before{
+		    content: '' !important;
+		}

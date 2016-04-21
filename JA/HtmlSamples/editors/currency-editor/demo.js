@@ -28,7 +28,7 @@ $(document).ready(function () {
         $("#stateTax").igCurrencyEditor({
             buttonType: "spin",
             spinDelta: 0.01,
-            value: -331.80,
+            value: -300.00,
             maxDecimals:2,
             minValue: -331.80,
             maxValue: 331.80,
@@ -38,7 +38,7 @@ $(document).ready(function () {
             }
         });
         $("#socialSecurity").igCurrencyEditor({
-            value: -744,
+            value: -700,
             minValue: -744,
             maxValue: 744,
             valueChanged: function (evt, ui) {

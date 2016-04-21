@@ -1,0 +1,34 @@
+span.ui-icon.ui-icon-contact {
+            background-image: url('http://jp.igniteui.com/igniteui/css/themes/infragistics/images/ui-icons_888888_256x240.png');
+            background-position: -177px -97px;
+        }
+
+        #dropZone {
+            position: absolute;
+            border: 3px dashed #bbb;
+            border-color: gray;
+            -moz-border-radius: 2px;
+            -webkit-border-radius: 2px;
+            border-radius: 1px;
+            text-align: center;
+            color: gray;
+            opacity: 0.3;
+            filter: alpha(opacity=30);
+            background-color: white;
+            vertical-align: middle;
+            font-size: 30px;
+            box-sizing: border-box;
+        }
+
+        /* Override sample's browser styles */
+        #htmlEditor h1, #htmlEditor h2, #htmlEditor h3, #htmlEditor h4, #htmlEditor h5, #htmlEditor h6 {
+            margin: 0px;
+        }
+
+        #htmlEditor h1 {
+            font-size: 1.9em;
+        }
+
+        #sampleContainer {
+            overflow: visible;
+        }

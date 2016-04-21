@@ -10,7 +10,7 @@ $(document).ready(function () {
 
             $('#gender').igTextEditor({
                 inputName: "gender",
-                listItems: ["Male", "Female"]
+                listItems: ["男", "女"]
             });
 
             $("#phone").igMaskEditor({

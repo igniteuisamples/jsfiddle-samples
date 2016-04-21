@@ -8,35 +8,32 @@
 <script src="http://jp.igniteui.com/js-data/northwind"></script>
 <link href="http://cdn-na.infragistics.com/igniteui/latest/css/themes/infragistics/infragistics.theme.css" rel="stylesheet"></link>
 <link href="http://cdn-na.infragistics.com/igniteui/latest/css/structure/infragistics.css" rel="stylesheet"></link>
-<link href="http://jp.igniteui.com/css/bootstrap/bootstrap.min.css" rel="stylesheet"></link>
 <script src="http://cdn-na.infragistics.com/igniteui/latest/js/i18n/infragistics-ja.js"></script>
 
 <div ng-app="sampleApp" ng-controller="hierarchicalGridController">
-        <div class="row">
-            <div class="col-md-12">
-                <ig-hierarchical-grid id="grid1" data-source="data" width="100%" height="400px" auto-commit="true" auto-generate-columns="false" auto-generate-layouts="false">
-                    <columns>
-                        <column key="FirstName" header-text="名前" width="25%" data-type="string"></column>
-                        <column key="LastName" header-text="名字" width="25%" data-type="string"></column>
-                        <column key="Title" header-text="役職" width="25%" data-type="string"></column>
-                        <column key="BirthDate" header-text="生年月日" width="25%" data-type="date"></column>
-                    </columns>
-                    <column-layouts>
-                        <column-layout key="Orders" response-data-key="results" primary-key="OrderID" auto-generate-columns="false" width="100%">
-                            <columns>
-                                <column key="OrderID" header-text="注文 ID" width="25%" data-type="string"></column>
-                                <column key="Freight" header-text="輸送" width="25%" data-type="string"></column>
-                                <column key="ShipName" header-text="配送先" width="25%" data-type="string"></column>
-                                <column key="ShipAddress" header-text="配送先住所" width="25%" data-type="string"></column>
-                            </columns>
-                            <features>
-                                <feature name="Paging" page-size="10"></feature>
-                                <feature name="Sorting"></feature>
-                            </features>
-                        </column-layout>
-                    </column-layouts>
-                </ig-hierarchical-grid>
+        <div>
+            <ig-hierarchical-grid id="grid1" data-source="data" width="100%" height="400px" auto-commit="true" auto-generate-columns="false" auto-generate-layouts="false">
+                <columns>
+                    <column key="FirstName" header-text="名前" width="25%" data-type="string"></column>
+                    <column key="LastName" header-text="名字" width="25%" data-type="string"></column>
+                    <column key="Title" header-text="役職" width="25%" data-type="string"></column>
+                    <column key="BirthDate" header-text="生年月日" width="25%" data-type="date"></column>
+                </columns>
+                <column-layouts>
+                    <column-layout key="Orders" response-data-key="results" primary-key="OrderID" auto-generate-columns="false" width="100%">
+                        <columns>
+                            <column key="OrderID" header-text="注文 ID" width="25%" data-type="string"></column>
+                            <column key="Freight" header-text="輸送" width="25%" data-type="string"></column>
+                            <column key="ShipName" header-text="配送先" width="25%" data-type="string"></column>
+                            <column key="ShipAddress" header-text="配送先住所" width="25%" data-type="string"></column>
+                        </columns>
+                        <features>
+                            <feature name="Paging" page-size="10"></feature>
+                            <feature name="Sorting"></feature>
+                        </features>
+                    </column-layout>
+                </column-layouts>
+            </ig-hierarchical-grid>
 
-            </div>
         </div>
     </div>

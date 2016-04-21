@@ -9,7 +9,8 @@ var listData = ["EUR", "USD", "GBP"];
         });
 
         $('#creditAmount').igNumericEditor({
-            placeHolder: "例: 3000",
+        	placeHolder: "例: 3000",
+			value: 1000,
             minValue: 500,
             maxValue: 10000
         });
@@ -33,6 +34,7 @@ var listData = ["EUR", "USD", "GBP"];
             placeHolder: "例: " + new Date().getFullYear().toString() + "/" + new Date().getMonth().toString() + "/" + new Date().getDay().toString(),
             minValue: new Date(2015, 5, 1),
             maxValue: new Date(2020, 11, 31),
+            value: new Date(),
             locale: "ja",
             regional: "ja"
         });
@@ -95,6 +97,23 @@ var listData = ["EUR", "USD", "GBP"];
 
         });
 
+        $("#btnReset").click(function () {
+        	$("#firstName").igTextEditor("value", "");
+        	$("#lastName").igTextEditor("value", "");
+        	$("#creditAmount").igNumericEditor("value", 1000);
+        	$("#currency").igTextEditor("value", "EUR");
+        	$('#interestRate').igPercentEditor("value", "8.70%");
+        	$('#startDateOfCredit').igDatePicker("value", new Date());
+        	$('#term').igNumericEditor("value", 24);
+        	$('#salaryInBank').igCheckboxEditor("option", "checked", false);
+        	$('#pin').igMaskEditor("value", "");
+        	disableEditors(false);
+        });
+
+        $("#btnEnable").click(function () {
+        	disableEditors(false);
+        });
+
         function getResult(creditAmound, getSumToReceive, getMonthlyPaymentInterestRate) {
             var currencySymbol;
             var selectedCurrency = $('#currency').igTextEditor("option", "value");
@@ -128,15 +147,16 @@ var listData = ["EUR", "USD", "GBP"];
             var output = "<p class=\"info\">" + "" + customerName + " 様、以下はローン詳細です: " + "</p>";
             $(".creditTable").before(output);
             $("#valuesContainer").show();
-            disableEditors();
+            disableEditors(true);
         }
 
-        function disableEditors() {
+        function disableEditors(disable) {
             var allEditors = $("#form .ui-igedit-container");
             for (i = 0; i < allEditors.length; i++) {
                 var widgetType = Object.keys(allEditors.eq(i).data())[0];
-                allEditors.eq(i)[widgetType.toString()]('option', 'disabled', 'true');
+                allEditors.eq(i)[widgetType.toString()]('option', 'disabled', disable);
             }
+            $("#btnEnable").prop('disabled', !disable);
         }
 
         (function doOnLoad() {
