@@ -66,7 +66,9 @@ $(function () {
                 if (seriesType == "area" ||
                     seriesType == "splineArea" ||
                     seriesType == "column" ||
-                    seriesType == "stepArea" || seriesType == "bar") {
+                    seriesType == "stepArea" ||
+                    seriesType == "bar" ||
+                    seriesType == "point") {
                     thickness = 1;
                 }
                 
