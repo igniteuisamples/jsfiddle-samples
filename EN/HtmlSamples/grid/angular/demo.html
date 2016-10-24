@@ -11,13 +11,13 @@
 <link href="http://igniteui.com/css/bootstrap/bootstrap.min.css" rel="stylesheet"></link>
 
 <script id="colTmpl" type="text/template" ng-non-bindable="">
-        {{if ${UnitPrice} == null }}
+        {{if ${UnitsInStock} == null }}
         N/A
-        {{elseif ${UnitPrice} >= (Math.random()+0.5)*${UnitPrice} }}
-        $ ${UnitPrice}
+        {{elseif ${UnitsInStock} >= (Math.random()+0.5)*${UnitsInStock} }}
+        $ ${UnitsInStock}
         <img width='10' height='15' src='http://igniteui.github.io/igniteui-angular/samples/images/arrowUp.gif' />
         {{else}}
-        $ ${UnitPrice}
+        $ ${UnitsInStock}
         <img width='10' height='15' src='http://igniteui.github.io/igniteui-angular/samples/images/arrowDown.gif' />
         {{/if}}
     </script>
@@ -28,9 +28,9 @@
                 <ig-grid id="grid1" data-source="data" data-source-type="json" width="100%" height="400px" primary-key="ProductID" auto-commit="true" auto-generate-columns="false">
                     <columns>
                         <column key="ProductID" header-text="ID" width="50px" data-type="number"></column>
-                        <column key="ProductName" header-text="Supplier Name" width="250px" data-type="string"></column>
-                        <column key="QuantityPerUnit" header-text="Units In Stock" width="200px" data-type="string"></column>
-                        <column key="UnitPrice" header-text="Unit Price" width="100px" data-type="number" template="{{getHtml('#colTmpl')}}"></column>
+                        <column key="ProductName" header-text="Product Name" width="250px" data-type="string"></column>
+                        <column key="QuantityPerUnit" header-text="Units On Order" width="200px" data-type="string"></column>
+                        <column key="UnitsInStock" header-text="Unit Price" width="100px" data-type="number" template="{{getHtml('#colTmpl')}}"></column>
                     </columns>
                     <features>
                         <feature name="Updating">
@@ -52,10 +52,12 @@
                         <h4>Add Product</h4>
                     </div>
                     <div class="card-block">
-                        <input type="text" ng-model="newProduct.ProductName" class="form-control" placeholder="Supplier Name">
-                        <input type="text" ng-model="newProduct.QuantityPerUnit" class="form-control" placeholder="Units In Stock">
-                        <input type="text" ng-model="newProduct.UnitPrice" class="form-control" placeholder="Unit Price">
-                        <input type="button" value="Add row" ng-click="addProduct()" class="btn btn-secondary"></input>
+                        <form name="myForm">
+                            <input type="text" ng-model="newProduct.ProductName" class="form-control" placeholder="Product Name">
+                            <input type="text" ng-model="newProduct.QuantityPerUnit" class="form-control" placeholder="Units On Order">
+                            <input type="number" ng-model="newProduct.UnitsInStock" name="unitsInStock" class="form-control" placeholder="Unit Price">
+                            <input type="button" value="Add row" ng-click="addProduct()" ng-disabled="myForm.unitsInStock.$error.number" class="btn btn-secondary"></input>
+                        </form>
                     </input></input></input></div>
                 </div>
             </div>
@@ -67,8 +69,8 @@
             <thead>
                 <tr>
                     <th>Product ID</th>
-                    <th>Supplier Name</th>
-                    <th>Units In Stock</th>
+                    <th>Product Name</th>
+                    <th>Units On Order</th>
                     <th>Unit Price</th>
                     <th></th>
                 </tr>
@@ -78,7 +80,7 @@
                     <td>{{product.ProductID}}</td>
                     <td><input type="text" ng-model="product.ProductName" class="form-control"></input></td>
                     <td>{{product.QuantityPerUnit}}</td>
-                    <td><input type="text" ng-model="product.UnitPrice" class="form-control"></input></td>
+                    <td><input type="number" ng-model="product.UnitsInStock" class="form-control"></input></td>
                     <td><input type="button" value="Delete row" ng-click="deleteProduct($index)" class="btn btn-secondary"></input></td>
                 </tr>
             </tbody>

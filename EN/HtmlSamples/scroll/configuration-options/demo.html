@@ -1,0 +1,69 @@
+<script src="http://igniteui.com/js/modernizr.min.js"></script>
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>
+<script src="http://cdn-na.infragistics.com/igniteui/latest/js/infragistics.core.js"></script>
+<script src="http://cdn-na.infragistics.com/igniteui/latest/js/infragistics.lob.js"></script>
+<script src="http://www.igniteui.com/data-files/employee-data-allDatatypes.js"></script>
+<link href="http://cdn-na.infragistics.com/igniteui/latest/css/themes/infragistics/infragistics.theme.css" rel="stylesheet"></link>
+<link href="http://cdn-na.infragistics.com/igniteui/latest/css/structure/infragistics.css" rel="stylesheet"></link>
+<link href="http://cdn-na.infragistics.com/igniteui/latest/css/structure/modules/infragistics.ui.scroll.css" rel="stylesheet"></link>
+
+<div id="scrollableContent" style="height:400px; width:100%; oveflow:hidden;">
+		<table style="height:500px;width: 800px; table-layout:fixed;" id="table-main">
+			<colgroup></colgroup>
+			<thead>
+			</thead>
+			<tbody></tbody>
+		</table>
+	</div>
+
+	<fieldset id="rowNumber" class="explorer">
+		<legend>Number of records: <span id="rowNum">100</span></legend>
+		<div><div id="rowNumSlider" style="margin: 10px 5px 5px 10px; width: 200px;"></div></div>
+	</fieldset>
+	<fieldset id="colNumber" class="explorer">
+		<legend>Number of columns: <span id="colNum">5</span></legend>
+		<div><div id="colNumSlider" style="margin: 10px 5px 5px 10px; width: 200px;"></div></div>
+	</fieldset>
+
+
+
+	<fieldset id="behaviorOptionsMobile" class="explorer">
+		<legend>Scroll behavior options - mobile</legend>
+		<div><label for="inertiaDuration" style="display:inline"> Change inertia duration: </label><label class="currVal">1</label><div id="inertiaDuration" style="margin: 10px 5px 5px 10px; width: 200px;"></div> </div>
+		<div><label for="inertiaStep" style="display:inline"> Change inertia step: </label><label class="currVal">1</label><div id="inertiaStep" style="margin: 10px 5px 5px 10px; width: 200px;"></div> </div>
+		<div><label for="swipeToleranceX" style="display:inline"> Change horizontal swipe tolerance when scrolling vertically: </label><label class="currVal">30</label>px<div id="swipeToleranceX" style="margin: 10px 5px 5px 10px; width: 200px;"></div> </div>
+	</fieldset>
+
+
+	<fieldset id="behaviorOptionsDesktop" class="explorer">
+		<legend>Scroll behavior options - desktop</legend>
+		<div><input type="checkbox" id="smoothing"></input><label for="smoothing" style="display:inline"> Enable smooth scrolling</label></div>
+		<div style="display:none;"><label for="smoothingDuration" style="display:inline"> Change smoothing animation duration:</label><label class="currVal">1</label><div id="smoothingDuration" style="margin: 10px 5px 5px 10px; width: 200px;"></div> </div>
+		<div style="display:none;"><label for="smoothingStep" style="display:inline"> Change smoothing step: </label><label class="currVal">1</label><div id="smoothingStep" style="margin: 10px 5px 5px 10px; width: 200px;"></div> </div>
+		<div><label for="wheelStep" style="display:inline"> Change wheel step: </label><label class="currVal">50</label>px<div id="wheelStep" style="margin: 10px 5px 5px 10px; width: 200px;"></div> </div>
+		<div><label for="smallIncrementStep" style="display:inline"> Change scrollbar arrow step: </label><label class="currVal">40</label>px<div id="smallIncrementStep" style="margin: 10px 5px 5px 10px; width: 200px;"></div> </div>
+		<div><label for="bigIncrementStep" style="display:inline"> Change track area scroll step: </label><label class="currVal">100</label>px<div id="bigIncrementStep" style="margin: 10px 5px 5px 10px; width: 200px;"></div> </div>
+
+	</fieldset>
+
+	<fieldset id="visualizationOptions" class="explorer">
+		<legend>Scroll visualization options</legend>
+		<div><input type="checkbox" id="alwaysVisible"></input><label for="alwaysVisible" style="display:inline"> Always display scrollbars</label></div>
+		<div>
+			<select id="scrollbarType" style="width:150px; height:20px;">
+				<option>custom</option>
+				<option>native</option>
+				<option>none</option>
+			</select>
+			<label for="scrollbarType" style="display:inline"> Change scrollbar type </label>
+		</div>
+	</fieldset>
+
+	<fieldset id="postionOptions" class="explorer">
+		<legend>Scroll position options</legend>
+		<div><label for="scrollTop"> Set scroll top position to: </label><input id="scrollTop" type="text" value="0" style="height:22px;"></input><button id="scrTopApply">Apply</button></div>
+		<div><label for="scrollLeft"> Set scroll left position to: </label><input id="scrollLeft" type="text" value="0" style="height:22px;"></input><button id="scrLeftApply">Apply</button></div>
+	</fieldset>
+
+		<div style="clear: both;"></div>

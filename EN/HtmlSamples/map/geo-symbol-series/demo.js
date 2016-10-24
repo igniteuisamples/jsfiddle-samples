@@ -1,5 +1,5 @@
 $(function () {
-         
+
             // load geo-locations from shapefile and simplify data structure
             var worldCities = [];
             var points = [];
@@ -34,7 +34,7 @@ $(function () {
                     return 1;
                 return 0;
             }
-            
+
         function createMap() {
 
             $("#map").igMap({
@@ -66,11 +66,11 @@ $(function () {
                             var ctx = renderInfo.context;
                             var x = renderInfo.xPosition;
                             var y = renderInfo.yPosition;
-                            if (renderInfo.isHitTestRender) 
+                            if (renderInfo.isHitTestRender)
                                 ctx.fillStyle = renderInfo.data.actualItemBrush().fill();
-                            else 
+                            else
                                 ctx.fillStyle = "black";
-                            
+
                             var size = 10;
                             var heightHalf = size / 2.0;
                             var widthHalf = size / 2.0;
@@ -78,7 +78,7 @@ $(function () {
                             if (renderInfo.isHitTestRender) {
                                 ctx.fillRect(x - widthHalf, y - heightHalf, size, size);
                             } else {
-                                
+
                                 // color markers based on population of cities
                                 var pop = renderInfo.data.item()["Population"];
                                 if (pop > 0)
@@ -91,7 +91,7 @@ $(function () {
                                     ctx.fillStyle = "rgba(210,60,20,0.8)";
                                 if (pop > 10000000)
                                     ctx.fillStyle = "rgba(155,20,20,0.8)";
-                               
+
                                 size = 3;
                                 ctx.globalAlpha = 1;
                                 ctx.strokeStyle = "rgba(20,20,20,0.36)";
@@ -102,9 +102,9 @@ $(function () {
                             }
                         }
                     }
-                }],
-
+                }]
             });
+            $("#map").find(".ui-widget-content").append("<span class='copyright-notice'><a href='http://www.openstreetmap.org/copyright'>© OpenStreetMap contributors</a></span>");
         };
 
     });

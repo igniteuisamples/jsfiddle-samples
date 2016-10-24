@@ -28,6 +28,9 @@ $(function () {
                         enableRowNumbering: true
                     },
                     {
+                        name: "GroupBy"
+                    },
+                    {
                         name: "Responsive",
                         enableVerticalRendering: false,
                         columnSettings: [

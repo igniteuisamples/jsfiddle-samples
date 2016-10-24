@@ -15,72 +15,70 @@
 <link href="http://cdn-na.infragistics.com/igniteui/latest/css/structure/infragistics.css" rel="stylesheet"></link>
 
 <div id="error-message" style="color: #FF0000; font-weight: bold;"></div>
-    
-    <table id="gridKO" data-bind="igGrid: {
-            dataSource: data,
-            primaryKey: 'ID',
-            width: '100%',
-			height: '100%',
-            autoCommit: true,
-            features: [
-                 {
-                     name: 'Updating',
-                     editMode: 'row',
-                     columnSettings: [
-                         {
-                             columnKey: 'ID',
-                             readOnly: true
-                         }
-                     ],
-                     generatePrimaryKeyValue: function ( evt, ui )
-                     {
-                         // setting a primary key for the new row
-                         ui.value = 'PK' + ui.value;
-                     },                  
-                     rowDeleting: function (evt, ui) {
-                         var rowID = ui.rowID;
-                         var selectedRow = $('#gridKO').igGridSelection('selectedRow');
-                         if (selectedRow == null || rowID != selectedRow.id) {
-                             $('#error-message').html('You should select the row before deleting it!').stop(true, true).fadeIn(500).delay(3000).fadeOut(500);
-                             return false;
-                         }
-                     }
-                 },
-                {
-                    name: 'Selection',
-                    mode: 'row',
-                    multipleSelection: false,
-                    activation: false,
-                    rowSelectionChanged: selectionChanged
-                }
-            ],
-            autoGenerateColumns: false,
-            columns: [
-                { headerText: 'Customer ID', key: 'ID', dataType: 'string', width: '25%'},
-                { headerText: 'Contact Name', key: 'ContactName', dataType: 'string', width: '25%' },
-                { headerText: 'City', key: 'City', dataType: 'string', width: '25%' },
-                { headerText: 'Country', key: 'Country', dataType: 'string', width: '25%' }
-            ],
-            rendered: function (evt, ui) {
-                $('#gridKO').igGridSelection('selectRow', 0);
-            }
-        }">
-    </table>
-    
-    <div class="api-explorer">
-       <fieldset>
-           <legend>Edit Selected Row</legend> 
-            <label><b>Customer ID:</b> </label>
-            <span id="idEditor" data-bind="text: (selectedItemID() > -1 && selectedItemID() < data().length && data().length>0) ? data()[selectedItemID()].ID : '', valueUpdate: 'afterkeydown'"></span>
-            <br />
-            <label><b>Contact Name:</b> </label>
-            <input id="nameEditor" type="text" data-bind="value: (selectedItemID() > -1 && selectedItemID() < data().length) ? data()[selectedItemID()].ContactName : '', valueUpdate: 'afterkeydown'"></input>
-            <br />
-            <label><b>City:</b> </label>
-            <input id="cityEditor" type="text" data-bind="value: (selectedItemID() > -1 && selectedItemID() < data().length) ? data()[selectedItemID()].City : '', valueUpdate: 'afterkeydown'"></input>
-            <br />
-            <label><b>Country:</b> </label>
-            <input id="countryEditor" type="text" data-bind="value: (selectedItemID() > -1 && selectedItemID() < data().length) ? data()[selectedItemID()].Country : '', valueUpdate: 'afterkeydown'"></input>
-            <br />   
-       </fieldset>     
-    </div>
+
+	<table id="gridKO" data-bind="igGrid: {
+		dataSource: data,
+		primaryKey: 'ID',
+		width: '100%',
+		autoCommit: true,
+		features: [
+			{
+				name: 'Updating',
+				editMode: 'row',
+				columnSettings: [
+					{
+						columnKey: 'ID',
+						readOnly: true
+					}
+				],
+				generatePrimaryKeyValue: function ( evt, ui )
+				{
+					// setting a primary key for the new row
+					ui.value = 'PK' + ui.value;
+				},
+				rowDeleting: function (evt, ui) {
+					var rowID = ui.rowID;
+					var selectedRow = $('#gridKO').igGridSelection('selectedRow');
+					if (selectedRow == null || rowID != selectedRow.id) {
+						$('#error-message').html('You should select the row before deleting it!').stop(true, true).fadeIn(500).delay(3000).fadeOut(500);
+						return false;
+					}
+				}
+			},
+			{
+				name: 'Selection',
+				mode: 'row',
+				multipleSelection: false,
+				activation: false,
+				rowSelectionChanged: selectionChanged
+			}
+		],
+		autoGenerateColumns: false,
+		columns: [
+			{ headerText: 'Customer ID', key: 'ID', dataType: 'string', width: '25%'},
+			{ headerText: 'Contact Name', key: 'ContactName', dataType: 'string', width: '25%' },
+			{ headerText: 'City', key: 'City', dataType: 'string', width: '25%' },
+			{ headerText: 'Country', key: 'Country', dataType: 'string', width: '25%' }
+		],
+		rendered: function (evt, ui) {
+			$('#gridKO').igGridSelection('selectRow', 0);
+		}
+	}"></table>
+
+	<div class="api-explorer">
+		<fieldset>
+			<legend>Edit Selected Row</legend>
+			<label><b>Customer ID:</b> </label>
+			<span id="idEditor" data-bind="text: (selectedItemID() > -1 && selectedItemID() < data().length && data().length>0) ? data()[selectedItemID()].ID : '', valueUpdate: 'afterkeydown'"></span>
+			<br />
+			<label><b>Contact Name:</b> </label>
+			<input id="nameEditor" type="text" data-bind="value: (selectedItemID() > -1 && selectedItemID() < data().length) ? data()[selectedItemID()].ContactName : '', valueUpdate: 'afterkeydown'"></input>
+			<br />
+			<label><b>City:</b> </label>
+			<input id="cityEditor" type="text" data-bind="value: (selectedItemID() > -1 && selectedItemID() < data().length) ? data()[selectedItemID()].City : '', valueUpdate: 'afterkeydown'"></input>
+			<br />
+			<label><b>Country:</b> </label>
+			<input id="countryEditor" type="text" data-bind="value: (selectedItemID() > -1 && selectedItemID() < data().length) ? data()[selectedItemID()].Country : '', valueUpdate: 'afterkeydown'"></input>
+			<br />
+		</fieldset>
+	</div>

@@ -1,0 +1,69 @@
+<script src="http://igniteui.com/js/modernizr.min.js"></script>
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>
+<script src="http://cdn-na.infragistics.com/igniteui/latest/js/infragistics.core.js"></script>
+<script src="http://cdn-na.infragistics.com/igniteui/latest/js/infragistics.dv.js"></script>
+<link href="http://cdn-na.infragistics.com/igniteui/latest/css/themes/infragistics/infragistics.theme.css" rel="stylesheet"></link>
+<link href="http://cdn-na.infragistics.com/igniteui/latest/css/structure/infragistics.css" rel="stylesheet"></link>
+
+<div id="chart" class="chart" style="width:600px;height:400px"></div>
+
+    <div class="optionsPane">
+        <div class="optionsPane">
+            <div><b>X-Axis Options</b></div>
+            <div class="optionContainer">
+                <label id="showXMajorAxisLinesLbl" class="labels">Show Major Grid Lines:</label>
+                <input id="xAxisMajorLinesCkBx" type="checkbox" class="chkBoxMargin"></input>
+                <div>
+                    <label id="XMajorIntervalThicknessLbl">Major Grid Lines Thickness:</label>
+                    <label id="XMajorIntervalThicknessValueLbl" class="values">1</label>
+                    <div id="XMajorIntervalThicknessSlider" class="slider"></div>
+                </div>
+            </div>
+
+            <div>
+                <div class="optionContainer">
+                    <label id="showXMinorAxisLinesLbl" class="labels">Show Minor Grid Lines:</label>
+                    <input id="xAxisMinorLinesCkBx" type="checkbox" class="chkBoxMargin"></input>
+                    <div>
+                        <label id="XMinorIntervalThicknessLbl">Minor Grid Lines Thickness:</label>
+                        <label id="XMinorIntervalThicknessValueLbl" class="values">1</label>
+                        <div id="XMinorIntervalThicknessSlider" class="slider"></div>
+                    </div>
+                    <div>
+                        <label id="XMinorIntervalValueLbl" class="labels">Minor Interval:</label>
+                        <label id="XMinorIntervalActualValueLbl" class="values">1</label>
+                        <div id="XMinorIntervalValueSlider" class="slider"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="optionsPane">
+            <div><b>Y-Axis Options</b></div>
+            <div class="optionContainer">
+                <label id="showYMajorAxisLinesLbl" class="labels">Show Major Grid Lines:</label>
+                <input id="yAxisMajorLinesCkBx" type="checkbox" class="chkBoxMargin"></input>
+                <div>
+                    <label id="YMajorIntervalThicknessLbl">Major Grid Lines Thickness:</label>
+                    <label id="YMajorIntervalThicknessValueLbl" class="values">1</label>
+                    <div id="YMajorIntervalThicknessSlider" class="slider"></div>
+                </div>
+            </div>
+
+            <div class="optionContainer">
+                <label id="showYMinorAxisLinesLbl" class="labels">Show Minor Grid Lines:</label>
+                <input id="yAxisMinorLinesCkBx" type="checkbox" class="chkBoxMargin"></input>
+                <div>
+                    <label id="YMinorIntervalThicknessLbl">Minor Grid Lines Thickness:</label>
+                    <label id="YMinorIntervalThicknessValueLbl" class="values">1</label>
+                    <div id="YMinorIntervalThicknessSlider" class="slider"></div>
+                </div>
+                <div>
+                    <label id="YMinorIntervalValueLbl" class="labels">Minor Interval:</label>
+                    <label id="YMinorIntervalActualValueLbl" class="values">50</label>
+                    <div id="YMinorIntervalValueSlider" class="slider"></div>
+                </div>
+            </div>
+        </div>
+    </div>

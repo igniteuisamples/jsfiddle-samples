@@ -1,0 +1,44 @@
+<script src="../../Scripts/jquery.signalR-1.1.4.min.js"></script>
+<script src="http://igniteui.com/signalr/hubs"></script>
+<script src="http://igniteui.com/js/modernizr.min.js"></script>
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>
+<script src="http://cdn-na.infragistics.com/igniteui/latest/js/infragistics.core.js"></script>
+<script src="http://cdn-na.infragistics.com/igniteui/latest/js/infragistics.lob.js"></script>
+<script src="http://cdn-na.infragistics.com/igniteui/latest/js/infragistics.dv.js"></script>
+<link href="http://cdn-na.infragistics.com/igniteui/latest/css/themes/infragistics/infragistics.theme.css" rel="stylesheet"></link>
+<link href="http://cdn-na.infragistics.com/igniteui/latest/css/structure/infragistics.css" rel="stylesheet"></link>
+
+<script id="colTmpl" type="text/template">
+		<div class='rightAlign'>
+			<span>${Change}%</span>
+			{{if parseFloat(${Change}) >= 0 }}
+			<img width='10' height='15' src='http://www.igniteui.com/images/samples/templating-engine/colTemplateWithConditionalCell/arrowUp.gif' />
+			{{else}}
+			<img width='10' height='15' src='http://www.igniteui.com/images/samples/templating-engine/colTemplateWithConditionalCell/arrowDown.gif' />
+			{{/if}}
+		</div>
+	</script>
+
+<fieldset>
+		<table>
+			<colgroup>
+				<col style="width:150px">
+				<col style="width:150px">
+			</colgroup>
+			<tr>
+				<td>
+					Refresh time: <span id="intervalText">1500</span>
+				</td>
+				<td rowspan="2" style="padding-left:20px"><input type="button" id="startDataFeed" value="Start Data Feed"></input></td>
+			</tr>
+			<tr>
+				<td>
+					<div id="intervalSlider" class="sliderBounds" style="margin: 10px 5px 5px 10px;"></div>
+				</td>
+			</tr>
+		</table>
+	</fieldset>
+	
+
+	<table id="grid"></table>

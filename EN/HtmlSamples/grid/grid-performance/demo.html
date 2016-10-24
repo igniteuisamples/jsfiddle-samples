@@ -1,0 +1,54 @@
+<script src="http://igniteui.com/js/modernizr.min.js"></script>
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>
+<script src="http://cdn-na.infragistics.com/igniteui/latest/js/infragistics.core.js"></script>
+<script src="http://cdn-na.infragistics.com/igniteui/latest/js/infragistics.lob.js"></script>
+<script src="http://igniteui.com/js/apiviewer.js"></script>
+<link href="http://cdn-na.infragistics.com/igniteui/latest/css/themes/infragistics/infragistics.theme.css" rel="stylesheet"></link>
+<link href="http://cdn-na.infragistics.com/igniteui/latest/css/structure/infragistics.css" rel="stylesheet"></link>
+
+<div class="w100 igui-filter-section clearfix">
+
+        <div class="w33 min-173 pr30 border-box igui-filter-f-left">
+            <div class="igui-filter-modul">
+                <div class="mb10 w100 clearfix">
+                    <label class="igui-filter-f-left">Rows Count: </label>
+                    <span class="igui-filter-f-right" id="rowsLbl">5000</span>
+                </div>
+                <div id="dataCount"></div>
+            </div>
+
+            <div class="igui-filter-modul">
+                <div class="mb10 w100 clearfix">
+                    <label class="igui-filter-f-left">Columns Count: </label>
+                    <span class="igui-filter-f-right" id="colsLbl">10</span>
+                </div>
+                <div id="colCount"></div>
+            </div>
+        </div>
+
+        <div class="min-173 w33 pr30 border-box igui-filter-f-left igui-filter-checkbox">
+            <div class="mb10 clearfix">
+                <input class="mr5 igui-filter-f-left" id="pagingCheck" type="checkbox"></input>
+                <label class="ml5 igui-filter-f-right" for="pagingCheck">Enable Paging: </label>
+
+            </div>
+            <div class="mb10 clearfix">
+                <input class="igui-filter-f-left" id="filteringCheck" type="checkbox"></input>
+                <label class="ml5 igui-filter-f-right" for="filteringCheck">Enable Filtering: </label>
+            </div>
+            <div class="mb10">
+                <label class="mb10 d-block" for="virt">Virtualization Type: </label>
+                <input id="virt" type="text"></input>
+            </div>
+        </div>
+
+        <div class="w33 igui-filter-f-left">
+            
+            <div>
+                <button id="btnRefresh" type="button">Rebind the grid</button>
+            </div>
+        </div>
+    </div>
+    <table id="grid"></table>
+	<div class="api-viewer"></div>

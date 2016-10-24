@@ -19,7 +19,7 @@
             position: relative;
             width: 100%;
         }
-        #legendLineChart { position: absolute; top: 120px; left: 45px; border: none; background-color: transparent; font-weight: bold;}
+        #legendLineChart { border: none; background-color: transparent; font-weight: bold;}
 
         /* Polar chart container and legend */
         .sample-polar-chart-holder {
@@ -37,7 +37,7 @@
             float: left;
             margin-top: 10px;
         }
-        #legendBarColumnChart { position: absolute; top: 135px; left: 45px; border: none; background-color: transparent; font-weight: bold; }
+        #legendBarColumnChart { border: none; background-color: transparent; font-weight: bold; }
 
 
     	@media screen and (max-width: 970px) {

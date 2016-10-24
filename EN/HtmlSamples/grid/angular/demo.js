@@ -17,7 +17,7 @@ var sampleApp = angular.module('sampleApp', ['igniteui-directives']);
                 ProductID: 21,
                 ProductName: null,
                 QuantityPerUnit: null,
-                UnitPrice: null
+                UnitsInStock: null
             };
         });
 });

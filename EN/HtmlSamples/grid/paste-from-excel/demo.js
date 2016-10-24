@@ -288,10 +288,11 @@ $(function () {
 						//SuccessfullyPasted
 						rec.igNotifier("notify", "success", "Successfully pasted data in the grid.");
 					}
-
-					rec.focus();
-					$(rec).on("blur", function () {
-						rec.igNotifier("hide");
-					});
+					setTimeout(function () {
+						rec.focus();
+						$(rec).on("blur", function () {
+							rec.igNotifier("hide");
+						});
+					}, 0);
 				}
 			});

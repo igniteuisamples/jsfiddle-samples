@@ -140,7 +140,7 @@ $(function () {
             });
 
             $("#month").igCombo({
-                width: "101px",
+                width: "100px",
                 textKey: "Text",
                 valueKey: "Value",
                 dataSource: months,
@@ -149,7 +149,7 @@ $(function () {
             });
 
             $("#year").igCombo({
-                width: "101px",
+                width: "100px",
                 textKey: "Text",
                 valueKey: "Text",
                 dataSource: years,
@@ -158,7 +158,7 @@ $(function () {
             });
 
             $("#ccv").igNumericEditor({
-                width: "101px",
+                width: "100px",
                 placeHolder: "CCV",
                 disabled: true
             });

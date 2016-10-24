@@ -1,0 +1,32 @@
+.codeTable {
+			border-collapse: collapse;
+			border-spacing: 0;
+		}
+
+		.removed {
+			background-color: rgb(252, 216, 217);
+		}
+
+		.chunk-removed {
+			background-color: #ff4d4d !important;
+		}
+
+		.line-empty {
+			background-color: lightgrey;
+		}
+
+		.line-inserted {
+			background-color: lightgreen;
+		}
+
+			.line-inserted > span {
+				background-color: #00cc00 !important;
+			}
+
+		.line-modified {
+			background-color: lightgreen;
+		}
+
+		.chunk-inserted {
+			background-color: #00cc00 !important;
+		}

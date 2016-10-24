@@ -1,0 +1,41 @@
+#table-div {
+			height: 400px;
+			width: 600px;
+			overflow: hidden;
+		}
+
+		#table-headers {
+			height: 60px;
+			width: 600px;
+			overflow: hidden;
+		}
+
+		#table-main {
+			border: 1px solid #777777;
+		}
+
+		#table-main-headers {
+			border: 1px solid #777777;
+			height: 400px;
+			width: 800px;
+		}
+
+		th {
+			background-color: #888888;
+			color: #ffffff;
+			height: 30px;
+		}
+
+		fieldset.explorer {
+			float: left;
+			width: 45%;
+		}
+			fieldset.explorer > div {
+				width:100%;
+				padding-bottom:15px;
+
+			}
+			.currVal {
+				display:inline !important;
+
+			}

@@ -29,12 +29,12 @@ $(function () {
                 schema: xmlSchema 
             });
 
-            $("#chart2").igPieChart({
+            $("#chart").igPieChart({
                 width: "435px",
                 height: "435px",
                 dataSource: ds, //$.ig.DataSource defined above
-                valueMemberPath: "Population",
-                labelMemberPath: "Name",
+                dataValue: "Population",
+                dataLabel: "Name",
                 labelsPosition: "bestFit"
             });
 

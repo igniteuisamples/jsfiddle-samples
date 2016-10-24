@@ -13,10 +13,4 @@ $(function () {
                 inputMask: '(000) 000-000',
                 dataMode: "rawText"
             });
-
-            $("#btn").click(function () {
-                $("#serialNumber").igMaskEditor("option", "value", "");
-                $("#zipCode").igMaskEditor("option", "value", "");
-                $("#phone").igMaskEditor("option", "value", "");
-            });
         });

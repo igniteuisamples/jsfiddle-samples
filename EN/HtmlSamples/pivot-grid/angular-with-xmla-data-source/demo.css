@@ -1,7 +1,7 @@
-#dataSelector, #pivotGrid {
+#dataSelector, #pivotGrid_container {
             float: left;
         }
 
-        #pivotGrid {
+        #pivotGrid_container {
             width: 70%;
         }
