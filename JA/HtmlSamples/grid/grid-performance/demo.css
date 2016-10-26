@@ -1,0 +1,59 @@
+.clearfix {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .w100 {
+            width: 100%;
+        }
+
+        .w33 {
+            width: 33.3%;
+        }
+
+       .mb10 {
+            margin-bottom: 10px;
+        }
+
+       .ml5 {
+           margin-left: 5px;
+       }
+
+       .min-173 {
+           min-width: 173px;
+       }
+
+       .pr30 {
+           padding-right:30px;
+       }
+
+       .border-box {
+           box-sizing: border-box;
+       }
+
+        .igui-filter-f-left {
+            float: left;
+        }
+
+        .igui-filter-f-right {
+            float: right;
+        }
+
+        .igui-filter-modul {
+            margin: 0 0 15px 0;
+            border:1px solid  #f1f1f1;
+            padding: 10px;
+        }
+
+        .igui-filter-section {
+            margin-bottom: 20px;
+        }
+
+        .d-block {
+            display: block;
+        }
+
+        .igui-filter-checkbox label  {
+            cursor: pointer;
+        }

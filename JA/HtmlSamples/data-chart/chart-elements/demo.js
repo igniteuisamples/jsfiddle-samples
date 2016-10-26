@@ -1,5 +1,5 @@
 $(function () {
-var evntCounter = 0, transperantBrush = "rgba(0,0,0,0)",
+var transperantBrush = "rgba(0,0,0,0)",
             axisStripBrush = "rgba(150,150,150,0.1)",
             axisStokeLinesBrush = "rgba(50,50,50,0.7)",
             axisMajorLinesBrush = "rgba(120,120,120,0.5)",
@@ -86,10 +86,7 @@ var evntCounter = 0, transperantBrush = "rgba(0,0,0,0)",
                     title: 'ボリューム シリーズ',
                     xAxis: 'xAxis',
                     yAxis: 'yAxis2',
-                    valueMemberPath: 'Close',
-                    //trendLineThickness: 3,
-                    //trendlineBrush: trendlineBrush,
-                    //trendLineType: 'modifiedAverage'
+                    valueMemberPath: 'Close'
                 }],
             });
             
@@ -104,7 +101,6 @@ var evntCounter = 0, transperantBrush = "rgba(0,0,0,0)",
             $("#axisMajorLines").click(function () {
                 var brush = $(this).is(":checked") ? axisMajorLinesBrush : transperantBrush;
                 $("#chart").igDataChart("option", "axes", [
-                    //{ name: "xAxis", majorStroke: brush },
                     { name: "yAxis", majorStroke: brush }
                 ]);
                 $("#chart").igDataChart("styleUpdated");
@@ -112,7 +108,6 @@ var evntCounter = 0, transperantBrush = "rgba(0,0,0,0)",
             $("#axisMinorLines").click(function () {
                 var brush = $(this).is(":checked") ? axisMinorLinesBrush : transperantBrush;
                 $("#chart").igDataChart("option", "axes", [
-                    //{ name: "xAxis", minorStroke: brush },
                     { name: "yAxis", minorStroke: brush }
                 ]);
                 $("#chart").igDataChart("styleUpdated");
@@ -120,7 +115,6 @@ var evntCounter = 0, transperantBrush = "rgba(0,0,0,0)",
             $("#axisStripes").click(function () {
                 var brush = $(this).is(":checked") ? axisStripBrush : transperantBrush;
                 $("#chart").igDataChart("option", "axes", [
-                    //{ name: "xAxis", strip: brush },
                     { name: "yAxis", strip: brush }
                 ]);
                 $("#chart").igDataChart("styleUpdated");
@@ -173,20 +167,17 @@ var evntCounter = 0, transperantBrush = "rgba(0,0,0,0)",
                 var pBrush = ($(this).is(":checked")) ? priceTrendlineBrush : transperantBrush;
                 var vBrush = ($(this).is(":checked")) ? volumeTrendlineBrush : transperantBrush;
                 $("#chart").igDataChart("option", "series", [
-                    { name: "priceSeries", trendLineBrush: pBrush }//,
-                    //{ name: "lineSeries", trendLineBrush: vBrush }
+                    { name: "priceSeries", trendLineBrush: pBrush }
                 ]);
                 $("#chart").igDataChart("styleUpdated");
             });
             
             $("#lineSeries").click(function () {
                 var brush = ($(this).is(":checked")) ? lineSeriesBrush : transperantBrush;
-                //var mType = ($(this).is(":checked")) ? "circle" : "none";
                 var visibility = ($(this).is(":checked")) ? "visible" : "collapsed";
                 $("#chart").igDataChart("option", "series", [
                     {
                         name: "lineSeries", brush: brush,
-                        //markerType: mType,
                         legendItemVisibility: visibility
                     }]);
                 $("#chart").igDataChart("styleUpdated");
@@ -210,24 +201,4 @@ var evntCounter = 0, transperantBrush = "rgba(0,0,0,0)",
                 $("#chart").igDataChart("styleUpdated");
             });
         });
-        
-       
-        //$("#priceSeries").click(function () {
-        //    console.log('priceSeries');
-        //    var brush = ($(this).is(":checked")) ? priceBrush : transperantBrush;
-        //    var negBrush = ($(this).is(":checked")) ? negativeBrush : transperantBrush;
-        //    var visibility = ($(this).is(":checked")) ? "visible" : "collapsed";
-        //    $("#chart").igDataChart("option", "series", [
-        //        { name: "priceSeries", brush: brush, negativeBrush: negBrush, outline: negBrush, legendItemVisibility: visibility }]);
-        //    $("#chart").igDataChart("styleUpdated");
-        //});
-        
-       
-
-        //$("#volumeTrendline").click(function () {
-        //    console.log('volumeTrendline');
-        //    var brush = ($(this).is(":checked")) ? trendlineBrush : transperantBrush;
-        //    $("#chart").igDataChart("option", "series", [{ name: "series2", trendLineBrush: brush }]);
-        //    $("#chart").igDataChart("styleUpdated");
-        //});
 });

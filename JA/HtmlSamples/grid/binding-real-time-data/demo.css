@@ -1,0 +1,12 @@
+.price-down {
+			background-color:#ffe7e5;
+		}
+		.price-up {
+			background-color: #e1fbd6;
+		}
+		.rightAlign {
+			text-align:right;
+		}
+		.ui-sparkline {
+		  padding: 0px !important;
+		}

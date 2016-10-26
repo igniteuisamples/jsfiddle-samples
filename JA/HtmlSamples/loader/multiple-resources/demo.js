@@ -5,7 +5,9 @@ $.ig.loader({
             resources: "igDataChart.Radial,igCombo"
         });
 
-        $.ig.loader(function () {
+        // jQuery's ready event can be used with the loader.
+        // The loader calls holdReady until all JS and CSS files are loaded.
+        $(function () {
             var data1 = [{ "Label": "管理", "Budget": 60, "Spending": 20 },
                 { "Label": "セールス", "Budget": 40, "Spending": 80 },
                 { "Label": "IT", "Budget": 60, "Spending": 20 },

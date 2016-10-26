@@ -5,7 +5,9 @@ $.ig.loader({
 	        resources: "igGrid.Sorting"
 	    });
 
-	    $.ig.loader(function () {
+        // jQuery's ready event can be used with the loader.
+        // The loader calls holdReady until all JS and CSS files are loaded.
+	    $(function () {
 	        $("#grid").igGrid({
 	            autoGenerateColumns: false,
 	            columns: [

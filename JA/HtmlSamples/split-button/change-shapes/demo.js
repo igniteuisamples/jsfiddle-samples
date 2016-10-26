@@ -44,14 +44,6 @@ $(function () {
                 drawCircle(circle);
 
                 $(".igsb-sample-desc").css("color", "#205867");
-
-                //triangle = document.getElementById("triangle");
-                //triangle.getContext("2d").fillStyle = "#5F497A";
-                //drawTriangle(triangle);
-
-                //square = document.getElementById("square");
-                //square.getContext("2d").fillStyle = "#E36C09"
-                //drawSquare(square);
             }
             function changeShape(id, newShape) {
                 var elementToChange = document.getElementById(id);
@@ -123,7 +115,10 @@ $(function () {
                 defaultItemName: "circlecolor",
                 defaultColor: "#205867",
                 colorSelected: function (event, color) {
-                    var circleCtx = document.getElementById("circle").getContext("2d");
+                    // A.K 17 October 2016 Bug fix: #225431 - Incorrect coloring of shape in Split button sample (in IE)
+                    var canvas = document.getElementById("circle");
+                    var circleCtx = canvas.getContext("2d");
+                    circleCtx.clearRect(0, 0, canvas.width, canvas.height);
                     circleCtx.fillStyle = color.value;
                     circleCtx.fill();
                     circleCtx.strokeStyle = "#000";

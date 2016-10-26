@@ -38,6 +38,7 @@ var lblCount = 30, timer = 40, interval, isAdding = false;
                     verticalZoomable: true,
                     windowResponse: "immediate",
                     dataSource: currData,
+                    pixelScalingRatio: 1.0,
                     axes: [{
                             name: "xAxis",
                             type: "categoryX",

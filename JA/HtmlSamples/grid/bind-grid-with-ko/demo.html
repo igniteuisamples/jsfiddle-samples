@@ -16,72 +16,70 @@
 <script src="http://cdn-na.infragistics.com/igniteui/latest/js/i18n/infragistics-ja.js"></script>
 
 <div id="error-message" style="color: #FF0000; font-weight: bold;"></div>
-    
-    <table id="gridKO" data-bind="igGrid: {
-            dataSource: data,
-            primaryKey: 'ID',
-            width: '100%',
-			height: '100%',
-            autoCommit: true,
-            features: [
-                 {
-                     name: 'Updating',
-                     editMode: 'row',
-                     columnSettings: [
-                         {
-                             columnKey: 'ID',
-                             readOnly: true
-                         }
-                     ],
-                     generatePrimaryKeyValue: function ( evt, ui )
-                     {
-                         // setting a primary key for the new row
-                         ui.value = 'PK' + ui.value;
-                     },                  
-                     rowDeleting: function (evt, ui) {
-                         var rowID = ui.rowID;
-                         var selectedRow = $('#gridKO').igGridSelection('selectedRow');
-                         if (selectedRow == null || rowID != selectedRow.id) {
-                             $('#error-message').html('行を削除するには、行を選択する必要があります。').stop(true, true).fadeIn(500).delay(3000).fadeOut(500);
-                             return false;
-                         }
-                     }
-                 },
-                {
-                    name: 'Selection',
-                    mode: 'row',
-                    multipleSelection: false,
-                    activation: false,
-                    rowSelectionChanged: selectionChanged
-                }
-            ],
-            autoGenerateColumns: false,
-            columns: [
-                { headerText: '顧客 ID', key: 'ID', dataType: 'string', width: '25%'},
-                { headerText: '名前', key: 'ContactName', dataType: 'string', width: '25%' },
-                { headerText: '市', key: 'City', dataType: 'string', width: '25%' },
-                { headerText: '国名', key: 'Country', dataType: 'string', width: '25%' }
-            ],
-            rendered: function (evt, ui) {
-                $('#gridKO').igGridSelection('selectRow', 0);
-            }
-        }">
-    </table>
-    
-    <div class="api-explorer">
-       <fieldset>
-           <legend>選択した行の編集</legend> 
-            <label><b>顧客 ID:</b> </label>
-            <span id="idEditor" data-bind="text: (selectedItemID() > -1 && selectedItemID() < data().length && data().length>0) ? data()[selectedItemID()].ID : '', valueUpdate: 'afterkeydown'"></span>
-            <br />
-            <label><b>名前:</b> </label>
-            <input id="nameEditor" type="text" data-bind="value: (selectedItemID() > -1 && selectedItemID() < data().length) ? data()[selectedItemID()].ContactName : '', valueUpdate: 'afterkeydown'"></input>
-            <br />
-            <label><b>市:</b> </label>
-            <input id="cityEditor" type="text" data-bind="value: (selectedItemID() > -1 && selectedItemID() < data().length) ? data()[selectedItemID()].City : '', valueUpdate: 'afterkeydown'"></input>
-            <br />
-            <label><b>国名:</b> </label>
-            <input id="countryEditor" type="text" data-bind="value: (selectedItemID() > -1 && selectedItemID() < data().length) ? data()[selectedItemID()].Country : '', valueUpdate: 'afterkeydown'"></input>
-            <br />   
-       </fieldset>     
-    </div>
+
+	<table id="gridKO" data-bind="igGrid: {
+		dataSource: data,
+		primaryKey: 'ID',
+		width: '100%',
+		autoCommit: true,
+		features: [
+			{
+				name: 'Updating',
+				editMode: 'row',
+				columnSettings: [
+					{
+						columnKey: 'ID',
+						readOnly: true
+					}
+				],
+				generatePrimaryKeyValue: function ( evt, ui )
+				{
+					// setting a primary key for the new row
+					ui.value = 'PK' + ui.value;
+				},
+				rowDeleting: function (evt, ui) {
+					var rowID = ui.rowID;
+					var selectedRow = $('#gridKO').igGridSelection('selectedRow');
+					if (selectedRow == null || rowID != selectedRow.id) {
+						$('#error-message').html('行を削除するには、行を選択する必要があります。').stop(true, true).fadeIn(500).delay(3000).fadeOut(500);
+						return false;
+					}
+				}
+			},
+			{
+				name: 'Selection',
+				mode: 'row',
+				multipleSelection: false,
+				activation: false,
+				rowSelectionChanged: selectionChanged
+			}
+		],
+		autoGenerateColumns: false,
+		columns: [
+			{ headerText: '顧客 ID', key: 'ID', dataType: 'string', width: '25%'},
+			{ headerText: '名前', key: 'ContactName', dataType: 'string', width: '25%' },
+			{ headerText: '市', key: 'City', dataType: 'string', width: '25%' },
+			{ headerText: '国名', key: 'Country', dataType: 'string', width: '25%' }
+		],
+		rendered: function (evt, ui) {
+			$('#gridKO').igGridSelection('selectRow', 0);
+		}
+	}"></table>
+
+	<div class="api-explorer">
+		<fieldset>
+			<legend>選択した行の編集</legend>
+			<label><b>顧客 ID:</b> </label>
+			<span id="idEditor" data-bind="text: (selectedItemID() > -1 && selectedItemID() < data().length && data().length>0) ? data()[selectedItemID()].ID : '', valueUpdate: 'afterkeydown'"></span>
+			<br />
+			<label><b>名前:</b> </label>
+			<input id="nameEditor" type="text" data-bind="value: (selectedItemID() > -1 && selectedItemID() < data().length) ? data()[selectedItemID()].ContactName : '', valueUpdate: 'afterkeydown'"></input>
+			<br />
+			<label><b>市:</b> </label>
+			<input id="cityEditor" type="text" data-bind="value: (selectedItemID() > -1 && selectedItemID() < data().length) ? data()[selectedItemID()].City : '', valueUpdate: 'afterkeydown'"></input>
+			<br />
+			<label><b>国名:</b> </label>
+			<input id="countryEditor" type="text" data-bind="value: (selectedItemID() > -1 && selectedItemID() < data().length) ? data()[selectedItemID()].Country : '', valueUpdate: 'afterkeydown'"></input>
+			<br />
+		</fieldset>
+	</div>

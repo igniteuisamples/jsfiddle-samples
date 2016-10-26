@@ -17,7 +17,7 @@ var data = [
                 valueMemberPath: "Budget",
                 innerLabelMemberPath: "Budget",
                 innerLabelVisibility: "visible",
-                tooltipTemplate: "<span>ID:${Id}<br>分門:${Department}</span>"
+                tooltipTemplate: "<span>ID: ${Id}<br>分門: ${Department}</span>"
             });
 
             //  Create a funnel chart with Bezier curved shape. You can control the exact shape of 
@@ -30,7 +30,7 @@ var data = [
                 valueMemberPath: "Budget",
                 innerLabelMemberPath: "Budget",
                 innerLabelVisibility: "visible",
-                tooltipTemplate: "<span>ID:${Id}<br>分門:${Department}</span>",
+                tooltipTemplate: "<span>ID: ${Id}<br>分門: ${Department}</span>",
                 useBezierCurve: true,
                 bezierPoints: "0.1 0.1 0.7 1"
             });

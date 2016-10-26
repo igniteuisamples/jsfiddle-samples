@@ -288,10 +288,11 @@ $(function () {
 						//SuccessfullyPasted
 						rec.igNotifier("notify", "success", "データをグリッドに正常に貼り付けました。");
 					}
-
-					rec.focus();
-					$(rec).on("blur", function () {
-						rec.igNotifier("hide");
-					});
+					setTimeout(function () {
+						rec.focus();
+						$(rec).on("blur", function () {
+							rec.igNotifier("hide");
+						});
+					}, 0);
 				}
 			});

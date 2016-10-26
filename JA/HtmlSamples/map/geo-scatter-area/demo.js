@@ -30,4 +30,5 @@ $(function () {
                     width: 0.025
                 }
             });
+            $("#map").find(".ui-widget-content").append("<span class='copyright-notice'><a href='http://www.openstreetmap.org/copyright'>© OpenStreetMap contributors</a></span>");
         });

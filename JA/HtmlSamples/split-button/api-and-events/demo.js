@@ -41,12 +41,15 @@ $(function () {
                 apiViewer.log(message);
             });
 
-            $("#split-expand").on("click", function () {
-                $("#split-button").igSplitButton("expand");
+            // Calling API methods programmatically does not raise events related to their operation unless specifically stated otherwise by the corresponding API documentation. 
+            // Those events are only raised by their respective user interaction.
+            $("#split-expand").on("click", function (e) {
+                $("#split-button").igSplitButton("expand", e);
             });
 
-
-            $("#split-collapse").on("click", function () {
-                $("#split-button").igSplitButton("collapse");
+            // Calling API methods programmatically does not raise events related to their operation unless specifically stated otherwise by the corresponding API documentation. 
+            // Those events are only raised by their respective user interaction.
+            $("#split-collapse").on("click", function (e) {
+                $("#split-button").igSplitButton("collapse", e);
             });
         });
