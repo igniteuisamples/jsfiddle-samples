@@ -25,7 +25,7 @@
                                 <b>社員 ID:</b>
                             </td>
                             <td>
-                                <span id="idEditor" data-bind="text: Records()[0].EmployeeID, valueUpdate: 'afterkeydown'"></span>
+                                <span id="idEditor" data-bind="text: Records()[0].EmployeeID, valueUpdate: 'input'"></span>
                             </td>
                         </tr>
                         <tr>
@@ -33,7 +33,7 @@
                                 <b>名前:</b>
                             </td>
                             <td>
-                                <input id="fnameEditor" type="text" data-bind="value: Records()[0].FirstName, valueUpdate: 'afterkeydown'"></input>
+                                <input id="fnameEditor" type="text" data-bind="value: Records()[0].FirstName, valueUpdate: 'input'"></input>
                             </td>
                         </tr>
                         <tr>
@@ -41,7 +41,7 @@
                                 <b>名字:</b>
                             </td>
                             <td>
-                                <input id="lnameEditor" type="text" data-bind="value: Records()[0].LastName, valueUpdate: 'afterkeydown'"></input>
+                                <input id="lnameEditor" type="text" data-bind="value: Records()[0].LastName, valueUpdate: 'input'"></input>
                             </td>
                         </tr>
                         <tr>
@@ -49,7 +49,7 @@
                                 <b>市/州:</b>
                             </td>
                             <td>
-                                <input id="cityEditor" type="text" data-bind="value: Records()[0].City, valueUpdate: 'afterkeydown'"></input>
+                                <input id="cityEditor" type="text" data-bind="value: Records()[0].City, valueUpdate: 'input'"></input>
                             </td>
                         </tr>
                         <tr>
@@ -57,7 +57,7 @@
                                 <b>国名:</b>
                             </td>
                             <td>
-                                <input id="countryEditor" type="text" data-bind="value: Records()[0].Country, valueUpdate: 'afterkeydown'"></input>
+                                <input id="countryEditor" type="text" data-bind="value: Records()[0].Country, valueUpdate: 'input'"></input>
                             </td>
                         </tr>
                     </table>
@@ -72,7 +72,7 @@
                                 <b>注文 ID:</b>
                             </td>
                             <td>
-                                <span id="Span1" data-bind="text: Records()[0].Orders()[0].OrderID, valueUpdate: 'afterkeydown'"></span>
+                                <span id="Span1" data-bind="text: Records()[0].Orders()[0].OrderID, valueUpdate: 'input'"></span>
                             </td>
                         </tr>
                         <tr>
@@ -80,7 +80,7 @@
                                 <b>配送先:</b>
                             </td>
                             <td>
-                                <input id="Text1" type="text" data-bind="value: Records()[0].Orders()[0].ShipName, valueUpdate: 'afterkeydown'"></input>
+                                <input id="Text1" type="text" data-bind="value: Records()[0].Orders()[0].ShipName, valueUpdate: 'input'"></input>
                             </td>
                         </tr>
                         <tr>
@@ -88,7 +88,7 @@
                                 <b>輸送:</b>
                             </td>
                             <td>
-                                <input id="Text2" type="text" data-bind="value: Records()[0].Orders()[0].Freight, valueUpdate: 'afterkeydown'"></input>
+                                <input id="Text2" type="text" data-bind="value: Records()[0].Orders()[0].Freight, valueUpdate: 'input'"></input>
                             </td>
                         </tr>
                         <tr>
@@ -96,7 +96,7 @@
                                 <b>郵便番号:</b>
                             </td>
                             <td>
-                                <input id="Text3" type="text" data-bind="value: Records()[0].Orders()[0].ShipPostalCode, valueUpdate: 'afterkeydown'"></input>
+                                <input id="Text3" type="text" data-bind="value: Records()[0].Orders()[0].ShipPostalCode, valueUpdate: 'input'"></input>
                             </td>
                         </tr>
                         <tr>
@@ -104,7 +104,7 @@
                                 <b>注文日:</b>
                             </td>
                             <td>
-                                <input id="Date1" type="date" data-bind="igDatePicker: { value: Records()[0].Orders()[0].OrderDate, valueUpdate: 'afterkeydown'}"></input>
+                                <input id="Date1" type="date" data-bind="igDatePicker: { value: Records()[0].Orders()[0].OrderDate, valueUpdate: 'input'}"></input>
                             </td>
                         </tr>
                     </table>

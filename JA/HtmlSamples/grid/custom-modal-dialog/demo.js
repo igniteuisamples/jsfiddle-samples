@@ -1,28 +1,83 @@
 $(function () {
-$.widget("ui.SlideInDialog", $.ui.igGridModalDialog, {
+$.widget("ui.SplitterDialog", $.ui.igGridModalDialog, {
 			_create: function () {
-				var d = this.element, self = this, gc, header;
+				var d = this.element, self = this, gc, header, footer, $buttonSet, $buttonOK, $buttonCancel, o = this.options, self = this,
+				outerContianer;
 				// get the grid's container
 				gc = d.closest(".ui-iggrid");
+
+				d.detach();
+				
+				outerContianer = "<div id='customContainerDiv'></div>";
+
+				gc.wrap(outerContianer).wrap("<div></div>");
+				
+				gc.parent().parent().append(d);
+
+				this._customSplitterContainer = $("#customContainerDiv");
+				
+				this._customSplitterContainer.igSplitter(
+					{
+						width: "100%",
+						height: "400px",
+						panels: [
+							{ size: "60%" },
+							{ size: "40%" }
+						]
+					}
+					);
+
 				// adding the header
 				header = $("<div></div>")
 					.addClass("ui-widget-header")
 					.css("padding", "4px")
 					.text(this.options.modalDialogCaptionText)
 					.appendTo(d);
+
+				//adding footer
+				footer = $("<div></div>")
+				//.addClass(this.css.modalDialogFooter)
+				.attr("id", this._id("footer"))
+				.appendTo(d);
+				$buttonSet = $("<div></div>")
+					.appendTo(footer);
+
+				$buttonOK = $("<button></button>")
+					.attr("id", this._id("footer_buttonok"))
+					.appendTo($buttonSet);
+				$buttonOK.igButton({
+					labelText: o.buttonApplyText,
+					title: o.buttonApplyTitle,
+					disabled: o.buttonApplyDisabled,
+					click: function(){
+						self.closeModalDialog(true, true);
+					}
+				});
+				$buttonCancel = $("<button></button>")
+					.attr("id", this._id("footer_buttoncancel"))
+					.appendTo($buttonSet);
+				$buttonCancel.igButton({
+					labelText: o.buttonCancelText,
+					title: o.buttonCancelTitle,
+					click: function () {
+						self.closeModalDialog(false, true);
+					}
+				});
+
 				// adding the content
 				$("<div></div>")
 					.css({
 						"overflow": "auto",
-						"height": gc.outerHeight() - header.outerHeight()
+						"height": gc.outerHeight() - header.outerHeight() - footer.outerHeight()
 					})
 					.attr("id", this.element.attr("id") + "_content")
-					.appendTo(d);
+					.insertAfter(header);
+
+				$buttonSet.css("float", "right");
 				// dialog css
 				d.css({
 					"width": this.options.modalDialogWidth,
 					"height": gc.outerHeight(),
-					"position": "absolute",
 					"background-color": "#FFFFFF"
 				});
 				// grid's container need to hide the sliding dialog
@@ -32,11 +87,9 @@ $.widget("ui.SlideInDialog", $.ui.igGridModalDialog, {
 						var table = gc.find(".ui-iggrid-table"),
 							rowID = $(evt.target).closest("tr").attr("data-id");
 						if (table.igGridUpdating("isEditing")) {
-							self._blockSlide = true;
 							if (table.igGridUpdating("endEdit", true)) {
 								table.igGridUpdating("startEdit", rowID);
 							}
-							delete self._blockSlide;
 						}
 						evt.stopPropagation();
 					}
@@ -72,8 +125,6 @@ $.widget("ui.SlideInDialog", $.ui.igGridModalDialog, {
 						}
 					}
 				});
-				// finally hide it initially
-				d.hide();
 			},
 			openModalDialog: function () {
 				var d = this.element, noCancel;
@@ -96,16 +147,9 @@ $.widget("ui.SlideInDialog", $.ui.igGridModalDialog, {
 						}
 					);
 					this._modalDialogOpened = true;
-					if (!this._blockSlide) {
-						// prepare the container for slide-in animation
-						d.css({
-							"top": "0px",
-							"left": "-" + this.options.modalDialogWidth,
-							"z-index": 1000
-						});
-						// execute the animation
-						d.show().animate({ left: 0 }, 500);
-					}
+					d.show();
+					d.prev().show();
+					this._customSplitterContainer.igSplitter("setFirstPanelSize", "60%");
 				}
 			},
 			closeModalDialog: function (accepted, fromUI) {
@@ -123,19 +167,13 @@ $.widget("ui.SlideInDialog", $.ui.igGridModalDialog, {
 						raiseEvents: fromUI
 					});
 				if (noCancel) {
-					if (!this._blockSlide) {
-						d.animate({ left: "-" + this.options.modalDialogWidth }, 500, function () {
-							self._trigger(self.events.modalDialogClosed, null, {
-								modalDialog: d,
-								owner: self,
-								accepted: !!accepted,
-								raiseEvents: fromUI
-							});
-							d.hide();
-						});
-					}
 					this._modalDialogOpened = false;
+					d.hide();
+					d.prev().hide();
+
+					this._customSplitterContainer.igSplitter("setFirstPanelSize", "100%");
 				}
+
 			}
 		});
 
@@ -143,26 +181,26 @@ $.widget("ui.SlideInDialog", $.ui.igGridModalDialog, {
 			$("#grid").igGrid({
 				dataSource: data,
 				autoCommit: true,
-				width: "100%",
+				height: "400px",
 				autoGenerateColumns: false,
 				primaryKey: "company",
 				columns: [
-					{ headerText: "会社", key: "company", dataType: "string", },
+					{ headerText: "会社", key: "company", dataType: "string" },
 					{ headerText: "生涯セールス", key: "sales_lifetimeSales", dataType: "number" },
-					{ headerText: "市場の潜在能力", key: "sales_marketPotential", dataType: "number", },
-					{ headerText: "現金資産", key: "assets_cash", dataType: "number", rowIndex: 0, },
-					{ headerText: "売掛金勘定", key: "assets_accRec", dataType: "number", },
-					{ headerText: "国", key: "country", dataType: "string", },
+					{ headerText: "市場の潜在能力", key: "sales_marketPotential", dataType: "number"},
+					{ headerText: "現金資産", key: "assets_cash", dataType: "number", rowIndex: 0},
+					{ headerText: "売掛金勘定", key: "assets_accRec", dataType: "number"},
+					{ headerText: "国", key: "country", dataType: "string"},
 				],
 				autofitLastColumn: false,
 				features: [
 					{
 						name: "Paging",
-						pageSize: 5
+						pageSize: 10
 					},
 					{
 						name: "Updating",
-						dialogWidget: "SlideInDialog",
+						dialogWidget: "SplitterDialog",
 						editMode: "dialog",
 						enableAddRow: false,
 						enableDeleteRow: false,
