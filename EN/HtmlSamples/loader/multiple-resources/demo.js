@@ -2,7 +2,7 @@ $(function () {
 $.ig.loader({
             scriptPath: "http://cdn-na.infragistics.com/igniteui/latest/js/",
             cssPath: "http://cdn-na.infragistics.com/igniteui/latest/css/",
-            resources: "igDataChart.Radial,igCombo"
+            resources: "igDataChart.Radial,igChartLegend,igCombo"
         });
 
         // jQuery's ready event can be used with the loader.

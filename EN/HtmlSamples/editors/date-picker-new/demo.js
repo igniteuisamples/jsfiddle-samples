@@ -8,15 +8,11 @@ var data = [
         $(function () {
             $("#datePicker1").igDatePicker({
                 minValue: new Date(2015, 6, 1),
-                locale: "en",
-                regional: "en",
                 dateDisplayFormat: "yy/MM/dd dddd"
             });
 
             $("#datePicker2").igDatePicker({
                 maxValue: new Date(2018, 8, 8),
-                locale: "en",
-                regional: "en",
                 dateDisplayFormat: "yy/MM/dd dddd"
             });
 

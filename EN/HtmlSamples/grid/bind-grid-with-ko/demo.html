@@ -69,16 +69,16 @@
 		<fieldset>
 			<legend>Edit Selected Row</legend>
 			<label><b>Customer ID:</b> </label>
-			<span id="idEditor" data-bind="text: (selectedItemID() > -1 && selectedItemID() < data().length && data().length>0) ? data()[selectedItemID()].ID : '', valueUpdate: 'afterkeydown'"></span>
+			<span id="idEditor" data-bind="text: (selectedItemID() > -1 && selectedItemID() < data().length && data().length>0) ? data()[selectedItemID()].ID : '', valueUpdate: 'input'"></span>
 			<br />
 			<label><b>Contact Name:</b> </label>
-			<input id="nameEditor" type="text" data-bind="value: (selectedItemID() > -1 && selectedItemID() < data().length) ? data()[selectedItemID()].ContactName : '', valueUpdate: 'afterkeydown'"></input>
+			<input id="nameEditor" type="text" data-bind="value: (selectedItemID() > -1 && selectedItemID() < data().length) ? data()[selectedItemID()].ContactName : '', valueUpdate: 'input'"></input>
 			<br />
 			<label><b>City:</b> </label>
-			<input id="cityEditor" type="text" data-bind="value: (selectedItemID() > -1 && selectedItemID() < data().length) ? data()[selectedItemID()].City : '', valueUpdate: 'afterkeydown'"></input>
+			<input id="cityEditor" type="text" data-bind="value: (selectedItemID() > -1 && selectedItemID() < data().length) ? data()[selectedItemID()].City : '', valueUpdate: 'input'"></input>
 			<br />
 			<label><b>Country:</b> </label>
-			<input id="countryEditor" type="text" data-bind="value: (selectedItemID() > -1 && selectedItemID() < data().length) ? data()[selectedItemID()].Country : '', valueUpdate: 'afterkeydown'"></input>
+			<input id="countryEditor" type="text" data-bind="value: (selectedItemID() > -1 && selectedItemID() < data().length) ? data()[selectedItemID()].Country : '', valueUpdate: 'input'"></input>
 			<br />
 		</fieldset>
 	</div>
