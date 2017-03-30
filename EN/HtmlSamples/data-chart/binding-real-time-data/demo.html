@@ -6,49 +6,41 @@
 <link href="http://cdn-na.infragistics.com/igniteui/latest/css/themes/infragistics/infragistics.theme.css" rel="stylesheet"></link>
 <link href="http://cdn-na.infragistics.com/igniteui/latest/css/structure/infragistics.css" rel="stylesheet"></link>
 
-<script id="tooltipTemplate" type="text/x-jquery-tmpl">
-            <div id="tooltip" class="ui-widget-content ui-corner-all">
-                <span id="tooltipValue">Value: ${item.Value}</span>
-            </div>
-        </script>
-
 <div id="chart"></div>
-        
-        <div class="selectionOptions">
-            
-            <table>
-                <tr>
-                    <td>
-                        Data Points: <span id="volumeText">5000</span>
-                    </td>
-                     <td style="width: 10px; min-width: 10px;"></td>
-                  <td>
-                      Refresh time: <span id="intervalText">10</span>
-                    </td>
-                    <td>
-                         Refreshes Per Second: <span id="refreshCount">0</span>
-                    </td>
-                 </tr>
-               <tr>
-                    <td>
-                      <div id="volumeSlider" class="sliderBounds" style="margin: 10px 5px 5px 10px;"></div>
-                    </td> 
-                   <td style="width: 10px; min-width: 10px;"></td>
-                   <td>
-                        <div id="intervalSlider" class="sliderBounds" style="margin: 10px 5px 5px 10px;"></div>
-                    </td> 
-                </tr>
-                <tr>
-                    <td>
-                        <input type="button" id="addDataPoints" value="Add Data Points"></input> 
-                    </td>
-                     <td style="width: 10px; min-width: 10px;"></td>
-                    <td>
-                        <input type="button" id="startDataFeed" value="Start Data Feed"></input>
-                    </td>
-                </tr>
-             
-            </table>
-      
-            
-        </div>
+	<div id="chartFPS">
+		<div id="refreshCount"></div>
+		<div id="refreshCountLabel">Refresh rate</div>
+	</div>
+
+	<div class="selectionOptions">
+
+		<table>
+			<tr>
+				<td>
+					Data Points: <span id="volumeText">5000</span>
+				</td>
+				<td style="width: 10px; min-width: 10px;"></td>
+				<td>
+					Refresh time: <span id="intervalText">10</span>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<div id="volumeSlider" class="sliderBounds" style="margin: 10px 5px 5px 10px;"></div>
+				</td>
+				<td style="width: 10px; min-width: 10px;"></td>
+				<td>
+					<div id="intervalSlider" class="sliderBounds" style="margin: 10px 5px 5px 10px;"></div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<input type="button" id="addDataPoints" value="Add Data Points"></input>
+				</td>
+				<td style="width: 10px; min-width: 10px;"></td>
+				<td>
+					<input type="button" id="startDataFeed" value="Start Data Feed"></input>
+				</td>
+			</tr>
+		</table>
+	</div>

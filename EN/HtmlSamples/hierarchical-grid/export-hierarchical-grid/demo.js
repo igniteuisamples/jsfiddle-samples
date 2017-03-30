@@ -1,36 +1,60 @@
 $(function () {
 $.ig.loader({
-        scriptPath: "http://cdn-na.infragistics.com/igniteui/latest/js/",
-        cssPath: "http://cdn-na.infragistics.com/igniteui/latest/css/",
-        resources: 'igHierarchicalGrid,' +
-            'igExcel,' +
-            'igGridExcelExporter'
-    });
-			
-    $.ig.loader(function() {				
-        var data = [
-            { Name: "Food", Products: [
-                { Name: "Bread", Quantity: 3 },
-                { Name: "Pizza", Quantity: 4 }]
-            },
-            { Name: "Beverages", Products: [
-                { Name: "Milk", Quantity: 1 },
-                { Name: "Fruit punch", Quantity: 4 }]
-            }];
-					
-        $("#hierarchicalGrid").igHierarchicalGrid({
-            width: "400px",
-            dataSource: data, //Array of objects defined above
-            autoGenerateColumns: true,
-            autoGenerateLayouts: true
+            scriptPath: "http://cdn-na.infragistics.com/igniteui/latest/js/",
+            cssPath: "http://cdn-na.infragistics.com/igniteui/latest/css/",
+            resources: 'igHierarchicalGrid,' +
+                'igGridExcelExporter'
         });
 
-        $("#exportButton").igButton({ labelText: "Export" });
-					
-        $("#exportButton").on("igbuttonclick", function () {
-            $.ig.GridExcelExporter.exportGrid($("#hierarchicalGrid"), {
-                dataExportMode: $("#dataExportMode").val()
+        $.ig.loader(function() {
+
+            $("#hierarchicalGrid").igHierarchicalGrid({
+                width: "100%",
+                autoCommit: true,
+                autoGenerateColumns: false,
+                dataSource: northwind,
+                responseDataKey: "results",
+                dataSourceType: "json",
+                autofitLastColumn: false,
+                columns: [
+                   { key: "EmployeeID", headerText: "Employee ID", dataType: "number", hidden: true },
+                   { key: "LastName", headerText: "First Name", dataType: "string", width: "10%" },
+                   { key: "FirstName", headerText: "Last Name", dataType: "string", width: "10%" },
+                   { key: "Title", headerText: "Title", dataType: "string", width: "25%" },
+                   { key: "Address", headerText: "Address", dataType: "string", width: "20%" },
+                   { key: "City", headerText: "City", dataType: "string", width: "10%" },
+                   { key: "Region", headerText: "Region", dataType: "string", width: "10%" },
+                   { key: "Country", headerText: "Country", dataType: "string", width: "10%" }
+                ],
+                childrenDataProperty: "Orders",
+                autoGenerateLayouts: false,
+                columnLayouts: [
+                    {
+                        key: "Orders",
+                        autoCommit: true,
+                        responseDataKey: "results",
+                        autoGenerateColumns: false,
+                        autofitLastColumn: false,
+                        primaryKey: "OrderID",
+                        width: "100%",
+                        columns: [
+                            { key: "OrderID", headerText: "Order ID", dataType: "number", width: "10%", hidden: true },
+                            { key: "Freight", headerText: "Freight", dataType: "string", width: "15%" },
+                            { key: "ShipName", headerText: "Ship Name", dataType: "string", width: "20%" },
+                            { key: "ShipAddress", headerText: "Ship Address", dataType: "string", width: "25%" },
+                            { key: "ShipCity", headerText: "Ship City", dataType: "string", width: "20%" },
+                            { key: "ShipCountry", headerText: "Ship Country", dataType: "string", width: "20%" }
+                        ],
+                    }
+                ]
             });
-        })
-    });
+
+            $("#exportButton").igButton({ labelText: "Export" });
+
+            $("#exportButton").on("igbuttonclick", function () {
+                $.ig.GridExcelExporter.exportGrid($("#hierarchicalGrid"), {
+                    dataExportMode: $("#dataExportMode").val()
+                });
+            })
+        });
 });

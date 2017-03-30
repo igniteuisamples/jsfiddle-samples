@@ -1,5 +1,4 @@
 $(function () {
-$(document).ready(function () {
         	$("#suite").igCheckboxEditor({
         		inputName: "suite",
                 checked: true,
@@ -29,4 +28,3 @@ $(document).ready(function () {
         		return false;
         	});
         });
-});

@@ -1,7 +1,7 @@
 $(function () {
 $("#loremText").igScroll({
-            alwaysVisible: true,
-            smoothing: true,
-            scrollbarType: "custom"
-        });
+			alwaysVisible: true,
+			smoothing: true,
+			scrollbarType: "custom"
+		});
 });

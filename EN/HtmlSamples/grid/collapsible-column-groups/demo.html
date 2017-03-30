@@ -7,4 +7,23 @@
 <link href="http://cdn-na.infragistics.com/igniteui/latest/css/themes/infragistics/infragistics.theme.css" rel="stylesheet"></link>
 <link href="http://cdn-na.infragistics.com/igniteui/latest/css/structure/infragistics.css" rel="stylesheet"></link>
 
+<script id="colTmpl" type="text/template">
+		{{if ${ContactTitle} === "Sales Representative" }}
+			<div class='blueCell'>${ContactTitle}</div>
+		{{elseif ${ContactTitle} === "Owner"}} 
+			<div class='redCell'>${ContactTitle}</div>
+		{{else}}
+			<div class='greenCell'>${ContactTitle}</div>
+		{{/if}}
+	</script>
+<script id="colTmpl1" type="text/template">
+		{{if ${ContactTitle} === "Sales Representative" }}
+		<div class='blueCell'>${Phone}</div>
+		{{elseif ${ContactTitle} === "Owner"}}
+		<div class='redCell'>${Phone}</div>
+		{{else}}
+		<div class='greenCell'>${Phone}</div>
+		{{/if}}
+	</script>
+
 <table id="grid1"></table>

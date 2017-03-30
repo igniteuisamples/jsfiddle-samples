@@ -1,6 +1,4 @@
 $(function () {
-$(document).ready(function () {
-            
            $("#successEditor1").igNotifier({
                 direction: "right",
                 messages: {
@@ -34,6 +32,5 @@ $(document).ready(function () {
             });
             $("#hide").on("click", function myfunction() {
                 $("#successEditor1").igNotifier("hide");
-            });          
+            });
         });
-});

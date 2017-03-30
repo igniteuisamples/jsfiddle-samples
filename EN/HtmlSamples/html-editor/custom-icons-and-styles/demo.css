@@ -136,6 +136,17 @@
             background-image: url("http://igniteui.com/images/samples/html-editor/ig-html-editor-custom-styles-sprite.png")!important;
             background-position: 0 -288px;
         }
+        .ui-icon.ui-igbutton-copy:before, .ui-igbutton-cut.ui-icon:before, .ui-igbutton-paste.ui-icon:before,
+        .ui-igbutton-bold.ui-icon:before, .ui-igbutton-italic.ui-icon:before, .ui-igbutton-underline.ui-icon:before,
+        .ui-igbutton-strikethrough.ui-icon:before, .ui-igbutton-table.ui-icon:before, .ui-igbutton-addrow.ui-icon:before,
+        .ui-igbutton-addcolumn.ui-icon:before, .ui-igbutton-removerow.ui-icon:before, .ui-igbutton-addimage.ui-icon:before,
+        .ui-igbutton-addlink.ui-icon:before, .ui-igbutton-unorderedlist.ui-icon:before, .ui-igbutton-orderedlist.ui-icon:before,
+        .ui-igbutton-viewsource-icon.ui-icon:before, .ui-igbutton-removeindent.ui-icon:before, .ui-igbutton-indent.ui-icon:before,
+        .ui-igbutton-justifyright.ui-icon:before, .ui-igbutton-justifyleft.ui-icon:before, .ui-igbutton-justifycenter.ui-icon:before,
+        .ui-igbutton-justifyfull.ui-icon:before
+        {
+            content: "";
+        }
         .ui-ightmleditor .ui-igtoolbar .ui-igbutton.ui-state-default {    
            border-color:transparent;
         }

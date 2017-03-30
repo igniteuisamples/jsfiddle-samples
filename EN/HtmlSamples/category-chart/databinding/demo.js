@@ -9,7 +9,9 @@ var tabularData = [
 
         $(function () {
             $("#theChart").igCategoryChart({
-                dataSource: tabularData
+                dataSource: tabularData,
+                title: "A comparison of population over time",
+                subtitle: "A comparison of the population of Brazil, Indonesia, United States, India and China"
             });
         });
 });

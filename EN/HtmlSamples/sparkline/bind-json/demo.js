@@ -4,7 +4,8 @@ $(function () {
                 dataSource: northwindInvoices,
                 height: "100px",
                 width: "100%",
-                valueMemberPath: 'ExtendedPrice'
+                valueMemberPath: 'ExtendedPrice',
+                tooltipTemplate: "Low:${Low}<br>High:${High}"
             });
 
         });

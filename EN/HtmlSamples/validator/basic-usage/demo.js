@@ -1,5 +1,4 @@
 $(function () {
-$(document).ready(function () {
             var data = [
                 { ID: "ID101", Name: "Business", Code: 101 },
                 { ID: "ID102", Name: "Cooking", Code: 102 },
@@ -41,7 +40,7 @@ $(document).ready(function () {
 
             $("#igCheckboxSubscribe").igCheckboxEditor();
 
-            $('#validationForm').igValidator({                
+            $('#validationForm').igValidator({
                 onsubmit: true,
                 successMessage: "Valid",
                 fields: [{
@@ -69,7 +68,7 @@ $(document).ready(function () {
 				{
 				    required: true,
 				    selector: "#dateOfBirth",
-				    date: true,				   
+				    date: true,
 				    onblur: true
 				},
                 {
@@ -81,7 +80,7 @@ $(document).ready(function () {
 				{
 				    required: true,
 				    selector: "#email",
-				    email: true,				   
+				    email: true,
 				    onblur: true
 				},
                 {
@@ -91,13 +90,13 @@ $(document).ready(function () {
                     errorMessage: "Should contain at least 8 characters, 1 number, 1 lowercase character (a-z), 1 uppercase character",
                     custom: function(value, fieldOptions){
                         var myRegEx  = /^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])([a-zA-Z0-9]{8,})$/;
-                        var isValid = myRegEx.test(value);						
+                        var isValid = myRegEx.test(value);
                         return isValid;
                     }
                 },
                 {
                     required: true,
-                    selector: "#confirmPassword",                    
+                    selector: "#confirmPassword",
                     equalTo: "#createPassword",
                     onblur: true,
                 },
@@ -131,4 +130,3 @@ $(document).ready(function () {
                 ]
             });
         });
-});

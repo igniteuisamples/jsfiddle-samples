@@ -10,7 +10,9 @@ var data = [
             $("#theChart").igCategoryChart({
                 dataSource: data,
                 xAxisTitle: "X-Axis Title",
-                yAxisTitle: "Y-Axis Title"
+                yAxisTitle: "Y-Axis Title",
+                title: "A comparison of population over time",
+                subtitle: "A comparison of the population of Brazil, Indonesia, United States, India and China"
             });
         });
 });

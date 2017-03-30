@@ -10,7 +10,7 @@ var data = [
         var selectedSlices = [];
 
         $(function () {
-            //  Create a funnel chart with slice selection allowed and an event handler for 
+            //  Create a funnel chart with slice selection allowed and an event handler for
             //  the sliceClicked event. The styles for selected and unselected slices from
             //  infragistics.theme.css file are used and redefined in the <style> node of the page.
             $("#chart").igFunnelChart({

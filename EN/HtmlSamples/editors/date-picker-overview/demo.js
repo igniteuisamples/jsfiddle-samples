@@ -1,5 +1,4 @@
 $(function () {
-$(document).ready(function () {
             var today = new Date(),
             tomorrow = new Date(new Date().getTime() + 24 * 60 * 60 * 1000);
 
@@ -67,4 +66,3 @@ $(document).ready(function () {
             });
 
         });
-});

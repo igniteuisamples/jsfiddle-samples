@@ -6,10 +6,24 @@
 <link href="http://cdn-na.infragistics.com/igniteui/latest/css/themes/infragistics/infragistics.theme.css" rel="stylesheet"></link>
 <link href="http://cdn-na.infragistics.com/igniteui/latest/css/structure/infragistics.css" rel="stylesheet"></link>
 
-<div id="chart"></div>
-    <br/>
-    
-    <div class="USCensus-attribution">
-        Population data from:<br />
-        <a href="http://www.census.gov/" target="_blank">U.S. Census Bureau</a>
-    </div>
+<div>
+		<div class="layer-type">
+			<input type="checkbox" id="crosshair" checked="checked"></input> Crosshair Layer
+		</div>
+		<div class="layer-type">
+			<input type="radio" name="highlight" value="highlight"></input> Highlight Layer <br />
+			<input type="radio" name="highlight" value="highlightItem" checked="checked"></input> Highlight Item Layer
+		</div>
+		<div class="layer-type">
+			<input type="radio" name="tooltip" value="tooltip" checked="checked"></input> Tooltip Layer <br />
+			<input type="radio" name="tooltip" value="tooltipItem"></input> Tooltip Item Layer
+		</div>
+		<div class="float-clear"></div>
+
+		<div id="chart"></div><br />
+
+		<div class="USCensus-attribution">
+			Population data from:<br />
+			<a href="http://www.census.gov/" target="_blank">U.S. Census Bureau</a>
+		</div>
+	</div>

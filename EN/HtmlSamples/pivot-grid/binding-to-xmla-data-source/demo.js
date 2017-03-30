@@ -3,7 +3,7 @@ $.support.cors = true;
 
         $(function () {
             var dataSource = new $.ig.OlapXmlaDataSource({
-                serverUrl: 'http://sampledata.infragistics.com/olap/msmdpump.dll',
+                serverUrl: 'https://sampledata.infragistics.com/olap/msmdpump.dll',
                 catalog: 'Adventure Works DW Standard Edition',
                 cube: 'Adventure Works',
                 rows: "[Ship Date].[Calendar]",
@@ -13,13 +13,13 @@ $.support.cors = true;
 
             $('#dataSelector').igPivotDataSelector({
                 dataSource: dataSource,
-                height: "650px",
+                height: "600px",
                 width: "240px"
             });
             $("#pivotGrid").igPivotGrid({
                 dataSource: dataSource,
-                height: "650px",
-                width: "670px"
+                height: "600px",
+                width: "570px"
             });
         });
 });

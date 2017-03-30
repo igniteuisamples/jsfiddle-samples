@@ -3,11 +3,13 @@
 <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>
 <script src="http://cdn-na.infragistics.com/igniteui/latest/js/infragistics.core.js"></script>
 <script src="http://cdn-na.infragistics.com/igniteui/latest/js/infragistics.dv.js"></script>
+<script src="http://cdn-na.infragistics.com/igniteui/latest/js/infragistics.lob.js"></script>
 <link href="http://cdn-na.infragistics.com/igniteui/latest/css/themes/infragistics/infragistics.theme.css" rel="stylesheet"></link>
 <link href="http://cdn-na.infragistics.com/igniteui/latest/css/structure/infragistics.css" rel="stylesheet"></link>
 <link href="http://igniteui.com/css/charts/chart-samples.css" type="text/css" rel="stylesheet"></link>
 
 <div class="sampleContent">
+        <h3>Start funnel slice selection, the igGrid below will keep track of the selected slices.</h3><br />
         <div class="chartContainer">
             <h4>Selection with Built-In Styles</h4>
             <div id="chart"></div>
@@ -18,12 +20,12 @@
         </div>
         <div>
             <div style="float: left; padding-top: 7px; border-bottom: 1px solid #d0d0d0; width: 100%;">
-				</div>
+            </div>
             <div style="float: left; padding-top: 20px;">
-					<h4 style="float: left;">Selected Slices:&nbsp;</h4>
-				</div>
-				<div style="float: left; padding-top: 8px;">
-		         <table id="selectedSlicesGrid"></table>
-				</div>
+                <h4 style="float: left;">Selected Slices (grid will be empty until slice selection is performed):&nbsp;</h4>
+            </div>
+            <div style="float: left; padding-top: 8px;">
+                <table id="selectedSlicesGrid"></table>
+            </div>
         </div>
     </div>

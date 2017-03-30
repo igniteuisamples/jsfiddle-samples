@@ -1,6 +1,4 @@
 $(function () {
-$(document).ready(function () {
-
             var colors = ["blue", "red", "brown"];
 
             $("#shoeSize").igNumericEditor({
@@ -34,4 +32,3 @@ $(document).ready(function () {
             $("#tip4").click(function () { $("#info4").toggle(); });
 
         });
-});

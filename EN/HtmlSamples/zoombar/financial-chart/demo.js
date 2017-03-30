@@ -72,23 +72,25 @@ $(document).ready(function () {
 				verticalZoomable: false,
 				windowResponse: "immediate",
 				refreshCompleted: function (e, ui) {
-					var viewport = chart.igDataChart("option", "gridAreaRect"),
-						leftMostValue = chart.igDataChart("unscaleValue", "xAxis", viewport.left),
-						rightMostValue = $("#chart").igDataChart("unscaleValue", "xAxis", viewport.left + viewport.width);
-					// get the dates corresponding to the values
-					leftMostValue = new Date(leftMostValue);
-					rightMostValue = new Date(rightMostValue);
-					// set the dates to the popover
-					if (popoverLeft.data("igPopover")) {
-						popoverLeft.igPopover("setContent", $.ig.formatter(leftMostValue, "date", "date"));
-					}
-					if (popoverRight.data("igPopover")) {
-						popoverRight.igPopover("setContent", $.ig.formatter(rightMostValue, "date", "date"));
-					}
-					zoomParams = {
-						left: ui.chart.actualWindowRect ? ui.chart.actualWindowRect.left : 0.35,
-						width: ui.chart.actualWindowRect ? ui.chart.actualWindowRect.width : 0.30
-					};
+				    if (chart && chart.igDataChart) {
+                        var viewport = chart.igDataChart("option", "gridAreaRect"),
+							    leftMostValue = chart.igDataChart("unscaleValue", "xAxis", viewport.left),
+							    rightMostValue = $("#chart").igDataChart("unscaleValue", "xAxis", viewport.left + viewport.width);
+				        // get the dates corresponding to the values
+				        leftMostValue = new Date(leftMostValue);
+				        rightMostValue = new Date(rightMostValue);
+				        // set the dates to the popover
+				        if (popoverLeft.data("igPopover")) {
+				            popoverLeft.igPopover("setContent", $.ig.formatter(leftMostValue, "date", "date"));
+				        }
+				        if (popoverRight.data("igPopover")) {
+				            popoverRight.igPopover("setContent", $.ig.formatter(rightMostValue, "date", "date"));
+				        }
+				        zoomParams = {
+				            left: ui.chart.actualWindowRect ? ui.chart.actualWindowRect.left : 0.35,
+				            width: ui.chart.actualWindowRect ? ui.chart.actualWindowRect.width : 0.30
+				        }
+                    }
 				}
 			});
 			$("#zoom").igZoombar({

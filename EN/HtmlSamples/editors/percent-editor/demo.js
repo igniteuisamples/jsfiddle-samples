@@ -1,5 +1,4 @@
 $(function () {
-$(document).ready(function () {
             var listValues = [10, 15, 25, 28, 33, 35];
 
             function nettChange() {
@@ -57,4 +56,3 @@ $(document).ready(function () {
             });
 
         });
-});

@@ -6,7 +6,7 @@ $(function () {
                 autoGenerateColumns: false,
                 dataSource: nwCustomersWithOrders,
                 columns: [{
-                    headerText: "ID",
+                    headerText: "Customer ID",
                     key: "ID"
                 }, {
                     headerText: "Company Name",
@@ -18,28 +18,36 @@ $(function () {
                     headerText: "Contact Title",
                     key: "ContactTitle"
                 }],
+                dataRendered: function(evt, ui) {
+                    $("#mainGrid").igGridSelection("selectRow", 0);
+                    selectRowAndExpandSecondPane(0);
+                },
                 features: [{
                     name: "Selection",
                     mode: "row",
                     rowSelectionChanged: function (ui, args) {
-                        $("#detailGrid").igGrid({
-                            width: "100%",
-                            height: "100%",
-                            autoGenerateColumns: false,
-                             columns: [{
-                                 headerText: "Order ID",
-                                key: "OrderID"
-                            }, {
-                                headerText: "Customer ID",
-                                key: "CustomerID"
-                            }, {
-                                headerText: "Ship Name",
-                                key: "ShipName"
-                            }],
-                            dataSource: nwCustomersWithOrders[args.row.index].Orders || []
-                        });
-                        $("#splitter").igSplitter("expandAt", 1);
+                        selectRowAndExpandSecondPane(args.row.index);
                     }
                 }]
             });
+
+            function selectRowAndExpandSecondPane(rowIndex) {
+                $("#detailGrid").igGrid({
+                    width: "100%",
+                    height: "100%",
+                    autoGenerateColumns: false,
+                    columns: [{
+                        headerText: "Order ID",
+                        key: "OrderID"
+                    }, {
+                        headerText: "Customer ID",
+                        key: "CustomerID"
+                    }, {
+                        headerText: "Ship Name",
+                        key: "ShipName"
+                    }],
+                    dataSource: nwCustomersWithOrders[rowIndex].Orders || []
+                });
+                $("#splitter").igSplitter("expandAt", 1);
+            }
         });

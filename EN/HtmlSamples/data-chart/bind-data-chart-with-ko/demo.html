@@ -10,12 +10,14 @@
 <script src="http://cdn-na.infragistics.com/igniteui/latest/js/extensions/infragistics.ui.combo.knockout-extensions.js"></script>
 <script src="http://cdn-na.infragistics.com/igniteui/latest/js/extensions/infragistics.ui.editors.knockout-extensions.js"></script>
 <script src="http://cdn-na.infragistics.com/igniteui/latest/js/extensions/infragistics.ui.datachart.knockout-extensions.js"></script>
+<script src="http://cdn-na.infragistics.com/igniteui/latest/js/extensions/infragistics.datasource.knockoutjs.js"></script>
+<script src="http://cdn-na.infragistics.com/igniteui/latest/js/extensions/infragistics.ui.grid.knockout-extensions.js"></script>
 <link href="http://cdn-na.infragistics.com/igniteui/latest/css/themes/infragistics/infragistics.theme.css" rel="stylesheet"></link>
 <link href="http://cdn-na.infragistics.com/igniteui/latest/css/structure/infragistics.css" rel="stylesheet"></link>
 
 <div class="main-container">
         <div class="eidtors-title">
-            Change editor values to update the charts below
+            Change grid cell values to update the charts below
             <div class="year-profit" data-bind="igCurrencyEditor: {
                 value: yearProfit,
                 readOnly: true,
@@ -28,60 +30,66 @@
         </div>
         <div class="clear hr"></div>
         <div class="window-container-1">
-			<button class="btn-refresh" title="Randomize Chart Data"></button>
-			<span data-bind="text: currMonthLong" class="number-container"></span>
-			<div class="editor-container">
-				<label class="labels">Select Month:</label>
-				<div id="combo-month" data-bind="igCombo: {
-					selectedItems: currMonth,
-					dataSource: months,
-					mode: 'dropdown',
-					enableClearButton: false,
-					width: 100
-				}"></div>
-			</div>
-			<div class="editor-container">
-				<label class="labels">Month Name:</label>
-				<div id="ed-month" data-bind="igTextEditor: { value: currMonth, width: 100, updateMode: 'immediate', readOnly: true }"></div>
-			</div>
-			<div class="responsive-clear"></div>
-			<div class="editor-container">
-				<label class="labels">Revenue:</label>
-				<div id="ed-revenue" data-bind="igNumericEditor: {
-					value: currentRevenue,
-					width: 100,
-					minValue: 0,
-					maxValue: 50,
-					button: 'spin',
-					spinDelta: 0.01,
-					updateMode: 'immediate'
-				}"></div>
-			</div>
-			<div class="editor-container">
-				<label class="labels">Expenses:</label>
-				<div id="ed-expenses" data-bind="igNumericEditor: {
-					value: currentExpenses,
-					width: 100,
-					minValue: 0,
-					maxValue: 50,
-					button: 'spin',
-					spinDelta: 0.01,
-					updateMode: 'immediate'
-				}"></div>
-			</div>
-			<div class="editor-container">
-				<label class="labels">Profit:</label>
-				<div id="ed-profit" data-bind="igNumericEditor: {
-					value: currentProfit,
-					width: 100,
-					minValue: -50,
-					button: 'spin',
-					spinDelta: 0.01,
-					maxValue: 50,
-					updateMode: 'immediate'
-				}"></div>
-			</div>
-			<div class="clear"></div>
+        <button class="btn-refresh" title="Randomize Chart Data"></button>
+            
+        <div class="grid-holder">
+            <table id="grid" data-bind="igGrid: {
+                    dataSource: data,
+                    width: '90%',
+                    height: 300,
+                    autoCommit: true,
+                    autoGenerateColumns: false,
+                    primaryKey: 'index',
+                    columns: [
+                        { key: 'index', hidden: true },
+                        { key: 'month', headerText: 'Month Name' },
+                        { key: 'revenue', headerText: 'Revenue', formatter: toFixedTwoDigits },
+                        { key: 'expenses', headerText: 'Revenue', formatter: toFixedTwoDigits },
+                        { key: 'profit', headerText: 'Profit', formatter: toFixedTwoDigits }
+                    ],
+                    features: [
+                        {
+                            name: 'Updating',
+                            enableAddRow: false,
+                            enableDeleteRow: false,
+                            columnSettings: [{
+                                columnKey: 'month',
+                                readOnly: true
+                            }, {
+                                columnKey: 'revenue',
+                                editorType: 'numeric',
+                                editorOptions: {
+                                    width: 100,
+					                minValue: 0,
+					                maxValue: 50,
+					                buttonType: 'spin',
+					                updateMode: 'immediate'
+                                }
+                            }, {
+                                columnKey: 'expenses',
+                                editorType: 'numeric',
+                                editorOptions: {
+                                    width: 100,
+					                minValue: 0,
+					                maxValue: 50,
+					                buttonType: 'spin',
+					                updateMode: 'immediate'
+                                }
+                            }, {
+                                columnKey: 'profit',
+                                editorType: 'numeric',
+                                editorOptions: {
+                                    width: 100,
+					                minValue: -50,
+					                buttonType: 'spin',
+					                updateMode: 'immediate'
+                                }
+                            }]
+                        }
+                    ]
+                }"></table>
+            </div>
+            <div class="clear"></div>
             <div class="sample-line-chart-holder">
                 <div id="lineChart" data-bind='igDataChart: {
                     dataSource: data,
@@ -141,7 +149,7 @@
                         brush: profitColor
                     }]
                 }'>
-	            </div>
+                </div>
                 <div id="legendLineChart"></div>
             </div>
             <div class="sample-polar-chart-holder">
@@ -173,7 +181,7 @@
                         brush: revenueColor
                     }]
                 }'>
-	            </div>
+                </div>
                 <div id="legendPolarChartRevenue" class="polar-chart-legend"></div>
             </div>
             <div class="sample-polar-chart-holder">
@@ -205,7 +213,7 @@
                         brush: expensesColor
                     }]
                 }'>
-	            </div>
+                </div>
                 <div id="legendPolarChartExpenses" class="polar-chart-legend"></div>
             </div>
             <div class="sample-polar-chart-holder">
@@ -237,7 +245,7 @@
                         brush: profitColor
                     }]
                 }'>
-	            </div>
+                </div>
                 <div id="legendPolarChartProfit" class="polar-chart-legend"></div>
             </div>
             <div class="sample-bar-chart-holder">
@@ -293,7 +301,7 @@
                         brush: profitColor
                     }]
                 }'></div>
-           <div id="legendBarColumnChart"></div>
+                <div id="legendBarColumnChart"></div>
+            </div>
         </div>
-    </div>
     </div>

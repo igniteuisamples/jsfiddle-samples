@@ -64,12 +64,12 @@ $(function () {
                     $("#pivotGrid").igPivotGrid("expandTupleMember", "rowAxis", 0, 0, false);
                     $("#pivotGrid").igPivotGrid("expandTupleMember", "columnAxis", 0, 0, true);
                 },
-                height: "565px",
-                width: "660px"
+                height: "580px",
+                width: "560px"
             });
 
             $('#dataSelector').igPivotDataSelector({
                 dataSource: dataSource,
-                height: "565px"
+                height: "580px"
             });
         });

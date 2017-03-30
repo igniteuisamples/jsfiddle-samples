@@ -3,7 +3,57 @@
 <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>
 <script src="http://igniteui.com/js/external/FileSaver.js"></script>
 <script src="http://igniteui.com/js/external/Blob.js"></script>
-<script src="http://cdn-na.infragistics.com/igniteui/latest/js/infragistics.loader.js"></script>
+<script src="http://cdn-na.infragistics.com/igniteui/latest/js/infragistics.core.js"></script>
+<script src="http://cdn-na.infragistics.com/igniteui/latest/js/infragistics.lob.js"></script>
+<script src="http://cdn-na.infragistics.com/igniteui/latest/js/modules/infragistics.documents.core.js"></script>
+<script src="http://cdn-na.infragistics.com/igniteui/latest/js/modules/infragistics.excel.js"></script>
+<script src="http://cdn-na.infragistics.com/igniteui/latest/js/modules/infragistics.gridexcelexporter.js"></script>
+<script src="http://igniteui.com/js-data/employee-data-allDatatypes"></script>
 
-<table id="grid"></table><br />
-    <input type="button" id="exportButton" value="Export"></input>
+<div class="group-fields">
+            <div class="item">
+                <div id="sorting" class="optionContainer"></div>
+                <label class="item-label" for="sorting">Sorting</label>
+            </div>
+            <div class="item">
+                <div id="summaries" class="optionContainer"></div>
+                <label class="item-label" for="summaries">Summaries</label>
+            </div>
+            <div class="item">
+                <div id="colfixing" class="optionContainer"></div>
+                <label class="item-label" for="colfixing">Column Fixing</label>
+            </div>
+            <div class="item">
+                <div id="styling" class="optionContainer"></div>
+                <label class="item-label" for="styling">Grid Styling</label>
+            </div>
+        </div>
+        <div class="optionContainer">
+            Filtering<br />
+            <select id="filtering" class="selectBounds">
+                <option value="applied">applied</option>
+                <option value="none">none</option>
+                <option value="filteredRowsOnly">filteredRowsOnly</option>
+            </select>
+        </div>
+        <div class="optionContainer">
+            Paging<br />
+            <select id="paging" class="selectBounds">
+                <option value="currentPage">currentPage</option>
+                <option value="allRows">allRows</option>
+            </select>
+        </div>
+        <div class="optionContainer">
+            Hiding <br />
+            <select id="hiding" class="selectBounds">
+                <option value="visibleColumnsOnly">visibleColumnsOnly</option>
+                <option value="none">none</option>
+                <option value="applied">applied</option>
+            </select>
+        </div>
+        <div class="optionContainer">
+            Columns to skip <br />
+            <div id="colstoskip"></div>
+        </div><br/>
+        <input type="button" id="exportButton"></input><br />
+        <table id="grid1"></table>
