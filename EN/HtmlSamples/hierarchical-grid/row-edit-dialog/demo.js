@@ -21,7 +21,7 @@ $(function () {
                         editMode: "dialog",
                         rowEditDialogOptions: {
                             height: "350px",
-                            width: "300px",
+                            width: "390px",
                             containment: "window",
                             showDoneCancelButtons: true
                         },

@@ -9,7 +9,7 @@ $(function () {
                     type: "bing",
                     key: mapHelper.bingData(),
                     imagerySet: "AerialWithLabels", // alternative: "Road" | "Aerial",
-                    bingUrl: "http://dev.virtualearth.net/REST/v1/Imagery/Metadata/"
+                    bingUrl: "https://dev.virtualearth.net/REST/v1/Imagery/Metadata/"
                 },
                 series: [{
                     type: "geographicSymbol",

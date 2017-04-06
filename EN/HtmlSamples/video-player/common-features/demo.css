@@ -42,7 +42,7 @@ canvas {
 		}
 
 		.rightContainer {
-			width: 112px;
+			width: 30%;
 			height: 290px;
 			border-color: #999999;
 			border-style: none none none solid;
@@ -64,7 +64,7 @@ canvas {
 
 		.videoPlayerContainer {
 			float: left;
-			width: 380px;
+			width: 59%;
 		}
 
 		.screenshot {
