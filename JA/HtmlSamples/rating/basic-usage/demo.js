@@ -1,5 +1,3 @@
 $(function () {
-
             $("#rating").igRating();
-
         });

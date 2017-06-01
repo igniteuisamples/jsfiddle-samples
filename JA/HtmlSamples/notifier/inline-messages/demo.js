@@ -1,6 +1,5 @@
 $(function () {
-$(document).ready(function () {
-            /* 
+            /*
 			 * Inline
 			 */
             $("#sSuccessEditor").igTextEditor().igNotifier({ mode: "inline" })
@@ -12,4 +11,3 @@ $(document).ready(function () {
             $("#sErrorEditor").igTextEditor().igNotifier({ mode: "inline" })
 				.igNotifier("notify", "error", "エラー メッセージ。");
        });
-});

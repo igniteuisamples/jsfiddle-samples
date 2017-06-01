@@ -1,45 +1,48 @@
 $(function () {
 var colors = [
-            { Name: "黒" },
-            { Name: "青" },
-            { Name: "茶" },
-            { Name: "緑" },
-            { Name: "オレンジ" },
-            { Name: "パープル" },
-            { Name: "赤" },
-            { Name: "白" },
-            { Name: "黄" }
+            { Name: "jQuery/HTML5/ASP.NET MVC コントロール" },
+            { Name: "ASP.NET コントロール" },
+            { Name: "Windows Forms コントロール" },
+            { Name: "WPF コントロール" },
+            { Name: "Android ネイティブ モバイル コントロール" },
+            { Name: "iOS コントロール" },
+            { Name: "SharePlus" },
+            { Name: "ReportPlus" },
+            { Name: "Indigo Studio" }
         ];
 
         $(function () {
 
             $("#singleSelectCombo").igCombo({
-                width: "270px",
+                width: 300,
                 dataSource: colors,
                 textKey: "Name",
                 valueKey: "Name",
-                dropDownOnFocus: true
+                dropDownOnFocus: true,
+                dropDownOrientation: "bottom"
             });
 
             $("#multiSelectCombo").igCombo({
-                width: "270px",
+                width: 300,
                 dataSource: colors,
                 textKey: "Name",
                 valueKey: "Name",
                 multiSelection: {
                     enabled: true
-                }
+                },
+                dropDownOrientation: "bottom"
             });
 
             $("#checkboxSelectCombo").igCombo({
-                width: "270px",
+                width: 300,
                 dataSource: colors,
                 textKey: "Name",
                 valueKey: "Name",
                 multiSelection: {
                     enabled: true,
                     showCheckboxes: true
-                }
+                },
+                dropDownOrientation: "bottom"
             });
 
         });

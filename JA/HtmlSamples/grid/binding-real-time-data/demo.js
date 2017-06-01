@@ -117,7 +117,38 @@ $(function () {
 					rowsRendered: function (evt, ui) {
 						renderCharts();
 					},
-					features: [{ name: "Updating", editMode: "none", enableAddRow: false, enableDeleteRow: false }]
+					features: [
+						{
+							name: "Updating",
+							editMode: "none",
+							enableAddRow: false,
+							enableDeleteRow: false
+						}, {
+							name: "Filtering",
+							columnSettings: [{
+								columnKey: "Change",
+								customConditions: {
+									Positive: {
+									    labelText: "正数",
+										expressionText: "Positive",
+										requireExpr: false,
+										filterFunc: filterPositiveChangeItems
+									},
+									Negative: {
+									    labelText: "負数",
+										expressionText: "Negative",
+										requireExpr: false,
+										filterFunc: filterNegativeChangeItems
+									}
+								}
+							}]
+						}]
 				});
 			};
+			function filterPositiveChangeItems(value, expression, dataType, ignoreCase, preciseDateFormat) {
+				return value > 0;
+			}
+			function filterNegativeChangeItems(value, expression, dataType, ignoreCase, preciseDateFormat) {
+				return value < 0;
+			}
 		});

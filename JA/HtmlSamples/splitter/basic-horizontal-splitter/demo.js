@@ -6,7 +6,7 @@ $(function () {
                 autoGenerateColumns: false,
                 dataSource: nwCustomersWithOrders,
                 columns: [{
-                    headerText: "ID",
+                    headerText: "顧客 ID",
                     key: "ID"
                 }, {
                     headerText: "会社名",
@@ -18,28 +18,36 @@ $(function () {
                     headerText: "連絡先",
                     key: "ContactTitle"
                 }],
+                dataRendered: function(evt, ui) {
+                    $("#mainGrid").igGridSelection("selectRow", 0);
+                    selectRowAndExpandSecondPane(0);
+                },
                 features: [{
                     name: "Selection",
                     mode: "row",
                     rowSelectionChanged: function (ui, args) {
-                        $("#detailGrid").igGrid({
-                            width: "100%",
-                            height: "100%",
-                            autoGenerateColumns: false,
-                             columns: [{
-                                 headerText: "注文 ID",
-                                key: "OrderID"
-                            }, {
-                                headerText: "顧客 ID",
-                                key: "CustomerID"
-                            }, {
-                                headerText: "出荷名",
-                                key: "ShipName"
-                            }],
-                            dataSource: nwCustomersWithOrders[args.row.index].Orders || []
-                        });
-                        $("#splitter").igSplitter("expandAt", 1);
+                        selectRowAndExpandSecondPane(args.row.index);
                     }
                 }]
             });
+
+            function selectRowAndExpandSecondPane(rowIndex) {
+                $("#detailGrid").igGrid({
+                    width: "100%",
+                    height: "100%",
+                    autoGenerateColumns: false,
+                    columns: [{
+                        headerText: "注文 ID",
+                        key: "OrderID"
+                    }, {
+                        headerText: "顧客 ID",
+                        key: "CustomerID"
+                    }, {
+                        headerText: "出荷名",
+                        key: "ShipName"
+                    }],
+                    dataSource: nwCustomersWithOrders[rowIndex].Orders || []
+                });
+                $("#splitter").igSplitter("expandAt", 1);
+            }
         });

@@ -8,7 +8,8 @@ $(function () {
                 backgroundContent: {
                     type: "bing",
                     key: mapHelper.bingData(),
-                    imagerySet: "AerialWithLabels", // alternative: "Road" | "Aerial"
+                    imagerySet: "AerialWithLabels", // alternative: "Road" | "Aerial",
+                    bingUrl: "https://dev.virtualearth.net/REST/v1/Imagery/Metadata/"
                 },
                 series: [{
                     type: "geographicSymbol",

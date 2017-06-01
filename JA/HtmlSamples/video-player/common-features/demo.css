@@ -24,7 +24,7 @@ canvas {
 
 		.controlsContainer {
 			width: 310px;
-			height: 340px;
+			height: 380px;
 			margin-left: 7px;
 			background: none repeat scroll 0 0 #CFCFCF;
 			border: 1px solid #B1B1B1;
@@ -42,7 +42,7 @@ canvas {
 		}
 
 		.rightContainer {
-			width: 112px;
+			width: 30%;
 			height: 290px;
 			border-color: #999999;
 			border-style: none none none solid;
@@ -64,7 +64,7 @@ canvas {
 
 		.videoPlayerContainer {
 			float: left;
-			width: 380px;
+			width: 59%;
 		}
 
 		.screenshot {

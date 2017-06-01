@@ -42,7 +42,7 @@ var viewModel;
                 $(this).text("製品カテゴリを取得するエラーが発生しました。");
             });
             //  Get all the Categories and their related Products from the Northwind database
-               $.getJSON("http://igniteui.com/api/categories?callback=?", function (data) {
+               $.getJSON("https://igniteui.com/api/categories?callback=?", function (data) {
                 viewModel = new ViewModel(ko.mapping.fromJS(data.d.results));
 
                 viewModel.Category.subscribe(function (item) {

@@ -50,7 +50,7 @@ $(function () {
                 dataSourceType: "json",
                 autofitLastColumn: false,
                 columns: [
-                   { key: "EmployeeID", headerText: "社員 ID", dataType: "number", width: "15%" },
+                   { key: "EmployeeID", headerText: "社員 ID", dataType: "number", width: "15%", hidden: true },
                    { key: "LastName", headerText: "名字", dataType: "string", width: "15%" },
                    { key: "FirstName", headerText: "名前", dataType: "string", width: "15%" },
                    { key: "Title", headerText: "役職", dataType: "string", width: "15%" },

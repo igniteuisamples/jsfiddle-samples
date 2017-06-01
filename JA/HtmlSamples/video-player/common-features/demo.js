@@ -1,11 +1,11 @@
 $(function () {
 			var playing = false;
 			$("#videoPlayer1").igVideoPlayer({
-				sources: ["http://dl.infragistics.com/pg/2011-1/web/shared/videoplayer/videos/big_buck_bunny.mp4",
-							"http://dl.infragistics.com/pg/2011-1/web/shared/videoplayer/videos/big_buck_bunny.webm",
-							"http://dl.infragistics.com/pg/2011-1/web/shared/videoplayer/videos/big_buck_bunny.ogv"
+				sources: ["https://dl.infragistics.com/pg/2011-1/web/shared/videoplayer/videos/big_buck_bunny.mp4",
+							"https://dl.infragistics.com/pg/2011-1/web/shared/videoplayer/videos/big_buck_bunny.webm",
+							"https://dl.infragistics.com/pg/2011-1/web/shared/videoplayer/videos/big_buck_bunny.ogv"
 				],
-				width: 380,
+				width: "100%",
 				posterUrl: "http://jp.igniteui.com/images/samples/video-player/big-buck-bunny.png",
 				fullscreen: false,
 				browserControls: false,

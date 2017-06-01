@@ -10,7 +10,7 @@ $(function () {
             $("#dialog").igDialog({
                 height: height,
                 width: width,
-                headerText: "http://jp.infragistics.com",
+                headerText: "https://jp.infragistics.com",
                 showMinimizeButton: true,
                 showMaximizeButton: true,
                 showPinButton: true

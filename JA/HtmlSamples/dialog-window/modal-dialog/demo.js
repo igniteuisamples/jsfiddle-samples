@@ -10,7 +10,8 @@ $(function () {
                 draggable: false,
                 resizable: false,
                 height: "350px",
-                width: "290px"
+                width: "290px",
+				zIndex: 100010
             });
 
             $("#openDialog").on({

@@ -34,7 +34,7 @@ $( function ()
 
         function contentFunction()
         {
-            var imgTemplate = "<img class='map' alt='${value}' src='http://maps.google.com/maps/api/staticmap?zoom=10&size=250x250&maptype=terrain&sensor=false&center=${value}'>";
+            var imgTemplate = "<img class='map' alt='${value}' src='https://maps.google.com/maps/api/staticmap?zoom=10&size=250x250&maptype=terrain&sensor=false&center=${value}'>";
             var data = [{ value: $( this )[0].value }];
             return $.ig.tmpl( imgTemplate, data );
         }

@@ -9,7 +9,9 @@ var tabularData = [
 
         $(function () {
             $("#theChart").igCategoryChart({
-                dataSource: tabularData
+                dataSource: tabularData,
+                title: "人口の比較 (年)",
+                subtitle: "ブラジル、インドネシア、米国、インド、中国の人口の比較"
             });
         });
 });

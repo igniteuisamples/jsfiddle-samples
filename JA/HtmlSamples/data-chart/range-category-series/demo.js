@@ -18,7 +18,7 @@ $(function () {
                     }],
                     series: [{
                         name: "series1",
-                        title: "テスト系列",
+                        title: "テスト シリーズ",
                         type: seriesType,
                         isHighlightingEnabled: true,
                         isTransitionInEnabled: true,

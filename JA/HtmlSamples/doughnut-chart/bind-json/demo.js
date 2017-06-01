@@ -20,7 +20,10 @@ $(function () {
                         labelsPosition: "bestFit",
                         formatLabel: function (context) {
                             return context.itemLabel + " (" + context.item.Pop1990 + ")";
-                        }
+                        },
+                        showTooltip: true,
+                        tooltipTemplate: "populationTooltipTemplate",
+                        brushes: ["#B284BE", "#5D8AA8", "#C9FFE5", "#7CB9E8", "#F19CBB"]
                     }]
                 });
             });

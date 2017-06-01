@@ -57,13 +57,13 @@ $(function () {
 
             $('#dataSelector').igPivotDataSelector({
                 dataSource: dataSource,
-                height: "565px",
+                height: "580px",
                 width: "230px"
             });
 
             $("#pivotGrid").igPivotGrid({
                 dataSource: dataSource,
-                height: "565px",
-                width: "720px"
+                height: "580px",
+                width: "580px"
             });
         });

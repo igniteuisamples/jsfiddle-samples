@@ -1,4 +1,16 @@
-.codeTable {
+#scrollableContentLeft {
+			height:400px;
+			width:100%;
+			overflow:hidden;
+		}
+
+		#scrollableContentRight {
+			height:400px;
+			width:100%;
+			overflow:hidden;
+		}
+
+		.codeTable {
 			border-collapse: collapse;
 			border-spacing: 0;
 		}

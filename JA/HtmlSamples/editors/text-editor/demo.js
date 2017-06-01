@@ -1,5 +1,4 @@
 $(function () {
-$(document).ready(function () {
         	$("#firstName").igTextEditor({
         		placeHolder: "ジョン",
         	});
@@ -58,4 +57,3 @@ $(document).ready(function () {
                 $("#note").igTextEditor("option", "readOnly", false);
             });
         });
-});

@@ -1,6 +1,4 @@
 $(function () {
-$(document).ready(function () {
-
             var colors = ["青", "赤", "茶"];
 
             $("#shoeSize").igNumericEditor({
@@ -34,4 +32,3 @@ $(document).ready(function () {
             $("#tip4").click(function () { $("#info4").toggle(); });
 
         });
-});

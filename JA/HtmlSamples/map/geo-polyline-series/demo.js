@@ -226,6 +226,6 @@ $(function () {
                         }
                     ]
                 });
-                $("#map").find(".ui-widget-content").append("<span class='copyright-notice'><a href='http://www.openstreetmap.org/copyright'>© OpenStreetMap contributors</a></span>");
+                $("#map").find(".ui-widget-content").append("<span class='copyright-notice'><a href='https://www.openstreetmap.org/copyright'>© OpenStreetMap contributors</a></span>");
             };
         });

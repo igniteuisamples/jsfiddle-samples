@@ -3,20 +3,13 @@
 <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>
 <script src="http://cdn-na.infragistics.com/igniteui/latest/js/infragistics.core.js"></script>
 <script src="http://cdn-na.infragistics.com/igniteui/latest/js/infragistics.dv.js"></script>
+<script src="http://cdn-na.infragistics.com/igniteui/latest/js/infragistics.lob.js"></script>
 <link href="http://cdn-na.infragistics.com/igniteui/latest/css/themes/infragistics/infragistics.theme.css" rel="stylesheet"></link>
 <link href="http://cdn-na.infragistics.com/igniteui/latest/css/structure/infragistics.css" rel="stylesheet"></link>
 <script src="http://cdn-na.infragistics.com/igniteui/latest/js/i18n/infragistics-ja.js"></script>
 
-<span>チャート タイプ:</span>
-
-        <select id="chartTypePicker" onchange="changeChartType()">
-            <option value="line">line</option>
-            <option value="column">column</option>
-            <option value="point">point</option>
-            <option value="area">area</option>
-            <option value="spline">spline</option>
-            <option value="splineArea">splineArea</option>
-            <option value="stepLine">stepLine</option>
-            <option value="stepArea">stepArea</option>
-        </select>
-        <div id="theChart" style="width:800px;height:400px"></div>
+<div style="font-size:17px;">以下のコンボを使用してカテゴリ チャート タイプを変更します。</div>
+    <select id="chartTypePicker">
+    </select>
+    <br /><br />
+    <div id="theChart" style="width:800px;height:400px"></div>

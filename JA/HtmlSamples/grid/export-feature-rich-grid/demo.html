@@ -3,8 +3,58 @@
 <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>
 <script src="http://jp.igniteui.com/js/external/FileSaver.js"></script>
 <script src="http://jp.igniteui.com/js/external/Blob.js"></script>
-<script src="http://cdn-na.infragistics.com/igniteui/latest/js/infragistics.loader.js"></script>
+<script src="http://cdn-na.infragistics.com/igniteui/latest/js/infragistics.core.js"></script>
+<script src="http://cdn-na.infragistics.com/igniteui/latest/js/infragistics.lob.js"></script>
+<script src="http://cdn-na.infragistics.com/igniteui/latest/js/modules/infragistics.documents.core.js"></script>
+<script src="http://cdn-na.infragistics.com/igniteui/latest/js/modules/infragistics.excel.js"></script>
+<script src="http://cdn-na.infragistics.com/igniteui/latest/js/modules/infragistics.gridexcelexporter.js"></script>
+<script src="http://jp.igniteui.com/js-data/employee-data-allDatatypes"></script>
 <script src="http://cdn-na.infragistics.com/igniteui/latest/js/i18n/infragistics-ja.js"></script>
 
-<table id="grid"></table><br />
-    <input type="button" id="exportButton" value="エクスポート"></input>
+<div class="group-fields">
+            <div class="item">
+                <div id="sorting" class="optionContainer"></div>
+                <label class="item-label" for="sorting">並べ替え</label>
+            </div>
+            <div class="item">
+                <div id="summaries" class="optionContainer"></div>
+                <label class="item-label" for="summaries">集計</label>
+            </div>
+            <div class="item">
+                <div id="colfixing" class="optionContainer"></div>
+                <label class="item-label" for="colfixing">列の固定</label>
+            </div>
+            <div class="item">
+                <div id="styling" class="optionContainer"></div>
+                <label class="item-label" for="styling">グリッドのスタイル設定</label>
+            </div>
+        </div>
+        <div class="optionContainer">
+            フィルタリング<br />
+            <select id="filtering" class="selectBounds">
+                <option value="applied">applied</option>
+                <option value="none">none</option>
+                <option value="filteredRowsOnly">filteredRowsOnly</option>
+            </select>
+        </div>
+        <div class="optionContainer">
+            ページング<br />
+            <select id="paging" class="selectBounds">
+                <option value="currentPage">currentPage</option>
+                <option value="allRows">allRows</option>
+            </select>
+        </div>
+        <div class="optionContainer">
+            非表示 <br />
+            <select id="hiding" class="selectBounds">
+                <option value="visibleColumnsOnly">visibleColumnsOnly</option>
+                <option value="none">none</option>
+                <option value="applied">applied</option>
+            </select>
+        </div>
+        <div class="optionContainer">
+            スキップする列 <br />
+            <div id="colstoskip"></div>
+        </div><br/>
+        <input type="button" id="exportButton"></input><br />
+        <table id="grid1"></table>

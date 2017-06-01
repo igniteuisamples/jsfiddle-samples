@@ -50,7 +50,7 @@ $(function () {
                         type: "numericY",
                         minimumValue: 8,
                         maximumValue: 15,
-                        title: "Speed (km/h)",
+                        title: "スピード (km/h)",
                     }
                 ],
                 series: [

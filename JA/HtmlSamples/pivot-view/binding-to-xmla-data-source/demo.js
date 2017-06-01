@@ -5,7 +5,7 @@ $.support.cors = true;
             $("#pivotView").igPivotView({
                 dataSourceOptions: {
                     xmlaOptions: {
-                        serverUrl: 'http://sampledata.infragistics.com/olap/msmdpump.dll',
+                        serverUrl: 'https://sampledata.infragistics.com/olap/msmdpump.dll',
                         catalog: 'Adventure Works DW Standard Edition',
                         cube: 'Adventure Works'
                     },

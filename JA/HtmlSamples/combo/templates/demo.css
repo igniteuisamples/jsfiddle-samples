@@ -45,3 +45,8 @@
         {
             border: none
         }
+
+        .igsb-running-sample > div:first-of-type
+        {
+	        width : 50% !important;
+        }

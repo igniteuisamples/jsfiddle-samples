@@ -1,5 +1,4 @@
 $(function () {
-$(document).ready(function () {
         var listValues = [600, 900, 1500, 1680, 1980, 2100];
 
         function nettChange() {
@@ -56,4 +55,3 @@ $(document).ready(function () {
         });
 
     });
-});

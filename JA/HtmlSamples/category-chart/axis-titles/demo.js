@@ -10,7 +10,9 @@ var data = [
             $("#theChart").igCategoryChart({
                 dataSource: data,
                 xAxisTitle: "X 軸タイトル",
-                yAxisTitle: "Y 軸タイトル"
+                yAxisTitle: "Y 軸タイトル",
+                title: "人口の比較 (年)",
+                subtitle: "ブラジル、インドネシア、米国、インド、中国の人口の比較"
             });
         });
 });

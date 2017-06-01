@@ -9,16 +9,25 @@
 <link href="http://cdn-na.infragistics.com/igniteui/latest/css/structure/infragistics.css" rel="stylesheet"></link>
 <script src="http://cdn-na.infragistics.com/igniteui/latest/js/i18n/infragistics-ja.js"></script>
 
-<div id="priceChart"></div>
-    <div id="indicatorChart"></div>
+<table style="width:100%">
+        <tr>
+            <td style="width:50%">
+                <div id="priceChart"></div>
+            </td>
+            <td style="width:50%">
+                <div id="indicatorChart"></div>
+            </td>
+        </tr>
+    </table>
 
     <div class="selectionOptions">
         <label>インジケーターの選択:</label>
         <select id="indicatorTypes"></select>
     </div>
-    
+
     <div class="selectionOptions" style="display: inline-block">
-        <label>株価のデータ ソース:
+        <label>
+            株価のデータ ソース:
             <a href="http://www.quandl.com/" target="_blank">Quandl</a>
         </label>
     </div>

@@ -1,15 +1,15 @@
 $(function () {
 
             var northwindProductsJSON = [
-                { "ID": 0, "Name": "パン", "Description": "全粒パン", "ReleaseDate": "\/Date(694224000000)\/", "DiscontinuedDate": null, "Rating": 4, "Price": "2.5", "CategoryID": 0 },
-                { "ID": 1, "Name": "果汁 100% オレンジ", "Description": "オレンジ ジュース", "ReleaseDate": "\/Date(812505600000)\/", "DiscontinuedDate": null, "Rating": 3, "Price": "3.5", "CategoryID": 1 },
-                { "ID": 2, "Name": "果汁 100% グレープ", "Description": "グレープ ジュース", "ReleaseDate": "\/Date(970358400000)\/", "DiscontinuedDate": null, "Rating": 3, "Price": "20.9", "CategoryID": 1 },
-                { "ID": 3, "Name": "果汁 100% レモン", "Description": "レモン ジュース", "ReleaseDate": "\/Date(1128124800000)\/", "DiscontinuedDate": "\/Date(1159660800000)\/", "Rating": 3, "Price": "19.9", "CategoryID": 1 },
-                { "ID": 4, "Name": "コーヒーマイルド", "Description": "コーヒーマイルド 195g×10缶", "ReleaseDate": "\/Date(1041724800000)\/", "DiscontinuedDate": null, "Rating": 3, "Price": "22.99", "CategoryID": 1 },
-                { "ID": 5, "Name": "コーヒービター", "Description": "コーヒービター 195g×10缶", "ReleaseDate": "\/Date(1154649600000)\/", "DiscontinuedDate": null, "Rating": 3, "Price": "22.8", "CategoryID": 1 },
-                { "ID": 6, "Name": "コーヒーミルク", "Description": "コーヒーミルク 195g×10缶", "ReleaseDate": "\/Date(1162684800000)\/", "DiscontinuedDate": null, "Rating": 3, "Price": "18.8", "CategoryID": 1 },
-                { "ID": 7, "Name": "DVD プレーヤー", "Description": "1080P DVD プレーヤー", "ReleaseDate": "\/Date(1163548800000)\/", "DiscontinuedDate": null, "Rating": 3, "Price": "35.88", "CategoryID": 2 },
-                { "ID": 8, "Name": "LCD HDTV", "Description": "100 センチメートル 1080p LCD テレビ", "ReleaseDate": "\/Date(1210204800000)\/", "DiscontinuedDate": null, "Rating": 3, "Price": "1088.8", "CategoryID": 2 }
+                { "ID": 0, "メーカー": "Dough Masters", "Name": "パン", "Description": "全粒パン", "ReleaseDate": "\/Date(694224000000)\/", "DiscontinuedDate": null, "Rating": 4, "Price": "2.5", "CategoryID": 0 },
+                { "ID": 1, "メーカー": "Smith Brothers", "Name": "果汁 100% オレンジ", "Description": "オレンジ ジュース", "ReleaseDate": "\/Date(812505600000)\/", "DiscontinuedDate": null, "Rating": 3, "Price": "3.5", "CategoryID": 1 },
+                { "ID": 2, "メーカー": "Healthy Drinks", "Name": "果汁 100% グレープ", "Description": "グレープ ジュース", "ReleaseDate": "\/Date(970358400000)\/", "DiscontinuedDate": null, "Rating": 3, "Price": "20.9", "CategoryID": 1 },
+                { "ID": 3, "メーカー": "Healthy Drinks", "Name": "果汁 100% レモン", "Description": "レモン ジュース", "ReleaseDate": "\/Date(1128124800000)\/", "DiscontinuedDate": "\/Date(1159660800000)\/", "Rating": 3, "Price": "19.9", "CategoryID": 1 },
+                { "ID": 4, "メーカー": "Healthy Drinks", "Name": "コーヒーマイルド", "Description": "コーヒーマイルド 195g×10缶", "ReleaseDate": "\/Date(1041724800000)\/", "DiscontinuedDate": null, "Rating": 3, "Price": "22.99", "CategoryID": 1 },
+                { "ID": 5, "メーカー": "Healthy Drinks", "Name": "コーヒービター", "Description": "コーヒービター 195g×10缶", "ReleaseDate": "\/Date(1154649600000)\/", "DiscontinuedDate": null, "Rating": 3, "Price": "22.8", "CategoryID": 1 },
+                { "ID": 6, "メーカー": "Healthy Drinks", "Name": "コーヒーミルク", "Description": "コーヒーミルク 195g×10缶", "ReleaseDate": "\/Date(1162684800000)\/", "DiscontinuedDate": null, "Rating": 3, "Price": "18.8", "CategoryID": 1 },
+                { "ID": 7, "メーカー": "Western Electronics", "Name": "DVD プレーヤー", "Description": "1080P DVD プレーヤー", "ReleaseDate": "\/Date(1163548800000)\/", "DiscontinuedDate": null, "Rating": 3, "Price": "35.88", "CategoryID": 2 },
+                { "ID": 8, "メーカー": "Western Electronics", "Name": "LCD HDTV", "Description": "100 センチメートル 1080p LCD テレビ", "ReleaseDate": "\/Date(1210204800000)\/", "DiscontinuedDate": null, "Rating": 3, "Price": "1088.8", "CategoryID": 2 }
             ],
 
             northWindCategoriesJSON = [
@@ -46,10 +46,11 @@ $(function () {
                 width: "100%",
                 height: "360px",
                 columns: [
-                    { headerText: "", key: "ID", dataType: "number", width: "8%" },
-                    { headerText: "名前", key: "Name", dataType: "string", width: "24%" },
-                    { headerText: "説明", key: "Description", dataType: "string", width: "34%" },
-                    { headerText: "カテゴリ", key: "CategoryID", dataType: "number", width: "34%", formatter: formatCategoryCombo }
+                    { headerText: "", key: "ID", dataType: "number", hidden: true },
+                    { headerText: "メーカー", key: "Manufacturer", dataType: "string", width: "20%" },
+                    { headerText: "名前", key: "Name", dataType: "string", width: "20%" },
+                    { headerText: "説明", key: "Description", dataType: "string", width: "30%" },
+                    { headerText: "カテゴリ", key: "CategoryID", dataType: "number", width: "30%", formatter: formatCategoryCombo }
                 ],
                 features: [
                     {

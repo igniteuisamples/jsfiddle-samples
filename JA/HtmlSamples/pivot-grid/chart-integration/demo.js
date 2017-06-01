@@ -137,7 +137,7 @@ $(function () {
                         $chart.igDataChart("destroy");
                     }
                     $chart.igDataChart({
-                        width: "700px",
+                        width: "80%",
                         height: "500px",
                         dataSource: ds,
                         series: series,
@@ -153,7 +153,8 @@ $(function () {
                         }],
                         horizontalZoomable: true,
                         verticalZoomable: true,
-                        windowResponse: "immediate"
+                        windowResponse: "immediate",
+                        title: "販売単位ごとの売上"
                     });
                 };
 
