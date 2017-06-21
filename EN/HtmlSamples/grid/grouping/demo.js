@@ -2,22 +2,29 @@ $(function () {
 			$("#grid").igGrid({
 				autoGenerateColumns: false,
 				width: "100%",
-				height: "400px",
+				height: "500px",
+			    rowVirtualization: true,
+			    virtualizationMode: "continuous",
 				columns: [
 					{ headerText: "Order ID", key: "OrderID", dataType: "number", width: "0%", hidden: true },
-					{ headerText: "Ship Country", key: "ShipCountry", dataType: "string", width: "20%" },
-					{ headerText: "Order Date", key: "OrderDate", dataType: "date", width: "10%" },
-					{ headerText: "Unit Price", key: "UnitPrice", dataType: "string", width: "20%" },
-					{ headerText: "Discount", key: "Discount", dataType: "string", width: "10%" },
-					{ headerText: "Ship Name", key: "ShipName", dataType: "string", width: "20%" },
-					{ headerText: "Ship City", key: "ShipCity", dataType: "string", width: "12%" },
-					{ headerText: "Customer City", key: "City", dataType: "string", width: "8%" }
+					{ headerText: "Ship Country", key: "ShipCountry", dataType: "string", width: "12%" },
+					{ headerText: "Order Date", key: "OrderDate", dataType: "date", width: "18%" },
+					{ headerText: "Ship Name", key: "ShipName", dataType: "string", width: "14%" },
+					{ headerText: "Ship City", key: "ShipCity", dataType: "string", width: "13%" },
+					{ headerText: "Customer City", key: "City", dataType: "string", width: "13%" },
+					{ headerText: "Unit Price", key: "UnitPrice", dataType: "number", width: "17%" },
+					{ headerText: "Discount", key: "Discount", dataType: "number", width: "13%" },
 				],
 				dataSource: northwindInvoices,
 				features: [
 					{
 						name: 'GroupBy',
 						groupByDialogContainment: "window",
+						groupSummaries: [
+							{
+								summaryFunction: "Sum", label: "Sum = ", format: ".##"
+							}
+						],
 						columnSettings: [
 							{
 								columnKey: "ShipCountry",
@@ -32,11 +39,11 @@ $(function () {
 										customSummary: function (data) {
 											var count = 0, date = new Date(1996, 7, 1);
 											$.map(data.array, function (d) {
-												  if (d > date) {
-													  count++;
-												  }
-											  });
-											  return count.toFixed(0);
+												if (d > date) {
+													count++;
+												}
+											});
+											return count.toFixed(0);
 										}
 									}
 								]
@@ -45,9 +52,6 @@ $(function () {
 						summarySettings: {
 							summaryFormat: "#"
 						}
-					},
-					{
-						name: "Paging"
 					},
 					{
 						name: "Filtering"

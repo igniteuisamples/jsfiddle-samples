@@ -1,0 +1,87 @@
+<script src="http://igniteui.com/js/modernizr.min.js"></script>
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>
+<script src="http://cdn-na.infragistics.com/igniteui/latest/js/infragistics.loader.js"></script>
+
+<div class="actions spreadsheet-sample" id="tabs">
+		<ul>
+			<li><a href="#tabs-1">Show</a></li>
+			<li><a href="#tabs-2">Zoom Level</a></li>
+			<li><a href="#tabs-3">Sheet</a></li>
+			<li><a href="#tabs-4">Formatting</a></li>
+			<li><a href="#tabs-5">Delete</a></li>
+		</ul>
+
+		<div class="show clearfix" id="tabs-1">
+			<div class="show-row">
+                <span for="gridlines" class="show-row-text">
+                    <div id="gridlines" class="show-row-checkbox"></div>
+                    Gridlines
+                </span>
+            </div>
+            <div class="show-row">
+                <span for="headings" class="show-row-text">
+                    <div id="headings" class="show-row-checkbox"></div>
+                    Headings
+                </span>
+            </div>
+            <div class="show-row">
+                <span for="formulabar" class="show-row-text">
+                    <div id="formulabar" class="show-row-checkbox"></div>
+                    Formula bar
+                </span>
+            </div>
+        </div>
+
+		<div class="zoom clearfix" id="tabs-2">
+			<div class="zoom-slider f-left">
+                <div id="zoomOut" class="spreadsheet-sample-btn">
+                    <div class="spreadsheet-icon zoom-in-icon"></div>
+                </div>
+
+                <div id="zoomSlider"></div>
+
+                <div id="zoomIn" class="spreadsheet-sample-btn">
+                    <div class="spreadsheet-icon zoom-out-icon"></div>
+                </div>
+            </div>
+
+			<div class="f-left">
+                <div id="zoom" class="spreadsheet-sample-btn">
+                    <div class="spreadsheet-icon zoom-reset"></div>
+                </div>
+
+                <div id="zoomSelection" class="spreadsheet-sample-btn">
+                    <div class="spreadsheet-icon zoom-selection"></div>
+                </div>
+            </div>
+		</div>
+
+		<div class="sheet clearfix" id="tabs-3">
+			<div id="freeze"></div>
+			<div id="split" class="spreadsheet-sample-btn">Split</div>
+		</div>
+
+		<div class="formatting clearfix" id="tabs-4">
+
+			<div id="bold" class="spreadsheet-sample-btn">
+                <div class="spreadsheet-icon ribbon-bold"></div>
+            </div>
+
+			<div id="italic" class="spreadsheet-sample-btn">
+                <div class="spreadsheet-icon ribbon-italic"></div>
+            </div>
+
+			<div id="underline" class="spreadsheet-sample-btn">
+                <div class="spreadsheet-icon ribbon-underline"></div>
+            </div>
+
+		</div>
+
+		<div class="delete clearfix" id="tabs-5">
+			<div id="delSheet" class="spreadsheet-sample-btn">Delete Sheet</div>
+			<div id="delContent" class="spreadsheet-sample-btn">Delete Content</div>
+		</div>
+
+	</div>
+	<div id="spreadsheet2"></div>

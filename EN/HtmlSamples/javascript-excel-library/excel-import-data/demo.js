@@ -61,7 +61,7 @@ $(function () {
                 }
 
             })
-        })
+        });
 
         function createGrid(data, gridColumns) {
             if ($("#grid1").data("igGrid") !== undefined) {

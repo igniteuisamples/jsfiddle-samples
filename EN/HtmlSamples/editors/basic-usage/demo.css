@@ -20,10 +20,17 @@
         .element
         {
             width: 200px;
+            margin-right: 40px;
             float: left;
+            height: 3.75em;
+        }
+        .element.mid
+        {
+            margin-left: 240px;
+            margin-top: 20px;
         }
 
-        input, label
+        p.inline
         {
             display: inline-block;
         }

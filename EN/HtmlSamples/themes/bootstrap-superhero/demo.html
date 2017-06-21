@@ -5,75 +5,121 @@
 <script src="http://cdn-na.infragistics.com/igniteui/latest/js/infragistics.lob.js"></script>
 <script src="http://cdn-na.infragistics.com/igniteui/latest/js/infragistics.dv.js"></script>
 <script src="http://igniteui.com/data-files/adventureworks.min.js"></script>
-<link href="http://cdn-na.infragistics.com/igniteui/latest/css/themes/superhero/infragistics.theme.css" rel="stylesheet"></link>
+<link href="http://cdn-na.infragistics.com/igniteui/latest/css/themes/bootstrap3/superhero/infragistics.theme.css" rel="stylesheet"></link>
 <link href="http://cdn-na.infragistics.com/igniteui/latest/css/structure/infragistics.css" rel="stylesheet"></link>
 
-<div class="igsb-sample-desc">
-        <p>This is the Ignite UI Bootstrap Superhero theme.  You can use this independently of Bootstrap for Ignite UI, but it is based on this Bootstrap theme so that you can use it along with other Bootstrap-themed elements.</p>
-        <p>You can also generate your own Bootstrap-based themes for Ignite UI using our Ignite UI Bootstrap Theme Generator!</p>
-    </div>
-    <div class="themeButtonContainer">
-        <a class="themeButton" href="http://www.igniteui.com/bootstrap-theme-generator/superhero">
-            <span>Generate Your Own Custom Bootstrap Theme</span>
-        </a>
-    </div>
-    <div class="theme-container">
-    <h2>igGrid</h2>
-    <table id="grid"></table>
+<div class="theme-container">
+        <section>
+            <div class="igsb-sample-desc">
+                <p>This is the Ignite UI Bootstrap Superhero theme.  You can use this independently of Bootstrap for Ignite UI, but it is based on this Bootstrap theme so that you can use it along with other Bootstrap-themed elements.</p>
+            </div>
 
-    <h2>igEditors</h2>
-    
-    <p>
-        <input id="textEditor" value="John"></input></p>
-    <p>
-        <input id="dateEditor" value="07/07/2012"></input></p>
-    <p>
-        <input id="maskEditor" value="mask edit"></input></p>
-    <p>
-        <input id="currencyEditor" value="42"></input></p>
-    <p>
-        <input id="numericEditor" value="42"></input></p>
-    <p>
-        <input id="percentEditor" value="0.42"></input></p>
-    <p style="padding: 2px">
-        <input id="datePicker" type="date"></input></p>
+            <br />
+            <p>You can also generate your own Bootstrap-based themes for Ignite UI using our Ignite UI Bootstrap Theme Generator!</p>
+            <div class="themeButtonContainer">
+                <a class="themeButton" href="http://www.igniteui.com/bootstrap-theme-generator/superhero">
+                    <span>Generate Your Own Custom Bootstrap Theme</span>
+                </a>
+            </div>
+        </section>
 
-    <h2>igCombo</h2>
-    <div id="combo"></div>
+        <section>
+            <h1 class="pageTitle">igGrid</h1>
+            <table id="grid"></table>
+        </section>
 
-    <h2>igTree</h2>
-    <ul id="tree"></ul>
 
-    <h2>igDialog</h2>
-    <input type="button" id="openDialog"></input>
-    <div id="dialog">
-        <img style="width: 200px" src="http://igniteui.com/images/samples/dialog-window/content.jpg"></img>
-    </div>
+        <section>
+            <h1 class="pageTitle">igEditors</h1>
+            <div class="igEditors flex">
+                <div>
+                    <label for="textEditor">Text</label>
+                    <input id="textEditor" value="John"></input>
+                </div>
 
-    <h2>igDataChart</h2>
-    <div style="width: 80%; min-width: 210px;">
-        <div id="chart"></div>
-    </div>
+                <div>
+                    <label for="dateEditor">Date</label>
+                    <input id="dateEditor" value="07/07/2012"></input>
+                </div>
 
-    <h2>jQuery UI Tabs</h2>
-    <div id="tabs">
-      <ul>
-        <li><a href="#tabs-1">Lorem ipsum</a></li>
-        <li><a href="#tabs-2">Nunc lacinia</a></li>
-        <li><a href="#tabs-3">Praesent tristique</a></li>
-      </ul>
-      <div id="tabs-1">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget porta urna. Ut gravida mi at ligula commodo feugiat vehicula lacus tincidunt. Proin lobortis magna sed lacus malesuada commodo fermentum felis auctor. Sed quis nulla quis tellus facilisis malesuada. Mauris aliquam neque consequat mi blandit in luctus magna rutrum. Fusce sit amet ipsum magna. Vivamus porttitor arcu vitae eros molestie et sagittis dolor cursus. Quisque ultrices feugiat risus, vitae molestie felis interdum ac. Suspendisse pellentesque magna nec est commodo porttitor.</p>
-      </div>
-      <div id="tabs-2">
-        <p>Nunc lacinia ligula a nisl porta sed facilisis mauris facilisis. Sed a ante turpis, eget semper odio. Curabitur facilisis faucibus iaculis. Ut fermentum pretium ultrices. Etiam sem dui, adipiscing sed tempus et, adipiscing eget erat. Vestibulum nec eros magna.</p>
-      </div>
-      <div id="tabs-3">
-        <p>Praesent tristique arcu eget ligula pulvinar mollis. Maecenas at elit at justo posuere gravida id eu enim. Duis imperdiet lectus nec augue sollicitudin hendrerit. Suspendisse consectetur, lorem nec eleifend rutrum, eros metus sodales libero, et rutrum diam augue et lectus. Integer sed est vitae risus dignissim condimentum ullamcorper at massa. Donec a orci nisl, eget ullamcorper augue. Quisque sagittis fringilla tortor. Vivamus ligula velit, aliquam ut pellentesque quis, fringilla sit amet tortor.</p>
-        <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed convallis risus sit amet lorem facilisis posuere. Cras malesuada lobortis sodales. Praesent aliquam elementum tortor nec sollicitudin. Phasellus sed erat lectus, elementum adipiscing odio.</p>
-      </div>
-    </div>
+                <div>
+                    <label for="maskEditor">Mask</label>
+                    <input id="maskEditor" value="mask edit"></input>
+                </div>
 
-    <h2>jQuery UI Datepicker</h2>
-    <div id="datepickerui"></div>
+                <div>
+                    <label for="currencyEditor">Currency</label>
+                    <input class="text-rigth" id="currencyEditor" value="42"></input>
+                </div>
+
+                <div>
+                    <label for="numericEditor">Numeric</label>
+                    <input class="text-rigth" id="numericEditor" value="42"></input>
+                </div>
+
+                <div>
+                    <label for="percentEditor">Percent</label>
+                    <input class="text-rigth" id="percentEditor" value="0.42"></input>
+                </div>
+
+                <div>
+                    <label for="datePicker">Date Picker</label>
+                    <input id="datePicker" type="date"></input>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="three-col flex">
+            <div>
+                <h1 class="pageTitle">igCombo</h1>
+                <div id="combo"></div>
+            </div>
+
+            <div>
+                <h1 class="pageTitle">igTree</h1>
+                <ul id="tree"></ul>
+            </div>
+
+            <div>
+                <h1 class="pageTitle">igDialog</h1>
+                <input type="button" id="openDialog"></input>
+                <div id="dialog">
+                    <img style="width: 200px" src="http://igniteui.com/images/samples/dialog-window/content.jpg"></img>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h1 class="pageTitle">igDataChart</h1>
+
+            <div id="chart"></div>
+
+        </section>
+
+        <section>
+            <h1 class="pageTitle">jQuery UI Tabs</h1>
+            <div id="tabs">
+                <ul>
+                    <li><a href="#tabs-1">Lorem ipsum</a></li>
+                    <li><a href="#tabs-2">Nunc lacinia</a></li>
+                    <li><a href="#tabs-3">Praesent tristique</a></li>
+                </ul>
+                <div id="tabs-1">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget porta urna. Ut gravida mi at ligula commodo feugiat vehicula lacus tincidunt. Proin lobortis magna sed lacus malesuada commodo fermentum felis auctor. Sed quis nulla quis tellus facilisis malesuada. Mauris aliquam neque consequat mi blandit in luctus magna rutrum. Fusce sit amet ipsum magna. Vivamus porttitor arcu vitae eros molestie et sagittis dolor cursus. Quisque ultrices feugiat risus, vitae molestie felis interdum ac. Suspendisse pellentesque magna nec est commodo porttitor.</p>
+                </div>
+                <div id="tabs-2">
+                    <p>Nunc lacinia ligula a nisl porta sed facilisis mauris facilisis. Sed a ante turpis, eget semper odio. Curabitur facilisis faucibus iaculis. Ut fermentum pretium ultrices. Etiam sem dui, adipiscing sed tempus et, adipiscing eget erat. Vestibulum nec eros magna.</p>
+                </div>
+                <div id="tabs-3">
+                    <p>Praesent tristique arcu eget ligula pulvinar mollis. Maecenas at elit at justo posuere gravida id eu enim. Duis imperdiet lectus nec augue sollicitudin hendrerit. Suspendisse consectetur, lorem nec eleifend rutrum, eros metus sodales libero, et rutrum diam augue et lectus. Integer sed est vitae risus dignissim condimentum ullamcorper at massa. Donec a orci nisl, eget ullamcorper augue. Quisque sagittis fringilla tortor. Vivamus ligula velit, aliquam ut pellentesque quis, fringilla sit amet tortor.</p>
+                    <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed convallis risus sit amet lorem facilisis posuere. Cras malesuada lobortis sodales. Praesent aliquam elementum tortor nec sollicitudin. Phasellus sed erat lectus, elementum adipiscing odio.</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h1 class="pageTitle">jQuery UI Datepicker</h1>
+            <div id="datepickerui"></div>
+        </section>
     </div>

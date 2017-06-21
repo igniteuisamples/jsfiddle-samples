@@ -8,19 +8,19 @@
 
 <div id="container">
         <div id="formContainer">
-            <p style="display: inline-block">Measurement units</p>
+            <p class="inline">Measurement units</p>
             <input type="radio" name="radioMeasurement" id="radioMetric" value="metric" onchange="radioChange()" checked=""></input>
             <label for="radioM">metric</label>
             <input type="radio" name="radioMeasurement" id="radioImperial" value="imperial" onchange="radioChange()"></input>
             <label for="radioI">imperial</label>
 
             <div id="mainInfo">
-                <div class="element" style="margin-right: 40px;">
+                <div class="element">
                     <label for="client">Client</label>
                     <input id="clientName" type="text" name="client"></input>
                 </div>
 
-                <div class="element" style="margin-right: 40px;">
+                <div class="element">
                     <label for="address">Delivery address</label>
                     <input id="deliveryAddress" name="address"></input>
                 </div>
@@ -31,12 +31,12 @@
             </div>
 
             <div id="client">
-                <div class="element" style="margin-right: 40px;">
+                <div class="element">
                     <label for="mail">Contact email</label>
                     <input id="clientMail" name="mail"></input>
                 </div>
 
-                <div class="element" style="margin-right: 40px;">
+                <div class="element">
                     <label for="date">Delivery date</label>
                     <input id="deliveryDate" name="date"></input>
                 </div>
@@ -47,9 +47,9 @@
             </div>
 
             <div id="delivery">
-                <div class="element" style="margin-left: 240px; margin-right: 40px; margin-top: 20px;">
-                    <input id="freeDelivery" style="margin-right: 5px; display: inline-block"></input>
-                    <label for="checkbox" style="display: inline-block;">Apply free delivery</label>
+                <div class="element mid">
+                    <input id="freeDelivery"></input>
+                    <label for="freeDelivery">Apply free delivery</label>
                 </div>
                 <div class="element">
                     <label for="applyDiscount">Apply discount</label>
@@ -63,7 +63,7 @@
                     <input type="submit" id="createOrder" value="Create Purchase Order" style="height: 25px; width: 200px;" onclick="createNewOrder()"></input>
                 
                     <div id="successMessageDiv">
-                        <p id="successMessage" style="display: inline-block;">
+                        <p id="successMessage" class="inline">
                     </div>
                 </div>
             </div>

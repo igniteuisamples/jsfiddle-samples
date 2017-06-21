@@ -1,15 +1,15 @@
 $(function () {
 var northwindEmployees = [
-			{ "ID": 1, "Name": "Davolio, Nancy", "Title": "Sales Representative", "ImageUrl": "http://igniteui.com/images/samples/nw/employees/1.png", "Phone": "(206) 555-9857", "PhoneUrl": "tel:(206) 555-9857", "BirthDate": "\/Date(480808800000)\/", "HireDate": "\/Date(1224795600000)\/", "Country": "USA", "Languages": [{ name: "English" }, { name: "Russian" }] },
-			{ "ID": 2, "Name": "Fuller, Andrew", "Title": "Vice President, Sales", "ImageUrl": "http://igniteui.com/images/samples/nw/employees/2.png", "Phone": "(206) 555-9482", "PhoneUrl": "tel:(206) 555-9482", "BirthDate": "\/Date(433458000000)\/", "HireDate": "\/Date(1269640800000)\/", "Country": "USA", "Languages": [{ name: "English" }, { name: "German" }] },
-			{ "ID": 3, "Name": "Leverling, Janet", "Title": "Sales Representative", "ImageUrl": "http://igniteui.com/images/samples/nw/employees/3.png", "Phone": "(206) 555-3412", "PhoneUrl": "tel:(206) 555-3412", "BirthDate": "\/Date(268088400000)\/", "HireDate": "\/Date(1318453200000)\/", "Country": "USA", "Languages": [{ name: "English" }] },
-			{ "ID": 4, "Name": "Peacock, Margaret", "Title": "Sales Representative", "ImageUrl": "http://igniteui.com/images/samples/nw/employees/4.png", "Phone": "(206) 555-8122", "PhoneUrl": "tel:(206) 555-8122", "BirthDate": "\/Date(377388000000)\/", "HireDate": "\/Date(1171404000000)\/", "Country": "USA", "Languages": [{ name: "English" }, { name: "Spanish" }] },
-			{ "ID": 5, "Name": "Buchanan, Steven", "Title": "Sales Manager", "ImageUrl": "http://igniteui.com/images/samples/nw/employees/5.png", "Phone": "(71) 555-4848", "PhoneUrl": "tel:(71) 555-4848", "BirthDate": "\/Date(-110084400000)\/", "HireDate": "\/Date(955573200000)\/", "Country": "UK", "Languages": [{ name: "English" }, { name: "Italian" }] },
-			{ "ID": 6, "Name": "Suyama, Michael", "Title": "Sales Representative", "ImageUrl": "http://igniteui.com/images/samples/nw/employees/6.png", "Phone": "(71) 555-7773", "PhoneUrl": "tel:(71) 555-7773", "BirthDate": "\/Date(44744400000)\/", "HireDate": "\/Date(1125090000000)\/", "Country": "UK", "Languages": [{ name: "English" }, { name: "Portuguese" }] },
-			{ "ID": 7, "Name": "King, Robert", "Title": "Sales Representative", "ImageUrl": "http://igniteui.com/images/samples/nw/employees/7.png", "Phone": "(71) 555-5598", "PhoneUrl": "tel:(71) 555-5598", "BirthDate": "\/Date(-213760800000)\/", "HireDate": "\/Date(907794000000)\/", "Country": "UK", "Languages": [{ name: "English" }, { name: "French" }, { name: "Spanish" }] },
-			{ "ID": 8, "Name": "Callahan, Laura", "Title": "Inside Sales Coordinator", "ImageUrl": "http://igniteui.com/images/samples/nw/employees/8.png", "Phone": "(206) 555-1189", "PhoneUrl": "tel:(206) 555-1189", "BirthDate": "\/Date(318828800000)\/", "HireDate": "\/Date(962825600000)\/", "Country": "USA", "Languages": [{ name: "English" }, { name: "Mandarin" }] },
-			{ "ID": 9, "Name": "Dodsworth, Anne", "Title": "Sales Representative", "ImageUrl": "http://igniteui.com/images/samples/nw/employees/9.png", "Phone": "(71) 555-4444", "PhoneUrl": "tel:(71) 555-4444", "BirthDate": "\/Date(444952800000)\/", "HireDate": "\/Date(1246395600000)\/", "Country": "UK", "Languages": [{ name: "English" }, { name: "Japanese" }] }
-		]
+			{ "ID": 1, "Name": "Davolio, Nancy", "Title": "Sales Representative", "ImageUrl": "http://igniteui.com/images/samples/nw/employees/1.png", "Phone": "(206) 555-9857", "PhoneUrl": "tel:(206) 555-9857", "BirthDate":"1948-12-08T00:00:00", "HireDate":"1992-05-01T00:00:00", "Country": "USA", "Languages": [{ name: "English" }, { name: "Russian" }] },
+			{ "ID": 2, "Name": "Fuller, Andrew", "Title": "Vice President, Sales", "ImageUrl": "http://igniteui.com/images/samples/nw/employees/2.png", "Phone": "(206) 555-9482", "PhoneUrl": "tel:(206) 555-9482", "BirthDate":"1952-02-19T00:00:00", "HireDate":"1992-08-14T00:00:00", "Country": "USA", "Languages": [{ name: "English" }, { name: "German" }] },
+			{ "ID": 3, "Name": "Leverling, Janet", "Title": "Sales Representative", "ImageUrl": "http://igniteui.com/images/samples/nw/employees/3.png", "Phone": "(206) 555-3412", "PhoneUrl": "tel:(206) 555-3412", "BirthDate":"1963-08-30T00:00:00Z", "HireDate":"1992-04-01T00:00:00Z", "Country": "USA", "Languages": [{ name: "English" }] },
+			{ "ID": 4, "Name": "Peacock, Margaret", "Title": "Sales Representative", "ImageUrl": "http://igniteui.com/images/samples/nw/employees/4.png", "Phone": "(206) 555-8122", "PhoneUrl": "tel:(206) 555-8122", "BirthDate":"1937-09-19T00:00:00Z","HireDate":"1993-05-03T00:00:00Z", "Country": "USA", "Languages": [{ name: "English" }, { name: "Spanish" }] },
+			{ "ID": 5, "Name": "Buchanan, Steven", "Title": "Sales Manager", "ImageUrl": "http://igniteui.com/images/samples/nw/employees/5.png", "Phone": "(71) 555-4848", "PhoneUrl": "tel:(71) 555-4848", "BirthDate":"1955-03-04T00:00:00Z","HireDate":"1993-10-17T00:00:00Z", "Country": "UK", "Languages": [{ name: "English" }, { name: "Italian" }] },
+			{ "ID": 6, "Name": "Suyama, Michael", "Title": "Sales Representative", "ImageUrl": "http://igniteui.com/images/samples/nw/employees/6.png", "Phone": "(71) 555-7773", "PhoneUrl": "tel:(71) 555-7773","BirthDate":"1963-07-02T00:00:00Z","HireDate":"1993-10-17T00:00:00Z", "Country": "UK", "Languages": [{ name: "English" }, { name: "Portuguese" }] },
+			{ "ID": 7, "Name": "King, Robert", "Title": "Sales Representative", "ImageUrl": "http://igniteui.com/images/samples/nw/employees/7.png", "Phone": "(71) 555-5598", "PhoneUrl": "tel:(71) 555-5598", "BirthDate":"1960-05-29T00:00:00Z","HireDate":"1994-01-02T00:00:00Z", "Country": "UK", "Languages": [{ name: "English" }, { name: "French" }, { name: "Spanish" }] },
+			{ "ID": 8, "Name": "Callahan, Laura", "Title": "Inside Sales Coordinator", "ImageUrl": "http://igniteui.com/images/samples/nw/employees/8.png", "Phone": "(206) 555-1189", "PhoneUrl": "tel:(206) 555-1189","BirthDate":"1958-01-09T00:00:00Z","HireDate":"1994-03-05T00:00:00Z", "Country": "USA", "Languages": [ { name: "English" }, { name: "Mandarin" }] },
+			{ "ID": 9, "Name": "Dodsworth, Anne", "Title": "Sales Representative", "ImageUrl": "http://igniteui.com/images/samples/nw/employees/9.png", "Phone": "(71) 555-4444", "PhoneUrl": "tel:(71) 555-4444", "BirthDate":"1966-01-27T00:00:00Z","HireDate":"1994-11-15T00:00:00Z", "Country": "UK", "Languages": [{ name: "English" }, { name: "Japanese" }] }
+		];
 
 		$.ig.loader({
 			scriptPath: "http://cdn-na.infragistics.com/igniteui/latest/js/",
@@ -25,7 +25,7 @@ var northwindEmployees = [
 					this.currCallbacks = callbacks;
 					var tmpContainer = $("#templateContainer");
 					//appending teh div and the image elemnts
-					tmpContainer.parent().append('<div id="container" style="width: 35%;float: right;position:relative; padding-top:5%; margin-top: 32px; margin-left: 20px;"><img id="imgTmp" src="" alt="" title="" width="150px" height="150px"/><div id="tooltip" style="margin-padding:5px; position:absolute; top:65px; left:50px;" ></div></div>');
+					tmpContainer.parent().prepend('<div id="container" style="width: 35%;float: left;position:relative; padding-top:5%; margin-top: 32px; margin-left: 20px;"><img id="imgTmp" src="" alt="" title="" width="150px" height="150px"/><div id="tooltip" style="margin-padding:5px; position:absolute; top:65px; left:50px;" ></div></div>');
 					tmpContainer.parent().append('<div style="clear:both;"></div><div id="error-message" style="float: right;color: #FF0000; font-weight: bold;"></div>');
 					this.createUpload();
 					this.image = $("#imgTmp");
@@ -135,8 +135,10 @@ var northwindEmployees = [
 								delete self._blockSlide;
 							}
 							evt.stopPropagation();
-						}
-					}, "td")
+						},
+						pointerdown: function (evt) { evt.stopPropagation(); },
+						touchstart: function (evt) { evt.stopPropagation(); }
+					}, "td");
 					d.bind({
 						// bind to keydown so that the dialog can be closed on ENTER and ESC keypresses,
 						// also handles the TAB sequence to wrap around the elements of the dialog

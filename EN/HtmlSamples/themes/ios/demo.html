@@ -8,98 +8,152 @@
 <link href="http://cdn-na.infragistics.com/igniteui/latest/css/themes/ios/infragistics.theme.css" rel="stylesheet"></link>
 <link href="http://cdn-na.infragistics.com/igniteui/latest/css/structure/infragistics.css" rel="stylesheet"></link>
 
-<h2>igGrid</h2>
-    <table id="grid"></table>
+<section>
+        <h1 class="pageTitle">igGrid</h1>
+        <table id="grid"></table>
+    </section>
 
-    <h2>igEditors</h2>
-    
-    <p>
-        <input id="textEditor" value="John"></input></p>
-    <p>
-        <input id="dateEditor" value="07/07/2012"></input></p>
-    <p>
-        <input id="maskEditor" value="mask edit"></input></p>
-    <p>
-        <input id="currencyEditor" value="42"></input></p>
-    <p>
-        <input id="numericEditor" value="42"></input></p>
-    <p>
-        <input id="percentEditor" value="0.42"></input></p>
-    <p style="padding: 2px">
-        <input id="datePicker" type="date"></input></p>
 
-    <h2>igCombo</h2>
-    <div id="combo"></div>
+    <section>
+        <h1 class="pageTitle">igEditors</h1>
+        <div class="igEditors flex">
+            <div>
+                <label for="textEditor">Text</label>
+                <input id="textEditor" value="John"></input>
+            </div>
 
-    <h2>igTree</h2>
-    <ul id="tree"></ul>
+            <div>
+                <label for="dateEditor">Date</label>
+                <input id="dateEditor" value="07/07/2012"></input>
+            </div>
 
-    <h2>igDialog</h2>
-    <input type="button" id="openDialog"></input>
-    <div id="dialog">
-        <img style="width: 200px" src="http://igniteui.com/images/samples/dialog-window/content.jpg"></img>
-    </div>
+            <div>
+                <label for="maskEditor">Mask</label>
+                <input id="maskEditor" value="mask edit"></input>
+            </div>
 
-    <h2>jQuery UI Accordion</h2>
-    <div id="accordion">
-      <h3>Paragraph 1</h3>
-      <div>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget porta urna. Ut gravida mi at ligula commodo feugiat vehicula lacus tincidunt. Proin lobortis magna sed lacus malesuada commodo fermentum felis auctor. Sed quis nulla quis tellus facilisis malesuada. Mauris aliquam neque consequat mi blandit in luctus magna rutrum. Fusce sit amet ipsum magna. Vivamus porttitor arcu vitae eros molestie et sagittis dolor cursus. Quisque ultrices feugiat risus, vitae molestie felis interdum ac. Suspendisse pellentesque magna nec est commodo porttitor.</p>
-      </div>
-      <h3>Paragraph 2</h3>
-      <div>
-        <p>Nunc lacinia ligula a nisl porta sed facilisis mauris facilisis. Sed a ante turpis, eget semper odio. Curabitur facilisis faucibus iaculis. Ut fermentum pretium ultrices. Etiam sem dui, adipiscing sed tempus et, adipiscing eget erat. Vestibulum nec eros magna.</p>
-      </div>
-      <h3>Paragraph 3</h3>
-      <div>
-        <p>Praesent tristique arcu eget ligula pulvinar mollis. Maecenas at elit at justo posuere gravida id eu enim. Duis imperdiet lectus nec augue sollicitudin hendrerit. Suspendisse consectetur, lorem nec eleifend rutrum, eros metus sodales libero, et rutrum diam augue et lectus. Integer sed est vitae risus dignissim condimentum ullamcorper at massa. Donec a orci nisl, eget ullamcorper augue. Quisque sagittis fringilla tortor. Vivamus ligula velit, aliquam ut pellentesque quis, fringilla sit amet tortor.</p>
-      </div>
-      <h3>Paragraph 4</h3>
-      <div>
-        <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed convallis risus sit amet lorem facilisis posuere. Cras malesuada lobortis sodales. Praesent aliquam elementum tortor nec sollicitudin. Phasellus sed erat lectus, elementum adipiscing odio.</p>
-      </div>
-    </div>
+            <div>
+                <label for="currencyEditor">Currency</label>
+                <input class="text-rigth" id="currencyEditor" value="42"></input>
+            </div>
 
-    <h2>jQuery UI Tabs</h2>
-    <div id="tabs">
-      <ul>
-        <li><a href="#tabs-1">Lorem ipsum</a></li>
-        <li><a href="#tabs-2">Nunc lacinia</a></li>
-        <li><a href="#tabs-3">Praesent tristique</a></li>
-      </ul>
-      <div id="tabs-1">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget porta urna. Ut gravida mi at ligula commodo feugiat vehicula lacus tincidunt. Proin lobortis magna sed lacus malesuada commodo fermentum felis auctor. Sed quis nulla quis tellus facilisis malesuada. Mauris aliquam neque consequat mi blandit in luctus magna rutrum. Fusce sit amet ipsum magna. Vivamus porttitor arcu vitae eros molestie et sagittis dolor cursus. Quisque ultrices feugiat risus, vitae molestie felis interdum ac. Suspendisse pellentesque magna nec est commodo porttitor.</p>
-      </div>
-      <div id="tabs-2">
-        <p>Nunc lacinia ligula a nisl porta sed facilisis mauris facilisis. Sed a ante turpis, eget semper odio. Curabitur facilisis faucibus iaculis. Ut fermentum pretium ultrices. Etiam sem dui, adipiscing sed tempus et, adipiscing eget erat. Vestibulum nec eros magna.</p>
-      </div>
-      <div id="tabs-3">
-        <p>Praesent tristique arcu eget ligula pulvinar mollis. Maecenas at elit at justo posuere gravida id eu enim. Duis imperdiet lectus nec augue sollicitudin hendrerit. Suspendisse consectetur, lorem nec eleifend rutrum, eros metus sodales libero, et rutrum diam augue et lectus. Integer sed est vitae risus dignissim condimentum ullamcorper at massa. Donec a orci nisl, eget ullamcorper augue. Quisque sagittis fringilla tortor. Vivamus ligula velit, aliquam ut pellentesque quis, fringilla sit amet tortor.</p>
-        <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed convallis risus sit amet lorem facilisis posuere. Cras malesuada lobortis sodales. Praesent aliquam elementum tortor nec sollicitudin. Phasellus sed erat lectus, elementum adipiscing odio.</p>
-      </div>
-    </div>
+            <div>
+                <label for="numericEditor">Numeric</label>
+                <input class="text-rigth" id="numericEditor" value="42"></input>
+            </div>
 
-    <h2>jQuery UI Slider</h2>
-    <div id="slider" style="margin-top: 20px"></div>
+            <div>
+                <label for="percentEditor">Percent</label>
+                <input class="text-rigth" id="percentEditor" value="0.42"></input>
+            </div>
 
-    <h2>jQuery UI Menu</h2>
-    <ul style="width:150px;" id="menu">
-        <li><a href="#">North America</a>
-            <ul style="width:150px;">
-                <li><a href="#">United States</a></li>
-                <li><a href="#">Canada</a></li>
-                <li><a href="#">Mexico</a></li>
+            <div>
+                <label for="datePicker">Date Picker</label>
+                <input id="datePicker" type="date"></input>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="three-col flex">
+        <div>
+            <h1 class="pageTitle">igCombo</h1>
+            <div id="combo"></div>
+        </div>
+
+        <div>
+            <h1 class="pageTitle">igTree</h1>
+            <ul id="tree"></ul>
+        </div>
+
+        <div>
+            <h1 class="pageTitle">igDialog</h1>
+            <input type="button" id="openDialog"></input>
+            <div id="dialog">
+                <img style="width: 200px" src="http://igniteui.com/images/samples/dialog-window/content.jpg"></img>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h1 class="pageTitle">igDataChart</h1>
+
+        <div id="chart"></div>
+
+    </section>
+
+    <section>
+        <h1 class="pageTitle">jQuery UI Accordion</h1>
+        <div id="accordion">
+            <h3>Paragraph 1</h3>
+            <div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget porta urna. Ut gravida mi at ligula commodo feugiat vehicula lacus tincidunt. Proin lobortis magna sed lacus malesuada commodo fermentum felis auctor. Sed quis nulla quis tellus facilisis malesuada. Mauris aliquam neque consequat mi blandit in luctus magna rutrum. Fusce sit amet ipsum magna. Vivamus porttitor arcu vitae eros molestie et sagittis dolor cursus. Quisque ultrices feugiat risus, vitae molestie felis interdum ac. Suspendisse pellentesque magna nec est commodo porttitor.</p>
+            </div>
+            <h3>Paragraph 2</h3>
+            <div>
+                <p>Nunc lacinia ligula a nisl porta sed facilisis mauris facilisis. Sed a ante turpis, eget semper odio. Curabitur facilisis faucibus iaculis. Ut fermentum pretium ultrices. Etiam sem dui, adipiscing sed tempus et, adipiscing eget erat. Vestibulum nec eros magna.</p>
+            </div>
+            <h3>Paragraph 3</h3>
+            <div>
+                <p>Praesent tristique arcu eget ligula pulvinar mollis. Maecenas at elit at justo posuere gravida id eu enim. Duis imperdiet lectus nec augue sollicitudin hendrerit. Suspendisse consectetur, lorem nec eleifend rutrum, eros metus sodales libero, et rutrum diam augue et lectus. Integer sed est vitae risus dignissim condimentum ullamcorper at massa. Donec a orci nisl, eget ullamcorper augue. Quisque sagittis fringilla tortor. Vivamus ligula velit, aliquam ut pellentesque quis, fringilla sit amet tortor.</p>
+            </div>
+            <h3>Paragraph 4</h3>
+            <div>
+                <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed convallis risus sit amet lorem facilisis posuere. Cras malesuada lobortis sodales. Praesent aliquam elementum tortor nec sollicitudin. Phasellus sed erat lectus, elementum adipiscing odio.</p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h1 class="pageTitle">jQuery UI Tabs</h1>
+        <div id="tabs">
+            <ul>
+                <li><a href="#tabs-1">Lorem ipsum</a></li>
+                <li><a href="#tabs-2">Nunc lacinia</a></li>
+                <li><a href="#tabs-3">Praesent tristique</a></li>
             </ul>
-        </li>
-        <li><a href="#">South America</a></li>
-        <li><a href="#">Europe</a>
-            <ul style="width:150px;">
-                <li><a href="#">United Kingdom</a></li>
-                <li><a href="#">Germany</a></li>
-                <li><a href="#">Bulgaria</a></li>
-            </ul>
-        </li>
-    </ul>
+            <div id="tabs-1">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget porta urna. Ut gravida mi at ligula commodo feugiat vehicula lacus tincidunt. Proin lobortis magna sed lacus malesuada commodo fermentum felis auctor. Sed quis nulla quis tellus facilisis malesuada. Mauris aliquam neque consequat mi blandit in luctus magna rutrum. Fusce sit amet ipsum magna. Vivamus porttitor arcu vitae eros molestie et sagittis dolor cursus. Quisque ultrices feugiat risus, vitae molestie felis interdum ac. Suspendisse pellentesque magna nec est commodo porttitor.</p>
+            </div>
+            <div id="tabs-2">
+                <p>Nunc lacinia ligula a nisl porta sed facilisis mauris facilisis. Sed a ante turpis, eget semper odio. Curabitur facilisis faucibus iaculis. Ut fermentum pretium ultrices. Etiam sem dui, adipiscing sed tempus et, adipiscing eget erat. Vestibulum nec eros magna.</p>
+            </div>
+            <div id="tabs-3">
+                <p>Praesent tristique arcu eget ligula pulvinar mollis. Maecenas at elit at justo posuere gravida id eu enim. Duis imperdiet lectus nec augue sollicitudin hendrerit. Suspendisse consectetur, lorem nec eleifend rutrum, eros metus sodales libero, et rutrum diam augue et lectus. Integer sed est vitae risus dignissim condimentum ullamcorper at massa. Donec a orci nisl, eget ullamcorper augue. Quisque sagittis fringilla tortor. Vivamus ligula velit, aliquam ut pellentesque quis, fringilla sit amet tortor.</p>
+                <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed convallis risus sit amet lorem facilisis posuere. Cras malesuada lobortis sodales. Praesent aliquam elementum tortor nec sollicitudin. Phasellus sed erat lectus, elementum adipiscing odio.</p>
+            </div>
+        </div>
+    </section>
 
-    <h2>jQuery UI Datepicker</h2>
-    <div id="datepickerui"></div>
+    <section>
+        <h1 class="pageTitle">jQuery UI Slider</h1>
+        <div id="slider"></div>
+    </section>
+
+    <section>
+        <h1 class="pageTitle">jQuery UI Menu</h1>
+        <ul style="width:150px;" id="menu">
+            <li>
+                <a href="#">North America</a>
+                <ul style="width:150px;">
+                    <li><a href="#">United States</a></li>
+                    <li><a href="#">Canada</a></li>
+                    <li><a href="#">Mexico</a></li>
+                </ul>
+            </li>
+            <li><a href="#">South America</a></li>
+            <li>
+                <a href="#">Europe</a>
+                <ul style="width:150px;">
+                    <li><a href="#">United Kingdom</a></li>
+                    <li><a href="#">Germany</a></li>
+                    <li><a href="#">Bulgaria</a></li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+
+    <section>
+        <h1 class="pageTitle">jQuery UI Datepicker</h1>
+        <div id="datepickerui"></div>
+    </section>
