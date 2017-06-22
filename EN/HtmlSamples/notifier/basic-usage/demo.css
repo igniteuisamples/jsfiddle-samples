@@ -13,16 +13,17 @@ div.float {
             height: 28px;
             opacity: 1;
         }        
-        button {
+
+        div.buttons {
+            clear:both;
+        }
+        .buttons button {
             width: 70px;
             height: 29px;
             opacity: 1;           
             float:left;           
             margin-right:20px;
             background-color: rgb(226, 226, 226);
-        }
-        div.buttons{
-            clear:both;
         }
         #successEditor1 {
             margin-top: 20px;
