@@ -1,0 +1,191 @@
+.ui-igspreadsheet .ui-menu-item {
+            white-space:nowrap;
+        }
+
+		.sampleContainer .ui-tabs .ui-tabs-panel {
+            background:#efefef;
+            border-radius:0;
+            border-color:#ddd;
+            border-bottom:none;
+		}
+
+
+        .sampleContainer .ui-tabs {
+            padding: 0;
+            border-radius:0;
+            border:none;
+        }
+
+        .sampleContainer .ui-tabs .ui-tabs-nav {
+            padding:0;
+            background:transparent;
+            border:none;
+        }
+
+        .clearfix:after {
+          content: "";
+          display: table;
+          clear: both;
+        }
+
+        .sampleContainer .ui-tabs .ui-tabs-nav li.ui-state-default {
+            background:transparent;
+        }
+
+        .sampleContainer .ui-tabs .ui-tabs-nav li.ui-state-default,
+        .sampleContainer .ui-tabs .ui-tabs-nav li.ui-state-active {
+            border:none;
+        }
+
+        .sampleContainer .ui-tabs .ui-tabs-nav li.ui-state-default:hover {
+            background:#efefef;
+        }
+
+        .sampleContainer .ui-tabs .ui-tabs-nav li.ui-state-active {
+            background:#efefef;
+            color:#333;
+            border: 1px solid #ddd;
+            border-bottom: none;
+        }
+
+        .sampleContainer .ui-tabs .ui-tabs-nav li.ui-state-active a {
+            color:#333;
+            font-weight:bold;
+        }
+
+        .sampleContainer .ui-tabs .ui-tabs-nav li.ui-state-active:hover {
+            background:#efefef;
+            color:#333;
+            border: 1px solid #ddd;
+            border-bottom: none;
+        }
+
+        #freeze {
+            margin-right: 10px;
+        }
+
+        #zoomSlider {
+            max-width: 30%;
+            min-width: 100px;
+            float: left;
+            margin: 9px 9px 9px 0px;
+        }
+
+        .spreadsheet-sample-btn,
+        #freeze,
+        #zoomSlider,
+        .f-left {
+            float: left;
+        }
+
+        .spreadsheet-sample-btn
+        {
+            max-width: 200px;
+            padding: 8px;
+            background: #fff;
+            color:#444;
+            text-align: center;
+            border-radius: 3px;
+            font-size: 12px;
+            text-transform: uppercase;
+            margin-right: 10px;
+            cursor:pointer;
+            border:1px solid #ccc;
+        }
+
+        .spreadsheet-sample-btn:hover {
+            border-color:#09f;
+        }
+
+        #bold {
+            font-weight:bold
+        }
+
+        #italic {
+            font-style:italic;
+        }
+
+        #underline {
+            text-decoration:underline;
+        }
+
+        #delSheet:hover,
+        #delContent:hover
+         {
+            color:#fff;
+            background:indianred;
+        }
+
+        #delSheet,
+        #delContent {
+            border-color:indianred;
+            color:indianred;
+        }
+
+        .ui-widget.ui-widget-content.spreadsheet-sample {
+            border:none;
+            border-radius:0;
+        }
+
+        .show-row {
+            position:relative;
+            margin-bottom:10px;
+        }
+        .show-row:last-of-type {
+            margin-bottom:0;
+        } 
+        .spreadsheet-sample .show-row-checkbox {
+            position:absolute;
+            left:0;
+            top:0;
+        }
+        .show-row-text {
+            padding-left:23px;
+            display:inline-block;
+        }
+
+        .spreadsheet-icon {
+            background:url('http://jp.igniteui.com/images/samples/spreadsheet/sprite.png');
+            width:16px;
+            height:16px;
+            overflow:hidden;
+        }
+
+        .zoom-in-icon {
+            background-position: 0 0;
+        }
+         .zoom-out-icon {
+            background-position: 0 -16px;
+        }
+
+        .zoom-selection {
+            background-position: 0 -32px;
+        }
+
+        .zoom-reset {
+            background-position: 0 -224px;
+        }
+
+        .ribbon-bold {
+            background-position: 0 -304px;
+        }
+
+        .ribbon-italic {
+            background-position: 0 -320px;
+        }
+
+        .ribbon-underline {
+            background-position: 0 -208px;
+        }
+
+        .spreadsheet-sample a {
+            color:#666!important;
+        }
+
+        .spreadsheet-sample  .ui-slider {
+            background:#555;
+        }
+
+        .spreadsheet-sample .ui-slider-handle {
+            background:#fff;
+        }
