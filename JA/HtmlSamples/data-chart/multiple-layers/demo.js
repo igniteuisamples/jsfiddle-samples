@@ -37,10 +37,10 @@ $(function () {
             		useInterpolation: false,
             		transitionDuration: 250
             	},
-            	categoryItemToolTipLayer: {
-            		name: "categoryItemToolTipLayer",
-            		title: "categoryItemToolTip",
-            		type: "categoryItemToolTipLayer",
+            	itemToolTipLayer: {
+            		name: "itemToolTipLayer",
+            		title: "itemToolTipLayer",
+            		type: "itemToolTipLayer",
             		useInterpolation: false,
             		transitionDuration: 250
             	}
@@ -118,11 +118,11 @@ $(function () {
             $("input:radio[name=tooltip]").change(function () {
             	var chart = $("#chart");
             	if ($(this).val() === "tooltip") {
-            		chart.igDataChart("option", "series", [{ name: "categoryItemToolTipLayer", remove: true }]);
+            		chart.igDataChart("option", "series", [{ name: "itemToolTipLayer", remove: true }]);
             		chart.igDataChart("option", "series", [ seriesSettings.categoryToolTipLayer ]);
             	} else {
             		chart.igDataChart("option", "series", [{ name: "categoryToolTipLayer", remove: true }]);
-            		chart.igDataChart("option", "series", [ seriesSettings.categoryItemToolTipLayer ]);
+            		chart.igDataChart("option", "series", [ seriesSettings.itemToolTipLayer ]);
             	}
             });
         });

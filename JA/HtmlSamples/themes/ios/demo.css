@@ -2,3 +2,76 @@
             content: "";
             display: table;
         }
+     
+        .flex {
+            display: -webkit-box;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-flex-wrap: wrap; /* Safari 6.1+ */
+            flex-wrap: wrap;
+        }
+
+        .ui-tabs .ui-tabs-panel {
+            margin-top: auto;
+        }
+
+        .sampleContainer p {
+            line-height: 28px;
+        }
+
+        .sampleContainer .ui-igcombo-wrapper {
+            width: 100%;
+        }
+
+        igsb-sample-desc {
+            font-size: 16px;
+        }
+
+        .themeButtonContainer {
+            margin-bottom: 30px;
+        }
+
+        section {
+            margin-bottom: 30px;
+        }
+
+        .sampleContainer .pageTitle {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .igEditors input {
+            width: 100%;
+            margin-bottom: 15px;
+            padding: 5px;
+            box-sizing: border-box;
+        }
+
+        .igEditors > div:last-of-type input {
+            padding: 0;
+            height: 29px;
+        }
+
+        .igEditors label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .igEditors > div {
+            min-width: 32%;
+            margin: 5px;
+        }
+
+        .text-rigth {
+            text-align: right;
+        }
+
+        .three-col > div {
+            padding: 10px;
+            min-width: 32.1%;
+            background: #f9f9f9;
+            margin: 5px;
+            box-sizing: border-box;
+        }

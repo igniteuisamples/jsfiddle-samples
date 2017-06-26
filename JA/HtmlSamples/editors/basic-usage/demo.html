@@ -9,19 +9,19 @@
 
 <div id="container">
         <div id="formContainer">
-            <p style="display: inline-block">測定単位</p>
+            <p class="inline">測定単位</p>
             <input type="radio" name="radioMeasurement" id="radioMetric" value="metric" onchange="radioChange()" checked=""></input>
             <label for="radioM">メトリック</label>
             <input type="radio" name="radioMeasurement" id="radioImperial" value="imperial" onchange="radioChange()"></input>
             <label for="radioI">インペリアル</label>
 
             <div id="mainInfo">
-                <div class="element" style="margin-right: 40px;">
+                <div class="element">
                     <label for="client">顧客</label>
                     <input id="clientName" type="text" name="client"></input>
                 </div>
 
-                <div class="element" style="margin-right: 40px;">
+                <div class="element">
                     <label for="address">配送先住所</label>
                     <input id="deliveryAddress" name="address"></input>
                 </div>
@@ -32,12 +32,12 @@
             </div>
 
             <div id="client">
-                <div class="element" style="margin-right: 40px;">
+                <div class="element">
                     <label for="mail">連絡先のメール</label>
                     <input id="clientMail" name="mail"></input>
                 </div>
 
-                <div class="element" style="margin-right: 40px;">
+                <div class="element">
                     <label for="date">出荷日付</label>
                     <input id="deliveryDate" name="date"></input>
                 </div>
@@ -48,9 +48,9 @@
             </div>
 
             <div id="delivery">
-                <div class="element" style="margin-left: 240px; margin-right: 40px; margin-top: 20px;">
-                    <input id="freeDelivery" style="margin-right: 5px; display: inline-block"></input>
-                    <label for="checkbox" style="display: inline-block;">無料の出荷を適用</label>
+                <div class="element mid">
+                    <input id="freeDelivery"></input>
+                    <label for="freeDelivery">無料の出荷を適用</label>
                 </div>
                 <div class="element">
                     <label for="applyDiscount">割引を適用</label>
@@ -64,7 +64,7 @@
                     <input type="submit" id="createOrder" value="注文書を作成" style="height: 25px; width: 200px;" onclick="createNewOrder()"></input>
                 
                     <div id="successMessageDiv">
-                        <p id="successMessage" style="display: inline-block;">
+                        <p id="successMessage" class="inline">
                     </div>
                 </div>
             </div>

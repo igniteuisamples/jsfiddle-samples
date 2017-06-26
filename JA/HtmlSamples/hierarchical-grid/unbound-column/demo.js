@@ -68,7 +68,6 @@ $(function () {
                 columnLayouts: [
                     {
                         key: "Orders",
-                        responseDataKey: "results",
                         autoGenerateColumns: false,
                         autofitLastColumn: false,
                         primaryKey: "OrderID",

@@ -1,12 +1,4 @@
-$(function () {
-$.ig.loader({
-            scriptPath: "http://cdn-na.infragistics.com/igniteui/latest/js/",
-            cssPath: "http://cdn-na.infragistics.com/igniteui/latest/css/",
-            resources: 'igHierarchicalGrid,' +
-                'igGridExcelExporter'
-        });
-
-        $.ig.loader(function() {
+$(function() {
 
             $("#hierarchicalGrid").igHierarchicalGrid({
                 width: "100%",
@@ -32,7 +24,6 @@ $.ig.loader({
                     {
                         key: "Orders",
                         autoCommit: true,
-                        responseDataKey: "results",
                         autoGenerateColumns: false,
                         autofitLastColumn: false,
                         primaryKey: "OrderID",
@@ -57,4 +48,3 @@ $.ig.loader({
                 });
             })
         });
-});

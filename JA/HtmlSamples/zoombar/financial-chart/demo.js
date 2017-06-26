@@ -1,14 +1,14 @@
 $(function () {
 $(document).ready(function () {
-			var chart = $("#chart"),
-				zoombar = $("#zoom"),
+		    var chartOverview = $("#chartOverview"),
+				zoombarOverview = $("#zoomOverview"),
 				popoverTimeout = 0,
 				popoverLeft,
 				popoverRight,
 				lastTarget,
 				currentlyDragged,
 				zoomParams;
-			chart.igDataChart({
+		    chartOverview.igDataChart({
 				width: "100%",
 				height: "300px",
 				axes: [
@@ -72,10 +72,10 @@ $(document).ready(function () {
 				verticalZoomable: false,
 				windowResponse: "immediate",
 				refreshCompleted: function (e, ui) {
-				    if (chart && chart.igDataChart) {
-                        var viewport = chart.igDataChart("option", "gridAreaRect"),
-							    leftMostValue = chart.igDataChart("unscaleValue", "xAxis", viewport.left),
-							    rightMostValue = $("#chart").igDataChart("unscaleValue", "xAxis", viewport.left + viewport.width);
+				    if ($("#chartOverview")[0] !== undefined && $("#chartOverview")[0] !== null) {
+				        var viewport = ui.chart.gridAreaRect,
+							    leftMostValue = $("#chartOverview").igDataChart("unscaleValue", "xAxis", viewport.left),
+							    rightMostValue = $("#chartOverview").igDataChart("unscaleValue", "xAxis", viewport.left + viewport.width);
 				        // get the dates corresponding to the values
 				        leftMostValue = new Date(leftMostValue);
 				        rightMostValue = new Date(rightMostValue);
@@ -90,11 +90,11 @@ $(document).ready(function () {
 				            left: ui.chart.actualWindowRect ? ui.chart.actualWindowRect.left : 0.35,
 				            width: ui.chart.actualWindowRect ? ui.chart.actualWindowRect.width : 0.30
 				        }
-                    }
+				    }
 				}
 			});
-			$("#zoom").igZoombar({
-				target: "#chart",
+		    $("#zoomOverview").igZoombar({
+			    target: "#chartOverview",
 				zoomWindowMinWidth: 1.2,
 				windowResized: function (evt, ui) {
 					var target = $(evt.originalEvent.target),
@@ -136,8 +136,8 @@ $(document).ready(function () {
 			function onClick(button, label) {
 				var newWidth,
 					activeCss = "ui-state-active",
-					viewport = chart.igDataChart("option", "gridAreaRect"),
-					leftMostValue = chart.igDataChart("unscaleValue", "xAxis", viewport.left);
+					viewport = chartOverview.igDataChart("option", "gridAreaRect"),
+					leftMostValue = chartOverview.igDataChart("unscaleValue", "xAxis", viewport.left);
 				if (button === "day") {
 					newWidth = 24 * 60 * 60 * 1000;
 				} else if (button === "week") {
@@ -149,8 +149,8 @@ $(document).ready(function () {
 				if (!newWidth || lastSelectedButton === button)
 					return;
 				lastSelectedButton = button;
-				newWidth = chart.igDataChart("scaleValue", "xAxis", new Date(leftMostValue + newWidth));
-				zoombar.igZoombar("zoom", zoomParams.left * 100, (newWidth * zoomParams.width / viewport.width) * 100);
+				newWidth = chartOverview.igDataChart("scaleValue", "xAxis", new Date(leftMostValue + newWidth));
+				zoombarOverview.igZoombar("zoom", zoomParams.left * 100, (newWidth * zoomParams.width / viewport.width) * 100);
 				// verify/fix appearance of active button
 				if (label) {
 					setTimeout(function () {

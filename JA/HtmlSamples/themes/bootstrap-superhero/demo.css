@@ -1,16 +1,91 @@
 .theme-container {
-        font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
-        line-height: 1.42857143;
-        color: #ebebeb;
-        background-color: #2b3e50;
-        padding: 10px;
-        margin-top: 20px;
+            color: #ebebeb;
+            background-color: #2b3e50;
+            padding: 10px;
+        }
+
+        .flex {
+            display: -webkit-box; 
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: -webkit-flex; 
+            display: flex;
+            -webkit-flex-wrap: wrap; /* Safari 6.1+ */
+            flex-wrap: wrap;
         }
 
         .ui-tabs .ui-tabs-panel{
             margin-top: auto;
         }
-        .igsb-sample-desc
+
+        .ui-tabs .ui-tabs-nav
         {
+            border-bottom: 1px solid #4E5D6C;
+        }
+
+        .ui-tabs .ui-tabs-panel  {
+            border: 1px solid #4E5D6C;
+            border-top:none;
+        }
+
+        .sampleContainer p {
+            line-height:28px;
+            color:#ddd!important;
+        }
+
+        .sampleContainer .ui-igcombo-wrapper {
+            width:100%;
+        }
+
+        igsb-sample-desc  {
             font-size: 16px;
+        }
+
+        .themeButtonContainer {
+            margin-bottom:30px;
+        }
+
+        section {
+            margin-bottom:30px;
+        }
+
+        .sampleContainer .pageTitle {
+            font-size:20px;
+            margin-bottom:10px;
+            color:#fff;
+        }
+
+        .igEditors input {
+            width:100%;
+            margin-bottom:15px;
+            padding:5px;
+            box-sizing:border-box;
+        }
+
+        .igEditors > div:last-of-type input {
+            padding:0;
+            height:29px;
+        }
+
+        .igEditors label {
+            display:block;
+            margin-bottom:5px
+        }
+
+        .igEditors > div {
+            min-width:32%;
+            margin:5px;
+        }
+       
+        .text-rigth {
+            text-align:right;
+        }
+
+        .three-col > div {
+            padding: 10px;
+            min-width: 32%;
+            background: rgba(0,0,0, 0.1);
+            margin:5px;
+            box-sizing: border-box;
+           
         }
