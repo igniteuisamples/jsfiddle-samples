@@ -14,7 +14,7 @@ var northwindEmployees = [
 		$.ig.loader({
 			scriptPath: "http://cdn-na.infragistics.com/igniteui/latest/js/",
 			cssPath: "http://cdn-na.infragistics.com/igniteui/latest/css/",
-			resources: "igGrid.Updating,igUpload"
+			resources: "igGrid.Updating,igUpload,igSplitter"
 		});
 		$.ig.loader(function () {
 			//var currCallbacks;
@@ -25,7 +25,7 @@ var northwindEmployees = [
 					this.currCallbacks = callbacks;
 					var tmpContainer = $("#templateContainer");
 					//appending teh div and the image elemnts
-					tmpContainer.parent().prepend('<div id="container" style="width: 35%;float: left;position:relative; padding-top:5%; margin-top: 32px; margin-left: 20px;"><img id="imgTmp" src="" alt="" title="" width="150px" height="150px"/><div id="tooltip" style="margin-padding:5px; position:absolute; top:65px; left:50px;" ></div></div>');
+					tmpContainer.parent().prepend('<div id="container" style="width: 35%;float: left;position:relative; padding-top:5%; margin-top: 32px; margin-left: 20px;"><img id="imgTmp" src="" alt="" title="" width="120px" height="120px"/><div id="tooltip" style="left:25%;width:120px;position:absolute;"></div></div>');
 					tmpContainer.parent().append('<div style="clear:both;"></div><div id="error-message" style="float: right;color: #FF0000; font-weight: bold;"></div>');
 					this.createUpload();
 					this.image = $("#imgTmp");
@@ -44,6 +44,7 @@ var northwindEmployees = [
 					$('#upload').remove();
 					$("<div id='upload'></div>").appendTo($tooltip);
 					$("#upload").igUpload({
+						width: "120px",
 						autostartupload: true,
 						maxFileSize: 500000,
 						allowedExtensions: ["jpg", "jpeg", "gif", "png"],
@@ -94,148 +95,204 @@ var northwindEmployees = [
 				}
 			});
 
-			$.widget("ui.SlideInDialog", $.ui.igGridModalDialog, {
-				_create: function () {
-					var d = this.element, self = this, gc;
-					// dialog css
-					d.css({
-						"width": this.options.modalDialogWidth,
-						"height": "100%",
-						"position": "absolute",
-						"background-color": "#FFFFFF",
-						"border": "1px solid #bcbcbc"
-					});
-					// adding the header
-					$("<div></div>")
-						.addClass("ui-widget-header")
-						.css("padding", "4px")
-						.text(this.options.modalDialogCaptionText)
-						.appendTo(d);
-					// adding the content
-					$("<div></div>")
-						.css({
-							"overflow": "auto",
-							"float": "left"
-						})
-						.attr("id", this.element.attr("id") + "_content")
-						.appendTo(d);
-					$("<div data-editor-for-imageurl='true'></div>")
+			$.widget("ui.SplitterDialog", $.ui.igGridModalDialog, {
+			_create: function () {
+				var d = this.element, self = this, gc, header, footer, $buttonSet, $buttonOK, $buttonCancel, o = this.options, self = this,
+				outerContianer, closeButton, btnContainer;
+				// get the grid's container
+				gc = d.closest(".ui-iggrid");
+
+				d.detach();
+				
+				outerContianer = "<div id='customContainerDiv'></div>";
+
+				gc.wrap(outerContianer).wrap("<div></div>");
+				
+				gc.parent().parent().append(d);
+
+				this._customSplitterContainer = $("#customContainerDiv");
+				
+				this._customSplitterContainer.igSplitter(
+					{
+						width: "100%",
+						height: "400px",
+						panels: [
+							{ size: "30%" },
+							{ size: "70%" }
+						]
+					}
+					);
+
+				// adding the header
+				header = $("<div></div>")
+					.addClass("ui-widget-header")
+					.css("padding", "4px")
+					.text(this.options.modalDialogCaptionText)
 					.appendTo(d);
-					// get the grid
-					gc = this.element.closest(".ui-iggrid");
-					gc.find("tbody").on({
-						mousedown: function (evt) {
-							var table = gc.find(".ui-iggrid-table"),
-								rowID = $(evt.target).closest("tr").attr("data-id");
-							if (table.igGridUpdating("isEditing")) {
-								self._blockSlide = true;
-								if (table.igGridUpdating("endEdit", true)) {
-									table.igGridUpdating("startEdit", rowID);
-								}
-								delete self._blockSlide;
-							}
-							evt.stopPropagation();
-						},
-						pointerdown: function (evt) { evt.stopPropagation(); },
-						touchstart: function (evt) { evt.stopPropagation(); }
-					}, "td");
-					d.bind({
-						// bind to keydown so that the dialog can be closed on ENTER and ESC keypresses,
-						// also handles the TAB sequence to wrap around the elements of the dialog
-						keydown: function (e) {
-							var tabElems, first, last;
-							if (e.keyCode === $.ui.keyCode.ESCAPE) {
-								self.closeModalDialog(false, true);
-								return;
-							}
-							if (e.keyCode === $.ui.keyCode.ENTER &&
-								self.options.closeModalDialogOnEnter &&
-								!self.options.buttonApplyDisabled) {
-								self.closeModalDialog(true, true);
-								return;
-							}
-							if (e.keyCode !== $.ui.keyCode.TAB) {
-								return;
-							}
-							tabElems = $(":tabbable", this);
-							first = tabElems.first();
-							last = tabElems.last();
-							if (e.target === last[0] && !e.shiftKey) {
-								first.focus(1);
-								return false;
-							}
-							if (e.target === first[0] && e.shiftKey) {
-								last.focus(1);
-								return false;
+
+				//adding close button
+				btnContainer = $("<div></div>").appendTo(header).addClass("ui-iggrid-modaldialog-caption-buttoncontainer");
+
+				closeButton = $("<button type='button'></button>")
+				.attr("id","dialog_closeButton")
+				.appendTo(btnContainer);
+
+				closeButton.igButton({
+				onlyIcons: true,
+				icons: {
+					primary: "ui-icon-close"
+				},
+				width: "20px",
+				height: "20px",
+				click: function () {
+					self.closeModalDialog(false, true);
+				}
+				});
+
+				//adding footer
+				footer = $("<div class='dialogFooter'></div>")
+				//.addClass(this.css.modalDialogFooter)
+				.attr("id", this._id("footer"))
+				.appendTo(d);
+				$buttonSet = $("<div></div>")
+					.appendTo(footer);
+
+				$buttonOK = $("<button></button>")
+					.attr("id", this._id("footer_buttonok"))
+					.appendTo($buttonSet);
+				$buttonOK.igButton({
+					labelText: o.buttonApplyText,
+					title: o.buttonApplyTitle,
+					disabled: o.buttonApplyDisabled,
+					click: function(){
+						self.closeModalDialog(true, true);
+					}
+				});
+				$buttonCancel = $("<button></button>")
+					.attr("id", this._id("footer_buttoncancel"))
+					.appendTo($buttonSet);
+				$buttonCancel.igButton({
+					labelText: o.buttonCancelText,
+					title: o.buttonCancelTitle,
+					click: function () {
+						self.closeModalDialog(false, true);
+					}
+				});
+
+				// adding the content
+				$("<div></div>")
+					.css({
+						"overflow": "auto",
+						"height": gc.outerHeight() - header.outerHeight() - footer.outerHeight()
+					})
+					.attr("id", this.element.attr("id") + "_content")
+					.insertAfter(header);
+
+				$buttonSet.css("float", "right");
+				// dialog css
+				d.css({
+					"width": this.options.modalDialogWidth,
+					"height": gc.outerHeight(),
+					"background-color": "#FFFFFF"
+				});
+				// grid's container need to hide the sliding dialog
+				gc.css("overflow", "hidden");
+				gc.find("tbody").on({
+					mousedown: function (evt) {
+						var table = gc.find(".ui-iggrid-table"),
+							rowID = $(evt.target).closest("tr").attr("data-id");
+						if (table.igGridUpdating("isEditing")) {
+							if (table.igGridUpdating("endEdit", true)) {
+								table.igGridUpdating("startEdit", rowID);
 							}
 						}
-					});
-					// finally hide it initially
-					d.hide();
-				},
-				openModalDialog: function () {
-					var d = this.element, noCancel;
-					if (this._modalDialogOpened) {
-						return;
+						evt.stopPropagation();
+					},
+					pointerdown: function (evt) { evt.stopPropagation(); },
+					touchstart: function (evt) { evt.stopPropagation(); }
+				}, "td");
+				d.bind({
+					// bind to keydown so that the dialog can be closed on ENTER and ESC keypresses,
+					// also handles the TAB sequence to wrap around the elements of the dialog
+					keydown: function (e) {
+						var tabElems, first, last;
+						if (e.keyCode === $.ui.keyCode.ESCAPE) {
+							self.closeModalDialog(false, true);
+							return;
+						}
+						if (e.keyCode === $.ui.keyCode.ENTER &&
+							self.options.closeModalDialogOnEnter &&
+							!self.options.buttonApplyDisabled) {
+							self.closeModalDialog(true, true);
+							return;
+						}
+						if (e.keyCode !== $.ui.keyCode.TAB) {
+							return;
+						}
+						tabElems = $(":tabbable", this);
+						first = tabElems.first();
+						last = tabElems.last();
+						if (e.target === last[0] && !e.shiftKey) {
+							first.focus(1);
+							return false;
+						}
+						if (e.target === first[0] && e.shiftKey) {
+							last.focus(1);
+							return false;
+						}
 					}
-					noCancel = this._trigger(
-						this.events.modalDialogOpening,
+				});
+			},
+			openModalDialog: function () {
+				var d = this.element, noCancel;
+				if (this._modalDialogOpened) {
+					return;
+				}
+				noCancel = this._trigger(
+					this.events.modalDialogOpening,
+					null,
+					{
+						modalDialog: d, owner: this
+					}
+				);
+				if (noCancel) {
+					this._trigger(
+						this.events.modalDialogOpened,
 						null,
 						{
-							modalDialog: d, owner: this
+							modalDialogElement: d, owner: this, shouldFocus: true
 						}
 					);
-					if (noCancel) {
-						this._trigger(
-							this.events.modalDialogOpened,
-							null,
-							{
-								modalDialogElement: d, owner: this, shouldFocus: true
-							}
-						);
-						this._modalDialogOpened = true;
-						if (!this._blockSlide) {
-							// prepare the container for slide-in animation
-							d.css({
-								"top": "0px",
-								"left": "-" + this.options.modalDialogWidth,
-								"z-index": 1000
-							});
-							// execute the animation
-							d.show().animate({ left: 0 }, 500);
-						}
-					}
-				},
-				closeModalDialog: function (accepted, fromUI) {
-					var d = this.element, noCancel = true, self = this;
-					if (!this._modalDialogOpened) {
-						return;
-					}
-					noCancel = this._trigger(
-						this.events.modalDialogClosing,
-						null,
-						{
-							modalDialog: d,
-							owner: this,
-							accepted: !!accepted,
-							raiseEvents: fromUI
-						});
-					if (noCancel) {
-						if (!this._blockSlide) {
-							d.animate({ left: "-" + this.options.modalDialogWidth }, 500, function () {
-								self._trigger(self.events.modalDialogClosed, null, {
-									modalDialog: d,
-									owner: self,
-									accepted: !!accepted,
-									raiseEvents: fromUI
-								});
-								d.hide();
-							});
-						}
-						this._modalDialogOpened = false;
-					}
+					this._modalDialogOpened = true;
+					d.show();
+					d.prev().show();
+					this._customSplitterContainer.igSplitter("setFirstPanelSize", "50%");
 				}
-			});
+			},
+			closeModalDialog: function (accepted, fromUI) {
+				var d = this.element, noCancel = true, self = this;
+				if (!this._modalDialogOpened) {
+					return;
+				}
+				noCancel = this._trigger(
+					this.events.modalDialogClosing,
+					null,
+					{
+						modalDialog: d,
+						owner: this,
+						accepted: !!accepted,
+						raiseEvents: fromUI
+					});
+				if (noCancel) {
+					this._modalDialogOpened = false;
+					d.hide();
+					d.prev().hide();
+
+					this._customSplitterContainer.igSplitter("setFirstPanelSize", "100%");
+					this._customSplitterContainer.igSplitter("firstPanel").css("width", "100%");
+				}
+			}
+		});
 
 			$("#grid1").igGrid({
 				dataSource: northwindEmployees,
@@ -258,7 +315,7 @@ var northwindEmployees = [
 						enableAddRow: true,
 						enableDeleteRow: false,
 						editMode: "dialog",
-						dialogWidget: "SlideInDialog",
+						dialogWidget: "SplitterDialog",
 						columnSettings: [
 							{
 								columnKey: "ImageUrl",
@@ -267,11 +324,10 @@ var northwindEmployees = [
 							}
 						],
 						rowEditDialogOptions: {
-							width: "560px",
 							dialogTemplateSelector: "#dialogTemplate",
 							editorsTemplateSelector: "#editorsTemplate",
 							showReadonlyEditors: false,
-							editorsColumnWidth: 50
+							editorsColumnWidth: 150
 						}
 					}
 				]

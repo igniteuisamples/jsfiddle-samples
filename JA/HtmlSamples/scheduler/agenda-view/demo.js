@@ -1,30 +1,23 @@
-$(function () {
-$.ig.loader({
-            scriptPath: "http://cdn-na.infragistics.com/igniteui/latest/js/",
-            cssPath: "http://cdn-na.infragistics.com/igniteui/latest/css/",
-            resources: "igScheduler",
-            ready: function () {
+$( function () {
             var scheduleListDataSource = new $.ig.scheduler.ScheduleListDataSource(),
                 appointmentsDS = new $.ig.DataSource({
                     primaryKey: "id",
                     dataSource: appointments
                 });
 
-                appointmentsDS.dataBind();
+			appointmentsDS.dataBind();
 
-                scheduleListDataSource.resourceItemsSource(resources);
-                scheduleListDataSource.appointmentItemsSource(appointmentsDS);
+			scheduleListDataSource.resourceItemsSource(resources);
+			scheduleListDataSource.appointmentItemsSource(appointmentsDS);
 
-                $("#scheduler").igScheduler({
-                    height: "650px",
-                    width: "100%",
-                    agendaViewSettings: {
-                        dateRangeInterval: 10
-                    },
-                    views: ["agendaView"],
-                    selectedDate: today,
-                    dataSource: scheduleListDataSource
-                });
-            }
-        });
-});
+			$("#scheduler").igScheduler({
+				height: "650px",
+				width: "100%",
+				agendaViewSettings: {
+					dateRangeInterval: 10
+				},
+				views: ["agendaView"],
+				selectedDate: today,
+				dataSource: scheduleListDataSource
+			});
+		});

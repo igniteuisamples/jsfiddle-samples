@@ -1,0 +1,9 @@
+.ui-igedit-container {
+			width: 150px !important;
+		}
+		.dialogFooter button {margin:.5em .4em .5em 0;cursor:pointer}
+		.ui-igsplitter .ui-icon {
+			font-size: 11px;
+			height: 1em !important;
+			width: 1em !important;
+		}

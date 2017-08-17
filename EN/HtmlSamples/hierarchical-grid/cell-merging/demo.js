@@ -60,7 +60,6 @@ $(function () {
                     {
                         key: "Orders",
                         autoCommit: true,
-                        responseDataKey: "results",
                         autoGenerateColumns: false,
                         autofitLastColumn: false,
                         primaryKey: "OrderID",

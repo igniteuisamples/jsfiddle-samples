@@ -22,53 +22,53 @@
             margin: initial;
         }
 
-        .igscroll-varrow {
+        #loremText .igscroll-varrow {
             visibility: hidden;
         }
 
-        .igscroll-harrow {
+        #loremText .igscroll-harrow {
             visibility: hidden;
         }
 
-        .igscroll-vtrack {
+        #loremText .igscroll-vtrack {
             background-color: #dfdfdf;
             border-radius: 30px;
             width: 4px !important;
             box-shadow: inset 0px 0px 5px #888888;
         }
 
-        .igscroll-vdrag {
+        #loremText .igscroll-vdrag {
             border-radius: 5px;
             border: 1px solid #ccc;
             box-shadow: inset 0px 0px 5px #888888;
             background-color: #db5858;
         }
 
-        .igscroll-vdrag-thin {
+        #loremText .igscroll-vdrag-thin {
             left: -1px;
         }
 
-        .igscroll-vdrag-big {
+        #loremText .igscroll-vdrag-big {
             left: -3px;
         }
 
-        .igscroll-vdrag:hover {
+        #loremText .igscroll-vdrag:hover {
             background-color: #c45050;
         }
 
-        .igscroll-vdrag:active {
+        #loremText .igscroll-vdrag:active {
             background-color: #a34343;
         }
 
 
-        .igscroll-htrack {
+        #loremText .igscroll-htrack {
             background-color: #dfdfdf;
             border-radius: 30px;
             height: 4px !important;
             box-shadow: inset 0px 0px 5px #888888;
         }
 
-        .igscroll-hdrag {
+        #loremText .igscroll-hdrag {
             border-radius: 6px;
             border: 1px solid #ccc;
             box-shadow: inset 0px 0px 5px #888888;
@@ -76,18 +76,18 @@
         }
 
         
-        .igscroll-hdrag-thin {
+        #loremText .igscroll-hdrag-thin {
             left: -1px;
         }
 
-        .igscroll-hdrag-big {
+        #loremText .igscroll-hdrag-big {
             left: -3px;
         }
 
-        .igscroll-hdrag:hover {
+        #loremText .igscroll-hdrag:hover {
             background-color: #c45050;
         }
 
-        .igscroll-hdrag:active {
+        #loremText .igscroll-hdrag:active {
             background-color: #a34343;
         }

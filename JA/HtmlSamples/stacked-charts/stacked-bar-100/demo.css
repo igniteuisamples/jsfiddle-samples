@@ -1,0 +1,8 @@
+.chart {
+            display: inline-block;
+            margin: 0 10px 10px 0;
+        }
+
+            .chart h4 {
+                margin-bottom: 5px;
+            }

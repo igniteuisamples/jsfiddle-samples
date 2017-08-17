@@ -24,7 +24,6 @@ $.ig.loader({
                     columnLayouts: [
                         {
                             key: "Orders",
-                            responseDataKey: "results",
                             autoGenerateColumns: false,
                             primaryKey: "OrderID",
                             width: "100%",
