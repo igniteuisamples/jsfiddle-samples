@@ -118,7 +118,7 @@ var northwindEmployees = [
 						height: "400px",
 						panels: [
 							{ size: "30%" },
-							{ size: "70%" }
+							{ size: "70%", collapsible: true }
 						]
 					}
 					);
@@ -256,6 +256,10 @@ var northwindEmployees = [
 					}
 				);
 				if (noCancel) {
+					this._modalDialogOpened = true;
+					d.show();
+					d.prev().show();
+					this._customSplitterContainer.igSplitter("setFirstPanelSize", "50%");
 					this._trigger(
 						this.events.modalDialogOpened,
 						null,
@@ -263,10 +267,6 @@ var northwindEmployees = [
 							modalDialogElement: d, owner: this, shouldFocus: true
 						}
 					);
-					this._modalDialogOpened = true;
-					d.show();
-					d.prev().show();
-					this._customSplitterContainer.igSplitter("setFirstPanelSize", "50%");
 				}
 			},
 			closeModalDialog: function (accepted, fromUI) {

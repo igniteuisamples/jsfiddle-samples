@@ -1,0 +1,12 @@
+h2
+        {
+            width: 100%;
+            text-align: center;
+        }
+        
+        .chart
+        {
+            position: relative;
+            float: left;
+            margin-right: 10px;
+        }
