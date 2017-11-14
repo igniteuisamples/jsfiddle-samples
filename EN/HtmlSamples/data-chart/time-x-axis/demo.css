@@ -1,0 +1,16 @@
+.buttonset {
+            position: absolute;
+            top: 0px;
+            left: 50px;
+            z-index: 10000;
+        }
+
+            .buttonset > label {
+                width: 60px;
+                height: 26px;
+                margin-right: -4px !important;
+            }
+
+        .tooltip {
+            font-weight: bold;
+        }

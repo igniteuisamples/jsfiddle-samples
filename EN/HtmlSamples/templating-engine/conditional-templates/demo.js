@@ -27,7 +27,8 @@ $(function () {
                     {
                         name: "Paging",
                         type: "local",
-                        pageSize: 8
+                        pageSize: 8,
+                        pageSizeList: [4, 8, 12, 16, 20]
                     }
                 ]
             });

@@ -7,4 +7,5 @@ h4 {
             position: relative;
             float: left;
             margin-right: 10px;
+            display: inline-block;
         }

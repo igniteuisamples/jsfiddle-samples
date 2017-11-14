@@ -139,5 +139,54 @@ $( function () {
 				$("#underline").click(function () {
 					$('#spreadsheet2').igSpreadsheet('executeAction', "toggleUnderline");
 				});
+
+				$("#decimalPlaces").igCheckboxEditor({
+					valueChanged: function (evt, ui) {
+						$("#spreadsheet2").igSpreadsheet("option", "isFixedDecimalEnabled", ui.newState);
+						$("#decimalPlacesCount").igNumericEditor("option", "disabled", !ui.newState);
+					}
+				}).igNotifier({
+					width: 200,
+					showOn: "mouseenter",
+					mode: "popover",
+					appendTo: ".decimal-places-enabled",
+					direction: "right",
+					position: "right",
+					notifyLevel: "info",
+					headerTemplate: {
+						closeButton: false
+					},
+					locale: {
+						infoMsg: "Indicates whether a fixed decimal place is automatically added when a whole number is entered while in edit mode."
+					},
+					closeOnBlur: true
+				});;
+
+				$("#decimalPlacesCount").igNumericEditor({
+					minValue: 1,
+					maxValue: 10,
+					disabled: true,
+					value: $("#spreadsheet2").igSpreadsheet("option", "fixedDecimalPlaceCount"),
+					width: 34,
+					height: 34,
+					valueChanged: function (evt, ui) {
+						$("#spreadsheet2").igSpreadsheet("option", "fixedDecimalPlaceCount", ui.newValue);
+					}
+				}).igNotifier({
+					width: 200,
+					showOn: "mouseenter",
+					mode: "popover",
+					appendTo: ".decimal-places-count-container",
+					direction: "right",
+					position: "right",
+					notifyLevel: "info",
+					headerTemplate: {
+						closeButton: false
+					},
+					locale: {
+						infoMsg: "Number of decimal places by which a whole number typed in during edit mode should be adjusted."
+					},
+					closeOnBlur: true
+				});
 			}
 		});

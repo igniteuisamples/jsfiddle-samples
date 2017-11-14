@@ -13,7 +13,8 @@ $(function () {
                 headerText: "https://www.infragistics.com",
                 showMinimizeButton: true,
                 showMaximizeButton: true,
-                showPinButton: true
+                showPinButton: true,
+                zIndex: 100005
             });
 
             $("#openDialog").on({

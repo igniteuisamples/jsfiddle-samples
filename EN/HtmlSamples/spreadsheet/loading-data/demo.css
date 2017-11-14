@@ -22,7 +22,8 @@
 
         .spreadsheet-sample-btn
         {
-            position:relative;
+			position: relative;
+			float: left;
             max-width: 200px;
             padding: 8px;
             background: #fff;
@@ -32,7 +33,6 @@
             font-size: 12px;
             text-transform: uppercase;
             margin:15px 15px 15px 0;
-            cursor:pointer;
             border:1px solid #ccc;
             overflow:hidden;
         }
@@ -52,7 +52,32 @@
             z-index: 1;
         }
 
-        .spreadsheet-sample-btn label {
-            cursor: pointer;
-            position:relative;
-        }
+		.clear {
+			clear: both;
+		}
+
+		#saveWorkbookBtn {
+			padding: 7px;
+		}
+
+		.editing-controls-container {
+			position: relative;
+			min-width: 200px;
+			float: left;
+			margin: 15px;
+		}
+
+			.editing-controls-container #enableEditing {
+				margin-right: 6px;
+				border-radius: 3px;
+				position: absolute;
+				left: 0;
+				top: 10px;
+			}
+
+		.label-editing {
+			display:inline-block;
+			position: absolute;
+			left: 23px;
+			top: 15px;
+		}

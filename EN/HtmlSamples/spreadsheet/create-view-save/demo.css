@@ -19,3 +19,25 @@
         .spreadsheet-sample-btn:hover {
             border-color:#09f;
         }
+
+		.editing-controls-container {
+			display: inline-block;
+			position: relative;
+			min-width: 200px;
+			margin: 18px 15px;
+		}
+
+			.editing-controls-container #enableEditing {
+				margin-right: 6px;
+				border-radius: 3px;
+				position: absolute;
+				left: 0;
+				top: 10px;
+			}
+
+		.label-editing {
+			display:inline-block;
+			position: absolute;
+			left: 23px;
+			top: 15px;
+		}

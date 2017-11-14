@@ -135,8 +135,11 @@ var apiViewer = new $.ig.apiViewer();
 					virt = $("#virt").igCombo("value");
 					colsCount = $("#colCount").slider("value");
 					opts = setUpOptions(virt, paging, filtering, colsCount);
-
+					$(evt.target).igButton("option", "disabled", true);
 					$("#grid").igGrid("destroy");
+					opts.dataBound = function () {
+						$(evt.target).igButton("option", "disabled", false);
+					};
 					$("#grid").igGrid(opts);
 				}
 			});

@@ -1,22 +1,17 @@
 $(function () {
 var northwindEmployees = [
-			{ "ID": 1, "Name": "Davolio, Nancy", "Title": "Sales Representative", "ImageUrl": "http://igniteui.com/images/samples/nw/employees/1.png", "Phone": "(206) 555-9857", "PhoneUrl": "tel:(206) 555-9857", "BirthDate":"1948-12-08T00:00:00", "HireDate":"1992-05-01T00:00:00", "Country": "USA", "Languages": [{ name: "English" }, { name: "Russian" }] },
-			{ "ID": 2, "Name": "Fuller, Andrew", "Title": "Vice President, Sales", "ImageUrl": "http://igniteui.com/images/samples/nw/employees/2.png", "Phone": "(206) 555-9482", "PhoneUrl": "tel:(206) 555-9482", "BirthDate":"1952-02-19T00:00:00", "HireDate":"1992-08-14T00:00:00", "Country": "USA", "Languages": [{ name: "English" }, { name: "German" }] },
-			{ "ID": 3, "Name": "Leverling, Janet", "Title": "Sales Representative", "ImageUrl": "http://igniteui.com/images/samples/nw/employees/3.png", "Phone": "(206) 555-3412", "PhoneUrl": "tel:(206) 555-3412", "BirthDate":"1963-08-30T00:00:00Z", "HireDate":"1992-04-01T00:00:00Z", "Country": "USA", "Languages": [{ name: "English" }] },
-			{ "ID": 4, "Name": "Peacock, Margaret", "Title": "Sales Representative", "ImageUrl": "http://igniteui.com/images/samples/nw/employees/4.png", "Phone": "(206) 555-8122", "PhoneUrl": "tel:(206) 555-8122", "BirthDate":"1937-09-19T00:00:00Z","HireDate":"1993-05-03T00:00:00Z", "Country": "USA", "Languages": [{ name: "English" }, { name: "Spanish" }] },
-			{ "ID": 5, "Name": "Buchanan, Steven", "Title": "Sales Manager", "ImageUrl": "http://igniteui.com/images/samples/nw/employees/5.png", "Phone": "(71) 555-4848", "PhoneUrl": "tel:(71) 555-4848", "BirthDate":"1955-03-04T00:00:00Z","HireDate":"1993-10-17T00:00:00Z", "Country": "UK", "Languages": [{ name: "English" }, { name: "Italian" }] },
-			{ "ID": 6, "Name": "Suyama, Michael", "Title": "Sales Representative", "ImageUrl": "http://igniteui.com/images/samples/nw/employees/6.png", "Phone": "(71) 555-7773", "PhoneUrl": "tel:(71) 555-7773","BirthDate":"1963-07-02T00:00:00Z","HireDate":"1993-10-17T00:00:00Z", "Country": "UK", "Languages": [{ name: "English" }, { name: "Portuguese" }] },
-			{ "ID": 7, "Name": "King, Robert", "Title": "Sales Representative", "ImageUrl": "http://igniteui.com/images/samples/nw/employees/7.png", "Phone": "(71) 555-5598", "PhoneUrl": "tel:(71) 555-5598", "BirthDate":"1960-05-29T00:00:00Z","HireDate":"1994-01-02T00:00:00Z", "Country": "UK", "Languages": [{ name: "English" }, { name: "French" }, { name: "Spanish" }] },
-			{ "ID": 8, "Name": "Callahan, Laura", "Title": "Inside Sales Coordinator", "ImageUrl": "http://igniteui.com/images/samples/nw/employees/8.png", "Phone": "(206) 555-1189", "PhoneUrl": "tel:(206) 555-1189","BirthDate":"1958-01-09T00:00:00Z","HireDate":"1994-03-05T00:00:00Z", "Country": "USA", "Languages": [ { name: "English" }, { name: "Mandarin" }] },
-			{ "ID": 9, "Name": "Dodsworth, Anne", "Title": "Sales Representative", "ImageUrl": "http://igniteui.com/images/samples/nw/employees/9.png", "Phone": "(71) 555-4444", "PhoneUrl": "tel:(71) 555-4444", "BirthDate":"1966-01-27T00:00:00Z","HireDate":"1994-11-15T00:00:00Z", "Country": "UK", "Languages": [{ name: "English" }, { name: "Japanese" }] }
+			{ "ID": 1, "Name": "Davolio, Nancy", "Title": "Sales Representative", "ImageUrl": "http://igniteui.com/images/samples/nw/employees/1.png", "Phone": "(206) 555-9857", "PhoneUrl": "tel:(206) 555-9857", "BirthDate": "1948-12-08T00:00:00", "HireDate": "1992-05-01T00:00:00", "Country": "USA", "Languages": [{ name: "English" }, { name: "Russian" }] },
+			{ "ID": 2, "Name": "Fuller, Andrew", "Title": "Vice President, Sales", "ImageUrl": "http://igniteui.com/images/samples/nw/employees/2.png", "Phone": "(206) 555-9482", "PhoneUrl": "tel:(206) 555-9482", "BirthDate": "1952-02-19T00:00:00", "HireDate": "1992-08-14T00:00:00", "Country": "USA", "Languages": [{ name: "English" }, { name: "German" }] },
+			{ "ID": 3, "Name": "Leverling, Janet", "Title": "Sales Representative", "ImageUrl": "http://igniteui.com/images/samples/nw/employees/3.png", "Phone": "(206) 555-3412", "PhoneUrl": "tel:(206) 555-3412", "BirthDate": "1963-08-30T00:00:00Z", "HireDate": "1992-04-01T00:00:00Z", "Country": "USA", "Languages": [{ name: "English" }] },
+			{ "ID": 4, "Name": "Peacock, Margaret", "Title": "Sales Representative", "ImageUrl": "http://igniteui.com/images/samples/nw/employees/4.png", "Phone": "(206) 555-8122", "PhoneUrl": "tel:(206) 555-8122", "BirthDate": "1937-09-19T00:00:00Z", "HireDate": "1993-05-03T00:00:00Z", "Country": "USA", "Languages": [{ name: "English" }, { name: "Spanish" }] },
+			{ "ID": 5, "Name": "Buchanan, Steven", "Title": "Sales Manager", "ImageUrl": "http://igniteui.com/images/samples/nw/employees/5.png", "Phone": "(71) 555-4848", "PhoneUrl": "tel:(71) 555-4848", "BirthDate": "1955-03-04T00:00:00Z", "HireDate": "1993-10-17T00:00:00Z", "Country": "UK", "Languages": [{ name: "English" }, { name: "Italian" }] },
+			{ "ID": 6, "Name": "Suyama, Michael", "Title": "Sales Representative", "ImageUrl": "http://igniteui.com/images/samples/nw/employees/6.png", "Phone": "(71) 555-7773", "PhoneUrl": "tel:(71) 555-7773", "BirthDate": "1963-07-02T00:00:00Z", "HireDate": "1993-10-17T00:00:00Z", "Country": "UK", "Languages": [{ name: "English" }, { name: "Portuguese" }] },
+			{ "ID": 7, "Name": "King, Robert", "Title": "Sales Representative", "ImageUrl": "http://igniteui.com/images/samples/nw/employees/7.png", "Phone": "(71) 555-5598", "PhoneUrl": "tel:(71) 555-5598", "BirthDate": "1960-05-29T00:00:00Z", "HireDate": "1994-01-02T00:00:00Z", "Country": "UK", "Languages": [{ name: "English" }, { name: "French" }, { name: "Spanish" }] },
+			{ "ID": 8, "Name": "Callahan, Laura", "Title": "Inside Sales Coordinator", "ImageUrl": "http://igniteui.com/images/samples/nw/employees/8.png", "Phone": "(206) 555-1189", "PhoneUrl": "tel:(206) 555-1189", "BirthDate": "1958-01-09T00:00:00Z", "HireDate": "1994-03-05T00:00:00Z", "Country": "USA", "Languages": [{ name: "English" }, { name: "Mandarin" }] },
+			{ "ID": 9, "Name": "Dodsworth, Anne", "Title": "Sales Representative", "ImageUrl": "http://igniteui.com/images/samples/nw/employees/9.png", "Phone": "(71) 555-4444", "PhoneUrl": "tel:(71) 555-4444", "BirthDate": "1966-01-27T00:00:00Z", "HireDate": "1994-11-15T00:00:00Z", "Country": "UK", "Languages": [{ name: "English" }, { name: "Japanese" }] }
 		];
 
-		$.ig.loader({
-			scriptPath: "http://cdn-na.infragistics.com/igniteui/latest/js/",
-			cssPath: "http://cdn-na.infragistics.com/igniteui/latest/css/",
-			resources: "igGrid.Updating,igUpload,igSplitter"
-		});
-		$.ig.loader(function () {
+		$(function () {
 			//var currCallbacks;
 			//creating custom editor provider
 			$.ig.EditorProviderUpload = $.ig.EditorProvider.extend({
@@ -55,8 +50,10 @@ var northwindEmployees = [
 						onError: function (e, args) {
 							self.showAlert(args);
 						},
-						labelUploadButton: "Edit",
-						labelAddButton: "Edit",
+						locale: {
+							labelUploadButton: "Edit",
+							labelAddButton: "Edit"
+						},
 						controlId: "serverID4"
 					});
 				},
@@ -96,203 +93,203 @@ var northwindEmployees = [
 			});
 
 			$.widget("ui.SplitterDialog", $.ui.igGridModalDialog, {
-			_create: function () {
-				var d = this.element, self = this, gc, header, footer, $buttonSet, $buttonOK, $buttonCancel, o = this.options, self = this,
-				outerContianer, closeButton, btnContainer;
-				// get the grid's container
-				gc = d.closest(".ui-iggrid");
+				_create: function () {
+					var d = this.element, self = this, gc, header, footer, $buttonSet, $buttonOK, $buttonCancel, o = this.options, self = this,
+					outerContianer, closeButton, btnContainer;
+					// get the grid's container
+					gc = d.closest(".ui-iggrid");
 
-				d.detach();
-				
-				outerContianer = "<div id='customContainerDiv'></div>";
+					d.detach();
 
-				gc.wrap(outerContianer).wrap("<div></div>");
-				
-				gc.parent().parent().append(d);
+					outerContianer = "<div id='customContainerDiv'></div>";
 
-				this._customSplitterContainer = $("#customContainerDiv");
-				
-				this._customSplitterContainer.igSplitter(
-					{
-						width: "100%",
-						height: "400px",
-						panels: [
-							{ size: "30%" },
-							{ size: "70%", collapsible: true }
-						]
-					}
-					);
+					gc.wrap(outerContianer).wrap("<div></div>");
 
-				// adding the header
-				header = $("<div></div>")
-					.addClass("ui-widget-header")
-					.css("padding", "4px")
-					.text(this.options.modalDialogCaptionText)
+					gc.parent().parent().append(d);
+
+					this._customSplitterContainer = $("#customContainerDiv");
+
+					this._customSplitterContainer.igSplitter(
+						{
+							width: "100%",
+							height: "400px",
+							panels: [
+								{ size: "30%" },
+								{ size: "70%", collapsible: true }
+							]
+						}
+						);
+
+					// adding the header
+					header = $("<div></div>")
+						.addClass("ui-widget-header")
+						.css("padding", "4px")
+						.text(this.options.locale.modalDialogCaptionText)
+						.appendTo(d);
+
+					//adding close button
+					btnContainer = $("<div></div>").appendTo(header).addClass("ui-iggrid-modaldialog-caption-buttoncontainer");
+
+					closeButton = $("<button type='button'></button>")
+					.attr("id", "dialog_closeButton")
+					.appendTo(btnContainer);
+
+					closeButton.igButton({
+						onlyIcons: true,
+						icons: {
+							primary: "ui-icon-close"
+						},
+						width: "20px",
+						height: "20px",
+						click: function () {
+							self.closeModalDialog(false, true);
+						}
+					});
+
+					//adding footer
+					footer = $("<div class='dialogFooter'></div>")
+					//.addClass(this.css.modalDialogFooter)
+					.attr("id", this._id("footer"))
 					.appendTo(d);
+					$buttonSet = $("<div></div>")
+						.appendTo(footer);
 
-				//adding close button
-				btnContainer = $("<div></div>").appendTo(header).addClass("ui-iggrid-modaldialog-caption-buttoncontainer");
+					$buttonOK = $("<button></button>")
+						.attr("id", this._id("footer_buttonok"))
+						.appendTo($buttonSet);
+					$buttonOK.igButton({
+						labelText: o.locale.buttonApplyText,
+						title: o.locale.buttonApplyTitle,
+						disabled: o.buttonApplyDisabled,
+						click: function () {
+							self.closeModalDialog(true, true);
+						}
+					});
+					$buttonCancel = $("<button></button>")
+						.attr("id", this._id("footer_buttoncancel"))
+						.appendTo($buttonSet);
+					$buttonCancel.igButton({
+						labelText: o.locale.buttonCancelText,
+						title: o.locale.buttonCancelTitle,
+						click: function () {
+							self.closeModalDialog(false, true);
+						}
+					});
 
-				closeButton = $("<button type='button'></button>")
-				.attr("id","dialog_closeButton")
-				.appendTo(btnContainer);
+					// adding the content
+					$("<div></div>")
+						.css({
+							"overflow": "auto",
+							"height": gc.outerHeight() - header.outerHeight() - footer.outerHeight()
+						})
+						.attr("id", this.element.attr("id") + "_content")
+						.insertAfter(header);
 
-				closeButton.igButton({
-				onlyIcons: true,
-				icons: {
-					primary: "ui-icon-close"
-				},
-				width: "20px",
-				height: "20px",
-				click: function () {
-					self.closeModalDialog(false, true);
-				}
-				});
-
-				//adding footer
-				footer = $("<div class='dialogFooter'></div>")
-				//.addClass(this.css.modalDialogFooter)
-				.attr("id", this._id("footer"))
-				.appendTo(d);
-				$buttonSet = $("<div></div>")
-					.appendTo(footer);
-
-				$buttonOK = $("<button></button>")
-					.attr("id", this._id("footer_buttonok"))
-					.appendTo($buttonSet);
-				$buttonOK.igButton({
-					labelText: o.buttonApplyText,
-					title: o.buttonApplyTitle,
-					disabled: o.buttonApplyDisabled,
-					click: function(){
-						self.closeModalDialog(true, true);
-					}
-				});
-				$buttonCancel = $("<button></button>")
-					.attr("id", this._id("footer_buttoncancel"))
-					.appendTo($buttonSet);
-				$buttonCancel.igButton({
-					labelText: o.buttonCancelText,
-					title: o.buttonCancelTitle,
-					click: function () {
-						self.closeModalDialog(false, true);
-					}
-				});
-
-				// adding the content
-				$("<div></div>")
-					.css({
-						"overflow": "auto",
-						"height": gc.outerHeight() - header.outerHeight() - footer.outerHeight()
-					})
-					.attr("id", this.element.attr("id") + "_content")
-					.insertAfter(header);
-
-				$buttonSet.css("float", "right");
-				// dialog css
-				d.css({
-					"width": this.options.modalDialogWidth,
-					"height": gc.outerHeight(),
-					"background-color": "#FFFFFF"
-				});
-				// grid's container need to hide the sliding dialog
-				gc.css("overflow", "hidden");
-				gc.find("tbody").on({
-					mousedown: function (evt) {
-						var table = gc.find(".ui-iggrid-table"),
-							rowID = $(evt.target).closest("tr").attr("data-id");
-						if (table.igGridUpdating("isEditing")) {
-							if (table.igGridUpdating("endEdit", true)) {
-								table.igGridUpdating("startEdit", rowID);
+					$buttonSet.css("float", "right");
+					// dialog css
+					d.css({
+						"width": this.options.modalDialogWidth,
+						"height": gc.outerHeight(),
+						"background-color": "#FFFFFF"
+					});
+					// grid's container need to hide the sliding dialog
+					gc.css("overflow", "hidden");
+					gc.find("tbody").on({
+						mousedown: function (evt) {
+							var table = gc.find(".ui-iggrid-table"),
+								rowID = $(evt.target).closest("tr").attr("data-id");
+							if (table.igGridUpdating("isEditing")) {
+								if (table.igGridUpdating("endEdit", true)) {
+									table.igGridUpdating("startEdit", rowID);
+								}
+							}
+							evt.stopPropagation();
+						},
+						pointerdown: function (evt) { evt.stopPropagation(); },
+						touchstart: function (evt) { evt.stopPropagation(); }
+					}, "td");
+					d.bind({
+						// bind to keydown so that the dialog can be closed on ENTER and ESC keypresses,
+						// also handles the TAB sequence to wrap around the elements of the dialog
+						keydown: function (e) {
+							var tabElems, first, last;
+							if (e.keyCode === $.ui.keyCode.ESCAPE) {
+								self.closeModalDialog(false, true);
+								return;
+							}
+							if (e.keyCode === $.ui.keyCode.ENTER &&
+								self.options.closeModalDialogOnEnter &&
+								!self.options.buttonApplyDisabled) {
+								self.closeModalDialog(true, true);
+								return;
+							}
+							if (e.keyCode !== $.ui.keyCode.TAB) {
+								return;
+							}
+							tabElems = $(":tabbable", this);
+							first = tabElems.first();
+							last = tabElems.last();
+							if (e.target === last[0] && !e.shiftKey) {
+								first.focus(1);
+								return false;
+							}
+							if (e.target === first[0] && e.shiftKey) {
+								last.focus(1);
+								return false;
 							}
 						}
-						evt.stopPropagation();
-					},
-					pointerdown: function (evt) { evt.stopPropagation(); },
-					touchstart: function (evt) { evt.stopPropagation(); }
-				}, "td");
-				d.bind({
-					// bind to keydown so that the dialog can be closed on ENTER and ESC keypresses,
-					// also handles the TAB sequence to wrap around the elements of the dialog
-					keydown: function (e) {
-						var tabElems, first, last;
-						if (e.keyCode === $.ui.keyCode.ESCAPE) {
-							self.closeModalDialog(false, true);
-							return;
-						}
-						if (e.keyCode === $.ui.keyCode.ENTER &&
-							self.options.closeModalDialogOnEnter &&
-							!self.options.buttonApplyDisabled) {
-							self.closeModalDialog(true, true);
-							return;
-						}
-						if (e.keyCode !== $.ui.keyCode.TAB) {
-							return;
-						}
-						tabElems = $(":tabbable", this);
-						first = tabElems.first();
-						last = tabElems.last();
-						if (e.target === last[0] && !e.shiftKey) {
-							first.focus(1);
-							return false;
-						}
-						if (e.target === first[0] && e.shiftKey) {
-							last.focus(1);
-							return false;
-						}
+					});
+				},
+				openModalDialog: function () {
+					var d = this.element, noCancel;
+					if (this._modalDialogOpened) {
+						return;
 					}
-				});
-			},
-			openModalDialog: function () {
-				var d = this.element, noCancel;
-				if (this._modalDialogOpened) {
-					return;
-				}
-				noCancel = this._trigger(
-					this.events.modalDialogOpening,
-					null,
-					{
-						modalDialog: d, owner: this
-					}
-				);
-				if (noCancel) {
-					this._modalDialogOpened = true;
-					d.show();
-					d.prev().show();
-					this._customSplitterContainer.igSplitter("setFirstPanelSize", "50%");
-					this._trigger(
-						this.events.modalDialogOpened,
+					noCancel = this._trigger(
+						this.events.modalDialogOpening,
 						null,
 						{
-							modalDialogElement: d, owner: this, shouldFocus: true
+							modalDialog: d, owner: this
 						}
 					);
-				}
-			},
-			closeModalDialog: function (accepted, fromUI) {
-				var d = this.element, noCancel = true, self = this;
-				if (!this._modalDialogOpened) {
-					return;
-				}
-				noCancel = this._trigger(
-					this.events.modalDialogClosing,
-					null,
-					{
-						modalDialog: d,
-						owner: this,
-						accepted: !!accepted,
-						raiseEvents: fromUI
-					});
-				if (noCancel) {
-					this._modalDialogOpened = false;
-					d.hide();
-					d.prev().hide();
+					if (noCancel) {
+						this._modalDialogOpened = true;
+						d.show();
+						d.prev().show();
+						this._customSplitterContainer.igSplitter("setFirstPanelSize", "50%");
+						this._trigger(
+							this.events.modalDialogOpened,
+							null,
+							{
+								modalDialogElement: d, owner: this, shouldFocus: true
+							}
+						);
+					}
+				},
+				closeModalDialog: function (accepted, fromUI) {
+					var d = this.element, noCancel = true, self = this;
+					if (!this._modalDialogOpened) {
+						return;
+					}
+					noCancel = this._trigger(
+						this.events.modalDialogClosing,
+						null,
+						{
+							modalDialog: d,
+							owner: this,
+							accepted: !!accepted,
+							raiseEvents: fromUI
+						});
+					if (noCancel) {
+						this._modalDialogOpened = false;
+						d.hide();
+						d.prev().hide();
 
-					this._customSplitterContainer.igSplitter("setFirstPanelSize", "100%");
-					this._customSplitterContainer.igSplitter("firstPanel").css("width", "100%");
+						this._customSplitterContainer.igSplitter("setFirstPanelSize", "100%");
+						this._customSplitterContainer.igSplitter("firstPanel").css("width", "100%");
+					}
 				}
-			}
-		});
+			});
 
 			$("#grid1").igGrid({
 				dataSource: northwindEmployees,

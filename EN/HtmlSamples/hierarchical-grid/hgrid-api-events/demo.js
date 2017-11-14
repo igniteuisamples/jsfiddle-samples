@@ -218,7 +218,7 @@ $(function () {
 						return;
                 	}
                 	pageSize = $childGrid.igGridPaging("pageSize");
-                	totalRecords = $childGrid.igGrid("option", "dataSource").results.length;
+                	totalRecords = $childGrid.igGrid("option", "dataSource").length;
 					totalNumberOfPages = totalRecords / pageSize + 1;
 					sizeList = [];
                     for (i = 1; i <= totalNumberOfPages; i++) {
@@ -420,7 +420,7 @@ $(function () {
 						return;
                     }
                     var pageSize = args.items[0].data["size"];
-                    var totalRecords = grid.igGrid("option", "dataSource").results.length;
+                    var totalRecords = grid.igGrid("option", "dataSource").length;
                     var totalNumberOfPages = totalRecords / pageSize + 1;
                     var sizeList = [];
                    

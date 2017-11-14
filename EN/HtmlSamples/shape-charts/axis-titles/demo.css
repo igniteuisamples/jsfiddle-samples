@@ -1,0 +1,22 @@
+.chartSlider {
+            margin: 10px 0px 10px 0px;
+        }
+
+        .optionsPane {
+            position: right;
+            width: 310px;
+            margin: 6px 3px 6px 6px;
+            display: inline-block;
+            padding-top: 18px;
+            vertical-align: top;
+        }
+
+        .optionContainer {
+            position: relative;
+            width: 310px;
+            margin: 2px;
+            padding: 2px;
+            display: inline-block;
+            border: 1px solid black;
+            border-radius: 4px;
+        }

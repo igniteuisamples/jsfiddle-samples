@@ -7,7 +7,7 @@ $(function () {
             });
         	$("#icon").igCheckboxEditor({
         		inputName: "icon",
-                checked: false,
+                checked: false
             });
         	$("#indigo").igCheckboxEditor({
         		inputName: "indigo",

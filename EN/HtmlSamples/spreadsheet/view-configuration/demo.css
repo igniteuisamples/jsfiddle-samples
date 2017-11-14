@@ -189,3 +189,41 @@
         .spreadsheet-sample .ui-slider-handle {
             background:#fff;
         }
+
+		.decimal-places-enabled {
+			position: relative;
+			min-width: 400px;
+			float: left;
+			margin: 10px;
+		}
+
+			.decimal-places-enabled #decimalPlaces {
+				margin-right: 6px;
+				border-radius: 3px;
+				position: absolute;
+				left: 0;
+				top: 15px;
+			}
+
+		.label-decimal {
+			display:inline-block;
+			position: absolute;
+			left: 23px;
+			top: 15px;
+		}
+
+		.ui-igeditor-input-container,
+		.ui-igedit-container {
+			border-radius: 3px;
+		}
+		.decimal-places-count-container {
+			position: relative;
+			float: left;
+			margin-top: 10px;
+		}
+
+		.ui-igedit-input {
+			/*font-size: 12px!important;
+			font-weight: bold;
+			text-align: center!important;*/
+		}
