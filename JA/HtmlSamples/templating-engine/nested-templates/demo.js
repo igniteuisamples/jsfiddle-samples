@@ -21,6 +21,7 @@ $(function () {
                         name: "Paging",
                         type: "local",
                         pageSize: 4,
+                        pageSizeList: [2, 4, 7],
                         pageSizeChanged: function () {
                             initializeInnerControls();
                         },

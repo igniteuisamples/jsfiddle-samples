@@ -40,8 +40,8 @@ $(function () {
                 showOn: "mouseenter",
                 state: "info",
                 showIcon: true,
-                messages: {
-                    info: "チェックするとコメント領域を読み取り専用にします。"
+                locale: {
+                    infoMsg: "チェックするとコメント領域を読み取り専用にします。"
                 }
             });
 

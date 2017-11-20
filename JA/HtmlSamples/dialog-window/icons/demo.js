@@ -13,6 +13,7 @@ $(function () {
                 showMinimizeButton: true,
                 showMaximizeButton: true,
                 showPinButton: true,
+                zIndex: 100005,
                 height: "300px",
                 width: "280px"
             });

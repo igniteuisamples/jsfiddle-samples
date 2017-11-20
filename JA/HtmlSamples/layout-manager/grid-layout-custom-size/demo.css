@@ -1,0 +1,32 @@
+#layout {
+            position: relative;
+        }
+
+        .item {
+            background-color: #F5F5F5;
+            border: 1px solid #BDBDBD;
+        }
+
+        .item-inner-container {
+            width: 100%;
+            height: 100%;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+        }
+
+        .first-cat {
+            background-image: url(http://jp.igniteui.com/images/samples/layout-manager/koen-eijkelenboom-353679.jpg);
+        }
+
+        .second-cat {
+            background-image: url(http://jp.igniteui.com/images/samples/layout-manager/mikhail-vasilyev-253977.jpg);
+        }
+
+        .third-cat {
+            background-image: url(http://jp.igniteui.com/images/samples/layout-manager/cel-lisboa-73965.jpg);
+        }
+
+        .fourth-cat {
+            background-image: url(http://jp.igniteui.com/images/samples/layout-manager/anthony-de-kroon-377702.jpg);
+        }

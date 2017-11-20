@@ -12,6 +12,7 @@ $(function () {
             $("#departure").igDatePicker({
                 dateInputFormat: "yyyy 年 M 月 d 日 (ddd)",
                 value: today,
+                regional: "ja",
                 dataMode: "date",
                 datepickerOptions: {
                     minDate: today
@@ -34,6 +35,7 @@ $(function () {
             $("#return").igDatePicker({
                 value: tomorrow,
                 dateInputFormat: "yyyy 年 M 月 d 日 (ddd)",
+                regional: "ja",
                 dataMode: "date",
                     datepickerOptions: {
                         minDate: tomorrow,

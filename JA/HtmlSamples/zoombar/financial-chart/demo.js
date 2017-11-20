@@ -99,7 +99,10 @@ $(document).ready(function () {
 				windowResized: function (evt, ui) {
 					var target = $(evt.originalEvent.target),
 						handle = target.hasClass("ui-igzoombar-window-handle") ?
-						target : lastTarget,
+					    target : lastTarget,
+                        handle = handle.igPopover({
+                            direction: "top"
+                        }),
 						container =handle ? handle.igPopover("container").parent().parent(): null;
 					if (target.hasClass("ui-igzoombar-window-handle")) {
 						lastTarget = target;
@@ -109,7 +112,8 @@ $(document).ready(function () {
 					}
 					// show the popover if it's not already visible
 					if (container && !container.is(":visible")) {
-						handle.igPopover("show");
+					    handle.igPopover("show");
+					    handle.igPopover("setContent", "drag left/right")
 					}
 					if (handle) {
 						// update popovers position

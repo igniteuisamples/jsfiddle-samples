@@ -1,9 +1,20 @@
-$( function () {
+$(function () {
+			var editingEnabled = true;
 			//Initializing igSpreadsheet
 			$("#spreadsheet").igSpreadsheet({
 				height: "600",
 				width: "100%",
-				isFormulaBarVisible: true
+				isFormulaBarVisible: true,
+				editModeEntering: function (e, args) {
+					return editingEnabled;
+				}
+			});
+
+			$("#enableEditing").igCheckboxEditor({
+				checked: true,
+				valueChanged: function (evt, ui) {
+					editingEnabled = ui.newState;
+				}
 			});
 		});
 

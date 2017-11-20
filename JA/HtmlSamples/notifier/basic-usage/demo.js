@@ -1,12 +1,12 @@
 $(function () {
            $("#successEditor1").igNotifier({
-                direction: "right",
-                messages: {
-                    info: "情報メッセージ。",
-                    success: "成功メッセージ。",
-                    warning: "警告メッセージ。",
-                    error: "エラー メッセージ。"
-                }
+               direction: "right",
+               locale: {
+                   infoMsg: "情報メッセージ。",
+                   successMsg: "成功メッセージ。",
+                   warningMsg: "警告メッセージ。",
+                   errorMsg: "エラー メッセージ。"
+               }
             }).igNotifier("notify", "success");
 
             $("#state").on("change", function myfunction() {

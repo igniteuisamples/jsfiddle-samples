@@ -45,7 +45,7 @@ $(function () {
                     {
                         name: "CellMerging",
                         inherit: true,
-                        initialState: "merged"
+                        mergeOn: "always"
                     },
                     {
                         name: "Sorting",

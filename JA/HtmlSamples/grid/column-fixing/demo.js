@@ -1,7 +1,7 @@
 $(function () {
             $("#grid").igGrid({
                 columns: [
-                    { headerText: "", key: "ID", dataType: "string", width: "100px", template: "<input type='button' onclick='deleteRow(\"${ID}\")' value='Delete row' class='delete-button'/>" },
+                    { headerText: "", key: "ID", dataType: "string", width: "100px", template: "<input type='button' onclick='deleteRow(\"${ID}\")' value='行の削除' class='delete-button'/>" },
                     { headerText: "会社名", key: "CompanyName", dataType: "string", width: "250px" },
                     { headerText: "名前", key: "ContactName", dataType: "string", width: "200px" },
                     { headerText: "連絡先", key: "ContactTitle", dataType: "string", width: "200px" },

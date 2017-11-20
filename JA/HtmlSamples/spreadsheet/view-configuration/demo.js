@@ -139,5 +139,54 @@ $( function () {
 				$("#underline").click(function () {
 					$('#spreadsheet2').igSpreadsheet('executeAction', "toggleUnderline");
 				});
+
+				$("#decimalPlaces").igCheckboxEditor({
+					valueChanged: function (evt, ui) {
+						$("#spreadsheet2").igSpreadsheet("option", "isFixedDecimalEnabled", ui.newState);
+						$("#decimalPlacesCount").igNumericEditor("option", "disabled", !ui.newState);
+					}
+				}).igNotifier({
+					width: 200,
+					showOn: "mouseenter",
+					mode: "popover",
+					appendTo: ".decimal-places-enabled",
+					direction: "right",
+					position: "right",
+					notifyLevel: "info",
+					headerTemplate: {
+						closeButton: false
+					},
+					locale: {
+						infoMsg: "編集モードで整数が入力されたときに固定小数位が自動的に追加されるかどうかを示します。"
+					},
+					closeOnBlur: true
+				});;
+
+				$("#decimalPlacesCount").igNumericEditor({
+					minValue: 1,
+					maxValue: 10,
+					disabled: true,
+					value: $("#spreadsheet2").igSpreadsheet("option", "fixedDecimalPlaceCount"),
+					width: 34,
+					height: 34,
+					valueChanged: function (evt, ui) {
+						$("#spreadsheet2").igSpreadsheet("option", "fixedDecimalPlaceCount", ui.newValue);
+					}
+				}).igNotifier({
+					width: 200,
+					showOn: "mouseenter",
+					mode: "popover",
+					appendTo: ".decimal-places-count-container",
+					direction: "right",
+					position: "right",
+					notifyLevel: "info",
+					headerTemplate: {
+						closeButton: false
+					},
+					locale: {
+						infoMsg: "編集モードで入力された整数に使用される小数位。"
+					},
+					closeOnBlur: true
+				});
 			}
 		});

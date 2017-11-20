@@ -1,9 +1,21 @@
-$( function () {
+$(function () {
+			var editingEnabled = true;
 			$("#spreadsheet").igSpreadsheet({
 				height: "600",
 				width: "100%",
-				isFormulaBarVisible: true
+				isFormulaBarVisible: true,
+				editModeEntering: function (e, args) {
+					return editingEnabled;
+				}
 			});
+
+			$("#enableEditing").igCheckboxEditor({
+				checked: true,
+				valueChanged: function (evt, ui) {
+					editingEnabled = ui.newState;
+				}
+			});
+
 			//Check for Browser's - File API support
 			if (window.FileReader) {
 				$("#input").on("change", function () {
@@ -46,4 +58,13 @@ $( function () {
 				//load specific workbook
 				$("#spreadsheet").igSpreadsheet("option", "workbook", workbook);
 			}
+		}
+
+		function saveWorkbook(workbook, name) {
+			$("#spreadsheet").igSpreadsheet("option", "workbook")
+				.save({ type: 'blob' }, function (data) {
+					saveAs(data, name);
+				}, function (error) {
+					alert('Error exporting: : ' + error);
+				});
 		}

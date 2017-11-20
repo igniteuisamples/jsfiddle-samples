@@ -108,7 +108,7 @@ $(function () {
             exportingOverlay.css({
                 "width": $gridContainer.outerWidth(),
                 "height": $gridContainer.outerHeight()
-            }).html('<span class="exporting-text">Exporting...</span>');
+            }).html('<span class="exporting-text">エクスポートしています...</span>');
             exportingOverlay.addClass("exporting-overlay");
 
             $gridContainer.append(exportingOverlay);

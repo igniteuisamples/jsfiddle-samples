@@ -40,13 +40,13 @@ $(function () {
             });
 
             //igEditors
-            $("#textEditor").igTextEditor;
-            $("#dateEditor").igDateEditor;
-            $("#maskEditor").igMaskEditor;
-            $("#currencyEditor").igCurrencyEditor;
-            $("#numericEditor").igNumericEditor;
-            $("#percentEditor").igPercentEditor;
-            $("#datePicker").igDatePicker;
+            $("#textEditor").igTextEditor();
+            $("#dateEditor").igDateEditor();
+            $("#maskEditor").igMaskEditor();
+            $("#currencyEditor").igCurrencyEditor();
+            $("#numericEditor").igNumericEditor();
+            $("#percentEditor").igPercentEditor();
+            $("#datePicker").igDatePicker();
 
             //igCombo
             $("#combo").igCombo({

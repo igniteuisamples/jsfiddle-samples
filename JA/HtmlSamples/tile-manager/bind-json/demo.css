@@ -1,11 +1,14 @@
 .dashboard {         
             color: #2b2b2b;
-            border: 0;
             position: relative;
             width: 100%;
             height: 500px;
             margin-top: -10px;
             margin-left: -5px;
+        }
+
+        .ui-widget.ui-widget-content.dashboard {
+            border: 0;
         }
 
         .item-inner-container {
