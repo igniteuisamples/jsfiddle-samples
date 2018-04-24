@@ -14,6 +14,7 @@
             padding: initial;
             margin-top: 16px;
             margin-bottom: 16px;
+            line-height: 18px;
         }
 
         #loremText h3 {
@@ -23,11 +24,11 @@
         }
 
         #loremText .igscroll-varrow {
-            visibility: hidden;
+            opacity: 0;
         }
 
         #loremText .igscroll-harrow {
-            visibility: hidden;
+            opacity: 0;
         }
 
         #loremText .igscroll-vcontainer {

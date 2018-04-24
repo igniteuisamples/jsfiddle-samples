@@ -77,7 +77,7 @@ $(document).ready(function () {
 				],
 				horizontalZoomable: true,
 				verticalZoomable: true,
-				windowResponse: "immediate"				
+				windowResponse: "immediate"
 			});
 		    $("#zoomOverview").igZoombar({
 			    target: "#chartOverview",
@@ -149,7 +149,5 @@ $(document).ready(function () {
 					}, 40);
 				}
 			}
-			
-			
 		});
 });

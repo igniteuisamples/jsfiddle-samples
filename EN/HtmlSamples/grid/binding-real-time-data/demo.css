@@ -5,7 +5,7 @@
 			background-color: #e1fbd6;
 		}
 		.rightAlign {
-			text-align:right;
+			text-align:right !important;
 		}
 		.ui-sparkline {
 		  padding: 0px !important;

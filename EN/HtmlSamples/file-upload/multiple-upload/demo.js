@@ -18,6 +18,12 @@ $(function () {
             if (Modernizr.input.multiple) {
                 $(".ui-igstartupbrowsebutton").attr("style", "width: 320px; height: 80px;");
             }
+            $("#useSingleRequestCheck").igCheckboxEditor({
+                checked: false,
+                valueChanged: function (evt, ui) {
+                    $("#igUpload1").igUpload("option", "useSingleRequest", ui.newState);
+                }
+            });
         });
 
         function showAlert(args) {

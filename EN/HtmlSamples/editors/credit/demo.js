@@ -49,9 +49,15 @@ $(function () {
 			});
 
 			$('#salaryInBank').igCheckboxEditor({
-				checked: function () { $('#pin').show(); },
-				unchecked: function () { $('#pin').hide(); }
-
+				checked: false,
+				valueChanging: function (evt, ui) {
+					if (ui.newValue === true) {
+						$('#pin').show();
+					}
+					else {
+						$('#pin').hide();
+					}
+				}
 			});
 
 			$('#pin').igMaskEditor({
@@ -92,7 +98,6 @@ $(function () {
 				var sumToReceive = monthlyPaymentInterestRate * loanPeriod;
 				var bankDividend = sumToReceive - sumToGive;
 
-				//$("#results").append(getResult(sumToGive));
 				getResult(sumToGive, sumToReceive, monthlyPaymentInterestRate);
 
 			});
@@ -114,7 +119,7 @@ $(function () {
 				disableEditors(false);
 			});
 
-			function getResult(creditAmound, getSumToReceive, getMonthlyPaymentInterestRate) {
+			function getResult(creditAmount, getSumToReceive, getMonthlyPaymentInterestRate) {
 				var currencySymbol;
 				var selectedCurrency = $('#currency').igTextEditor("option", "value");
 				var customerName = $('#lastName').igTextEditor("option", "value");
@@ -136,7 +141,7 @@ $(function () {
 						currencySymbol = "€";
 				}
 				$("#resultCredit").igCurrencyEditor("option", "currencySymbol", currencySymbol);
-				$("#resultCredit").igCurrencyEditor("option", "value", creditAmound);
+				$("#resultCredit").igCurrencyEditor("option", "value", creditAmount);
 
 				$("#returnValue").igCurrencyEditor("option", "currencySymbol", currencySymbol);
 				$("#returnValue").igCurrencyEditor("option", "value", returnAmount);

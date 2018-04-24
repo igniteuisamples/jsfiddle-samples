@@ -119,6 +119,47 @@ $(function () {
                 });
             }
 
+            function createScatterSplineChart(selector, dataSource) {
+                $(selector).igDataChart({
+                    width: "320px",
+                    height: "320px",
+                    dataSource: dataSource,
+                    title: "Scatter Spline",
+                    subtitle: "U.S. Agricultural Production Per Year",
+                    axes: [{
+                        name: "xAxis",
+                        type: "numericX",
+                        interval: 10,
+                        title: "Year",
+                    }, {
+                        name: "yAxis",
+                        type: "numericY",
+                        title: "Billions of USD",
+                        maximumValue: 200000,
+                        formatLabel: function (val) {
+                            var bVal = (val / 1000),
+                            rounded = Math.round(bVal * 100) / 100;
+                            return "$" + rounded;
+                        }
+                    }],
+                    series: [{
+                        name: "scatterSpline",
+                        type: "scatterSpline",
+                        xAxis: "xAxis",
+                        yAxis: "yAxis",
+                        xMemberPath: "Year",
+                        yMemberPath: "Value",
+                        markerType: "circle",
+                        title: "Scatter Spline",
+                        showTooltip: true
+                    }],
+                    horizontalZoomable: true,
+                    verticalZoomable: true,
+                    windowResponse: "immediate"
+                });
+            }
+
+
             function createBubbleChart(selector, dataSource) {
                 $(selector).igDataChart({
                     width: "320px",
@@ -195,7 +236,7 @@ $(function () {
                         xAxis: "xAxis",
                         yAxis: "yAxis",
                         xMemberPath: "X",
-                        yMemberPath: "Y",
+                        yMemberPath: "Y",                        
                         colorMemberPath: "Z",
                         title: "$$(Chart_sel_scatterArea)",
                         showTooltip: true,

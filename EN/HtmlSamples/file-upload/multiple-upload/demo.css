@@ -1,0 +1,33 @@
+.s-clearfix {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .mb10 {
+            margin-bottom: 10px;
+        }
+
+        .ml5 {
+            margin-left: 5px;
+        }
+
+        .mt4 {
+            margin-top: 4px;
+        }
+
+        .border-box {
+            box-sizing: border-box;
+        }
+
+        .igui-filter-f-left {
+            float: left;
+        }
+
+        .igui-filter-f-right {
+            float: right;
+        }
+
+        .igui-filter-checkbox label {
+            cursor: pointer;
+        }

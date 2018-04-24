@@ -52,7 +52,8 @@ var editModes = [
 			});
 			$("#editModeCombo").igCombo({
 				dataSource: editModes,
-				valueKey: "ID",
+                valueKey: "ID",
+                mode: "dropdown",
 				textKey: "EditMode",
 				initialSelectedItems: [
 					{ index: 1 }

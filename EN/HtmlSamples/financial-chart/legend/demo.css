@@ -1,0 +1,12 @@
+.control-container {
+            float: left;
+            position: relative;
+            top: 0px;
+            left: 0px;
+        }
+        #chartLegend {
+            border: solid 1px gray;
+            position: absolute;
+            top: 50px;
+            left: 20px;
+        }
