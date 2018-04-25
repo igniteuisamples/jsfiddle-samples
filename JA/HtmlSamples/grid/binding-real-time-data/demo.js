@@ -57,10 +57,23 @@ $(function () {
 				//update random number of records
 
 				$(data).each(function () {
-					$("#grid").igGridUpdating("updateRow", this.ID, this);
-					renderCharts(this.ID);
+					var grid = $("#grid"), cell = grid.igGrid("cellById", this.ID, "PriceChange"), chart;
+
+					chart = cell.find("div.sparkline").detach();
+					grid.igGridUpdating("updateRow", this.ID, this);
+
+					//clear transactions
+					var transactions = grid.igGrid("allTransactions");
+					transactions.pop();
+
+					cell.empty();
+					cell.append(chart);
+
+					chart.igSparkline("removeItem", 0);
+					chart.igSparkline("addItem", this.ValueChangesList[this.ValueChangesList.length - 1]);
+
 					//apply additional css to the updated record's Price and Change columns
-					var row = $("#grid").igGrid("rowById", this.ID);
+					var row = grid.igGrid("rowById", this.ID);
 					if (this.Change < 0) {
 						row.addClass("price-down").removeClass("price-down", 2000);
 					} else {
@@ -70,29 +83,28 @@ $(function () {
 			};
 
 			renderCharts = function (recID) {
-				if (recID) {
-					//render specific chart
-					var rec = $("#grid").igGrid("findRecordByKey", recID);
-					$("div.sparkline[data-id=" + recID + "]").igSparkline({
+				//render all
+				$(".sparkline").each(function (i) {
+					var id = $(this).attr("data-id");
+					var rec = $("#grid").igGrid("findRecordByKey", id);
+					$(this).igSparkline({
 						dataSource: rec.ValueChangesList,
 						height: "25px",
 						width: "100%",
 						valueMemberPath: 'Price'
-					}).css("background-color", "transparent");
-				} else { 
-					//render all
-					$(".sparkline").each(function (i) {
-						var id = $(this).attr("data-id");
-						var rec = $("#grid").igGrid("findRecordByKey", id);
-						$(this).igSparkline({
-							dataSource: rec.ValueChangesList,
-							height: "25px",
-							width: "100%",
-							valueMemberPath: 'Price'
-						})
-						.css("background-color", "transparent");
-					});
+					})
+					.css("background-color", "transparent");
+				});
+			}
+			formatNumericColumn = function (val) {
+				if (!val) {
+					return "--";
 				}
+				return (val/1000000).toFixed(2) + "M";
+
+			};
+			formatCurrency = function (val) {
+				return $.ig.formatter(val.toFixed(2), "number","currency");
 			}
 			realTimeData.client.initGrid = function (stockData) {
 				$("#grid").igGrid({
@@ -104,14 +116,14 @@ $(function () {
 					primaryKey: "ID",
 					columns: [
 						{ headerText: "ID", key: "ID", dataType: "string", hidden: true },
-						{ headerText: "会社名", key: "CompanyName", dataType: "string" },
-						{ headerText: "ボリューム", key: "Volume", dataType: "string", columnCssClass: "rightAlign" },
-						{ headerText: "価格", key: "Price", dataType: "number", format:"currency", template: "<td class='rightAlign'><span>${Price}</span></td>" },
+						{ headerText: "会社名", key: "CompanyName", dataType: "string", width: "*" },
+						{ headerText: "ボリューム", key: "Volume", dataType: "number", columnCssClass: "rightAlign", headerCssClass: "rightAlign", formatter: formatNumericColumn, width: "150px"  },
+						{ headerText: "価格", key: "Price", dataType: "number", template: "<td class='rightAlign'><span>${Price}</span></td>", headerCssClass: "rightAlign", formatter: formatCurrency, width: "100px" },
 						{
-							headerText: "変更", key: "Change", dataType: "number", format: "number", template: $("#colTmpl").html()
+							headerText: "変更", key: "Change", dataType: "number", headerCssClass: "rightAlign", format: "0.00", template: $("#colTmpl").html(), width: "100px" 
 						},
 						{
-							headerText: "価格の変更", key: "PriceChange", unbound: true, template: "<div data-id='${ID}' class='sparkline'></div>"
+							headerText: "価格の変更", key: "PriceChange", unbound: true, template: "<div data-id='${ID}' class='sparkline'></div>", headerCssClass: "rightAlign"
 						}
 					],
 					rowsRendered: function (evt, ui) {
@@ -126,21 +138,36 @@ $(function () {
 						}, {
 							name: "Filtering",
 							columnSettings: [{
+								columnKey: "Volume",
+								condition: "greaterThan",
+								conditionList:["greaterThan", "lessThan", "greaterThanOrEqualTo", "lessThanOrEqualTo"]
+							},{
 								columnKey: "Change",
+								condition: "greaterThan",
+								conditionList:["greaterThan", "lessThan", "greaterThanOrEqualTo", "lessThanOrEqualTo" ,"Positive", "Negative"],
 								customConditions: {
 									Positive: {
 									    labelText: "正数",
 										expressionText: "Positive",
 										requireExpr: false,
-										filterFunc: filterPositiveChangeItems
+										filterFunc: filterPositiveChangeItems,
+										filterImgIcon: "ui-icon-plus"
 									},
 									Negative: {
 									    labelText: "負数",
 										expressionText: "Negative",
 										requireExpr: false,
-										filterFunc: filterNegativeChangeItems
+										filterFunc: filterNegativeChangeItems,
+										filterImgIcon: "ui-icon-minus"
 									}
 								}
+							}, {
+								columnKey: "PriceChange",
+								allowFiltering: false
+							}, {
+								columnKey: "Price",
+								condition: "greaterThan",
+								conditionList:["greaterThan", "lessThan", "greaterThanOrEqualTo", "lessThanOrEqualTo"],
 							}]
 						}]
 				});

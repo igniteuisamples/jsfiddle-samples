@@ -93,7 +93,7 @@ $(document).ready(function () {
 				    }
 				}
 			});
-		    $("#zoomOverview").igZoombar({
+			$("#zoomOverview").igZoombar({
 			    target: "#chartOverview",
 				zoomWindowMinWidth: 1.2,
 				windowResized: function (evt, ui) {
@@ -113,7 +113,6 @@ $(document).ready(function () {
 					// show the popover if it's not already visible
 					if (container && !container.is(":visible")) {
 					    handle.igPopover("show");
-					    handle.igPopover("setContent", "drag left/right")
 					}
 					if (handle) {
 						// update popovers position
@@ -177,8 +176,8 @@ $(document).ready(function () {
 					label = label.parentNode;
 				onClick(label.htmlFor, label);
 			});
-			popoverLeft = $("#zoom_zoombar_mask_left_handle");
-			popoverRight = $("#zoom_zoombar_mask_right_handle");
+			popoverLeft = $("#zoomOverview_zoombar_mask_left_handle");
+			popoverRight = $("#zoomOverview_zoombar_mask_right_handle");
 			popoverLeft.igPopover({
 				direction: "top",
 				showOn: "focus"

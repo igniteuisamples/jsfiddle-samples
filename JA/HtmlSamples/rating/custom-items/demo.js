@@ -40,6 +40,7 @@ $(function () {
                 voteCount: 3,
                 valueAsPercent: false,
                 precision: "whole",
+				precisionZeroVote: 0,
                 value: 1,
                 voteWidth: 64,
                 voteHeight: 38,

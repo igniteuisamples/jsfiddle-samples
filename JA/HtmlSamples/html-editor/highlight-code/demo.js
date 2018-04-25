@@ -103,7 +103,7 @@ $(function () {
 
             var prismUtils = document.createElement('script');
             prismUtils.type = 'text/javascript';
-            prismUtils.src = '../js/prismUtils.js';
+            prismUtils.text = "function highlightCode() {Prism.highlightAll(false);" +
             iFrameHead.appendChild(prismUtils);
         }
 

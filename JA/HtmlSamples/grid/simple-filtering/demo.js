@@ -28,8 +28,8 @@ $(function () {
 				textKey: "text",
 				valueKey: "value",
 				dataSource: [
-					{ value: "Simple Filtering", text: "簡易なフィルタリング" },
-					{ value: "Search By Text", text: "テキストで検索する" }
+					{ value: "Simple Filtering", text: "簡易フィルタリング" },
+					{ value: "Search By Text", text: "テキスト検索" }
 				],
 				initialSelectedItems : [
 					{ value: "Simple Filtering" }
