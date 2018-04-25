@@ -1,0 +1,81 @@
+<script src="http://jp.igniteui.com/js/modernizr.min.js"></script>
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>
+<script src="http://cdn-na.infragistics.com/igniteui/latest/js/infragistics.core.js"></script>
+<script src="http://cdn-na.infragistics.com/igniteui/latest/js/infragistics.dv.js"></script>
+<script src="http://jp.igniteui.com/js-data/MultiData"></script>
+<link href="http://cdn-na.infragistics.com/igniteui/latest/css/themes/infragistics/infragistics.theme.css" rel="stylesheet"></link>
+<link href="http://cdn-na.infragistics.com/igniteui/latest/css/structure/infragistics.css" rel="stylesheet"></link>
+<link rel="stylesheet" href="http://cdn-na.infragistics.com/igniteui/latest/css/structure/modules/infragistics.ui.chart.css"></link>
+<link rel="stylesheet" href="http://cdn-na.infragistics.com/igniteui/latest/css/structure/modules/infragistics.ui.financialchart.css"></link>
+<script src="http://cdn-na.infragistics.com/igniteui/latest/js/i18n/infragistics-ja.js"></script>
+
+<div id="chart" style="width:98%;height:500px"></div>
+    
+    <div style="width:98%;height:300px">
+        <fieldset id="chartOptions">
+            <legend>軸設定</legend>
+
+            <table>
+                <tr> 
+                    <td>
+                        <div class="optionContainer">
+                            <label>X 軸モード</label>
+                            <select id="xAxisMode" class="selectBounds">
+                                <option value="ordinal">順序</option>
+                                <option value="time">時刻</option>
+                            </select>
+                        </div>
+                    </td> 
+                         
+                    <td>
+                        <div class="optionContainer">
+                            <label>X 軸ラベルの表示状態</label>
+                            <select id="xAxisLabelVisibility" class="selectBounds">
+                                <option value="visible">表示</option>
+                                <option value="collapsed">縮小</option>
+                            </select>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="optionContainer">
+                            <label>X 軸のラベル角度</label>
+                            <div id="xAxisLabelAngleSlider" class="sliderBounds"></div>
+                            <label id="xAxisLabelAngle">0</label>
+                        </div>
+                    </td>                     
+                </tr>
+                <tr>
+
+                    <td>
+                        <div class="optionContainer">
+                            <label>Y 軸モード</label>
+                            <select id="yAxisMode" class="selectBounds">
+                                <option value="numeric">数値</option>
+                                <option value="percentChange">増減率</option>
+                            </select>
+                        </div>
+                    </td>
+
+                    <td>
+                        <div class="optionContainer">
+                            <label>Y 軸ラベルの表示状態</label>
+                            <select id="yAxisLabelVisibility" class="selectBounds">
+                                <option value="visible">表示</option>
+                                <option value="collapsed">縮小</option>
+                            </select>
+                        </div>
+                    </td>
+
+                    <td>
+                        <div class="optionContainer">
+                            <label>Y 軸のラベル角度</label>
+                            <div id="yAxisLabelAngleSlider" class="sliderBounds"></div>
+                            <label id="yAxisLabelAngle">0</label>
+                        </div>
+                    </td> 
+
+                </tr>
+            </table>              
+        </fieldset>
+    </div>

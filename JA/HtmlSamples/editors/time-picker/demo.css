@@ -1,0 +1,37 @@
+h3 {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        .group-fields {
+            margin-bottom: 10px;
+        }
+
+            .group-fields label {
+                display: block;
+                line-height: 18px;
+            }
+
+            .group-fields .inline {
+                display: inline;
+            }
+
+            .group-fields .ui-igcheckbox-normal {
+                margin-right: 5px;
+                float: left;
+            }
+
+            .group-fields .ui-igedit-container {
+                width: 230px;
+            }
+
+        .clearfix:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .group-fields.clearfix > div {
+            float: left;
+            margin-right: 10px;
+        }
