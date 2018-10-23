@@ -1,104 +1,134 @@
 $(function () {
 var transparentBrush = "rgba(0,0,0,0)";
-        var brush;
 
         var data = [
-                 { "CountryName": "China", "Pop1995": 1216, "Pop2005": 1297, "Pop2015": 1361, "Pop2025": 1394 },
-                 { "CountryName": "India", "Pop1995": 920, "Pop2005": 1090, "Pop2015": 1251, "Pop2025": 1396 },
-                 { "CountryName": "United States", "Pop1995": 266, "Pop2005": 295, "Pop2015": 322, "Pop2025": 351 },
-                 { "CountryName": "Indonesia", "Pop1995": 197, "Pop2005": 229, "Pop2015": 256, "Pop2025": 277 },
-                 { "CountryName": "Brazil", "Pop1995": 161, "Pop2005": 186, "Pop2015": 204, "Pop2025": 218 }
+                 { "CountryName": "CHN", "Population 1995": 1216, "Population 2005": 1297, "Population 2015": 1361, "Population 2025": 1394 },
+                 { "CountryName": "IND", "Population 1995": 920, "Population 2005": 1090, "Population 2015": 1251, "Population 2025": 1396 },
+                 { "CountryName": "USA", "Population 1995": 266, "Population 2005": 295, "Population 2015": 322, "Population 2025": 351 },
+                 { "CountryName": "BRA", "Population 1995": 161, "Population 2005": 186, "Population 2015": 204, "Population 2025": 218 }
         ];
 
+        // CODE SNIPPET
         $(function () {
-            $("#chart").igCategoryChart({
-                title: "Population per Country",
-                subtitle: "A comparison of population in 1995 and 2005",
-                xAxisTitle: "Country",
-                yAxisTitle: "Millions of People",
+            $("#chart").igCategoryChart({ 
+                xAxisMinorStroke: "Red",
+                yAxisMinorStroke: "Red",
+                yAxisMajorStroke: "Green",
+                xAxisMajorStroke: "Green",
+                xAxisMajorStrokeThickness: 1.0,
+                yAxisMajorStrokeThickness: 1.0,
+                xAxisMinorStrokeThickness: 0.5,
+                yAxisMinorStrokeThickness: 0.5,
+                xAxisMinorInterval: 0.5,
+                yAxisMinorInterval: 250,
+                xAxisInterval: 1,
+                yAxisInterval: 500,
+                yAxisMinimumValue: 0,
+                yAxisMaximumValue: 1500,
                 dataSource: data,
-                chartType: "column"
+                chartType: "column",
+
             });
         });
+        // CODE SNIPPET
 
-        $("#xAxisMajorLinesCkBx").click(function (e) {
-            brush = $("#xAxisMajorLinesCkBx").is(":checked") ? "Green" : transparentBrush;
+        $("#chart").igCategoryChart({ title: "Population per Country" });
+        $("#chart").igCategoryChart({
+            yAxisFormatLabel: function (value) {
+                return value + " M";
+            }
+        });
+
+        // event handers
+        $("#xAxisMajorCheckbox").click(function (e) {
+            var brush = $("#xAxisMajorCheckbox").is(":checked") ? "Green" : transparentBrush;
             $("#chart").igCategoryChart("option", "xAxisMajorStroke", brush);
         });
 
-        $("#xAxisMinorLinesCkBx").click("change", function () {
-            brush = ($(this).is(":checked")) ? "Red" : transparentBrush;
+        $("#xAxisMinorCheckbox").click("change", function () {
+            var brush = ($(this).is(":checked")) ? "Red" : transparentBrush;
             $("#chart").igCategoryChart("option", "xAxisMinorStroke", brush);
         });
 
-        $("#yAxisMajorLinesCkBx").click("change", function () {
-            brush = ($(this).is(":checked")) ? "Green" : transparentBrush;
+        $("#yAxisMajorCheckbox").click("change", function () {
+            var brush = ($(this).is(":checked")) ? "Green" : transparentBrush;
             $("#chart").igCategoryChart("option", "yAxisMajorStroke", brush);
         });
 
-        $("#yAxisMinorLinesCkBx").click("change", function () {
-            brush = ($(this).is(":checked")) ? "Red" : transparentBrush;
+        $("#yAxisMinorCheckbox").click("change", function () {
+            var brush = ($(this).is(":checked")) ? "Red" : transparentBrush;
             $("#chart").igCategoryChart("option", "yAxisMinorStroke", brush);
         });
 
-        $("#XMajorIntervalThicknessSlider").slider({
-            min: 1,
-            max: 10,
-            value: 1,
+        $("#xAxisMajorStrokeThicknessSlider").slider({
+            min: 5, max: 50, value: 10,
             slide: function (e, ui) {
-                $("#chart").igCategoryChart("option", "xAxisMajorStrokeThickness", ui.value);
-                $("#XMajorIntervalThicknessValueLbl").text(ui.value);
+                var thickness = ui.value * 0.1;
+                $("#chart").igCategoryChart("option", "xAxisMajorStrokeThickness", thickness);
+                $("#xAxisMajorStrokeThicknessLabel").text(thickness.toFixed(1));
             }
         });
 
-        $("#XMinorIntervalThicknessSlider").slider({
-            min: 1,
-            max: 10,
-            value: 1,
+        $("#xAxisMinorStrokeThicknessSlider").slider({
+            min: 5, max: 50, value: 10,
             slide: function (e, ui) {
-                $("#chart").igCategoryChart("option", "xAxisMinorStrokeThickness", ui.value);
-                $("#XMinorIntervalThicknessValueLbl").text(ui.value);
+                var thickness = ui.value * 0.1;
+                $("#chart").igCategoryChart("option", "xAxisMinorStrokeThickness", thickness);
+                $("#xAxisMinorStrokeThicknessLabel").text(thickness.toFixed(1));
             }
         });
 
-        $("#YMajorIntervalThicknessSlider").slider({
-            min: 1,
-            max: 10,
-            value: 1,
+        $("#yAxisMajorStrokeThicknessSlider").slider({
+            min: 5, max: 50, value: 10,
             slide: function (e, ui) {
-                $("#chart").igCategoryChart("option", "yAxisMajorStrokeThickness", ui.value);
-                $("#YMajorIntervalThicknessValueLbl").text(ui.value);
+                var thickness = ui.value * 0.1;
+                $("#chart").igCategoryChart("option", "yAxisMajorStrokeThickness", thickness);
+                $("#yAxisMajorStrokeThicknessLabel").text(thickness.toFixed(1));
             }
         });
 
-        $("#YMinorIntervalThicknessSlider").slider({
-            min: 1,
-            max: 10,
-            value: 1,
+        $("#yAxisMinorStrokeThicknessSlider").slider({
+            min: 5, max: 50, value: 10,
             slide: function (e, ui) {
-                $("#chart").igCategoryChart("option", "yAxisMinorStrokeThickness", ui.value);
-                $("#YMinorIntervalThicknessValueLbl").text(ui.value);
+                var thickness = ui.value * 0.1;
+                $("#chart").igCategoryChart("option", "yAxisMinorStrokeThickness", thickness);
+                $("#yAxisMinorStrokeThicknessLabel").text(thickness.toFixed(1));
             }
         });
 
-        $("#XMinorIntervalValueSlider").slider({
-            min: 1,
-            max: 20,
-            value: 1,
+        $("#xAxisMajorIntervalSlider").slider({
+            min: 1, max: 5, value: 1,
             slide: function (e, ui) {
-                $("#chart").igCategoryChart("option", "xAxisMinorInterval", ui.value * 0.05);
-                var num = ui.value * 0.05;
-                $("#XMinorIntervalActualValueLbl").text(num.toFixed(2));
+                var interval = ui.value;
+                $("#chart").igCategoryChart("option", "xAxisInterval", interval);
+                $("#xAxisMajorIntervalLabel").text(interval.toFixed(1));
             }
         });
 
-        $("#YMinorIntervalValueSlider").slider({
-            min: 1,
-            max: 100,
-            value: 50,
+        $("#yAxisMajorIntervalSlider").slider({
+            min: 200, max: 1500, value: 500,
             slide: function (e, ui) {
-                $("#chart").igCategoryChart("option", "yAxisMinorInterval", ui.value);
-                $("#YMinorIntervalActualValueLbl").text(ui.value);
+                var interval = ui.value;
+                $("#chart").igCategoryChart("option", "yAxisInterval", interval);
+                $("#yAxisMajorIntervalLabel").text(interval);
+            }
+        });
+
+        $("#xAxisMinorIntervalSlider").slider({
+            min: 1, max: 10, value: 5,
+            slide: function (e, ui) {
+                var interval = ui.value * 0.1;
+                $("#chart").igCategoryChart("option", "xAxisMinorInterval", interval);
+                $("#xAxisMinorIntervalLabel").text(interval.toFixed(1));
+            }
+        });
+
+        $("#yAxisMinorIntervalSlider").slider({
+            min: 100, max: 500, value: 250,
+            slide: function (e, ui) {
+                var interval = ui.value;
+                $("#chart").igCategoryChart("option", "yAxisMinorInterval", interval);
+                $("#yAxisMinorIntervalLabel").text(interval);
             }
         });
 });

@@ -9,7 +9,8 @@ $(function () {
 
             $('#gender').igTextEditor({
                 inputName: "gender",
-                listItems: ["Male", "Female"]
+                listItems: ["Male", "Female"],
+                isLimitedToListValues: true
             });
 
             $("#phone").igMaskEditor({

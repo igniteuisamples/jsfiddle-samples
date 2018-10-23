@@ -1,0 +1,13 @@
+td { vertical-align: top; }
+        .chartElement { margin-right: 10px; }
+        .chart-container {
+            width: 49%; 
+            box-sizing:border-box; 
+            float: left;
+        }
+            .chart-container h3 {
+                text-align: center
+            }
+        #charts {
+            padding : 1px;
+        }

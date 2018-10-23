@@ -1,0 +1,52 @@
+<script src="http://jp.igniteui.com/js/modernizr.min.js"></script>
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>
+<script src="http://cdn-na.infragistics.com/igniteui/latest/js/infragistics.core.js"></script>
+<script src="http://cdn-na.infragistics.com/igniteui/latest/js/infragistics.lob.js"></script>
+<script src="http://jp.igniteui.com/js/apiviewer.js"></script>
+<link href="http://cdn-na.infragistics.com/igniteui/latest/css/themes/infragistics/infragistics.theme.css" rel="stylesheet"></link>
+<link href="http://cdn-na.infragistics.com/igniteui/latest/css/structure/infragistics.css" rel="stylesheet"></link>
+<link href="http://jp.igniteui.com/css/apiviewer.css" rel="stylesheet" type="text/css"></link>
+<script src="http://cdn-na.infragistics.com/igniteui/latest/js/i18n/infragistics-ja.js"></script>
+
+<div id="dialog" class="sb-min-tablet-portrait">
+        <p>
+            <img src="http://jp.igniteui.com/images/samples/dialog-window/content.jpg"></img>
+        </p>
+        <button id="closeDialog"></button>
+	</div>
+
+    <div class="api-explorer">
+        <fieldset>
+            <legend>API</legend>
+                <label>状態をコードで変更</label>
+                <button id="createDialog">
+		        </button>
+		        <button id="destroyDialog">
+		        </button>
+		        <button id="openDialog">	
+		        </button>
+                <br />
+                <button id="minimizeDialog">
+                </button>
+		        <button id="maximizeDialog">
+                </button>
+		        <button id="pinDialog">
+                </button>
+		        <button id="unpinDialog">
+                </button>
+                <br />
+                <label>配置</label>
+		        <select id="position" disabled="disabled">
+			        <option selected="selected"></option>
+			        <option>my:'left+50 top+50',at:'left top'</option>
+			        <option>my:'left top',at:'left+200 top+100'</option>
+			        <option>my:'left top',at:'left+10 top+250'</option>
+			        <option>my:'left top',at:'left+200 top+10'</option>
+			        <option>my:'center',at:'center'</option>
+			        <option>my:'center-100 center-100',at:'center'</option>
+		        </select>
+        </fieldset>
+    </div>
+
+    <div class="api-viewer"></div>

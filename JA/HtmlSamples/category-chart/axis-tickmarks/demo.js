@@ -1,74 +1,67 @@
 $(function () {
 var data = [
-                 { "CountryName": "China", "Pop1995": 1216, "Pop2005": 1297, "Pop2015": 1361, "Pop2025": 1394 },
-                 { "CountryName": "India", "Pop1995": 920, "Pop2005": 1090, "Pop2015": 1251, "Pop2025": 1396 },
-                 { "CountryName": "United States", "Pop1995": 266, "Pop2005": 295, "Pop2015": 322, "Pop2025": 351 },
-                 { "CountryName": "Indonesia", "Pop1995": 197, "Pop2005": 229, "Pop2015": 256, "Pop2025": 277 },
-                 { "CountryName": "Brazil", "Pop1995": 161, "Pop2005": 186, "Pop2015": 204, "Pop2025": 218 }
+                 { "CountryName": "CHN", "Population 1995": 1216, "Population 2005": 1297, "Population 2015": 1361, "Population 2025": 1394 },
+                 { "CountryName": "IND", "Population 1995": 920, "Population 2005": 1090, "Population 2015": 1251, "Population 2025": 1396 },
+                 { "CountryName": "USA", "Population 1995": 266, "Population 2005": 295, "Population 2015": 322, "Population 2025": 351 },
+                 { "CountryName": "BRA", "Population 1995": 161, "Population 2005": 186, "Population 2015": 204, "Population 2025": 218 }
         ];
 
+        // CODE SNIPPET
         $(function () {
             $("#chart").igCategoryChart({
-                title: "国別人口",
-                subtitle: "1995 年と 2005 年の人口比較",
-                xAxisTitle: "国",
-                yAxisTitle: "人口 (百万)",
                 dataSource: data,
                 chartType: "auto",
-                xAxisTickLength: 5,
-                yAxisTickLength: 5,
-                xAxisTickStrokeThickness: 3,
-                yAxisTickStrokeThickness: 3,
+                xAxisTickLength: 10,
+                yAxisTickLength: 10,
+                xAxisTickStrokeThickness: 1,
+                yAxisTickStrokeThickness: 1,
+                xAxisTickStroke: "gray",
+                yAxisTickStroke: "gray",
             });
         });
+        // CODE SNIPPET
+
+        $("#chart").igCategoryChart({ title: "国別人口" });
 
         $("#YAxixTickmarkColorPicker").change(function (e) {
-            var ybrush = $(this).val();
-            $("#chart").igCategoryChart("option", "yAxisTickStroke", ybrush);
+            var brush = $(this).val();
+            $("#chart").igCategoryChart("option", "yAxisTickStroke", brush);
         });
 
         $("#XAxixTickmarkColorPicker").change(function (e) {
-            var xbrush = $(this).val();
-            $("#chart").igCategoryChart("option", "xAxisTickStroke", xbrush);
+            var brush = $(this).val();
+            $("#chart").igCategoryChart("option", "xAxisTickStroke", brush);
         });
 
         $("#XAxisTickmarkLengthSlider").slider({
-            min: 1,
-            max: 50,
-            value: 5,
+            min: 1, max: 50, value: 10,
             slide: function (e, ui) {
                 $("#chart").igCategoryChart("option", "xAxisTickLength", ui.value);
-                $("#XAxisTickmarkLengthValueLbl").text(ui.value);
-            }
-        });
-
-        $("#XAxisTickmarkThicknessSlider").slider({
-            min: 1,
-            max: 20,
-            value: 3,
-            slide: function (e, ui) {
-                $("#chart").igCategoryChart("option", "xAxisTickStrokeThickness", ui.value);
-                $("#XAxisTickmarkThicknessValueLbl").text(ui.value);
+                $("#XAxisTickmarkLength").text(ui.value);
             }
         });
 
         $("#YAxisTickmarkLengthSlider").slider({
-            min: 1,
-            max: 50,
-            value: 5,
+            min: 1, max: 50, value: 10,
             slide: function (e, ui) {
                 $("#chart").igCategoryChart("option", "yAxisTickLength", ui.value);
-                $("#YAxisTickmarkLengthValueLbl").text(ui.value);
+                $("#YAxisTickmarkLength").text(ui.value);
             }
-        }); 
+        });
+
+        $("#XAxisTickmarkThicknessSlider").slider({
+            min: 1, max: 20, value: 2,
+            slide: function (e, ui) {
+                $("#chart").igCategoryChart("option", "xAxisTickStrokeThickness", ui.value);
+                $("#XAxisTickmarkThickness").text(ui.value);
+            }
+        });
 
         $("#YAxisTickmarkThicknessSlider").slider({
-            min: 1,
-            max: 20,
-            value: 3,
+            min: 1, max: 20, value: 2,
             slide: function (e, ui) {
                 $("#chart").igCategoryChart("option", "yAxisTickStrokeThickness", ui.value);
-                $("#YAxisTickmarkThicknessValueLbl").text(ui.value);
+                $("#YAxisTickmarkThickness").text(ui.value);
             }
         });
 });

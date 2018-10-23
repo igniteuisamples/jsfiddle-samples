@@ -12,7 +12,8 @@ $(function () {
 					},
 					{ name: "Country", type: "string" },
 					{ name: "Age", type: "number" },
-					{ name: "IsActive", type: "bool" }
+                    { name: "IsActive", type: "bool" },
+                    { name: "RegistererTime" }
 				],
 			});
 			ds = new $.ig.DataSource({
@@ -112,7 +113,8 @@ $(function () {
 					{ headerText: "Register Date", key: "RegistererDate", dataType: "date" },
 					{ headerText: "Country", key: "Country", dataType: "string" },
 					{ headerText: "Age", key: "Age", dataType: "number" },
-					{ headerText: "Is Active", key: "IsActive", dataType: "bool" }
+                    { headerText: "Is Active", key: "IsActive", dataType: "bool" },
+                    { headerText: "Time", key: "RegistererTime", dataType: "time" }
 				],
 				dataSource: ds.dataView(),
 				responseDataKey: "results",

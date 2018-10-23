@@ -76,8 +76,8 @@ $(function () {
                             showTooltip: true
                         }]
                 });
-           
-        
+
+
             //yAxis Angle Transiton Duration Slider
             $("#yAxisAngleSlider").slider({
                 min: -180,
@@ -88,7 +88,7 @@ $(function () {
                     $("#yAxisAngleLabel").text(ui.value);
                 }
             });
-                
+
                 //xAxis Angle Transiton Duration Slider
             $("#xAxisAngleSlider").slider({
                 min: -180,
@@ -99,5 +99,5 @@ $(function () {
                     $("#xAxisAngleLabel").text(ui.value);
                 }
             });
-                
+
             });

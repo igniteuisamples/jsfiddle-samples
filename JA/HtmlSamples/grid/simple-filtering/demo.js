@@ -12,7 +12,8 @@ $(function () {
 					},
 					{ name: "Country", type: "string" },
 					{ name: "Age", type: "number" },
-					{ name: "IsActive", type: "bool" }
+                    { name: "IsActive", type: "bool" },
+                    { name: "RegistererTime" }
 				],
 			});
 			ds = new $.ig.DataSource({
@@ -112,7 +113,8 @@ $(function () {
 					{ headerText: "登録日付", key: "RegistererDate", dataType: "date" },
 					{ headerText: "国", key: "Country", dataType: "string" },
 					{ headerText: "年齢", key: "Age", dataType: "number" },
-					{ headerText: "アクティブ", key: "IsActive", dataType: "bool" }
+                    { headerText: "アクティブ", key: "IsActive", dataType: "bool" },
+                    { headerText: "時刻", key: "RegistererTime", dataType: "time" }
 				],
 				dataSource: ds.dataView(),
 				responseDataKey: "results",

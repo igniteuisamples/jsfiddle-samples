@@ -1,0 +1,35 @@
+<script src="http://igniteui.com/js/modernizr.min.js"></script>
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>
+<script src="http://cdn-na.infragistics.com/igniteui/latest/js/infragistics.core.js"></script>
+<script src="http://cdn-na.infragistics.com/igniteui/latest/js/infragistics.lob.js"></script>
+<script src="http://igniteui.com/js-data/nw-employees"></script>
+<link href="http://cdn-na.infragistics.com/igniteui/latest/css/themes/infragistics/infragistics.theme.css" rel="stylesheet"></link>
+<link href="http://cdn-na.infragistics.com/igniteui/latest/css/structure/infragistics.css" rel="stylesheet"></link>
+
+<script id="dialogTemplate" type="text/html">
+        <div class="row-edit-dialog-container-head"><strong>${Name}</strong></div>
+        <div class="row-edit-dialog-container-cols">
+            <div style="float: left;">
+                <table>
+                    <colgroup>
+                        <col style="width: 30%;" />
+                        <col style="width: 70%;" />
+                    </colgroup>
+                    <tbody data-render-tmpl="true"></tbody>
+                </table>
+            </div>
+            <div style="width: 160px; float: right;">
+                <img width="100" height="90" src="${ImageUrl}" alt="${Name}" title="${Name}" style="float:right;" />
+            </div>
+        </div>
+    </script>
+<script id="editorsTemplate" type="text/html">
+        <tr>
+            <td style="text-align:right;color:#777;"><strong>${headerText}</strong></td>
+            <td><input data-editor-for-${key}="true" /></td>
+        </tr>
+    </script>
+
+<table id="grid">
+    </table>

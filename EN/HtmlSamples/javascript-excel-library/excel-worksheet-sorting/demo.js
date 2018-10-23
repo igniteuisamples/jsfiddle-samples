@@ -21,7 +21,7 @@ function createTableWorkbook() {
            // table.style(workbook.standardTableStyles('TableStyleMedium2'))
 
             // Populate the table with data
-            sheet.getCell('A2').value(3224);
+             sheet.getCell('A2').value(3224);
             sheet.getCell('B2').value('Armin Barrywater');
             sheet.getCell('C2').value('In Review');
             sheet.getCell('D2').value('Underwriter is out until next week.');

@@ -1,0 +1,14 @@
+h2
+        {
+            width: 100%;
+            text-align: center;
+        }
+        
+        .chart
+        {
+            display: inline-block; 
+        }
+        .legend
+        {
+            display: inline-block; 
+        }

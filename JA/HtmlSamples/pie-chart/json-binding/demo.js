@@ -12,8 +12,8 @@ $(function () {
                 width: "435px",
                 height: "435px",
                 dataSource: data, //JSON data defined above
-                dataValue: "Pop2008",
-                dataLabel: "CountryName",
+                valueMemberPath: "Pop2008",
+                labelMemberPath: "CountryName",
                 labelsPosition: "bestFit"
             });
 

@@ -9,63 +9,81 @@
 
 <div id="chart" class="chart" style="width:600px;height:400px"></div>
 
-    <div class="optionsPane">
-        <div><b>軸ラベルのオプション:</b></div>
-
-        <div class="optionContainer">
-            <div><b>X 軸ラベルのオプション:</b></div>
-            <div>
+    <div>
+        <div class="optionsPane">
+            <div><b>X 軸オプション</b></div>
+            <div class="optionsColumn">
+                
                 <div>
-                    <label id="XAxisLabelMarginLbl">ラベル マージン:</label>
-                    <div id="XAxisLabelMarginSlider" class="slider"></div>
-                    <label id="XAxisLabelMarginValueLbl" class="labels">5</label>
+                    <label>ラベル マージン:</label>
+                    <label id="xAxisLabelMargin" class="values">5</label>
+                    <div id="xAxisLabelMarginSlider" class="slider"></div>
                 </div>
 
                 <div>
-                    <label id="ForegroundLbl" class="labels">前景:</label>
+                    <label>ラベルのフォント:</label>
+                    <label id="xAxisLabelFontSize" class="values">10</label>
+                    <div id="xAxisLabelFontSizeSlider" class="slider"></div>
+                </div>
 
-                    <select class="selector" id="XAxisLabelColorPicker">
-                        <option value="lightgray">lightgray</option>
+                <div>
+                    <label>ラベルの角度:</label>
+                    <label id="xAxisLabelAngle" class="values">0</label>
+                    <div id="xAxisLabelAngleSlider" class="slider"></div>
+                </div>
+
+                <label>ラベルの色:</label>
+                <div>
+                    <select class="selector" id="xAxisLabelColorPicker">
+                        <option value="gray">gray</option>
                         <option value="blue">blue</option>
                         <option value="red">red</option>
                         <option value="green">green</option>
                         <option value="orange">orange</option>
-                        <option value="cyan">cyan</option>
-                        <option value="yellow">yellow</option>
                         <option value="violet">violet</option>
-                        <option value="black">black</option>
                         <option value="indigo">indigo</option>
-                        <option value="rgba(0,0,0,0)">transparent</option>
+                        <option value="black">black</option>
+                        <option value="white">white</option>
                     </select>
                 </div>
             </div>
         </div>
-
-        <div class="optionContainer">
-            <div><b>Y 軸ラベルのオプション:</b></div>
-            <div>
+        <div class="optionsPane">
+            <div><b>Y 軸オプション</b></div>
+            <div class="optionsColumn">
                 <div>
-                    <label id="YAxisLabelMarginLbl">ラベル マージン:</label>
-                    <div id="YAxisLabelMarginSlider" class="slider"></div>
-                    <label id="YAxisLabelMarginValueLbl" class="labels">5</label>
+                    <label>ラベル マージン:</label>
+                    <label id="yAxisLabelMargin" class="values">5</label>
+                    <div id="yAxisLabelMarginSlider" class="slider"></div>
                 </div>
 
                 <div>
-                    <label id="ForegroundLbl" class="labels">前景:</label>
+                    <label>ラベルのフォント:</label>
+                    <label id="yAxisLabelFontSize" class="values">10</label>
+                    <div id="yAxisLabelFontSizeSlider" class="slider"></div>
+                </div>
 
-                    <select class="selector" id="YAxisLabelColorPicker">
-                        <option value="lightgray">lightgray</option>
-                        <option value="blue">blue</option>
-                        <option value="red">red</option>
-                        <option value="green">green</option>
-                        <option value="orange">orange</option>
-                        <option value="cyan">cyan</option>
-                        <option value="yellow">yellow</option>
-                        <option value="violet">violet</option>
-                        <option value="black">black</option>
-                        <option value="indigo">indigo</option>
-                        <option value="rgba(0,0,0,0)">transparent</option>
-                    </select>
+                <div>
+                    <label>ラベルの角度:</label>
+                    <label id="yAxisLabelAngle" class="values">0</label>
+                    <div id="yAxisLabelAngleSlider" class="slider"></div>
+                </div>
+
+                <div>
+                    <label>ラベルの色:</label>
+                    <div>
+                        <select class="selector" id="yAxisLabelColorPicker">
+                            <option value="gray">gray</option>
+                            <option value="blue">blue</option>
+                            <option value="red">red</option>
+                            <option value="green">green</option>
+                            <option value="orange">orange</option>
+                            <option value="violet">violet</option>
+                            <option value="indigo">indigo</option>
+                            <option value="black">black</option>
+                            <option value="white">white</option>
+                        </select>
+                    </div>
                 </div>
             </div>
         </div>

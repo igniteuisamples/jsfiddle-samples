@@ -26,7 +26,7 @@ $(function () {
                         name: "PopulationAxis",
                         type: "numericY",
                         minimumValue: 0,
-                        title: "予期人口 (百万人単位)",
+                        title: "人口 (百万人単位)",
                     }
                 ],
                 series: [

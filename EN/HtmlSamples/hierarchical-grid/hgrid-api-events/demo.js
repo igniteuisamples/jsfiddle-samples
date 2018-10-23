@@ -114,10 +114,10 @@ $(function () {
 
             //function for expanding/collapsing all rows on all levels in the igHierarhicalGrid
             function expandCollapseRowsPerGrid($gridElement, action, level, callback) {
-                var _root = $("#grid").data("igHierarchicalGrid");
+                var _root = $gridElement.data("igHierarchicalGrid") || $gridElement.closest(".ui-iggrid-root").data("igHierarchicalGrid");
                 //get all rows in the grid that are not child grid container
                 var rows = $gridElement.children('tbody').find('>tr:not([data-container])');
-                var rowsCount = rows.length;
+                var rowsCount = rows.find("span.ui-iggrid-expandbutton").length;
                 var gridChildElements = [];
                 var index = 0;
                 //Callback function used for the expand/collapse methods.

@@ -3,20 +3,22 @@
         }
 
         .optionsPane {
-            position: right;
-            width: 310px;
+            position: relative;
+            float: initial;
+            width: 275px;
             margin: 6px 3px 6px 6px;
             display: inline-block;
             padding-top: 18px;
-            vertical-align: top;
         }
 
-        .optionContainer {
-            position: relative;
-            width: 310px;
+        .optionsColumn {
+            float: left;
+            position: relative; 
             margin: 2px;
             padding: 2px;
             display: inline-block;
-            border: 1px solid black;
+            -moz-border-radius: 4px;
+            -webkit-border-radius: 4px;
             border-radius: 4px;
+            border: 1px solid #e0e0e0;
         }

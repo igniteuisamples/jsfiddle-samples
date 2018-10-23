@@ -8,13 +8,11 @@ $(function () {
                 dataSource: data,
                 width: '430px',
                 height: '430px',
-                dataValue: 'Budget',
-                dataLabel: 'Label',
+                valueMemberPath: 'Budget',
+                labelMemberPath: 'Label',
                 explodedSlices: [2, 3],
                 radiusFactor: .6,
                 labelsPosition: "outsideEnd",
-                labelOuterColor: "black",
-                labelInnerColor: "black",
                 leaderLineType: "arc",
                 labelExtent: 40,
                 legend: { element: 'legend', type: "item" }
@@ -75,22 +73,6 @@ $(function () {
                     if ($.isArray(ui.items) && ui.items[0] != undefined) {
                         $("#chart1").igPieChart("option", "leaderLineType", ui.items[0].data.value);
                     }
-                }
-            });
-
-            // Inner Color
-            $("#labelInnerColor").on({
-                change: function (e) {
-                    var labelInnerColor = $(this).val();
-                    $("#chart1").igPieChart("option", "labelInnerColor", labelInnerColor);
-                }
-            });
-
-            // Outer Color
-            $("#labelOuterColor").on({
-                change: function (e) {
-                    var labelOuterColor = $(this).val();
-                    $("#chart1").igPieChart("option", "labelOuterColor", labelOuterColor);
                 }
             });
 

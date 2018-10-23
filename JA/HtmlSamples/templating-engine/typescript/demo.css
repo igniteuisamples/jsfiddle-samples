@@ -1,0 +1,25 @@
+.clear {
+            clear: both;
+        }
+
+        .ui-igrating {
+            float: left;
+        }
+
+        .ratingLabel {
+            float: left;
+            margin-left: 3px;
+            margin-right: 5px;
+        }
+        .delete-button
+        {
+            width: 100%;
+            font-size: 1em;
+            border: solid 1px #777;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            color: #444;
+        }
+        .delete-button:hover
+        {
+            background-color: #d0edfa;
+        }

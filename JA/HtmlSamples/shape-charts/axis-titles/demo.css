@@ -1,22 +1,35 @@
-.chartSlider {
-            margin: 10px 0px 10px 0px;
-        }
-
-        .optionsPane {
-            position: right;
-            width: 310px;
+.optionsPane {
+            position: relative;
+            float: initial;
+            width: 210px;
             margin: 6px 3px 6px 6px;
             display: inline-block;
             padding-top: 18px;
-            vertical-align: top;
         }
 
-        .optionContainer {
-            position: relative;
-            width: 310px;
+        .optionsColumn {
+            float: left;
+            position: relative; 
             margin: 2px;
             padding: 2px;
             display: inline-block;
-            border: 1px solid black;
+            -moz-border-radius: 4px;
+            -webkit-border-radius: 4px;
             border-radius: 4px;
+            border: 1px solid #e0e0e0;
+        }
+        
+        .slider {
+            width: 175px;
+            margin: 10px 10px 4px 6px;
+            padding-right: 3px;
+            padding-left: 3px;
+            display: inline-block;
+            float: left;
+        }
+        
+        .values {
+            padding-left: 7px;
+            padding-right: 7px;
+            width: 20px;
         }

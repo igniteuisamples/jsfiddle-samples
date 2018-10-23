@@ -8,44 +8,6 @@ $(function () {
                 { "CountryName": "Brazil", "Pop1995": 161, "Pop2005": 186, "Pop2015": 204, "Pop2025": 218 }
             ];
 
-            seriesSettings = {
-            	crosshairLayer: {
-            		name: "crosshairLayer",
-            		title: "crosshair",
-            		type: "crosshairLayer",
-            		useInterpolation: false,
-            		transitionDuration: 250
-            	},
-            	categoryHighlightLayer: {
-            		name: "categoryHighlightLayer",
-            		title: "categoryHighlight",
-            		type: "categoryHighlightLayer",
-            		useInterpolation: false,
-            		transitionDuration: 250
-            	},
-            	categoryItemHighlightLayer: {
-            		name: "categoryItemHighlightLayer",
-            		title: "categoryItemHighlight",
-            		type: "categoryItemHighlightLayer",
-            		useInterpolation: false,
-            		transitionDuration: 250
-            	},
-            	categoryToolTipLayer: {
-            		name: "categoryToolTipLayer",
-            		title: "categoryToolTip",
-            		type: "categoryToolTipLayer",
-            		useInterpolation: false,
-            		transitionDuration: 250
-            	},
-            	itemToolTipLayer: {
-            		name: "itemToolTipLayer",
-            		title: "itemToolTipLayer",
-            		type: "itemToolTipLayer",
-            		useInterpolation: false,
-            		transitionDuration: 250
-            	}
-            }
-
             $("#chart").igDataChart({
                 width: "100%",
                 height: "400px",
@@ -91,38 +53,26 @@ $(function () {
                         isHighlightingEnabled: true,
                         showTooltip: true
                     },
-                    seriesSettings.crosshairLayer,
-                    seriesSettings.categoryItemHighlightLayer,
-					seriesSettings.categoryToolTipLayer
-                ]
-            });
-
-            $("#crosshair").change(function () {
-            	var chart = $("#chart"), isChecked = $(this).prop("checked");
-            	if (!isChecked) {
-            		chart.igDataChart("option", "series", [{ name: "crosshairLayer", remove: true }]);
-            	} else {
-            		chart.igDataChart("option", "series", [ seriesSettings.crosshairLayer ]);
-            	}
-            });
-            $("input:radio[name=highlight]").change(function () {
-            	var chart = $("#chart");
-            	if ($(this).val() === "highlight") {
-            		chart.igDataChart("option", "series", [{ name: "categoryItemHighlightLayer", remove: true }]);
-            		chart.igDataChart("option", "series", [ seriesSettings.categoryHighlightLayer ]);
-            	} else {
-            		chart.igDataChart("option", "series", [{ name: "categoryHighlightLayer", remove: true }]);
-            		chart.igDataChart("option", "series", [ seriesSettings.categoryItemHighlightLayer ]);
-            	}
-            });
-            $("input:radio[name=tooltip]").change(function () {
-            	var chart = $("#chart");
-            	if ($(this).val() === "tooltip") {
-            		chart.igDataChart("option", "series", [{ name: "itemToolTipLayer", remove: true }]);
-            		chart.igDataChart("option", "series", [ seriesSettings.categoryToolTipLayer ]);
-            	} else {
-            		chart.igDataChart("option", "series", [{ name: "categoryToolTipLayer", remove: true }]);
-            		chart.igDataChart("option", "series", [ seriesSettings.itemToolTipLayer ]);
-            	}
+                    {
+                        name: "crosshairLayer",
+                        title: "crosshair",
+                        type: "crosshairLayer",
+                        useInterpolation: false,
+                        transitionDuration: 250
+                    },
+                    {
+                        name: "catItemHighlightLayer",
+                        title: "categoryItemHighlight",
+                        type: "categoryItemHighlightLayer",
+                        useInterpolation: false,
+                        transitionDuration: 250
+                    },
+                    {
+                        name: "categoryToolTipLayer",
+                        title: "categoryToolTip",
+                        type: "categoryToolTipLayer",
+                        useInterpolation: false,
+                        transitionDuration: 250
+                    }]
             });
         });

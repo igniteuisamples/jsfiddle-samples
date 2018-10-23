@@ -1,0 +1,37 @@
+<script src="http://igniteui.com/js/modernizr.min.js"></script>
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>
+<script src="http://cdn-na.infragistics.com/igniteui/latest/js/infragistics.core.js"></script>
+<script src="http://cdn-na.infragistics.com/igniteui/latest/js/infragistics.lob.js"></script>
+<script src="http://igniteui.com/js/apiviewer.js"></script>
+<link href="http://cdn-na.infragistics.com/igniteui/latest/css/themes/infragistics/infragistics.theme.css" rel="stylesheet"></link>
+<link href="http://cdn-na.infragistics.com/igniteui/latest/css/structure/infragistics.css" rel="stylesheet"></link>
+<link href="http://igniteui.com/css/apiviewer.css" rel="stylesheet" type="text/css"></link>
+
+<div id="splitter">
+        <div>First Panel</div>
+        <div>Second Panel</div>
+    </div>
+
+    <div class="api-explorer">
+        <fieldset>
+            <legend>Splitter API settings</legend>
+            <input type="button" id="igButtonSplitterFirstPanelCollapse" value="Collapse First Panel" style="margin-bottom: 20px;"></input>
+            <input type="button" id="igButtonSplitterFirstPanelExpand" value="Expand First Panel" style="margin-bottom: 20px;"></input>
+            <input type="button" id="igButtonSplitterSecondPanelCollapse" value="Collapse Second Panel" style="margin-bottom: 20px;"></input>
+            <input type="button" id="igButtonSplitterSecondPanelExpand" value="Expand Second Panel" style="margin-bottom: 20px;"></input>
+            
+            <br />
+            Change content with  <input type="text" id="firstPanelText"></input> at the <input type="button" id="igButtonSplitterFirstPanel" value="First Panel" style="margin-bottom: 20px;"></input>
+            <br />
+            Change content with  <input type="text" id="secondPanelText"></input> at the <input type="button" id="igButtonSplitterSecondPanel" value="Second Panel" style="margin-bottom: 20px;"></input>
+            <br />
+            Enter new panel size <input type="text" id="firstPanelSize"></input> e.g. 100px <input type="button" id="igButtonSplitterFirstPanelSize" value="First Panel" style="margin-bottom: 20px;"></input>
+            <br />
+            Enter new panel size <input type="text" id="secondPanelSize"></input> e.g. 100px <input type="button" id="igButtonSplitterSecondPanelSize" value="Second Panel" style="margin-bottom: 20px;"></input>
+        </fieldset>
+    </div>
+
+    <br />
+
+    <div class="api-viewer"></div>

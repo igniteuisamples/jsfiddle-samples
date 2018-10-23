@@ -1,33 +1,27 @@
 $(function () {
-var data = [
-            { "X": 30, "Y": 30 },
-            { "X": 30, "Y": 70 },
-            { "X": 70, "Y": 70 },
-            { "X": 70, "Y": 30 }];
-
-
-        $(function () {
 
             $("#shapeChart").igShapeChart({
-                dataSource: data,
+                databaseSource: 'https://www.igniteui.com/data-files/shapes/world_countries_reg.dbf',
+                shapeDataSource: 'https://www.igniteui.com/data-files/shapes/world_countries_reg.shp',
+                chartType: "polygon",
                 width: "600px",
                 height: "400px",
-                xAxisMinimumValue: 0,
-                yAxisMinimumValue: 0,
-                xAxisMaximumValue: 100,
-                yAxisMaximumValue: 100,
-                xAxisInterval: 10,
+                xAxisMinimumValue: -180,
+                xAxisMaximumValue: 180,
+                yAxisMinimumValue: -90,
+                yAxisMaximumValue: 90,
                 xAxisMajorStroke: "Green",
-                xAxisMajorStrokeThickness: 2,
-                xAxisMinorStroke: "Red",
-                xAxisMinorStrokeThickness: 0.5,
-                xAxisMinorInterval: 5,
-                yAxisInterval: 10,
                 yAxisMajorStroke: "Green",
-                yAxisMajorStrokeThickness: 2,
+                xAxisMinorStroke: "Red",
                 yAxisMinorStroke: "Red",
+                xAxisMajorStrokeThickness: 1,
+                yAxisMajorStrokeThickness: 1,
+                xAxisMinorStrokeThickness: 0.5,
                 yAxisMinorStrokeThickness: 0.5,
-                yAxisMinorInterval: 5,
+                xAxisInterval: 30,
+                yAxisInterval: 30,
+                xAxisMinorInterval: 15,
+                yAxisMinorInterval: 15,
                 isHorizontalZoomEnabled: true,
                 isVerticalZoomEnabled: true,
             });
@@ -76,53 +70,47 @@ var data = [
 
         $("#xAxisMajorLineSlider").slider(
             {
-                min: 0.5,
-                max: 5,
-                value: 2,
+                min: 5, max: 50, value: 10,
                 slide: function (e, ui) {
-                    $("#shapeChart").igShapeChart("option", "xAxisMajorStrokeThickness", ui.value);
-                    $("#xAxisMajorThicknessValue").text(ui.value);
+                    var thickness = ui.value * 0.1;
+                    $("#shapeChart").igShapeChart("option", "xAxisMajorStrokeThickness", thickness);
+                    $("#xAxisMajorThicknessValue").text(thickness.toFixed(1));
                 }
             });
 
         $("#yAxisMajorLineSlider").slider(
             {
-                min: 0.5,
-                max: 5,
-                value: 2,
+                min: 5, max: 50, value: 10,
                 slide: function (e, ui) {
-                    $("#shapeChart").igShapeChart("option", "yAxisMajorStrokeThickness", ui.value);
-                    $("#yAxisMajorThicknessValue").text(ui.value);
+                    var thickness = ui.value * 0.1;
+                    $("#shapeChart").igShapeChart("option", "yAxisMajorStrokeThickness", thickness);
+                    $("#yAxisMajorThicknessValue").text(thickness.toFixed(1));
                 }
             });
 
         $("#xAxisMinorLineThicknessSlider").slider(
             {
-                min: 0.5,
-                max: 5,
-                value: 0.5,
+                min: 5, max: 50, value: 10,
                 slide: function (e, ui) {
-                    $("#shapeChart").igShapeChart("option", "xAxisMinorStrokeThickness", ui.value);
-                    $("#xAxisMinorThicknessValue").text(ui.value);
+                    var thickness = ui.value * 0.1;
+                    $("#shapeChart").igShapeChart("option", "xAxisMinorStrokeThickness", thickness);
+                    $("#xAxisMinorThicknessValue").text(thickness.toFixed(1));
                 }
             });
 
         $("#yAxisMinorLineThicknessSlider").slider(
             {
-                min: 0.5,
-                max: 5,
-                value: 0.5,
+                min: 5, max: 50, value: 10,
                 slide: function (e, ui) {
-                    $("#shapeChart").igShapeChart("option", "yAxisMinorStrokeThickness", ui.value);
-                    $("#yAxisMinorThicknessValue").text(ui.value);
+                    var thickness = ui.value * 0.1;
+                    $("#shapeChart").igShapeChart("option", "yAxisMinorStrokeThickness", thickness);
+                    $("#yAxisMinorThicknessValue").text(thickness.toFixed(1));
                 }
             });
 
         $("#xAxisMajorLineIntervalSlider").slider(
             {
-                min: 10,
-                max: 30,
-                value: 10,
+                min: 30, max: 90, value: 30,
                 slide: function (e, ui) {
                     $("#shapeChart").igShapeChart("option", "xAxisInterval", ui.value);
                     $("#xAxisMajorIntervalValue").text(ui.value);
@@ -131,10 +119,7 @@ var data = [
 
         $("#yAxisMajorLineIntervalSlider").slider(
             {
-                min: 10,
-                max: 30,
-                width: "100px",
-                value: 10,
+                min: 30, max: 90, value: 30,
                 slide: function (e, ui) {
                     $("#shapeChart").igShapeChart("option", "yAxisInterval", ui.value);
                     $("#yAxisMajorIntervalValue").text(ui.value);
@@ -143,24 +128,18 @@ var data = [
 
         $("#xAxisMinorLineIntervalSlider").slider(
             {
-                min: 1,
-                max: 10,
-                value: 5,
+                min: 10, max: 30, value: 15,
                 slide: function (e, ui) {
                     $("#shapeChart").igShapeChart("option", "xAxisMinorInterval", ui.value);
-                    $("#xAxisMinorIntervalValue").text(ui.value);
+                    $("#xAxisAxisMinorGridlinesInterval").text(ui.value);
                 }
             });
 
         $("#yAxisMinorLineIntervalSlider").slider(
             {
-                min: 1,
-                max: 10,
-                width: "100px",
-                value: 5,
+                min: 10, max: 30, value: 15,
                 slide: function (e, ui) {
                     $("#shapeChart").igShapeChart("option", "yAxisMinorInterval", ui.value);
-                    $("#yAxisMinorIntervalValue").text(ui.value);
+                    $("#yAxisAxisMinorGridlinesInterval").text(ui.value);
                 }
             });
-});

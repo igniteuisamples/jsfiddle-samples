@@ -1,41 +1,38 @@
 $(function () {
-var data = [
-            { "X": 30, "Y": 30 },
-            { "X": 30, "Y": 70 },
-            { "X": 70, "Y": 70 },
-            { "X": 70, "Y": 30 }];
-
-        $(function () {
 
             $("#shapeChart").igShapeChart({
-                dataSource: data,
+                databaseSource: 'https://www.igniteui.com/data-files/shapes/world_countries_reg.dbf',
+                shapeDataSource: 'https://www.igniteui.com/data-files/shapes/world_countries_reg.shp',
+                chartType: "polygon",
                 width: "600px",
                 height: "400px",
-                xAxisMinimumValue: 0,
-                xAxisLabelMargin: 20,
-                yAxisMinimumValue: 0,
-                xAxisMaximumValue: 100,
-                yAxisMaximumValue: 100,
+                xAxisLabelVisibility: "visible",
+                yAxisLabelVisibility: "visible",
+                xAxisLabelAngle: 0,
+                yAxisLabelAngle: 0,
+                xAxisLabelTextColor: "gray",
+                yAxisLabelTextColor: "gray",
+                xAxisLabelTextStyle: "10pt Verdana",
+                yAxisLabelTextStyle: "10pt Verdana",
+                xAxisLabelLocation: "outsideBottom",
+                yAxisLabelLocation: "outsideRight",
+                xAxisLabelVerticalAlignment: "top",
+                yAxisLabelHorizontalAlignment: "left",
+
+                xAxisMinimumValue: -180,
+                xAxisMaximumValue: 180,
+                yAxisMinimumValue: -90,
+                yAxisMaximumValue: 90,
+                xAxisInterval: 30,
+                yAxisInterval: 30,
                 isHorizontalZoomEnabled: true,
                 isVerticalZoomEnabled: true,
             });
-        });
-
-        $("#xAxisShowLabelsCheckbox").click(function (e) {
-            var isChecked = $("#xAxisShowLabelsCheckbox").is(":checked");
-            if (isChecked) {
-                $("#shapeChart").igShapeChart("option", "xAxisLabelVisibility", "visible");
-            }
-            else {
-                $("#shapeChart").igShapeChart("option", "xAxisLabelVisibility", "collapsed");
-            }
-        });
+        }); 
 
         $("#xAxisLabelAngleSlider").slider(
             {
-                min: 0,
-                max: 360,
-                value: 0,
+                min: -180, max: 180, value: 0,
                 slide: function (e, ui) {
                     $("#shapeChart").igShapeChart("option", "xAxisLabelAngle", ui.value);
                     $("#xAxisLabelAngleValue").text(ui.value);
@@ -44,44 +41,28 @@ var data = [
 
         $("#xAxisLabelFontSizeSlider").slider(
             {
-                min: 0,
-                max: 30,
-                value: 12,
+                min: 5, max: 15, value: 10,
                 slide: function (e, ui) {
                     var size = ui.value + "pt";
-                    var style = "Verdona";
-                    $("#shapeChart").igShapeChart("option", "xAxisLabelTextStyle", size + " " + style);
+                    var style = size + " " + "Verdona";
+                    $("#shapeChart").igShapeChart("option", "xAxisLabelTextStyle", style);
                     $("#xAxisLabelFontSizeValue").text(ui.value);
                 }
             });
 
         $("#xAxisLabelMarginSlider").slider(
             {
-                min: 0,
-                max: 25,
-                value: 2,
+                min: 0, max: 25, value: 5,
                 slide: function (e, ui) {
                     $("#shapeChart").igShapeChart("option", "xAxisLabelTopMargin", ui.value);
+                    $("#shapeChart").igShapeChart("option", "xAxisLabelBottomMargin", ui.value);
                     $("#xAxisLabelMarginValue").text(ui.value);
                 }
             });
 
-
-        $("#yAxisShowLabelsCheckbox").click(function (e) {
-            var isChecked = $("#yAxisShowLabelsCheckbox").is(":checked");
-            if (isChecked) {
-                $("#shapeChart").igShapeChart("option", "yAxisLabelVisibility", "visible");
-            }
-            else {
-                $("#shapeChart").igShapeChart("option", "yAxisLabelVisibility", "collapsed");
-            }
-        });
-
         $("#yAxisLabelAngleSlider").slider(
             {
-                min: 0,
-                max: 360,
-                value: 0,
+                min: -180, max: 180, value: 0,
                 slide: function (e, ui) {
                     $("#shapeChart").igShapeChart("option", "yAxisLabelAngle", ui.value);
                     $("#yAxisLabelAngleValue").text(ui.value);
@@ -90,25 +71,21 @@ var data = [
 
         $("#yAxisLabelFontSizeSlider").slider(
             {
-                min: 0,
-                max: 30,
-                value: 12,
+                min: 5, max: 15, value: 10,
                 slide: function (e, ui) {
                     var size = ui.value + "pt";
-                    var style = "Verdona";
-                    $("#shapeChart").igShapeChart("option", "yAxisLabelTextStyle", size + " " + style);
+                    var style = size + " " + "Verdona";
+                    $("#shapeChart").igShapeChart("option", "yAxisLabelTextStyle", style);
                     $("#yAxisLabelFontSizeValue").text(ui.value);
                 }
             });
 
         $("#yAxisLabelMarginSlider").slider(
             {
-                min: 0,
-                max: 25,
-                value: 2,
+                min: 0, max: 25, value: 5,
                 slide: function (e, ui) {
                     $("#shapeChart").igShapeChart("option", "yAxisLabelRightMargin", ui.value);
+                    $("#shapeChart").igShapeChart("option", "yAxisLabelLeftMargin", ui.value);
                     $("#yAxisLabelMarginValue").text(ui.value);
                 }
             });
-});

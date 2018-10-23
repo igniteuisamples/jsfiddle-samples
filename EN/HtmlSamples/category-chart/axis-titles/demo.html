@@ -3,7 +3,88 @@
 <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>
 <script src="http://cdn-na.infragistics.com/igniteui/latest/js/infragistics.core.js"></script>
 <script src="http://cdn-na.infragistics.com/igniteui/latest/js/infragistics.dv.js"></script>
-<link href="http://cdn-na.infragistics.com/igniteui/latest/css/themes/metro/infragistics.theme.css" rel="stylesheet"></link>
+<link href="http://cdn-na.infragistics.com/igniteui/latest/css/themes/infragistics/infragistics.theme.css" rel="stylesheet"></link>
 <link href="http://cdn-na.infragistics.com/igniteui/latest/css/structure/infragistics.css" rel="stylesheet"></link>
 
-<div id="theChart" style="width:800px;height:400px"></div>
+<div id="chart" class="chart" style="width:600px;height:400px"></div>
+
+    <div>
+        <div class="optionsPane">
+            <div><b>X-Axis Options</b></div>
+
+            <div class="optionsColumn">
+
+                <div>
+                    <label>Title Margin:</label>
+                    <label id="xAxisTitleMargin" class="values">5</label>
+                    <div id="xAxisTitleMarginSlider" class="slider"></div>
+                </div>
+
+                <div>
+                    <label>Title Font:</label>
+                    <label id="xAxisTitleFontSize" class="values">10</label>
+                    <div id="xAxisTitleFontSizeSlider" class="slider"></div>
+                </div>
+
+                <div>
+                    <label>Title Angle:</label>
+                    <label id="xAxisTitleAngle" class="values">0</label>
+                    <div id="xAxisTitleAngleSlider" class="slider"></div>
+                </div>
+
+                <label>Title Color:</label>
+                <div>
+                    <select class="selector" id="xAxisTitleColorPicker">
+                        <option value="gray">gray</option>
+                        <option value="blue">blue</option>
+                        <option value="red">red</option>
+                        <option value="green">green</option>
+                        <option value="orange">orange</option>
+                        <option value="violet">violet</option>
+                        <option value="indigo">indigo</option>
+                        <option value="black">black</option>
+                        <option value="white">white</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="optionsPane">
+            <div><b>Y-Axis Options</b></div>
+            <div class="optionsColumn">
+                <div>
+                    <label>Title Margin:</label>
+                    <label id="yAxisTitleMargin" class="values">5</label>
+                    <div id="yAxisTitleMarginSlider" class="slider"></div>
+                </div>
+
+                <div>
+                    <label>Title Font:</label>
+                    <label id="yAxisTitleFontSize" class="values">10</label>
+                    <div id="yAxisTitleFontSizeSlider" class="slider"></div>
+                </div>
+
+                <div>
+                    <label>Title Angle:</label>
+                    <label id="yAxisTitleAngle" class="values">0</label>
+                    <div id="yAxisTitleAngleSlider" class="slider"></div>
+                </div>
+
+                <label>Title Color:</label>
+                <div>
+                    <select class="selector" id="yAxisTitleColorPicker">
+                        <option value="gray">gray</option>
+                        <option value="blue">blue</option>
+                        <option value="red">red</option>
+                        <option value="green">green</option>
+                        <option value="orange">orange</option>
+                        <option value="violet">violet</option>
+                        <option value="indigo">indigo</option>
+                        <option value="black">black</option>
+                        <option value="white">white</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+    </div>

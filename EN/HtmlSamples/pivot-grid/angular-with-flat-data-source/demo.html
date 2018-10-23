@@ -9,8 +9,12 @@
 <link href="http://cdn-na.infragistics.com/igniteui/latest/css/structure/infragistics.css" rel="stylesheet"></link>
 
 <div class="push-down-xl" ng-app="sampleApp" ng-controller="pivotGridController">
-        <ig-pivot-data-selector id="dataSelector" data-source="pivotData" width="25%" height="550px">
-        </ig-pivot-data-selector>
-        <ig-pivot-grid id="pivotGrid" data-source="pivotData" height="550px">
-        </ig-pivot-grid>
+        <div style="float:left;width:25%;">
+            <ig-pivot-data-selector id="dataSelector" data-source="pivotData" height="550px">
+            </ig-pivot-data-selector>
+        </div>
+        <div style="float:right; width:70%;">
+            <ig-pivot-grid id="pivotGrid" data-source="pivotData" height="550px">
+            </ig-pivot-grid>
+        </div>
     </div>

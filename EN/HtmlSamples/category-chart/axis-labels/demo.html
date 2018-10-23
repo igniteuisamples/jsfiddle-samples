@@ -8,63 +8,81 @@
 
 <div id="chart" class="chart" style="width:600px;height:400px"></div>
 
-    <div class="optionsPane">
-        <div><b>Axis Label Options:</b></div>
-
-        <div class="optionContainer">
-            <div><b>X-Axis Label Options:</b></div>
-            <div>
+    <div>
+        <div class="optionsPane">
+            <div><b>X-Axis Options</b></div>
+            <div class="optionsColumn">
+                
                 <div>
-                    <label id="XAxisLabelMarginLbl">Label Margin:</label>
-                    <div id="XAxisLabelMarginSlider" class="slider"></div>
-                    <label id="XAxisLabelMarginValueLbl" class="labels">5</label>
+                    <label>Labels Margin:</label>
+                    <label id="xAxisLabelMargin" class="values">5</label>
+                    <div id="xAxisLabelMarginSlider" class="slider"></div>
                 </div>
 
                 <div>
-                    <label id="ForegroundLbl" class="labels">Foreground:</label>
+                    <label>Labels Font:</label>
+                    <label id="xAxisLabelFontSize" class="values">10</label>
+                    <div id="xAxisLabelFontSizeSlider" class="slider"></div>
+                </div>
 
-                    <select class="selector" id="XAxisLabelColorPicker">
-                        <option value="lightgray">lightgray</option>
+                <div>
+                    <label>Labels Angle:</label>
+                    <label id="xAxisLabelAngle" class="values">0</label>
+                    <div id="xAxisLabelAngleSlider" class="slider"></div>
+                </div>
+
+                <label>Labels Color:</label>
+                <div>
+                    <select class="selector" id="xAxisLabelColorPicker">
+                        <option value="gray">gray</option>
                         <option value="blue">blue</option>
                         <option value="red">red</option>
                         <option value="green">green</option>
                         <option value="orange">orange</option>
-                        <option value="cyan">cyan</option>
-                        <option value="yellow">yellow</option>
                         <option value="violet">violet</option>
-                        <option value="black">black</option>
                         <option value="indigo">indigo</option>
-                        <option value="rgba(0,0,0,0)">transparent</option>
+                        <option value="black">black</option>
+                        <option value="white">white</option>
                     </select>
                 </div>
             </div>
         </div>
-
-        <div class="optionContainer">
-            <div><b>Y-Axis Label Options:</b></div>
-            <div>
+        <div class="optionsPane">
+            <div><b>Y-Axis Options</b></div>
+            <div class="optionsColumn">
                 <div>
-                    <label id="YAxisLabelMarginLbl">Label Margin:</label>
-                    <div id="YAxisLabelMarginSlider" class="slider"></div>
-                    <label id="YAxisLabelMarginValueLbl" class="labels">5</label>
+                    <label>Labels Margin:</label>
+                    <label id="yAxisLabelMargin" class="values">5</label>
+                    <div id="yAxisLabelMarginSlider" class="slider"></div>
                 </div>
 
                 <div>
-                    <label id="ForegroundLbl" class="labels">Foreground:</label>
+                    <label>Labels Font:</label>
+                    <label id="yAxisLabelFontSize" class="values">10</label>
+                    <div id="yAxisLabelFontSizeSlider" class="slider"></div>
+                </div>
 
-                    <select class="selector" id="YAxisLabelColorPicker">
-                        <option value="lightgray">lightgray</option>
-                        <option value="blue">blue</option>
-                        <option value="red">red</option>
-                        <option value="green">green</option>
-                        <option value="orange">orange</option>
-                        <option value="cyan">cyan</option>
-                        <option value="yellow">yellow</option>
-                        <option value="violet">violet</option>
-                        <option value="black">black</option>
-                        <option value="indigo">indigo</option>
-                        <option value="rgba(0,0,0,0)">transparent</option>
-                    </select>
+                <div>
+                    <label>Labels Angle:</label>
+                    <label id="yAxisLabelAngle" class="values">0</label>
+                    <div id="yAxisLabelAngleSlider" class="slider"></div>
+                </div>
+
+                <div>
+                    <label>Labels Color:</label>
+                    <div>
+                        <select class="selector" id="yAxisLabelColorPicker">
+                            <option value="gray">gray</option>
+                            <option value="blue">blue</option>
+                            <option value="red">red</option>
+                            <option value="green">green</option>
+                            <option value="orange">orange</option>
+                            <option value="violet">violet</option>
+                            <option value="indigo">indigo</option>
+                            <option value="black">black</option>
+                            <option value="white">white</option>
+                        </select>
+                    </div>
                 </div>
             </div>
         </div>

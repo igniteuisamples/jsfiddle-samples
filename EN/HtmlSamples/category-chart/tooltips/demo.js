@@ -1,10 +1,10 @@
 $(function () {
 var data = [
-                 { "CountryName": "India", "Pop2025": 1396 },
-                 { "CountryName": "China", "Pop2025": 1394 },
-                 { "CountryName": "United States", "Pop2025": 351 },
-                 { "CountryName": "Indonesia", "Pop2025": 277 },
-                 { "CountryName": "Brazil", "Pop2025": 218 }
+                 { "Country": "India", "Pop2025": 1416 },
+                 { "Country": "China", "Pop2025": 1394 },
+                 { "Country": "United States", "Pop2025": 351 },
+                 { "Country": "Indonesia", "Pop2025": 277 },
+                 { "Country": "Brazil", "Pop2025": 218 }
         ];
 
         $(function () {

@@ -5,43 +5,52 @@
 <script src="http://cdn-na.infragistics.com/igniteui/latest/js/infragistics.dv.js"></script>
 <link href="http://cdn-na.infragistics.com/igniteui/latest/css/themes/infragistics/infragistics.theme.css" rel="stylesheet"></link>
 <link href="http://cdn-na.infragistics.com/igniteui/latest/css/structure/infragistics.css" rel="stylesheet"></link>
+<link href="http://cdn-na.infragistics.com/igniteui/latest/css/structure/modules/infragistics.ui.chart.css" rel="stylesheet"></link>
 <script src="http://cdn-na.infragistics.com/igniteui/latest/js/i18n/infragistics-ja.js"></script>
 
+<script id="tooltipTemplate" type="text/x-jquery-tmpl">
+            <div id="tooltip" class="ui-widget-content ui-corner-all">
+                <span id="tooltipValue">値: ${item.Value}</span>
+            </div>
+        </script>
+
 <div id="chart"></div>
-	<div id="chartFPS">
-		<div id="refreshCount"></div>
-		<div id="refreshCountLabel">更新レート</div>
-	</div>
-
-	<div class="selectionOptions">
-
-		<table>
-			<tr>
-				<td>
-					データ ポイント: <span id="volumeText">5000</span>
-				</td>
-				<td style="width: 10px; min-width: 10px;"></td>
-				<td>
-					更新時間: <span id="intervalText">10</span>
-				</td>
-			</tr>
-			<tr>
-				<td>
-					<div id="volumeSlider" class="sliderBounds" style="margin: 10px 5px 5px 10px;"></div>
-				</td>
-				<td style="width: 10px; min-width: 10px;"></td>
-				<td>
-					<div id="intervalSlider" class="sliderBounds" style="margin: 10px 5px 5px 10px;"></div>
-				</td>
-			</tr>
-			<tr>
-				<td>
-					<input type="button" id="addDataPoints" value="データ ポイントの追加"></input>
-				</td>
-				<td style="width: 10px; min-width: 10px;"></td>
-				<td>
-					<input type="button" id="startDataFeed" value="データ フィードの開始"></input>
-				</td>
-			</tr>
-		</table>
-	</div>
+        
+        <div class="selectionOptions">
+            
+            <table>
+                <tr>
+                    <td>
+                        データ ポイント: <span id="volumeText">5000</span>
+                    </td>
+                     <td style="width: 10px; min-width: 10px;"></td>
+                  <td>
+                      更新時間: <span id="intervalText">10</span>
+                    </td>
+                    <td>
+                         更新レート: <span id="refreshCount">0</span>
+                    </td>
+                 </tr>
+               <tr>
+                    <td>
+                      <div id="volumeSlider" class="sliderBounds" style="margin: 10px 5px 5px 10px;"></div>
+                    </td> 
+                   <td style="width: 10px; min-width: 10px;"></td>
+                   <td>
+                        <div id="intervalSlider" class="sliderBounds" style="margin: 10px 5px 5px 10px;"></div>
+                    </td> 
+                </tr>
+                <tr>
+                    <td>
+                        <input type="button" id="addDataPoints" value="データ ポイントの追加"></input> 
+                    </td>
+                     <td style="width: 10px; min-width: 10px;"></td>
+                    <td>
+                        <input type="button" id="startDataFeed" value="データ フィードの開始"></input>
+                    </td>
+                </tr>
+             
+            </table>
+      
+            
+        </div>

@@ -1,0 +1,142 @@
+<script src="http://igniteui.com/js/modernizr.min.js"></script>
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>
+<script src="http://cdn-na.infragistics.com/igniteui/latest/js/infragistics.core.js"></script>
+<script src="http://cdn-na.infragistics.com/igniteui/latest/js/infragistics.dv.js"></script>
+<script src="http://igniteui.com/js-data/uk-france-population"></script>
+<link href="http://cdn-na.infragistics.com/igniteui/latest/css/themes/infragistics/infragistics.theme.css" rel="stylesheet"></link>
+<link href="http://cdn-na.infragistics.com/igniteui/latest/css/structure/infragistics.css" rel="stylesheet"></link>
+<link href="http://cdn-na.infragistics.com/igniteui/latest/css/structure/modules/infragistics.ui.chart.css" rel="stylesheet"></link>
+
+<div class="selectionOptions">
+       
+         <table class="optionsTable">
+            <colgroup>
+                <col class="labelCol">
+                <col>
+                <col class="valueCol">
+                <col class="labelCol">
+                <col>
+                <col class="valueCol">
+                 <col>
+                <col class="valueCol">
+                   <col>
+                <col class="valueCol">
+         </colgroup>
+
+            <tr>
+                <td colspan="2">
+                    <b>Interactions</b>
+                </td>
+                <td></td>
+                <td colspan="2">
+                    <b>Vertical Zooming</b>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    Default
+                </td>
+                <td>
+                    <select id="selectDefault">
+                        <option value="dragZoom" selected="selected">DragZoom</option>
+                        <option value="dragPan">DragPan</option>
+                        <option value="none">None</option>
+                    </select>
+                </td>
+                <td></td>
+
+                <td>
+                    Enable Zooming
+                </td>
+                <td>
+                    <input type="checkbox" id="enableVerticalZooming" checked="checked"></input>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    Pan Modifier
+                </td>
+                <td>
+                    <select id="selectPanModifier">
+                        <option value="control">Control</option>
+                        <option value="alt">Alt</option>
+                        <option value="shift" selected="selected">Shift</option>
+                        <option value="none">None</option>
+                    </select>
+                </td>
+                <td></td>
+
+                <td>
+                    Zoom
+                </td>
+                <td>
+                    <div id="verticalZoomSlider" class="slider"></div>
+                </td>
+                <td>
+                    <span id="verticalZoomLevel">1.0000</span>
+                </td>
+            </tr>
+
+             <tr>
+                <td>
+                    Drag Modifier
+                </td>
+                <td>
+                    <select id="selectDragModifier">
+                        <option value="control">Control</option>
+                        <option value="alt">Alt</option>
+                        <option value="shift">Shift</option>
+                        <option value="none" selected="selected">None</option>
+                    </select>
+                </td>
+                  <td></td>
+              <td colspan="2">
+                    <b>Horizontal Zooming</b>
+                </td>
+          </tr>
+
+            <tr>
+                <td colspan="2">
+                    <b>Overview Plus Detail Pane</b>
+                </td>
+               <td></td>
+                <td>
+                    Enable Zooming
+                </td>
+                <td>
+                    <input type="checkbox" id="enableHorizontalZooming" checked="checked"></input>
+                </td>
+              </tr>
+
+            <tr>
+                <td>
+                    Enable Pane
+                </td>
+                <td>
+                    <input type="checkbox" id="enablePane" checked="checked"></input>
+                </td>
+              <td></td>
+                <td>
+                    Zoom
+                </td>
+                <td>
+                    <div id="horizontalZoomSlider" class="slider"></div>
+                </td>
+                <td>
+                    <span id="horizontalZoomLevel">1.0000</span>
+                </td>
+
+            </tr>
+             
+        </table>
+    </div>
+    
+    <table>
+        <tr>
+            <td id="chart" class="chartElement"></td>      
+            <td id="lineLegend" style="float: left"></td>
+        </tr>
+    </table>

@@ -8,62 +8,67 @@
 
 <div id="chart" class="chart" style="width:600px;height:400px"></div>
 
-    <div class="optionsPane">
+    <div>
         <div class="optionsPane">
             <div><b>X-Axis Options</b></div>
-            <div class="optionContainer">
-                <label id="showXMajorAxisLinesLbl" class="labels">Show Major Grid Lines:</label>
-                <input id="xAxisMajorLinesCkBx" type="checkbox" class="chkBoxMargin"></input>
+            <div class="optionsColumn">
+                <label class="labels">Major Grid Lines Visible:</label>
+                <input class="checkbox" id="xAxisMajorCheckbox" type="checkbox" checked=""></input>
                 <div>
-                    <label id="XMajorIntervalThicknessLbl">Major Grid Lines Thickness:</label>
-                    <label id="XMajorIntervalThicknessValueLbl" class="values">1</label>
-                    <div id="XMajorIntervalThicknessSlider" class="slider"></div>
+                    <label class="labels">Major Grid Lines Interval:</label>
+                    <label class="values" id="xAxisMajorIntervalLabel">1</label>
+                    <div class="slider" id="xAxisMajorIntervalSlider"></div>
                 </div>
-            </div>
+                <div>
+                    <label class="labels">Major Grid Lines Thickness:</label>
+                    <label class="values" id="xAxisMajorStrokeThicknessLabel">1</label>
+                    <div class="slider" id="xAxisMajorStrokeThicknessSlider"></div>
+                </div>
 
-            <div>
-                <div class="optionContainer">
-                    <label id="showXMinorAxisLinesLbl" class="labels">Show Minor Grid Lines:</label>
-                    <input id="xAxisMinorLinesCkBx" type="checkbox" class="chkBoxMargin"></input>
-                    <div>
-                        <label id="XMinorIntervalThicknessLbl">Minor Grid Lines Thickness:</label>
-                        <label id="XMinorIntervalThicknessValueLbl" class="values">1</label>
-                        <div id="XMinorIntervalThicknessSlider" class="slider"></div>
-                    </div>
-                    <div>
-                        <label id="XMinorIntervalValueLbl" class="labels">Minor Interval:</label>
-                        <label id="XMinorIntervalActualValueLbl" class="values">1</label>
-                        <div id="XMinorIntervalValueSlider" class="slider"></div>
-                    </div>
+                <label class="labels">Minor Grid Lines Visible:</label>
+                <input class="checkbox" id="xAxisMinorCheckbox" type="checkbox" checked=""></input>
+                <div>
+                    <label class="labels">Minor Grid Lines Interval:</label>
+                    <label class="values" id="xAxisMinorIntervalLabel">0.5</label>
+                    <div class="slider" id="xAxisMinorIntervalSlider"></div>
+                </div>
+                <div>
+                    <label class="labels">Minor Grid Lines Thickness:</label>
+                    <label class="values" id="xAxisMinorStrokeThicknessLabel">0.5</label>
+                    <div class="slider" id="xAxisMinorStrokeThicknessSlider"></div>
                 </div>
             </div>
+            
         </div>
         
         <div class="optionsPane">
             <div><b>Y-Axis Options</b></div>
-            <div class="optionContainer">
-                <label id="showYMajorAxisLinesLbl" class="labels">Show Major Grid Lines:</label>
-                <input id="yAxisMajorLinesCkBx" type="checkbox" class="chkBoxMargin"></input>
+            <div class="optionsColumn">
+                <label class="labels">Major Grid Lines Visible:</label>
+                <input class="checkbox" id="yAxisMajorCheckbox" type="checkbox" checked/="">
                 <div>
-                    <label id="YMajorIntervalThicknessLbl">Major Grid Lines Thickness:</label>
-                    <label id="YMajorIntervalThicknessValueLbl" class="values">1</label>
-                    <div id="YMajorIntervalThicknessSlider" class="slider"></div>
+                    <label class="labels">Major Grid Lines Interval:</label>
+                    <label class="values" id="yAxisMajorIntervalLabel">500</label>
+                    <div class="slider" id="yAxisMajorIntervalSlider"></div>
                 </div>
-            </div>
+                <div>
+                    <label class="labels">Major Grid Lines Thickness:</label>
+                    <label class="values" id="yAxisMajorStrokeThicknessLabel">1</label>
+                    <div class="slider" id="yAxisMajorStrokeThicknessSlider"></div>
+                </div> 
 
-            <div class="optionContainer">
-                <label id="showYMinorAxisLinesLbl" class="labels">Show Minor Grid Lines:</label>
-                <input id="yAxisMinorLinesCkBx" type="checkbox" class="chkBoxMargin"></input>
+                <label class="labels">Minor Grid Lines Visible:</label>
+                <input id="yAxisMinorCheckbox" type="checkbox" class="checkbox" checked/="">
                 <div>
-                    <label id="YMinorIntervalThicknessLbl">Minor Grid Lines Thickness:</label>
-                    <label id="YMinorIntervalThicknessValueLbl" class="values">1</label>
-                    <div id="YMinorIntervalThicknessSlider" class="slider"></div>
+                    <label class="labels">Minor Grid Lines Interval:</label>
+                    <label class="values" id="yAxisMinorIntervalLabel">250</label>
+                    <div class="slider" id="yAxisMinorIntervalSlider"></div>
                 </div>
                 <div>
-                    <label id="YMinorIntervalValueLbl" class="labels">Minor Interval:</label>
-                    <label id="YMinorIntervalActualValueLbl" class="values">50</label>
-                    <div id="YMinorIntervalValueSlider" class="slider"></div>
+                    <label class="labels">Minor Grid Lines Thickness:</label>
+                    <label class="values" id="yAxisMinorStrokeThicknessLabel">0.5</label>
+                    <div class="slider" id="yAxisMinorStrokeThicknessSlider"></div>
                 </div>
-            </div>
+            </input></input></div>
         </div>
     </div>

@@ -9,68 +9,67 @@
 <div id="chart" class="chart" style="width:600px;height:400px"></div>
 
     <div class="optionsPane">
-        <div><b>Axis Tickmark Options</b></div>
+        <div><b>X-Axis Options</b></div>
 
-        <div class="optionContainer">
-            <div><b>X-Axis Tickmarks</b></div>
+        <div class="optionsColumn">
             <div>
-                <label id="XAxisTickmarkLengthLbl">Length:</label>
-                <label id="XAxisTickmarkLengthValueLbl" class="labels">5</label>
+                <label>Tickmarks Length</label>
+                <label id="XAxisTickmarkLength" class="values">5</label>
                 <div id="XAxisTickmarkLengthSlider" class="slider"></div>
             </div>
 
             <div>
-                <label id="XAxisTickmarkThicknessLbl">Thickness:</label>
-                <label id="XAxisTickmarkThicknessValueLbl" class="labels">3</label>
+                <label>Tickmarks Thickness:</label>
+                <label id="XAxisTickmarkThickness" class="values">3</label>
                 <div id="XAxisTickmarkThicknessSlider" class="slider"></div>
             </div>
 
             <div>
-                <label id="XAxisTickMarkStrokeLbl">Stroke:</label>
-            
+                <label>Tickmarks Stroke:</label>
                 <select class="selector" id="XAxixTickmarkColorPicker">
-                    <option value="lightgray">lightgray</option>
+                    <option value="gray">gray</option>
                     <option value="blue">blue</option>
                     <option value="red">red</option>
                     <option value="green">green</option>
                     <option value="orange">orange</option>
-                    <option value="cyan">cyan</option>
-                    <option value="yellow">yellow</option>
                     <option value="violet">violet</option>
                     <option value="indigo">indigo</option>
-                    <option value="rgba(0,0,0,0)">transparent</option>
+                    <option value="black">black</option>
+                    <option value="white">white</option>
                 </select>
             </div>
-       </div>
-       <div class="optionContainer">
-           <div><b>Y-Axis Tickmarks</b></div>
-           <div>
-               <label id="YAxisTickmarkLengthLbl">Length:</label>
-               <label id="YAxisTickmarkLengthValueLbl" class="labels">5</label>
-               <div id="YAxisTickmarkLengthSlider" class="slider"></div>
-           </div>
+        </div>
 
-           <div>
-               <label id="YAxisTickmarkThicknessLbl">Thickness:</label>
-               <label id="YAxisTickmarkThicknessValueLbl" class="labels">3</label>
-               <div id="YAxisTickmarkThicknessSlider" class="slider"></div>
-           </div>
+    </div>
+    <div class="optionsPane">
+        <div><b>Y-Axis Options</b></div>
 
-           <div>
-               <label id="YAxisTickMarkStrokeLbl">Stroke:</label>
+        <div class="optionsColumn">  
+            <div>
+                <label>Tickmarks Length</label>
+                <label id="YAxisTickmarkLength" class="values">5</label>
+                <div id="YAxisTickmarkLengthSlider" class="slider"></div>
+            </div>
 
-               <select class="selector" id="YAxixTickmarkColorPicker">
-                   <option value="lightgray">lightgray</option>
-                   <option value="blue">blue</option>
-                   <option value="red">red</option>
-                   <option value="green">green</option>
-                   <option value="orange">orange</option>
-                   <option value="cyan">cyan</option>
-                   <option value="yellow">yellow</option>
-                   <option value="violet">violet</option>
-                   <option value="indigo">indigo</option>
-                   <option value="transparent">transparent</option>
-               </select>
-           </div>
-       </div>
-     </div>
+            <div>
+                <label>Tickmarks Thickness:</label>
+                <label id="YAxisTickmarkThickness" class="values">3</label>
+                <div id="YAxisTickmarkThicknessSlider" class="slider"></div>
+            </div>
+
+            <div>
+                <label>Tickmarks Stroke:</label>
+                <select class="selector" id="YAxixTickmarkColorPicker">
+                    <option value="gray">gray</option>
+                    <option value="blue">blue</option>
+                    <option value="red">red</option>
+                    <option value="green">green</option>
+                    <option value="orange">orange</option>
+                    <option value="violet">violet</option>
+                    <option value="indigo">indigo</option>
+                    <option value="black">black</option>
+                    <option value="white">white</option>
+                </select>
+            </div>
+        </div>
+    </div>
