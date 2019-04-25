@@ -1,3 +1,6 @@
+function getRandomBetween(min, max) {
+	return Math.floor(Math.random() * (max - min + 1)) + min;
+}
 $(function () {
 var alphabet = "A;B;C;D;E;F;G;H;I;J;K;L;M;N;O;P;Q;R;S;T;U;V;W;X;Y;Z".split(";");
         var headers = "Expenses;Feb;Feb;Mar;Apr;May;Jun;Jul;Aug;Sep;Oct;Nov;Dec".split(";");
@@ -104,10 +107,6 @@ var alphabet = "A;B;C;D;E;F;G;H;I;J;K;L;M;N;O;P;Q;R;S;T;U;V;W;X;Y;Z".split(";");
             chart.setSourceData('Sheet1!B3:M8', true);
 
             saveWorkbook(workbook, "Table.xlsx");
-        }
-
-        function getRandomBetween(min, max) {
-            return Math.floor(Math.random() * (max - min + 1)) + min;
         }
 
         function saveWorkbook(workbook, name) {
