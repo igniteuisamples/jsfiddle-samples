@@ -20,7 +20,7 @@ $( function ()
                 position: "start",
                 headerTemplate: {
                     closeButton: true,
-                    title: 'Google Maps を使用して市の位置を表示します。'
+                    title: 'Bing Maps を使用して市の位置を表示します。'
                 },
                 closeOnBlur: false,
                 animationDuration: 0,
@@ -34,7 +34,8 @@ $( function ()
 
         function contentFunction()
         {
-            var imgTemplate = "<img class='map' alt='${value}' src='https://maps.google.com/maps/api/staticmap?zoom=10&size=250x250&maptype=terrain&sensor=false&center=${value}'>";
-            var data = [{ value: $( this )[0].value }];
-            return $.ig.tmpl( imgTemplate, data );
+            var location = $(this)[0].value ? $(this)[0].value : "Sofia,Bulgaria";
+            var imgTemplate = "<img class='map' alt='${value}' src='https://dev.virtualearth.net/REST/V1/Imagery/Map/AerialWithLabels/${value}?mapSize=250,250&format=jpeg&key=${bingKey}'>";
+            var data = [{ value: location, bingKey: mapHelper.bingData() }];
+            return $.ig.tmpl(imgTemplate, data);
         }

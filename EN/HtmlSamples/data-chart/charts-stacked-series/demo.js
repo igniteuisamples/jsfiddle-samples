@@ -20,8 +20,8 @@ $(function () {
                 var selector = "#" + seriesType;
                 $(selector).igDataChart({
                     dataSource: lastFiveYears,
-                    height: "240px",
-                    width: "240px",
+                    height: "250px",
+                    width: "250px",
                     title: chartTitle,
                     horizontalZoomable: true,
                     verticalZoomable: true,

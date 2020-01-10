@@ -1,0 +1,41 @@
+.labels { 
+                width: 100%; 
+                float: left;
+        } 
+        .title { 
+                width: 100%; 
+                 margin: 20px 20px 0px 0px;
+        } 
+        .values {  
+                margin: 10px 0px 0px 0px;
+        }
+        .slider {
+                width: 100px;
+                margin: 10px 0px 0px 0px;
+        } 
+        .selector {
+                float: left;
+                width: 100px;
+                margin: 4px
+        } 
+        .options { 
+                width: 250px;
+                margin: 0px 20px 20px 20px;
+                float: right;
+                /*background: yellow;*/
+        } 
+        .optionsColumn { 
+            width: 100%; 
+            margin: 2px;
+            padding: 2px; 
+            /*background: #4EDECC;*/
+        }
+        .optionsRows {
+            position: relative;
+            float: initial; 
+            width: 250px;
+            margin: 2px 2px 2px 2px;
+            display: inline-block;
+            padding-top: 0px; 
+            /*background: #DE604E;*/
+        }

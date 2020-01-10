@@ -37,19 +37,19 @@ $(function () {
                     {
                         name: "button1",
                         header: "太字",
-                        iconUri: "http://jp.igniteui.com/images/samples/radial-menu/Bold.png",
+                        iconUri: "https://jp.igniteui.com/images/samples/radial-menu/Bold.png",
                         click: function () { toggleBold(); }
                     },
                     {
                         name: "button2",
                         header: "イタリック",
-                        iconUri: "http://jp.igniteui.com/images/samples/radial-menu/Italic.png",
+                        iconUri: "https://jp.igniteui.com/images/samples/radial-menu/Italic.png",
                         click: function () { toggleItalic(); }
                     },
                     {
                         type: "numericitem",
                         header: "フォント サイズ",
-                        iconUri: "http://jp.igniteui.com/images/samples/radial-menu/Size.png",
+                        iconUri: "https://jp.igniteui.com/images/samples/radial-menu/Size.png",
                         value: "8",
                         items:
                         [

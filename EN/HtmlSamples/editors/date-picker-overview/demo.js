@@ -20,7 +20,18 @@ $(function () {
                 valueChanged: function (evt, ui) {
                     if (ui.newValue instanceof Date) {
                         var nextDay = new Date(ui.newValue.getTime() + 24 * 60 * 60 * 1000);
-                        $("#return").igDatePicker("option", "value", nextDay);
+                        // V.S. April 3rd 2019, Set the min date for return to be at least 1 day after departure
+                        var currentValue = $("#return").igDatePicker("option", "value");
+                        // Depending on the current value, first set minDate OR first set value in order to avoid notifier showing up
+                        if (currentValue.getTime() > nextDay.getTime()) {
+                            $("#return").igDatePicker("option", "datepickerOptions", {
+                                minDate: nextDay
+                            }).igDatePicker("option", "value", nextDay)
+                        } else {
+                            $("#return").igDatePicker("option", "value", nextDay).igDatePicker("option", "datepickerOptions", {
+                                minDate: nextDay
+                            })
+                        }
                     }
                  }
             });

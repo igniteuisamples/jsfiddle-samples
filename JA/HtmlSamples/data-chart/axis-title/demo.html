@@ -1,15 +1,17 @@
-<script src="http://jp.igniteui.com/js/modernizr.min.js"></script>
-<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>
-<script src="http://cdn-na.infragistics.com/igniteui/latest/js/infragistics.core.js"></script>
-<script src="http://cdn-na.infragistics.com/igniteui/latest/js/infragistics.dv.js"></script>
-<script src="http://jp.igniteui.com/js-data/world-energy-production"></script>
-<link href="http://cdn-na.infragistics.com/igniteui/latest/css/themes/infragistics/infragistics.theme.css" rel="stylesheet"></link>
-<link href="http://cdn-na.infragistics.com/igniteui/latest/css/structure/infragistics.css" rel="stylesheet"></link>
-<link href="http://cdn-na.infragistics.com/igniteui/latest/css/structure/modules/infragistics.ui.chart.css" rel="stylesheet"></link>
-<script src="http://cdn-na.infragistics.com/igniteui/latest/js/i18n/infragistics-ja.js"></script>
+<script src="https://jp.igniteui.com/js/modernizr.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script src="https://code.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>
+<script src="https://cdn-na.infragistics.com/igniteui/latest/js/infragistics.core.js"></script>
+<script src="https://cdn-na.infragistics.com/igniteui/latest/js/infragistics.dv.js"></script>
+<script src="https://jp.igniteui.com/js-data/world-energy-production"></script>
+<link href="https://cdn-na.infragistics.com/igniteui/latest/css/themes/infragistics/infragistics.theme.css" rel="stylesheet"></link>
+<link href="https://cdn-na.infragistics.com/igniteui/latest/css/structure/infragistics.css" rel="stylesheet"></link>
+<link href="https://cdn-na.infragistics.com/igniteui/latest/css/structure/modules/infragistics.ui.chart.css" rel="stylesheet"></link>
+<script src="https://cdn-na.infragistics.com/igniteui/latest/js/i18n/infragistics-ja.js"></script>
 
-<table><tr><td id="chart" class="chartElement"></td><td id="columnLegend" style="float: left"></td></tr></table>
+<table><tr>
+            <td id="chart" class="chartElement"></td>
+            <td id="columnLegend" style="float: left"></td></tr></table>
                 
         <div class="EIA-attribution">
             エネルギーのデータ ソース:<br />
@@ -17,19 +19,22 @@
         </div>
         <br/>
         <div>
-            <fieldset id="chartOptions">
-                <legend>軸角度</legend>
-            
+            <div class="optionsPane">
+                <div class="optionsColumn">
+                    <div>
+                        <label>Y 軸を回転</label>
+                        <label id="yAxisAngleLabel" class="values">-90</label>
+                        <div id="yAxisAngleSlider" class="slider"></div>
+                    </div>
+                </div>
+                <div class="optionsColumn">
+                    <div>
+                        <label>X 軸を回転</label>
+                        <label id="xAxisAngleLabel" class="values">0</label>
+                        <div id="xAxisAngleSlider" class="slider"></div>
+                    </div>
+                </div>
 
-                <div class="optionContainer">
-                    Y 軸を回転
-                    <div id="yAxisAngleSlider" class="sliderBounds"></div>
-                    <label id="yAxisAngleLabel">-90</label>
-                </div>
-            <div class="optionContainer">
-                    X 軸を回転
-                    <div id="xAxisAngleSlider" class="sliderBounds"></div>
-                    <label id="xAxisAngleLabel">0</label>
-                </div>
-            </fieldset>
+            </div>
+
         </div>

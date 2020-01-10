@@ -14,7 +14,7 @@ $( function () {
 
 				var workbook = null;
 				var xhr = new XMLHttpRequest();
-				xhr.open('GET', 'https://www.igniteui.com/data-files/CustomSortData.xlsx', true);
+				xhr.open('GET', 'https://jp.igniteui.com/data-files/CustomSortData.xlsx', true);
 				xhr.responseType = 'arraybuffer';
 
 				xhr.onload = function (e) {

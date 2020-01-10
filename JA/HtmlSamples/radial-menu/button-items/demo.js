@@ -32,13 +32,13 @@ $(function() {
                     {
                         name: "button1",
                         header: "太字",
-                        iconUri: "http://jp.igniteui.com/images/samples/radial-menu/Bold.png",
+                        iconUri: "https://jp.igniteui.com/images/samples/radial-menu/Bold.png",
                         click: function () { toggleBold(); }
                     },
                     {
                         name: "button2",
                         header: "イタリック",
-                        iconUri: "http://jp.igniteui.com/images/samples/radial-menu/Italic.png",
+                        iconUri: "https://jp.igniteui.com/images/samples/radial-menu/Italic.png",
                         click: function () { toggleItalic(); }
                     },
                 ]

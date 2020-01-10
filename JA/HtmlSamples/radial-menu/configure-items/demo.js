@@ -53,7 +53,7 @@ var lastCliked = null;
                     {
                         name: "button1",
                         header: "太字",
-                        iconUri: "http://jp.igniteui.com/images/samples/radial-menu/Bold.png",
+                        iconUri: "https://jp.igniteui.com/images/samples/radial-menu/Bold.png",
                         click: function (evt, ui) {
                             lastCliked = evt.item.name;
                             toggleBold();
@@ -62,7 +62,7 @@ var lastCliked = null;
                     {
                         name: "button2",
                         header: "イタリック",
-                        iconUri: "http://jp.igniteui.com/images/samples/radial-menu/Italic.png",
+                        iconUri: "https://jp.igniteui.com/images/samples/radial-menu/Italic.png",
                         click: function (evt, ui) {
                             lastCliked = evt.item.name;
                             toggleItalic();

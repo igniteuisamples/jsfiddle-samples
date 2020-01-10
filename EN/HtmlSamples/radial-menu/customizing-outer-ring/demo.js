@@ -37,19 +37,19 @@ $(function () {
                     {
                         name: "button1",
                         header: "Bold",
-                        iconUri: "http://igniteui.com/images/samples/radial-menu/Bold.png",
+                        iconUri: "https://igniteui.com/images/samples/radial-menu/Bold.png",
                         click: function () { toggleBold(); }
                     },
                     {
                         name: "button2",
                         header: "Italic",
-                        iconUri: "http://igniteui.com/images/samples/radial-menu/Italic.png",
+                        iconUri: "https://igniteui.com/images/samples/radial-menu/Italic.png",
                         click: function () { toggleItalic(); }
                     },
                     {
                         type: "numericitem",
                         header: "Font Size",
-                        iconUri: "http://igniteui.com/images/samples/radial-menu/Size.png",
+                        iconUri: "https://igniteui.com/images/samples/radial-menu/Size.png",
                         value: "8",
                         items:
                         [

@@ -10,7 +10,7 @@
         .number-container { float: right; font-size: 30px; width: 200px; text-align: right; margin-right: 20px; }
         .btn-refresh { float: right; width: 48px; height: 48px; padding: 0; margin: 0;
             border-image-width: 0; cursor: pointer; border: 1px solid #999;
-            background-image: url(http://jp.igniteui.com/images/samples/data-chart/music-controls-sprite.png); 
+            background-image: url(https://jp.igniteui.com/images/samples/data-chart/music-controls-sprite.png); 
             background-position: -434px -2px; background-repeat: no-repeat; }
             .btn-refresh:hover { background-position: -434px -50px; }
 

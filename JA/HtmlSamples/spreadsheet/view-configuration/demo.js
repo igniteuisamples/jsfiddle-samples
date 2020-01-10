@@ -8,7 +8,7 @@ $( function () {
 
 				var workbook = null;
 				var xhr = new XMLHttpRequest();
-				xhr.open('GET', 'http://jp.igniteui.com/data-files/FormattingData.xlsx', true);
+				xhr.open('GET', 'https://jp.igniteui.com/data-files/FormattingData.xlsx', true);
 				xhr.responseType = 'arraybuffer';
 
 				xhr.onload = function (e) {

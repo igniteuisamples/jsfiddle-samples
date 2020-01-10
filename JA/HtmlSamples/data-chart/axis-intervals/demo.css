@@ -5,42 +5,41 @@
         }
 
         .slider {
-            width: 150px;
-            margin: 6px 3px -1px 6px;
+            width: 250px;
+            margin: 10px 10px 4px 6px;
+            padding-right: 3px;
+            padding-left: 3px;
             display: inline-block;
-        }
+            float: left;
+        } 
 
         .optionsPane {
             position: relative;
             float: initial;
-            width: 500px;
+            width: 270px;
             margin: 6px 3px 6px 6px;
             display: inline-block;
             padding-top: 18px;
         }
-
-
-        .optionContainer {
+         
+        .optionsColumn {
             float: left;
             position: relative;
-            width: 315px;
             margin: 2px;
             padding: 2px;
             display: inline-block;
-            border: 1px solid #e0e0e0;
             -moz-border-radius: 4px;
             -webkit-border-radius: 4px;
             border-radius: 4px;
+            border: 1px solid #e0e0e0;
         }
 
         .labels {
-            padding-right: 8px;
+            padding-right: 2px;
         }
 
-        .labels2 {
-            padding-right: 8px;
-        }
-
-        .labels3 {
+        .values {
+            padding-left: 2px;
             padding-right: 0px;
+            width: 30px;
         }

@@ -1,0 +1,114 @@
+<script src="https://jp.igniteui.com/js/modernizr.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script src="https://code.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>
+<script src="https://cdn-na.infragistics.com/igniteui/latest/js/infragistics.core.js"></script>
+<script src="https://cdn-na.infragistics.com/igniteui/latest/js/modules/encoding/infragistics.encoding.core.js"></script>
+<script src="https://cdn-na.infragistics.com/igniteui/latest/js/modules/encoding/infragistics.encoding_big5.js"></script>
+<script src="https://cdn-na.infragistics.com/igniteui/latest/js/modules/encoding/infragistics.encoding_cp437.js"></script>
+<script src="https://cdn-na.infragistics.com/igniteui/latest/js/modules/encoding/infragistics.encoding_gb2312.js"></script>
+<script src="https://cdn-na.infragistics.com/igniteui/latest/js/modules/encoding/infragistics.encoding_iso646-us.js"></script>
+<script src="https://cdn-na.infragistics.com/igniteui/latest/js/modules/encoding/infragistics.encoding_iso-8859-1.js"></script>
+<script src="https://cdn-na.infragistics.com/igniteui/latest/js/modules/encoding/infragistics.encoding_iso-8859-2.js"></script>
+<script src="https://cdn-na.infragistics.com/igniteui/latest/js/modules/encoding/infragistics.encoding_iso-8859-3.js"></script>
+<script src="https://cdn-na.infragistics.com/igniteui/latest/js/modules/encoding/infragistics.encoding_iso-8859-4.js"></script>
+<script src="https://cdn-na.infragistics.com/igniteui/latest/js/modules/encoding/infragistics.encoding_iso-8859-5.js"></script>
+<script src="https://cdn-na.infragistics.com/igniteui/latest/js/modules/encoding/infragistics.encoding_iso-8859-6.js"></script>
+<script src="https://cdn-na.infragistics.com/igniteui/latest/js/modules/encoding/infragistics.encoding_iso-8859-7.js"></script>
+<script src="https://cdn-na.infragistics.com/igniteui/latest/js/modules/encoding/infragistics.encoding_iso-8859-8.js"></script>
+<script src="https://cdn-na.infragistics.com/igniteui/latest/js/modules/encoding/infragistics.encoding_iso-8859-9.js"></script>
+<script src="https://cdn-na.infragistics.com/igniteui/latest/js/modules/encoding/infragistics.encoding_iso-8859-11.js"></script>
+<script src="https://cdn-na.infragistics.com/igniteui/latest/js/modules/encoding/infragistics.encoding_iso-8859-13.js"></script>
+<script src="https://cdn-na.infragistics.com/igniteui/latest/js/modules/encoding/infragistics.encoding_iso-8859-15.js"></script>
+<script src="https://cdn-na.infragistics.com/igniteui/latest/js/modules/encoding/infragistics.encoding_ksc5601.js"></script>
+<script src="https://cdn-na.infragistics.com/igniteui/latest/js/modules/encoding/infragistics.encoding_shift_jis.js"></script>
+<script src="https://cdn-na.infragistics.com/igniteui/latest/js/modules/encoding/infragistics.encoding_windows-1250.js"></script>
+<script src="https://cdn-na.infragistics.com/igniteui/latest/js/modules/encoding/infragistics.encoding_windows-1251.js"></script>
+<script src="https://cdn-na.infragistics.com/igniteui/latest/js/modules/encoding/infragistics.encoding_windows-1252.js"></script>
+<script src="https://cdn-na.infragistics.com/igniteui/latest/js/modules/encoding/infragistics.encoding_windows-1256.js"></script>
+<script src="https://cdn-na.infragistics.com/igniteui/latest/js/infragistics.dv.js"></script>
+<link href="https://cdn-na.infragistics.com/igniteui/latest/css/themes/infragistics/infragistics.theme.css" rel="stylesheet"></link>
+<link href="https://cdn-na.infragistics.com/igniteui/latest/css/structure/infragistics.css" rel="stylesheet"></link>
+<link href="https://jp.igniteui.com/css/apiviewer.css" rel="stylesheet" type="text/css"></link>
+<script src="https://cdn-na.infragistics.com/igniteui/latest/js/i18n/infragistics-ja.js"></script>
+
+<div id="barcode"></div>
+
+    <fieldset id="barcodeOptions" style="margin-top: 30px">
+        <legend>オプション</legend>
+        <table>
+            <tr>
+                <td colspan="4">
+                    <label style="width:16%; display:inline-block" for="dataInput">データ</label>
+                    <input id="dataInput" style="width:70%" value="http://www.infragistics.com/products/jquery/help"></input>
+                    <input id="setButton" type="button" value="適用" style="width:10%"></input>
+                </td>
+            </tr>
+            <tr>
+                <td>ECI 番号</td>
+                <td>
+                    <select id="eciNumber" style="width: 100px; margin: 12px">
+                        <option value="0">0 - CP 437</option>
+                        <option value="1">1 - ISO-8859-1</option>
+                        <option value="2">2 - CP 437</option>
+                        <option value="3" selected="">3 - ISO-8859-1</option>
+                        <option value="4">4 - ISO-8859-2</option>
+                        <option value="5">5 - ISO-8859-3</option>
+                        <option value="6">6 - ISO-8859-4</option>
+                        <option value="7">7 - ISO-8859-5</option>
+                        <option value="8">8- ISO-8859-6</option>
+                        <option value="9">9 - ISO-8859-7</option>
+                        <option value="10">10 - ISO-8859-8</option>
+                        <option value="11">11 - ISO-8859-9</option>
+                        <option value="13">13 - ISO-8859-11</option>
+                        <option value="15">15 - ISO-8859-13</option>
+                        <option value="17">17 - ISO-8859-15</option>
+                        <option value="20">20 - Shift JIS</option>
+                        <option value="21">21 - Windows-1250</option>
+                        <option value="22">22 - Windows-1251</option>
+                        <option value="23">23 - Windows-1252</option>
+                        <option value="24">24 - Windows-1256</option>
+                        <option value="25">25 - UTF-16</option>
+                        <option value="26">26 - UTF-8</option>
+                        <option value="27">27 - ISO-646-US</option>
+                        <option value="28">28 - Big5</option>
+                        <option value="29">29 - GB 2312</option>
+                        <option value="30">30 - KSC-5601</option>
+                    </select>
+                </td>
+                <td>ECC レベル</td>
+                <td>
+                    <select id="eccLevel" style="width: 100px; margin: 12px">
+                        <option>Low</option>
+                        <option selected="">Medium</option>
+                        <option>Quartil</option>
+                        <option>High</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>サイズ バージョン</td>
+                <td>
+                    <select id="sizeVersion" style="width: 100px; margin: 12px"></select>
+                </td>
+                <td>エンコード モード</td>
+                <td>
+                    <select id="encodingMode" style="width: 100px; margin: 12px">
+                        <option>Undefined</option>
+                        <option>Numeric</option>
+                        <option>Alphanumeric</option>
+                        <option>Byte</option>
+                        <option>Kanji</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>ECI ヘッダーの表示モード</td>
+                <td>
+                    <select id="eciHeaderDisplayMode" style="width: 100px; margin: 12px">
+                        <option>Hide</option>
+                        <option>Show</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+    </fieldset>

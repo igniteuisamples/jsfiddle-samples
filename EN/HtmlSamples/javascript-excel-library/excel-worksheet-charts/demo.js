@@ -1,9 +1,6 @@
-function getRandomBetween(min, max) {
-	return Math.floor(Math.random() * (max - min + 1)) + min;
-}
 $(function () {
 var alphabet = "A;B;C;D;E;F;G;H;I;J;K;L;M;N;O;P;Q;R;S;T;U;V;W;X;Y;Z".split(";");
-        var headers = "Expenses;Feb;Feb;Mar;Apr;May;Jun;Jul;Aug;Sep;Oct;Nov;Dec".split(";");
+        var headers = "Expenses;Jan;Feb;Mar;Apr;May;Jun;Jul;Aug;Sep;Oct;Nov;Dec".split(";");
         var months = "Jan;Feb;Mar;Apr;May;Jun;Jul;Aug;Sep;Oct;Nov;Dec".split(';');
 
         var data = getGridData();
@@ -47,7 +44,7 @@ var alphabet = "A;B;C;D;E;F;G;H;I;J;K;L;M;N;O;P;Q;R;S;T;U;V;W;X;Y;Z".split(";");
                             break;
                         }
                         case 1: {
-                            cell.value(data[i].Feb);
+                            cell.value(data[i].Jan);
                             break;
                         }
                         case 2: {

@@ -106,15 +106,16 @@ $(function () {
 			}
 			$("#gridSimpleFiltering").igGrid({
 				autoGenerateColumns: false,
-				height: "400px",
+                height: "400px",
+                width: "100%",
 				columns: [
-					{ headerText: "名前", key: "FirstName", dataType: "string" },
-					{ headerText: "名字", key: "LastName", dataType: "string" },
-					{ headerText: "登録日付", key: "RegistererDate", dataType: "date" },
-					{ headerText: "国", key: "Country", dataType: "string" },
-					{ headerText: "年齢", key: "Age", dataType: "number" },
-                    { headerText: "アクティブ", key: "IsActive", dataType: "bool" },
-                    { headerText: "時刻", key: "RegistererTime", dataType: "time" }
+                    { headerText: "名前", key: "FirstName", dataType: "string", width: "110px" },
+                    { headerText: "名字", key: "LastName", dataType: "string", width: "110px" },
+                    { headerText: "登録日付", key: "RegistererDate", dataType: "date", width: "150px" },
+                    { headerText: "国", key: "Country", dataType: "string", width: "100px" },
+                    { headerText: "年齢", key: "Age", dataType: "number", width: "80px" },
+                    { headerText: "アクティブ", key: "IsActive", dataType: "bool", width: "80px" },
+                    { headerText: "時刻", key: "RegistererTime", dataType: "time", width: "170px" }
 				],
 				dataSource: ds.dataView(),
 				responseDataKey: "results",

@@ -1,0 +1,82 @@
+<script src="https://jp.igniteui.com/js/modernizr.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script src="https://code.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>
+<script src="https://cdn-na.infragistics.com/igniteui/latest/js/infragistics.core.js"></script>
+<script src="https://cdn-na.infragistics.com/igniteui/latest/js/infragistics.dv.js"></script>
+<link href="https://cdn-na.infragistics.com/igniteui/latest/css/themes/infragistics/infragistics.theme.css" rel="stylesheet"></link>
+<link href="https://cdn-na.infragistics.com/igniteui/latest/css/structure/infragistics.css" rel="stylesheet"></link>
+<script src="https://cdn-na.infragistics.com/igniteui/latest/js/i18n/infragistics-ja.js"></script>
+
+<div id="shapeChart" class="chart"></div>
+
+    <div>
+        <div class="optionsPane">
+            <div><b>X 軸オプション</b></div>
+            <div class="optionsColumn">
+                <label>軸の主グリッド線の表示</label>
+                <input id="xAxisMajorLinesCheckbox" type="checkbox" checked=""></input><br />
+
+                <label>軸の副グリッド線の表示</label>
+                <input id="xAxisMinorLinesCheckbox" type="checkbox" checked=""></input><br /><br />
+
+                <div>
+                    <label>軸の主グリッド線の太さ</label>
+                    <label id="xAxisMajorThicknessValue">1</label>
+                    <div id="xAxisMajorLineSlider" class="slider"></div>
+                </div>
+
+                <div>
+                    <label>軸の副グリッド線の太さ</label>
+                    <label id="xAxisMinorThicknessValue">0.5</label>
+                    <div id="xAxisMinorLineThicknessSlider" class="slider"></div>
+                </div>
+
+                <div>
+                    <label>軸の主グリッド線の間隔</label>
+                    <label id="xAxisMajorIntervalValue">30</label>
+                    <div id="xAxisMajorLineIntervalSlider" class="slider"></div>
+                </div>
+
+                <div>
+                    <label>軸の副グリッド線の間隔</label>
+                    <label id="xAxisMinorGridlinesInterval">15</label>
+                    <div id="xAxisMinorLineIntervalSlider" class="slider"></div>
+                </div>
+            </div>
+        </div> 
+
+        <div class="optionsPane">
+            <div><b>Y 軸オプション</b></div>
+            <div class="optionsColumn">
+                <label>軸の主グリッド線の表示</label>
+                <input id="yAxisMajorLinesCheckbox" type="checkbox" checked=""></input><br />
+                <label>軸の副グリッド線の表示</label>
+                <input id="yAxisMinorLinesCheckbox" type="checkbox" checked=""></input><br /><br />
+
+                <div>
+                    <label>軸の主グリッド線の太さ</label>
+                    <label id="yAxisMajorThicknessValue">1</label>
+                    <div id="yAxisMajorLineSlider" class="slider"></div>
+                </div>
+
+                <div>
+                    <label>軸の副グリッド線の太さ</label>
+                    <label id="yAxisMinorThicknessValue">0.5</label>
+                    <div id="yAxisMinorLineThicknessSlider" class="slider"></div>
+                </div>
+
+                <div>
+                    <label>軸の主グリッド線の間隔</label>
+                    <label id="yAxisMajorIntervalValue">30</label>
+                    <div id="yAxisMajorLineIntervalSlider" class="slider"></div>
+                </div>
+
+                <div>
+                    <label>軸の副グリッド線の間隔</label>
+                    <label id="yAxisMinorGridlinesInterval">15</label>
+                    <div id="yAxisMinorLineIntervalSlider" class="slider"></div>
+                </div>
+
+            </div>
+        </div>
+    </div>

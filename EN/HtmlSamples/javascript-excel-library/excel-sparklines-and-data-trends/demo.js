@@ -17,12 +17,12 @@ $(function() {
                 columns: [
 					
 					{ key: "UnboundOrders", unbound: true, dataType: "number", width: "0%", hidden: true },
-					{ key: "Orders", width: "10%", headerText: "Freight Expenses", template: "<div data-id='${ID}' class='order-sparkline'></div>" }, 
+					{ key: "Orders", width: "20%", headerText: "Freight Expenses", template: "<div data-id='${ID}' class='order-sparkline'></div>" }, 
 					
-                    { key: "ID", headerText: "Company ID", hidden: true },
-                    { key: "CompanyName", headerText: "Company Name" },
-                    { key: "ContactName", headerText: "Contact Name" },
-                    { key: "ContactTitle", headerText: "Contact Title" }
+                    { key: "ID", width: "20%", headerText: "Company ID", hidden: true },
+                    { key: "CompanyName", width: "20%", headerText: "Company Name" },
+                    { key: "ContactName", width: "20%", headerText: "Contact Name" },
+                    { key: "ContactTitle", width: "20%", headerText: "Contact Title" }
                     
                 ],
 				rowExpanding: function (evt, ui) {

@@ -1,7 +1,7 @@
 $(function () {
             var i = 0, currentValue, limit,
                 headerTextValues = ["名前", "名字", "国", "映画"],
-                imagesRoot = "http://jp.igniteui.com/images/samples/templating-engine/multiConditionalColTemplate";
+                imagesRoot = "https://jp.igniteui.com/images/samples/templating-engine/multiConditionalColTemplate";
 
             $("#resultGrid").igGrid({
                 dataSource: actors,
