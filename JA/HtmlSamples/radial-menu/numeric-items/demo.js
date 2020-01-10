@@ -27,7 +27,7 @@ $(function () {
                     {
                         type: "numericitem",
                         header: "フォント サイズ",
-                        iconUri: "http://jp.igniteui.com/images/samples/radial-menu/Size.png",
+                        iconUri: "https://jp.igniteui.com/images/samples/radial-menu/Size.png",
                         value: "8",
                         items:
                         [
@@ -50,7 +50,7 @@ $(function () {
                     {
                         type: "list",
                         header: "フォント",
-                        iconUri: "http://jp.igniteui.com/images/samples/radial-menu/Font.png",
+                        iconUri: "https://jp.igniteui.com/images/samples/radial-menu/Font.png",
                         items:
                         [
                             {

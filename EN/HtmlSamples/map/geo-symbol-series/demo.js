@@ -4,8 +4,8 @@ $(function () {
             var worldCities = [];
             var points = [];
             var shapeDataSource = new $.ig.ShapeDataSource({
-                shapefileSource: "http://igniteui.com/data-files/shapes/world_cities.shp",
-                databaseSource: "http://igniteui.com/data-files/shapes/world_cities.dbf",
+                shapefileSource: "https://igniteui.com/data-files/shapes/world_cities.shp",
+                databaseSource: "https://igniteui.com/data-files/shapes/world_cities.dbf",
                 transformRecord: function (rec) {
                     var pointX = rec.points.item(0).item(0).x();
                     var pointY = rec.points.item(0).item(0).y();
@@ -42,7 +42,7 @@ $(function () {
                 height: "500px",
                 windowRect: { left: 0.1, top: 0.1, height: 0.7, width: 0.7 },
                 overviewPlusDetailPaneVisibility: "visible",
-                overviewPlusDetailPaneBackgroundImageUri: "http://igniteui.com/images/samples/maps/world.png",
+                overviewPlusDetailPaneBackgroundImageUri: "https://igniteui.com/images/samples/maps/world.png",
                 backgroundContent: {
                     type: "openStreet"
                 },

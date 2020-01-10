@@ -7,7 +7,7 @@ $(function () {
                 ],
                 width: 720,
                 height: 560,
-                posterUrl: "http://igniteui.com/images/samples/video-player/quince-intro-1.png",
+                posterUrl: "https://igniteui.com/images/samples/video-player/quince-intro-1.png",
                 fullscreen: false,
                 browserControls: false,
                 autohide: true,
@@ -15,7 +15,7 @@ $(function () {
                 showSeekTime: true,
                 title: "Quince Presentation Part 1",
                 relatedVideos: [{
-                    imageUrl: "http://igniteui.com/images/samples/video-player/quince-intro-2.png",
+                    imageUrl: "https://igniteui.com/images/samples/video-player/quince-intro-2.png",
                     title: "Quince Presentation Part 1",
                     css: "relatedVideosBanner",
                     sources: [

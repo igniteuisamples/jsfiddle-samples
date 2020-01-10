@@ -1,0 +1,36 @@
+<script src="https://jp.igniteui.com/js/modernizr.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script src="https://code.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>
+<script src="https://cdn-na.infragistics.com/igniteui/latest/js/infragistics.core.js"></script>
+<script src="https://cdn-na.infragistics.com/igniteui/latest/js/infragistics.dv.js"></script>
+<script src="https://jp.igniteui.com/js-data/Data"></script>
+<link href="https://cdn-na.infragistics.com/igniteui/latest/css/themes/infragistics/infragistics.theme.css" rel="stylesheet"></link>
+<link href="https://cdn-na.infragistics.com/igniteui/latest/css/structure/infragistics.css" rel="stylesheet"></link>
+<link href="https://cdn-na.infragistics.com/igniteui/latest/css/structure/modules/infragistics.ui.chart.css" rel="stylesheet"></link>
+<link href="https://cdn-na.infragistics.com/igniteui/latest/css/structure/modules/infragistics.ui.financialchart.css" rel="stylesheet"></link>
+<script src="https://cdn-na.infragistics.com/igniteui/latest/js/i18n/infragistics-ja.js"></script>
+
+<div id="chart" style="width:95%;height:500px"></div>
+
+    <div class="options-panel">
+        <fieldset>
+            <legend>軸設定</legend>
+
+            <label>crosshairsDisplayMode:</label>
+            <select id="crosshairsDisplayMode">
+                <option value="default">default</option>
+                <option value="none">none</option>
+                <option value="horizontal">horizontal</option>
+                <option value="vertical">vertical</option>
+                <option value="both" selected="selected">both</option>
+            </select>
+            <div>
+                <label for="crosshairsSnap">crosshairsSnapToData:</label>
+                <input id="crosshairsSnap" name="crosshairsSnapToData" type="checkbox" checked="checked"></input>
+            </div>
+            <div>
+                <label for="crosshairsAnnotation">crosshairsAnnotationEnabled:</label>
+                <input id="crosshairsAnnotation" name="crosshairsAnnotationEnabled" type="checkbox" checked="checked"></input>
+            </div>
+        </fieldset>
+    </div>

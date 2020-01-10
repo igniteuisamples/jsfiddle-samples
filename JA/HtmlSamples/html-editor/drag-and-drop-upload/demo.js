@@ -12,7 +12,7 @@ $(function () {
             $("#igUpload1").igUpload({
                 mode: "multiple",
                 autostartupload: true,
-                progressUrl: "http://jp.igniteui.com/IGUploadStatusHandler.ashx",
+                progressUrl: "https://jp.igniteui.com/IGUploadStatusHandler.ashx",
                 controlId: "serverID1",
                 multipleFiles: true,
                 maxUploadedFiles: 3,

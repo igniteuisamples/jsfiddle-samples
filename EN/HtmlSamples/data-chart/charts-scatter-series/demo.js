@@ -1,6 +1,4 @@
 $(function () {
-             
-
             function CreateSeries(seriesType) { 
 
                 var markerType = "none"; 
@@ -42,8 +40,8 @@ $(function () {
 
             function CreateChart(selector, seriesType, title) {
                 $(selector).igDataChart({
-                    width: "350px",
-                    height: "350px",
+                    width: "250px",
+                    height: "250px",
                     title: title, 
                     horizontalZoomable: true,
                     verticalZoomable: true,
@@ -67,8 +65,8 @@ $(function () {
                 });
             } 
 
-            CreateChart("#chartScatterPoint", "scatterPoint", "$$(SeriesType_Scatter)");
+            CreateChart("#chartScatterPoint", "scatterPoint", "Scatter Point");
             CreateChart("#chartScatterBubble", "scatterBubble", "Scatter Spline");
             CreateChart("#chartScatterLine", "scatterLine", "Scatter Line");
-            CreateChart("#chartScatterSpline", "scatterSpline", "Bubble Chart");
+            CreateChart("#chartScatterSpline", "scatterSpline", "Scatter Bubble");
         });

@@ -4,7 +4,7 @@ $(function () {
                 { "Budget": 60, "Label": "IT" }, { "Budget": 40, "Label": "Marketing" },
                 { "Budget": 60, "Label": "Development" }, { "Budget": 20, "Label": "Support" }];
 
-            $('#chart1').igPieChart({
+            $('#chart').igPieChart({
                 dataSource: data,
                 width: '430px',
                 height: '430px',
@@ -20,7 +20,7 @@ $(function () {
 
             $("#angle").slider({
                 slide: function (event, ui) {
-                    $("#chart1").igPieChart("option", "startAngle", ui.value);
+                    $("#chart").igPieChart("option", "startAngle", ui.value);
                 },
                 min: 0,
                 max: 360
@@ -28,7 +28,7 @@ $(function () {
 
             $("#radius").slider({
                 slide: function (event, ui) {
-                    $("#chart1").igPieChart("option", "radiusFactor", ui.value / 1000.0);
+                    $("#chart").igPieChart("option", "radiusFactor", ui.value / 1000.0);
                 },
                 min: 0,
                 max: 1000,
@@ -37,7 +37,7 @@ $(function () {
 
             $("#labelExtent").slider({
                 slide: function (event, ui) {
-                    $("#chart1").igPieChart("option", "labelExtent", ui.value);
+                    $("#chart").igPieChart("option", "labelExtent", ui.value);
                 },
                 min: 0,
                 max: 50,
@@ -46,7 +46,7 @@ $(function () {
             
             $("#explodedRadius").slider({
                 slide: function (event, ui) {
-                    $("#chart1").igPieChart("option", "explodedRadius", ui.value / 100);
+                    $("#chart").igPieChart("option", "explodedRadius", ui.value / 100);
                 },
                 min: 0,
                 max: 100,
@@ -58,7 +58,7 @@ $(function () {
                 mode: "dropdown",
                 selectionChanged: function (evt, ui) {
                     if ($.isArray(ui.items) && ui.items[0] != undefined) {
-                        $("#chart1").igPieChart("option", "labelsPosition", ui.items[0].data.value);
+                        $("#chart").igPieChart("option", "labelsPosition", ui.items[0].data.value);
 
                         $("#labelExtent").slider("option", "disabled", ui.items[0].data.value != "outsideEnd");
                         $("#leaderLine").igCombo("option", "disabled", ui.items[0].data.value != "outsideEnd" ? true : false);
@@ -71,7 +71,7 @@ $(function () {
                 mode: "dropdown",
                 selectionChanged: function (evt, ui) {
                     if ($.isArray(ui.items) && ui.items[0] != undefined) {
-                        $("#chart1").igPieChart("option", "leaderLineType", ui.items[0].data.value);
+                        $("#chart").igPieChart("option", "leaderLineType", ui.items[0].data.value);
                     }
                 }
             });

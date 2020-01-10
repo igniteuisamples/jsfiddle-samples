@@ -40,19 +40,19 @@
         }
 
         .ui-igsplitter-collapse-single-button .ui-icon-triangle-1-w {
-            background: url(http://igniteui.com/images/samples/tile-manager/collapsible-splitter/left-arrow-gray.svg) 0px 0px/16px 16px !important;
+            background: url(https://igniteui.com/images/samples/tile-manager/collapsible-splitter/left-arrow-gray.svg) 0px 0px/16px 16px !important;
         }
 
         .ui-igsplitter-collapse-single-button.ui-state-hover .ui-icon-triangle-1-w {
-            background-image: url(http://igniteui.com/images/samples/tile-manager/collapsible-splitter/left-arrow-white.svg) !important;
+            background-image: url(https://igniteui.com/images/samples/tile-manager/collapsible-splitter/left-arrow-white.svg) !important;
         }
 
         .ui-igsplitter-collapse-single-button .ui-icon-triangle-1-e {
-            background: url(http://igniteui.com/images/samples/tile-manager/collapsible-splitter/right-arrow-gray.svg) 0px 0px/16px 16px !important;
+            background: url(https://igniteui.com/images/samples/tile-manager/collapsible-splitter/right-arrow-gray.svg) 0px 0px/16px 16px !important;
         }
 
         .ui-igsplitter-collapse-single-button.ui-state-hover .ui-icon-triangle-1-e {
-            background-image: url(http://igniteui.com/images/samples/tile-manager/collapsible-splitter/right-arrow-white.svg) !important;
+            background-image: url(https://igniteui.com/images/samples/tile-manager/collapsible-splitter/right-arrow-white.svg) !important;
         }
 
         .ui-igsplitter-collapse-single-button .ui-icon:before,

@@ -7,7 +7,7 @@ $(function () {
                 ],
                 width: 720,
                 height: 560,
-                posterUrl: "http://jp.igniteui.com/images/samples/video-player/quince-intro-1.png",
+                posterUrl: "https://jp.igniteui.com/images/samples/video-player/quince-intro-1.png",
                 fullscreen: false,
                 browserControls: false,
                 autohide: true,
@@ -15,7 +15,7 @@ $(function () {
                 showSeekTime: true,
                 title: "Quince プレゼンテーション パート 1",
                 relatedVideos: [{
-                    imageUrl: "http://jp.igniteui.com/images/samples/video-player/quince-intro-2.png",
+                    imageUrl: "https://jp.igniteui.com/images/samples/video-player/quince-intro-2.png",
                     title: "Quince プレゼンテーション パート 1",
                     css: "relatedVideosBanner",
                     sources: [

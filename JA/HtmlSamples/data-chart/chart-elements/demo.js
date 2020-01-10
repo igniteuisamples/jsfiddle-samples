@@ -92,7 +92,7 @@ $(function () {
                     markerBrush: volumeSeriesBrush,
                     markerOutline: volumeSeriesBrush,
                     markerType: 'circle',
-                    title: '折れ線系列',
+                    title: '折れ線シリーズ',
                     xAxis: 'xAxis',
                     yAxis: 'vAxis',
                     valueMemberPath: 'Volume',

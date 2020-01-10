@@ -17,12 +17,12 @@ $(function() {
                 columns: [
 					
 					{ key: "UnboundOrders", unbound: true, dataType: "number", width: "0%", hidden: true },
-					{ key: "Orders", width: "10%", headerText: "$$(Northwind_Company_FreightExpenses)", template: "<div data-id='${ID}' class='order-sparkline'></div>" }, 
+					{ key: "Orders", width: "20%", headerText: "$$(Northwind_Company_FreightExpenses)", template: "<div data-id='${ID}' class='order-sparkline'></div>" }, 
 					
-                    { key: "ID", headerText: "$$(Northwind_Company_CompanyID)", hidden: true },
-                    { key: "CompanyName", headerText: "$$(Northwind_Company_CompanyName)" },
-                    { key: "ContactName", headerText: "$$(Northwind_Customers_ContactName)" },
-                    { key: "ContactTitle", headerText: "$$(Northwind_Customers_ContactTitle)" }
+                    { key: "ID", width: "20%", headerText: "$$(Northwind_Company_CompanyID)", hidden: true },
+                    { key: "CompanyName", width: "20%", headerText: "$$(Northwind_Company_CompanyName)" },
+                    { key: "ContactName", width: "20%", headerText: "$$(Northwind_Customers_ContactName)" },
+                    { key: "ContactTitle", width: "20%", headerText: "$$(Northwind_Customers_ContactTitle)" }
                     
                 ],
 				rowExpanding: function (evt, ui) {

@@ -11,8 +11,8 @@ $(function () {
                 }
 
                 $(selector).igDataChart({
-                    width: "360px",
-                    height: "360px",
+                    width: "250px",
+                    height: "250px",
                     dataSource: data,
                     legend: hasLegend ? { element: "legend" } : null,
                     title: title,

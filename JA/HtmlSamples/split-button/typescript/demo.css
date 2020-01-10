@@ -19,25 +19,25 @@
         }
 
         .ui-igbutton .ui-igbutton-forecolor, .button-split {
-            background-image: url('http://jp.igniteui.com/igniteui/css/themes/infragistics/images/ui-icons_888888_256x240.png')!important;
+            background-image: url('https://jp.igniteui.com/igniteui/css/themes/infragistics/images/ui-icons_888888_256x240.png')!important;
             background-size: 384px 370px;
         }
 
         #color-picker-circle .ui-igbutton .ui-igbutton-forecolor, .button-circle.ui-icon {
             background-position: -123px -230px;
-            background-image: url('http://jp.igniteui.com/igniteui/css/themes/infragistics/images/ui-icons_888888_256x240.png')!important;  
+            background-image: url('https://jp.igniteui.com/igniteui/css/themes/infragistics/images/ui-icons_888888_256x240.png')!important;  
         }
 
         #color-picker-triangle .ui-igbutton .ui-igbutton-forecolor, #split-button-circle .button-triangle,
         #split-button-triangle .button-triangle, #split-button-square .button-triangle.ui-icon {
             background-position: -98px -8px;
-            background-image: url('http://jp.igniteui.com/igniteui/css/structure/images/igGrid/filter-icons-333333.png')!important;
+            background-image: url('https://jp.igniteui.com/igniteui/css/structure/images/igGrid/filter-icons-333333.png')!important;
             background-size: 606px 32px;
         }
 
         #color-picker-square .ui-igbutton .ui-igbutton-forecolor, .button-square.ui-icon {
             background-position: -148px -254px;
-            background-image: url('http://jp.igniteui.com/igniteui/css/themes/infragistics/images/ui-icons_888888_256x240.png')!important;
+            background-image: url('https://jp.igniteui.com/igniteui/css/themes/infragistics/images/ui-icons_888888_256x240.png')!important;
         }
 
         .ui-splitbutton .ui-igtoolbarbutton.ui-button {

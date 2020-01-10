@@ -65,69 +65,99 @@ var transparentBrush = "rgba(0,0,0,0)";
                     valueMemberPath: "Pop1995"
                 }]
             })
-        });
 
-        $("#xAxisMajorLinesCkBx").click(function (e) {
-            brush = $("#xAxisMajorLinesCkBx").is(":checked") ? "Green" : transparentBrush;
+        $("#XAxisMajorLinesCheckbox").click(function (e) {
+            brush = $("#XAxisMajorLinesCheckbox").is(":checked") ? "Green" : transparentBrush;
             $("#chart").igDataChart("option", "axes", [{ name: "xAxis", majorStroke: brush }]);
             $("#chart").igDataChart("styleUpdated");
         });
 
-        $("#xAxisMinorLinesCkBx").click("change", function () {
+        $("#XAxisMinorLinesCheckbox").click("change", function () {
             brush = ($(this).is(":checked")) ? "Red" : transparentBrush;
             $("#chart").igDataChart("option", "axes", [{ name: "xAxis", minorStroke: brush }]);
             $("#chart").igDataChart("styleUpdated");
         });
 
-        $("#yAxisMajorLinesCkBx").click("change", function () {
+        $("#YAxisMajorLinesCheckbox").click("change", function () {
             brush = ($(this).is(":checked")) ? "Green" : transparentBrush;
             $("#chart").igDataChart("option", "axes", [{ name: "yAxis", majorStroke: brush }]);
             $("#chart").igDataChart("styleUpdated");
         });
 
-        $("#yAxisMinorLinesCkBx").click("change", function () {
+        $("#YAxisMinorLinesCheckbox").click("change", function () {
             brush = ($(this).is(":checked")) ? "Red" : transparentBrush;
             $("#chart").igDataChart("option", "axes", [{ name: "yAxis", minorStroke: brush }]);
             $("#chart").igDataChart("styleUpdated");
         });
 
-        $("#XMajorIntervalThicknessSlider").slider({
+        $("#XAxisMajorGridlinesThicknessSlider").slider({
             min: 1,
             max: 10,
             value: 2,
             slide: function (e, ui) {
-                $("#chart").igDataChart("option", "axes", [{ name: "xAxis", majorStrokeThickness: ui.value }]);
-                $("#XMajorIntervalThicknessLbl").text("XMajorIntervalThickness: " + ui.value);
+                $("#chart").igDataChart("option", "axes", [
+                    { name: "xAxis", majorStrokeThickness: ui.value }
+                ]);
+                $("#XAxisMajorGridlinesThicknessLabel").text(ui.value);
             }
         });
 
-        $("#XMinorIntervalThicknessSlider").slider({
+        $("#XAxisMinorGridlinesThicknessSlider").slider({
             min: 1,
             max: 10,
             value: 1,
             slide: function (e, ui) {
-                $("#chart").igDataChart("option", "axes", [{ name: "xAxis", minorStrokeThickness: ui.value }]);
-                $("#XMinorIntervalThicknessLbl").text("XMinorIntervalThickness: " + ui.value);
+                $("#chart").igDataChart("option", "axes", [
+                    { name: "xAxis", minorStrokeThickness: ui.value }
+                ]);
+                $("#XAxisMinorGridlinesThicknessLabel").text(ui.value);
             }
         });
 
-        $("#YMajorIntervalThicknessSlider").slider({
+        $("#YAxisMajorGridlinesThicknessSlider").slider({
             min: 1,
             max: 10,
             value: 2,
             slide: function (e, ui) {
-                $("#chart").igDataChart("option", "axes", [{ name: "yAxis", majorStrokeThickness: ui.value }]);
-                $("#YMajorIntervalThicknessLbl").text("YMajorIntervalThickness: " + ui.value);
+                $("#chart").igDataChart("option", "axes", [
+                    { name: "yAxis", majorStrokeThickness: ui.value }
+                ]);
+                $("#YAxisMajorGridlinesThicknessLabel").text(ui.value);
             }
         });
 
-        $("#YMinorIntervalThicknessSlider").slider({
+        $("#YAxisMinorGridlinesThicknessSlider").slider({
             min: 1,
             max: 10,
             value: 1,
             slide: function (e, ui) {
-                $("#chart").igDataChart("option", "axes", [{ name: "yAxis", minorStrokeThickness: ui.value }]);
-                $("#YMinorIntervalThicknessLbl").text("YMinorIntervalThickness: " + ui.value);
+                $("#chart").igDataChart("option", "axes", [
+                    { name: "yAxis", minorStrokeThickness: ui.value }
+                ]);
+                $("#YAxisMinorGridlinesThicknessLabel").text(ui.value);
+            }
+        });
+
+        $("#XAxisMajorGridlinesIntervalSlider").slider({
+            min: 1,
+            max: 5,
+            value: 1,
+            slide: function (e, ui) {
+                $("#chart").igDataChart("option", "axes", [
+                    { name: "xAxis", interval: ui.value }
+                ]);
+                $("#XAxisMajorGridlinesIntervalLabel").text(ui.value.toFixed(0));
+            }
+        });
+        $("#YAxisMajorGridlinesIntervalSlider").slider({
+            min: 100,
+            max: 1000,
+            value: 200,
+            slide: function (e, ui) {
+                $("#chart").igDataChart("option", "axes", [
+                    { name: "yAxis", interval: ui.value }
+                ]);
+                $("#YAxisMajorGridlinesIntervalLabel").text(ui.value.toFixed(0));
             }
         });
 
@@ -136,9 +166,11 @@ var transparentBrush = "rgba(0,0,0,0)";
             max: 10,
             value: 50,
             slide: function (e, ui) {
-                $("#chart").igDataChart("option", "axes", [{ name: "xAxis", minorInterval: (ui.value * .1) }]);
+                $("#chart").igDataChart("option", "axes", [
+                    { name: "xAxis", minorInterval: (ui.value * .1) }
+                ]);
                 var num = ui.value * 0.1;
-                $("#XAxisMinorGridlinesIntervalLbl").text("XAxisMinorGridlinesInterval: " + num.toFixed(2));
+                $("#XAxisMinorGridlinesIntervalLabel").text(num.toFixed(2));
             }
         });
         $("#YAxisMinorGridlinesIntervalSlider").slider({
@@ -146,8 +178,12 @@ var transparentBrush = "rgba(0,0,0,0)";
             max: 20,
             value: 10,
             slide: function (e, ui) {
-                $("#chart").igDataChart("option", "axes", [{ name: "yAxis", minorInterval: (ui.value * 10) }]);
-                $("#YAxisMinorGridlinesIntervalLbl").text("YAxisMinorGridlinesInterval: " + (ui.value * 10));
+                $("#chart").igDataChart("option", "axes", [
+                    { name: "yAxis", minorInterval: (ui.value * 10) }
+                ]);
+                $("#YAxisMinorGridlinesIntervalLabel").text(ui.value * 10);
             }
+        });
+
         });
 });

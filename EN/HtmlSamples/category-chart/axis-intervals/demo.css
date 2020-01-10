@@ -7,7 +7,7 @@
         .optionsPane {
             position: relative;
             float: initial;
-            width: 310px;
+            width: 270px;
             margin: 6px 3px 6px 6px;
             display: inline-block;
             padding-top: 18px;
@@ -16,7 +16,7 @@
         .optionsColumn {
             float: left;
             position: relative;
-            width: 280px;
+            /*width: 280px;*/
             margin: 2px;
             padding: 2px;
             display: inline-block;
@@ -27,7 +27,7 @@
         }
         
         .slider {
-            width: 160px;
+            width: 250px;
             margin: 10px 10px 4px 6px;
             padding-right: 3px;
             padding-left: 3px;
@@ -41,6 +41,6 @@
 
         .values {
             padding-left: 7px;
-            padding-right: 7px;
-            width: 15px;
+            padding-right: 0px;
+            width: 30px;
         }

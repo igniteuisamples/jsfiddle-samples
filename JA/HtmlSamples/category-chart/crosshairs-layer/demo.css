@@ -1,0 +1,8 @@
+.options-panel {
+            margin: 2px;
+            padding: 2px;
+            display: inline-block;
+            -moz-border-radius: 4px;
+            -webkit-border-radius: 4px;
+            border-radius: 4px;
+        }

@@ -27,7 +27,7 @@ $(function () {
                     {
                         type: "numericitem",
                         header: "Font Size",
-                        iconUri: "http://igniteui.com/images/samples/radial-menu/Size.png",
+                        iconUri: "https://igniteui.com/images/samples/radial-menu/Size.png",
                         value: "8",
                         items:
                         [
@@ -50,7 +50,7 @@ $(function () {
                     {
                         type: "list",
                         header: "Font",
-                        iconUri: "http://igniteui.com/images/samples/radial-menu/Font.png",
+                        iconUri: "https://igniteui.com/images/samples/radial-menu/Font.png",
                         items:
                         [
                             {

@@ -32,13 +32,13 @@ $(function() {
                     {
                         name: "button1",
                         header: "Bold",
-                        iconUri: "http://igniteui.com/images/samples/radial-menu/Bold.png",
+                        iconUri: "https://igniteui.com/images/samples/radial-menu/Bold.png",
                         click: function () { toggleBold(); }
                     },
                     {
                         name: "button2",
                         header: "Italic",
-                        iconUri: "http://igniteui.com/images/samples/radial-menu/Italic.png",
+                        iconUri: "https://igniteui.com/images/samples/radial-menu/Italic.png",
                         click: function () { toggleItalic(); }
                     },
                 ]

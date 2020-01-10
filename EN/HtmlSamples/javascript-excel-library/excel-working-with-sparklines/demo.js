@@ -8,14 +8,16 @@ var data = [4, 5, 2, 7, -1, 3, 0, 5, 2, 6]
                 dataSource: data,
                 displayType: "line",
                 height: "100px",
-                width: "100%",                
+                width: "100%", 
+				brush: "#376092",				
             });
 
             $("#columnSparkline").igSparkline({
                 dataSource: data,
                 displayType: "column",
                 height: "100px",
-                width: "100%",                
+                width: "100%",  
+				brush: "#376092",				
             });
 			
         });
@@ -25,10 +27,9 @@ var data = [4, 5, 2, 7, -1, 3, 0, 5, 2, 6]
             var workbook = new $.ig.excel.Workbook($.ig.excel.WorkbookFormat.excel2007);
             var sheet1 = workbook.worksheets().add('Sparklines');
 			var sheet2 = workbook.worksheets().add('Data');
-			sheet1.columns(0).width(10000);
-			sheet1.columns(1).width(10000);						
+			sheet1.columns(0).width(10000);							
 			sheet1.rows(0).height(3000);
-			
+			sheet1.rows(1).height(3000);
             var letters = ["A"]
             var headers = ["Data"]
             
@@ -51,7 +52,7 @@ var data = [4, 5, 2, 7, -1, 3, 0, 5, 2, 6]
             }			
 			
 			sheet1.sparklineGroups().add($.ig.excel.SparklineType.line, "Sparklines!A1:A1", "Data!A2:A11"); 
-			sheet1.sparklineGroups().add($.ig.excel.SparklineType.column, "Sparklines!B1:B1", "Data!A2:A11"); 
+			sheet1.sparklineGroups().add($.ig.excel.SparklineType.column, "Sparklines!A2:A2", "Data!A2:A11"); 
 			
 			saveWorkbook(workbook, "Sparklines.xlsx");			
 		}

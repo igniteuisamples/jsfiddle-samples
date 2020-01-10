@@ -127,8 +127,9 @@ $(function () {
                         },
                         {
                         	name: "Resizing",
-                        	columnResizing: function (e, args) {
-                        		addUndoState("resize", args.columnKey, false, args.originalWidth);
+                            columnResizing: function (e, args) {
+                                var originalWidth = args.owner.element.find("> thead > tr[data-header-row]").first().children("th").not("[data-skip=true]").get(args.columnIndex).offsetWidth;
+                                addUndoState("resize", args.columnKey, false, originalWidth);
                         	},
                         	columnResized: function (e, args) {
                         		var columnKey = args.columnKey,
@@ -227,46 +228,60 @@ $(function () {
     				case "resize": loadResizingStateArray(key, value); break;
     				default: break;
     			}
-    		}
-    		function loadPagingState(key, value) {
-    			gridHistoryJS.igGridPaging("pageIndex", value - 1);
+            }
+            function loadPagingState(key, value) {
+                if (gridHistoryJS.data("igGrid")) {
+                    gridHistoryJS.igGridPaging("pageIndex", value - 1);
+                }
     		}
     		function loadSortingState(key, descriptor, undo) {
     			var column = descriptor[0],
-					status = descriptor[1];
-    			if (undo) {
-    				gridHistoryJS.igGridSorting("unsortColumn", column);
-    			} else {
-    				gridHistoryJS.igGridSorting("sortColumn", column, status);
-    			}
+                    status = descriptor[1];
+                if (gridHistoryJS.data("igGrid")) {
+                    if (undo) {
+                        gridHistoryJS.igGridSorting("unsortColumn", column);
+                    } else {
+                        gridHistoryJS.igGridSorting("sortColumn", column, status);
+                    }
+                }
     		}
     		function loadSortingStateArray(key, value) {
-    			var columns = value.split(";"), i;
-    			for (i = 0; i < columns.length; i++) {
-    				gridHistoryJS.igGridSorting("sortColumn", columns[i].split("_", 1)[0], columns[i].split("_", 2)[1]);
-    			}
+                var columns = value.split(";"), i;
+                if (gridHistoryJS.data("igGrid")) {
+                    for (i = 0; i < columns.length; i++) {
+                        gridHistoryJS.igGridSorting("sortColumn", columns[i].split("_", 1)[0], columns[i].split("_", 2)[1]);
+                    }
+                }
     		}
-    		function loadFilteringState(key, descriptor, undo) {
-    			if (undo || descriptor === undefined || descriptor.length === 0) {
-            		gridHistoryJS.igGridFiltering("filter", []);
-            	} else {
-            		gridHistoryJS.igGridFiltering("filter", [{ fieldName: descriptor[0], expr: descriptor[2], cond: descriptor[1] }]);
-            	}
+            function loadFilteringState(key, descriptor, undo) {
+                if (gridHistoryJS.data("igGrid")) {
+                    if (undo || descriptor === undefined || descriptor.length === 0) {
+                        gridHistoryJS.igGridFiltering("filter", []);
+                    } else {
+                        gridHistoryJS.igGridFiltering("filter", [{ fieldName: descriptor[0], expr: descriptor[2], cond: descriptor[1] }]);
+                    }
+                }
             }
             function loadFilteringStateArray(key, value) {
-            	var columns = value.split(";"), i;
-            	for (i = 0; i < columns.length; i++) {
-            		gridHistoryJS.igGridFiltering("filter", [{ fieldName: columns[i].split("_", 1)[0], expr: columns[i].split("_", 3)[2], cond: columns[i].split("_", 2)[1] }]);
-            	}
+                var columns = value.split(";"), i;
+                if (gridHistoryJS.data("igGrid")) {
+                    for (i = 0; i < columns.length; i++) {
+                        gridHistoryJS.igGridFiltering("filter", [{ fieldName: columns[i].split("_", 1)[0], expr: columns[i].split("_", 3)[2], cond: columns[i].split("_", 2)[1] }]);
+                    }
+                }
             }
             function loadResizingState(key, descriptor) {
-            	gridHistoryJS.igGridResizing("resize", descriptor[0], descriptor[1]);
+                if (gridHistoryJS.data("igGrid")) {
+                    gridHistoryJS.igGridResizing("resize", descriptor[0], descriptor[1]);
+                }
             }
             function loadResizingStateArray(key, value) {
-            	var columns = value.split(";"), i;
-            	for (i = 0; i < columns.length; i++) {
-            		gridHistoryJS.igGridResizing("resize", columns[i].split("_", 1)[0], columns[i].split("_", 2)[1]);
-            	}
+                var columns = value.split(";"), i;
+                if (gridHistoryJS.data("igGrid")) {
+                    for (i = 0; i < columns.length; i++) {
+                        gridHistoryJS.igGridResizing("resize", columns[i].split("_", 1)[0], columns[i].split("_", 2)[1]);
+                    }
+                }
             }
             //<-- Load individual igGrid features
 

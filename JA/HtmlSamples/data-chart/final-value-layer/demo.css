@@ -1,0 +1,11 @@
+#sampleContainer fieldset.options label {
+            display: unset;
+        }
+        .options
+        {
+            display: inline-block;
+        }
+        .options > div
+        {
+            display: table;
+        }

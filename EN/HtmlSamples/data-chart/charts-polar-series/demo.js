@@ -2,8 +2,8 @@ $(function () {
 
             function CreateChart(selector, seriesType, title) {
                 $(selector).igDataChart({
-                    width: "240px",
-                    height: "240px",
+                    width: "250px",
+                    height: "250px",
                     dataSource: data,
                     title: title,
                     subtitle: "Wind Speed vs. Wind Direction",

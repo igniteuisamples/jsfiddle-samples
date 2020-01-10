@@ -2,7 +2,7 @@ $(function () {
             $("#igUpload1").igUpload({
                 mode: 'single',
                 autostartupload: true,
-                progressUrl: "http://igniteui.com/IGUploadStatusHandler.ashx",
+                progressUrl: "https://igniteui.com/IGUploadStatusHandler.ashx",
                 controlId: "serverID1",
                 onError: function (e, args) {
                     showAlert(args);

@@ -4,11 +4,10 @@ $(function () {
             stocks.push(StockData.TGT());
 
             $("#chart").igFinancialChart({
-                legend: { element: "chartLegend" },
+                isLegendVisible: true,
                 dataSource: stocks,
                 volumeType: "line",
                 chartType: "bar",
                 zoomSliderType: "bar",
-
             });
         });

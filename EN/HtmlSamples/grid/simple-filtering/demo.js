@@ -106,15 +106,16 @@ $(function () {
 			}
 			$("#gridSimpleFiltering").igGrid({
 				autoGenerateColumns: false,
-				height: "400px",
+                height: "400px",
+                width: "100%",
 				columns: [
-					{ headerText: "First Name", key: "FirstName", dataType: "string" },
-					{ headerText: "Last Name", key: "LastName", dataType: "string" },
-					{ headerText: "Register Date", key: "RegistererDate", dataType: "date" },
-					{ headerText: "Country", key: "Country", dataType: "string" },
-					{ headerText: "Age", key: "Age", dataType: "number" },
-                    { headerText: "Is Active", key: "IsActive", dataType: "bool" },
-                    { headerText: "Time", key: "RegistererTime", dataType: "time" }
+                    { headerText: "First Name", key: "FirstName", dataType: "string", width: "110px" },
+                    { headerText: "Last Name", key: "LastName", dataType: "string", width: "110px" },
+                    { headerText: "Register Date", key: "RegistererDate", dataType: "date", width: "150px" },
+                    { headerText: "Country", key: "Country", dataType: "string", width: "100px" },
+                    { headerText: "Age", key: "Age", dataType: "number", width: "80px" },
+                    { headerText: "Is Active", key: "IsActive", dataType: "bool", width: "80px" },
+                    { headerText: "Time", key: "RegistererTime", dataType: "time", width: "170px" }
 				],
 				dataSource: ds.dataView(),
 				responseDataKey: "results",

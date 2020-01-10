@@ -1,8 +1,8 @@
 $(function () {
             function CreateChart(selector, seriesType, title) {
                 $(selector).igDataChart({
-                    width: "400px",
-                    height: "400px",
+                    width: "250px",
+                    height: "250px",
                     dataSource: data,
                     title: title,
                     subtitle: "New York City vs. Philadelphia",

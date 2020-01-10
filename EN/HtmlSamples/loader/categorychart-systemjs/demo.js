@@ -1,3 +1,3 @@
 $(function () {
-System.import("http://igniteui.com/HtmlSamples/loader/categorychart-systemjs.js");
+System.import("https://igniteui.com/HtmlSamples/loader/categorychart-systemjs.js");
 });

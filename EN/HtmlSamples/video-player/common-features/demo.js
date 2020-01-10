@@ -6,7 +6,7 @@ $(function () {
 							"https://dl.infragistics.com/pg/2011-1/web/shared/videoplayer/videos/big_buck_bunny.ogv"
 				],
 				width: "100%",
-				posterUrl: "http://igniteui.com/images/samples/video-player/big-buck-bunny.png",
+				posterUrl: "https://igniteui.com/images/samples/video-player/big-buck-bunny.png",
 				fullscreen: false,
 				browserControls: false,
 				autoplay: false,

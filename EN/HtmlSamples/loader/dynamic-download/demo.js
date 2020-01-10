@@ -1,7 +1,7 @@
 $(function () {
 $.ig.loader({
-            scriptPath: "http://cdn-na.infragistics.com/igniteui/latest/js/",
-            cssPath: "http://cdn-na.infragistics.com/igniteui/latest/css/",
+            scriptPath: "https://cdn-na.infragistics.com/igniteui/latest/js/",
+            cssPath: "https://cdn-na.infragistics.com/igniteui/latest/css/",
             resources: "igShared",
             ready: function () {
                 //This button click triggers the tree to be created
