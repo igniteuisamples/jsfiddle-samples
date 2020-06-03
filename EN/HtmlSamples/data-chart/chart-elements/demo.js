@@ -148,7 +148,7 @@ $(function () {
                 var isVisible = ($(this).is(":checked"));
                 $("#chart").igDataChart("option", "axes", [
                     { name: "xAxis", title: isVisible ? axisTitleX : "" },
-                    { name: "yAxis", title: isVisible ? axisTitleY : "" },
+                    { name: "pAxis", title: isVisible ? axisTitleY : "" },
                     { name: "vAxis", title: isVisible ? axisTitleY : "" }]);
                 $("#chart").igDataChart("styleUpdated");
             });
