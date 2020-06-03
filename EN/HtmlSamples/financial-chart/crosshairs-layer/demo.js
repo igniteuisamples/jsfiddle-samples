@@ -14,7 +14,7 @@ $(function () {
                 $("#chart").igFinancialChart("option", "crosshairsDisplayMode", evt.target.value);
             });
             
-            $(".chartOptions input[type=checkbox]").change(function(evt){
+            $(".options-panel input[type=checkbox]").change(function(evt){
                 $("#chart").igFinancialChart("option", evt.target.name, evt.target.checked);
             });
 
