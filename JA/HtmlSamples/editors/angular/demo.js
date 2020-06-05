@@ -8,7 +8,7 @@ var sampleApp = angular.module('sampleApp', ['igniteui-directives']);
                 mask: '134-134-134',
                 numeric: 123,
                 percent: 0.12,
-                text: 'Ignite UI'
+                text: 'Ignite UI for jQuery'
             };
         });
 });
