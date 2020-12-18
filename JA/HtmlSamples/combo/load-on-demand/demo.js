@@ -24,7 +24,7 @@ $(function () {
                 },
                 responseDataKey: "d.results.Results",
                 responseTotalRecCountKey: "d.results.Count",
-                dataSource: "https://igniteui.com/api/products?callback=?",
+                dataSource: "https://www.igniteui.com/api/products?callback=?",
                 width: "400px",
                 textKey: "ProductName",
                 valueKey: "ID",

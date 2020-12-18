@@ -22,7 +22,7 @@ $(function () {
 
 
             // service Url
-            var url = "https://igniteui.com/api/employees?callback=?";
+            var url = "https://www.igniteui.com/api/employees?callback=?";
 
             // This code creates an $.ig.DataSource bound to oData service
             var ds = new $.ig.DataSource({
