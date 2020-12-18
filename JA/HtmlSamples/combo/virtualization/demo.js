@@ -9,7 +9,7 @@ $(function () {
                 textKey: "ShipName",
                 itemTemplate: "${ShipName} (ID: ${OrderID})",
                 width: "370px",
-                dataSourceUrl: 'https://igniteui.com/api/orders?&$top=1500&callback=?',
+                dataSourceUrl: 'https://www.igniteui.com/api/orders?&$top=1500&callback=?',
                 responseDataType: "json"
             });
 
